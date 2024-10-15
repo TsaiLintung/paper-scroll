@@ -1,0 +1,190 @@
+
+/* Body styling */
+body {
+    font-family: Georgia, Times, "Times New Roman", serif; 
+    font-size: 100%;
+    line-height: 1.5;
+    margin: 0; /* Remove any margin from the body */
+    padding: 0; /* Remove padding if there's any */
+}
+
+/* Title styling for paper headings (e.g., h2 elements) */
+h2 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+/* Greyscale styling for the progress bar */
+/* Greyscale styling for the progress bar */
+#progress-bar {
+    position: sticky;
+    top: 0;
+    background-color: #F3F3F1;
+    padding: 20px;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    box-shadow: 0 2px 4px rgba(146, 64, 70, 0.1); /* Add a subtle shadow below */
+}
+
+
+#progress-title {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    text-transform: uppercase; /* Optional: Makes the title uppercase */
+    letter-spacing: 1px; /* Adds spacing between letters for a refined look */
+    margin-right: 20px; /* Space between title and input */
+    white-space: nowrap; /* Prevents title from breaking into multiple lines */
+}
+
+#progress-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Input field styling */
+#jump-input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    /*border-radius: 4px;*/
+    background-color: #F3F3F1;
+    color: #924046;
+    width: 150px;
+}
+
+#jump-input:focus {
+    outline: none; /* Removes the default focus outline */
+    border-color: #924046; /* Change the border color when focused */
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+    #progress-bar {
+        flex-direction: row; /* Keep title and input in one row */
+        justify-content: space-between;
+        padding: 10px;
+        flex-wrap: nowrap;
+    }
+
+    #progress-title {
+        font-size: 20px;
+        margin-right: 10px;
+        white-space: nowrap; /* Prevent the title from wrapping to the next line */
+    }
+
+    #progress-container {
+        flex-grow: 1;
+        justify-content: flex-end;
+    }
+
+    #jump-input {
+        width: 100px; /* Reduce input width on mobile */
+    }
+}
+
+
+/* Paper list styling */
+#paper-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /* Center the paper list container */
+    justify-content: flex-start;
+    min-height: 100vh;   /* Full viewport height */
+    padding: 20px;       /* Optional padding around the list */
+}
+
+/* Individual paper styling */
+.paper {
+    width: 80%;              /* Adjust the width of each paper */
+    max-width: 800px;         /* Set a maximum width */
+    background-color: #F3F3F1;
+    padding: 20px;
+    border-top: 6px solid #924046;
+    margin-bottom: 20px;
+    /*box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: left;         /* Ensure content is left-aligned */
+}
+
+.paper-meta p {
+    margin: 0; /* Removes default margin */
+}
+
+.paper-meta p:first-child {
+    margin-bottom: 3px; /* Adds a smaller margin below the author */
+}
+
+
+
+/* Adjust paper styling for mobile */
+@media (max-width: 600px) {
+    .paper {
+        width: 95%;          /* Increase the width on mobile to use more of the screen */
+        padding: 10px;       /* Reduce the padding to make better use of space */
+    }
+} 
+
+/* Link styling for PDF download */
+a {
+    color: #924046;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Abstract expansion link styling */
+.expand-link {
+    color: #924046;
+    font-family: Georgia, Times, "Times New Roman", serif; 
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 5px;
+}
+
+.expand-link:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    background-color: #F3F3F1;
+    padding: 10px 20px;
+    font-family: Helvetica, Arial, sans-serif;
+    /*color: #924046;*/
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    z-index: 1000;  /* Ensure the footer stays above other elements */
+    box-shadow: -2px -2px 4px rgba(146, 64, 70, 0.1);  /* Add a subtle shadow */
+}
+
+footer a {
+    /*color: #924046;*/
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    font-size: 14px;
+    margin: 0;
+    text-align: right;
+}
+
+/* Reduce padding on mobile */
+@media (max-width: 600px) {
+    footer {
+        padding: 5px 10px;  /* Smaller padding for mobile screens */
+    }
+}
