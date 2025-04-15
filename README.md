@@ -9,6 +9,4 @@ Scroll the top 5 papers.
 
 # TODO
 
-2. How do we update it as the new paper comes out?
-3. Add top field.
-4. All the way back.
+1. Just Use CrossRef LMAO.
