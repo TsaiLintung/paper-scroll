@@ -5,6 +5,8 @@ import requests
 import json
 import os
 
+DIR = "/Users/lttsai/Documents/GitHub/paper-scroll"
+
 def fetch_crossref_journal_year(journal_issn, year):
     """
     Fetch all works from Crossref API for a given ISSN and year.
@@ -49,7 +51,7 @@ def fetch_crossref(journals, start_year, end_year):
             issn = journal["issn"]
             name = journal["name"]
 
-            output_path = f"data/{name}-{year}.json"
+            output_path = f"{DIR}/data/{name}-{year}.json"
             if os.path.exists(output_path):
                 print(f"Data for Journal {journal['name']} in year {year} already exists. Skipping...")
                 continue
@@ -70,8 +72,8 @@ def fetch_crossref(journals, start_year, end_year):
             print(f"Fetched {len(items)} items for Journal {name} in year {year}")
 
 def update_journals(e = None):
-
-    with open("config.json", "r", encoding="utf-8") as f:
+    print("Updating journals...")
+    with open(f"{DIR}/config.json", "r", encoding="utf-8") as f:
         config = json.load(f)
     start_year = config["start_year"]
     end_year = config["end_year"]

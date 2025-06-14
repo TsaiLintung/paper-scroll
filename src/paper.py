@@ -3,6 +3,8 @@ import os
 import json
 import random
 
+DIR = "/Users/lttsai/Documents/GitHub/paper-scroll"
+
 
 class Paper:
     def __init__(self, doi=None):
@@ -45,11 +47,11 @@ class Paper:
         return self.data.get(key, "Not Available")
 
     def get_random_doi(self):
-        data_dir = "data"
-        files = [f for f in os.listdir(data_dir) if f.endswith(".json")]
+        
+        files = [f for f in os.listdir(os.path.join(DIR, "data")) if f.endswith(".json")]
         if not files:
             return None
-        file_path = os.path.join(data_dir, random.choice(files))
+        file_path = os.path.join(os.path.join(DIR, "data"), random.choice(files))
         with open(file_path, "r", encoding="utf-8") as f:
             data = json.load(f)
         items = data.get("items", [])

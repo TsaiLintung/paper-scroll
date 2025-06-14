@@ -58,6 +58,8 @@ class PaperDisplay(ft.Card):
             expand=True,
         )
 
+        self.color = ft.Colors.WHITE
+
         # init 
         self.paper = Paper()
 
