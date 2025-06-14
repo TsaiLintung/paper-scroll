@@ -65,31 +65,43 @@ def fetch_crossref(journals, start_year, end_year):
 
             print(f"Fetched {len(items)} items for Journal {name} in year {year}")
 
+def fetch_openalex(doi):
+    """Fetch metadata from OpenAlex API for a given DOI."""
+    url = f"https://api.openalex.org/works/https://doi.org/{doi}?mailto=tsaidondon@gmail.com"
+    resp = requests.get(url, timeout=10)
+    if resp.status_code != 200:
+        print(f"Error fetching data for DOI {doi}: {resp.status_code}")
+        return None
+    paper = resp.json()
 
-
-
-if __name__ == "__main__":
-
-    with open("config.json", "r", encoding="utf-8") as f:
-        config = json.load(f)
-
-    action = input("Enter 'fetch' to fetch data or 'read' to display a random paper: ").strip().lower()
-
-    journals = config["journals"]
-    start_year = config["start_year"]
-    end_year = config["end_year"]
-
-    if action == "fetch":
-        fetch_crossref(journals, start_year, end_year)
-    elif action == "read":
-        print("Displaying a random paper. Press Enter to see another one or 'q' to quit.")
-        while True:
-            print_random_paper()
-            user_input = input("").strip().lower()
-            if user_input == "q":
-                break
+    abstract_inverted_index = paper.get("abstract_inverted_index", "")
+    if abstract_inverted_index:
+        words_positions = []
+        for word, positions in abstract_inverted_index.items():
+            for pos in positions:
+                words_positions.append((pos, word))
+        words_positions.sort()
+        abstract = " ".join(word for _, word in words_positions)
     else:
-        print("Invalid action. Please enter 'fetch' or 'read'.")
-    
+        abstract = ""
 
-   
+    linewidth = 80
+    wrapper = textwrap.TextWrapper(width=linewidth)
+    wrapped_abstract = wrapper.fill(text=abstract)
+    paper["abstract"] = wrapped_abstract
+    return paper
+
+def get_random_doi():
+    data_dir = "data"
+    files = [f for f in os.listdir(data_dir) if f.endswith(".json")]
+    if not files:
+        return None
+    file_path = os.path.join(data_dir, random.choice(files))
+    with open(file_path, "r", encoding="utf-8") as f:
+        data = json.load(f)
+    items = data.get("items", [])
+    if not items:
+        return None
+    item = random.choice(items)
+    return item.get("DOI")
+
