@@ -43,8 +43,9 @@ class PaperInfo(ft.Card):
 
     def update_paper(self, paper):
         self.title.value = paper.get("title", "No title available")
-        self.doi_text.text = paper.get("doi", "No DOI available")
-        self.doi_text.url = paper.get("doi", "No DOI available")
+        doi = paper.get("doi", "No DOI available")
+        self.doi_text.text = doi
+        self.doi_text.url = doi
         self.abstract.value = paper.get("abstract", "No abstract available")
         self.update()
 
