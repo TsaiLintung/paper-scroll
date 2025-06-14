@@ -5,6 +5,7 @@ import requests
 import os
 import json
 import random
+import textwrap
 
 def fetch_crossref_journal_year(journal_issn, year):
     """
@@ -97,24 +98,34 @@ def print_paper(pap):
 
     doi = pap.get("DOI")
     paper = fetch_openalex(doi)
-    if paper:
-        title = paper.get("title", "No title available")
-
-        print(f"Title: {title}")
-        print(f"DOI: {doi}")
-
-        abstract_inverted_index = paper.get("abstract_inverted_index", "")
-        if abstract_inverted_index:
-            words_positions = []
-            for word, positions in abstract_inverted_index.items():
-                for pos in positions:
-                    words_positions.append((pos, word))
-            words_positions.sort()
-            # Join words in order of their positions
-            abstract = " ".join(word for _, word in words_positions)
-            print(f"Abstract: {abstract}\n")
-    else:
+    if not paper:
         print("Paper metadata not found.")
+        return
+    
+    title = paper.get("title", "No title available")
+
+    abstract_inverted_index = paper.get("abstract_inverted_index", "")
+    if abstract_inverted_index:
+        words_positions = []
+        for word, positions in abstract_inverted_index.items():
+            for pos in positions:
+                words_positions.append((pos, word))
+        words_positions.sort()
+        # Join words in order of their positions
+        abstract = " ".join(word for _, word in words_positions)
+    else: 
+        abstract = paper.get("abstract", "No abstract available")
+
+
+    linewidth = 80
+    wrapper = textwrap.TextWrapper(width=linewidth)  # adjust width as needed
+    wrapped_abstract = wrapper.fill(text=abstract)
+
+    print("=" * linewidth)
+    print(f"Title    : {title}")
+    print(f"DOI      : {doi}")
+    print(wrapped_abstract)
+    print("=" * linewidth + "\n")
 
 
 if __name__ == "__main__":
@@ -131,9 +142,10 @@ if __name__ == "__main__":
     if action == "fetch":
         fetch_crossref(journals, start_year, end_year)
     elif action == "read":
+        print("Displaying a random paper. Press Enter to see another one or 'q' to quit.")
         while True:
             print_random_paper()
-            user_input = input("Press Enter to see another paper, or 'q' to quit: ").strip().lower()
+            user_input = input("").strip().lower()
             if user_input == "q":
                 break
     else:
