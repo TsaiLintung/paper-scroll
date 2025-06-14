@@ -2,10 +2,8 @@
 
 import time
 import requests
-import os
 import json
-import random
-import textwrap
+import os
 
 def fetch_crossref_journal_year(journal_issn, year):
     """
@@ -31,7 +29,7 @@ def fetch_crossref_journal_year(journal_issn, year):
             f"?filter=from-pub-date:{start_date},until-pub-date:{end_date}"
             f"&rows={batch_size}&cursor={cursor}"
         )
-        resp = requests.get(url, timeout=10)
+        resp = requests.get(url, timeout=100)
         data = resp.json()
         message = data.get("message", {})
         batch = message.get("items", [])
@@ -50,6 +48,12 @@ def fetch_crossref(journals, start_year, end_year):
         for year in range(start_year, end_year + 1):    
             issn = journal["issn"]
             name = journal["name"]
+
+            output_path = f"data/{name}-{year}.json"
+            if os.path.exists(output_path):
+                print(f"Data for Journal {journal['name']} in year {year} already exists. Skipping...")
+                continue
+
             items = fetch_crossref_journal_year(issn, year)
 
             data = {
@@ -59,46 +63,18 @@ def fetch_crossref(journals, start_year, end_year):
                 "items": items
             }
             
-            output_path = f"data/{name}-{year}.json"
+        
             with open(output_path, "w", encoding="utf-8") as f:
                 json.dump(data, f, ensure_ascii=False, indent=2)
 
             print(f"Fetched {len(items)} items for Journal {name} in year {year}")
 
-def fetch_openalex(doi):
-    """Fetch metadata from OpenAlex API for a given DOI."""
-    url = f"https://api.openalex.org/works/https://doi.org/{doi}?mailto=tsaidondon@gmail.com"
-    resp = requests.get(url, timeout=10)
-    if resp.status_code != 200:
-        print(f"Error fetching data for DOI {doi}: {resp.status_code}")
-        return None
-    paper = resp.json()
+def update_journals(e = None):
 
-    abstract_inverted_index = paper.get("abstract_inverted_index", "")
-    if abstract_inverted_index:
-        words_positions = []
-        for word, positions in abstract_inverted_index.items():
-            for pos in positions:
-                words_positions.append((pos, word))
-        words_positions.sort()
-        abstract = " ".join(word for _, word in words_positions)
-    else:
-        abstract = ""
-        
-    paper["abstract"] = abstract
-    return paper
-
-def get_random_doi():
-    data_dir = "data"
-    files = [f for f in os.listdir(data_dir) if f.endswith(".json")]
-    if not files:
-        return None
-    file_path = os.path.join(data_dir, random.choice(files))
-    with open(file_path, "r", encoding="utf-8") as f:
-        data = json.load(f)
-    items = data.get("items", [])
-    if not items:
-        return None
-    item = random.choice(items)
-    return item.get("DOI")
-
+    with open("config.json", "r", encoding="utf-8") as f:
+        config = json.load(f)
+    start_year = config["start_year"]
+    end_year = config["end_year"]
+    journals = config["journals"]
+    fetch_crossref(journals, start_year, end_year)
+    print("Journals updated.")

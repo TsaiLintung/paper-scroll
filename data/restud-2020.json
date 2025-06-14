@@ -13331,6 +13331,628 @@
             12
           ]
         ],
+        "date-time": "2025-06-12T11:05:04Z",
+        "timestamp": 1749726304996
+      },
+      "reference-count": 45,
+      "publisher": "Oxford University Press (OUP)",
+      "issue": "1",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2020,
+                8,
+                8
+              ]
+            ],
+            "date-time": "2020-08-08T00:00:00Z",
+            "timestamp": 1596844800000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://academic.oup.com/journals/pages/open_access/funder_policies/chorus/standard_publication_model"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2021,
+            2,
+            1
+          ]
+        ]
+      },
+      "abstract": "<jats:title>Abstract</jats:title><jats:p>In this paper, we use two comprehensive micro-data sets to study how the distribution of mortgage debt evolved during the 2000s housing boom. We show that the allocation of mortgage debt across the income distribution remained stable, as did the allocation of real estate assets. Any theory of the boom must replicate these facts, and a general equilibrium model shows that doing so requires two elements: (1) an exogenous shock that increases expected house price growth or, alternatively, reduces interest rates and (2) financial markets that endogenously relax borrowing constraints in response to the shock. Empirically, the endogenous relaxation of constraints was largely accomplished with subprime lending, which allowed the mortgage debt of low-income households to increase at the same rate as that of high-income households.</jats:p>",
+      "DOI": "10.1093/restud/rdaa034",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2020,
+            7,
+            27
+          ]
+        ],
+        "date-time": "2020-07-27T11:27:00Z",
+        "timestamp": 1595849220000
+      },
+      "page": "229-259",
+      "source": "Crossref",
+      "is-referenced-by-count": 40,
+      "title": [
+        "Cross-Sectional Patterns of Mortgage Debt during the Housing Boom: Evidence and Implications"
+      ],
+      "prefix": "10.1093",
+      "volume": "88",
+      "author": [
+        {
+          "given": "Christopher L",
+          "family": "Foote",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Federal Reserve Bank of Boston"
+            }
+          ]
+        },
+        {
+          "given": "Lara",
+          "family": "Loewenstein",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Federal Reserve Bank of Cleveland"
+            }
+          ]
+        },
+        {
+          "given": "Paul S",
+          "family": "Willen",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Federal Reserve Bank of Boston"
+            }
+          ]
+        }
+      ],
+      "member": "286",
+      "published-online": {
+        "date-parts": [
+          [
+            2020,
+            8,
+            8
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "2021020118562370400_B1",
+          "doi-asserted-by": "crossref",
+          "first-page": "1635",
+          "DOI": "10.1093/rfs/hhw018",
+          "article-title": "Loan Originations and Defaults in the Mortgage Crisis: The Role of the Middle Class",
+          "volume": "29",
+          "author": "ADELINO,",
+          "year": "2016",
+          "journal-title": "Review of Financial Studies"
+        },
+        {
+          "key": "2021020118562370400_B2",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.3386/w23740",
+          "article-title": "Credit Growth and the Financial Crisis: A New Narrative",
+          "author": "ALBANESI,",
+          "year": "2017"
+        },
+        {
+          "key": "2021020118562370400_B3",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.3386/w22816",
+          "article-title": "Housing Demand, Cost-of-Living Inequality, and the Affordability Crisis",
+          "author": "ALBOUY,",
+          "year": "2016"
+        },
+        {
+          "key": "2021020118562370400_B4",
+          "doi-asserted-by": "crossref",
+          "first-page": "147",
+          "DOI": "10.1257/aer.p20151054",
+          "article-title": "The Great Recession and Credit Trends across Income Groups",
+          "volume": "105",
+          "author": "AMROMIN,",
+          "year": "2015",
+          "journal-title": "American Economic Review"
+        },
+        {
+          "key": "2021020118562370400_B5",
+          "doi-asserted-by": "crossref",
+          "first-page": "284",
+          "DOI": "10.1016/j.jmoneco.2015.02.005",
+          "article-title": "The Ins and Outs of Mortgage Debt during the Housing Boom and Bust",
+          "volume": "76",
+          "author": "BHUTTA,",
+          "year": "2015",
+          "journal-title": "Journal of Monetary Economics"
+        },
+        {
+          "key": "2021020118562370400_B6",
+          "doi-asserted-by": "crossref",
+          "first-page": "1742",
+          "DOI": "10.1257/aer.20140040",
+          "article-title": "Interest Rates and Equity Extraction during the Housing Boom",
+          "volume": "106",
+          "author": "BHUTTA,",
+          "year": "2016",
+          "journal-title": "American Economic Review"
+        },
+        {
+          "year": "1989, 1992, 1995, 1998, 2001, 2004, 2007, 2010, 2013",
+          "journal-title": "Survey of Consumer Finances: Summary Extract Public Data",
+          "key": "2021020118562370400_B7"
+        },
+        {
+          "key": "2021020118562370400_B8",
+          "doi-asserted-by": "crossref",
+          "first-page": "1088",
+          "DOI": "10.1086/686732",
+          "article-title": "Understanding Booms and Busts in Housing Markets",
+          "volume": "124",
+          "author": "BURNSIDE,",
+          "year": "2016",
+          "journal-title": "Journal of Political Economy"
+        },
+        {
+          "key": "2021020118562370400_B9",
+          "first-page": "1553",
+          "article-title": "Household Finance (Presidential Address to the American Finance Association)",
+          "volume": "61",
+          "author": "CAMPBELL,",
+          "year": "2006",
+          "journal-title": "Journal of Finance"
+        },
+        {
+          "key": "2021020118562370400_B10",
+          "doi-asserted-by": "crossref",
+          "first-page": "265",
+          "DOI": "10.1353/eca.2012.0014",
+          "article-title": "What Have They Been Thinking? Homebuyer Behavior in Hot and Cold Markets",
+          "volume": "45",
+          "author": "CASE,",
+          "year": "2012",
+          "journal-title": "Brookings Papers on Economic Activity"
+        },
+        {
+          "key": "2021020118562370400_B11",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.21799/frbp.wp.2011.30",
+          "volume-title": "Collateral Damage: Sizing and Assessing the Subprime CDO Crisis",
+          "author": "CORDELL,",
+          "year": "2012"
+        },
+        {
+          "key": "2021020118562370400_B12",
+          "doi-asserted-by": "crossref",
+          "first-page": "140",
+          "DOI": "10.1086/689606",
+          "article-title": "The Macroeconomic Effects of Housing Wealth, Housing Finance, and Limited Risk Sharing in General Equilibrium",
+          "volume": "125",
+          "author": "FAVILUKIS,",
+          "year": "2017",
+          "journal-title": "Journal of Political Economy"
+        },
+        {
+          "volume-title": "Underwriting Manual: Underwriting Analysis Under Title II, Section 203 of the National Housing Act",
+          "year": "1947",
+          "key": "2021020118562370400_B13"
+        },
+        {
+          "year": "2015",
+          "author": "FERREIRA,",
+          "article-title": "A New Look at the US Foreclosure Crisis: Panel Data Evidence of Prime and Subprime Borrowers from 1997 to 2012",
+          "key": "2021020118562370400_B14"
+        },
+        {
+          "volume-title": "The Financial Crisis Inquiry Report: Final Report of the National Commission on the Causes of the Financial and Economic Crisis in the United States",
+          "year": "2011",
+          "key": "2021020118562370400_B15"
+        },
+        {
+          "key": "2021020118562370400_B16",
+          "first-page": "136",
+          "volume-title": "Rethinking the Financial Crisis",
+          "author": "FOOTE,",
+          "year": "2012"
+        },
+        {
+          "key": "2021020118562370400_B17",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.26509/frbc-wp-201816",
+          "article-title": "Technological Innovation in Mortgage Underwriting and the Growth in Credit: 1985–2015",
+          "author": "FOOTE,",
+          "year": "2018"
+        },
+        {
+          "key": "2021020118562370400_B18",
+          "doi-asserted-by": "crossref",
+          "first-page": "1",
+          "DOI": "10.1086/663989",
+          "article-title": "Natural Expectations, Macroeconomic Dynamics, and Asset Pricing",
+          "volume": "26",
+          "author": "FUSTER,",
+          "year": "2012",
+          "journal-title": "NBER Macroeconomics Annual"
+        },
+        {
+          "key": "2021020118562370400_B19",
+          "doi-asserted-by": "crossref",
+          "first-page": "67",
+          "DOI": "10.1257/jep.24.4.67",
+          "article-title": "Natural Expectations and Macroeconomic Fluctuations",
+          "volume": "24",
+          "author": "FUSTER,",
+          "year": "2010",
+          "journal-title": "Journal of Economic Perspectives"
+        },
+        {
+          "year": "2018",
+          "author": "GALLIN,",
+          "article-title": "Measuring Aggregate Housing Wealth: New Insights from Machine Learning",
+          "key": "2021020118562370400_B20"
+        },
+        {
+          "volume-title": "A Crisis of Beliefs: Investor Psychology and Financial Fragility",
+          "year": "2018",
+          "author": "GENNAIOLI,",
+          "key": "2021020118562370400_B21"
+        },
+        {
+          "key": "2021020118562370400_B22",
+          "doi-asserted-by": "crossref",
+          "first-page": "69",
+          "DOI": "10.1353/eca.0.0017",
+          "article-title": "Making Sense of the Subprime Crisis",
+          "volume": "39",
+          "author": "GERARDI,",
+          "year": "2008",
+          "journal-title": "Brookings Papers on Economic Activity"
+        },
+        {
+          "key": "2021020118562370400_B23",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.2202/1935-1682.2232",
+          "article-title": "Subprime Mortgages, Foreclosures, and Urban Neighborhoods",
+          "volume": "9",
+          "author": "GERARDI,",
+          "year": "2009",
+          "journal-title": "B.E. Journal of Economic Analysis & Policy"
+        },
+        {
+          "key": "2021020118562370400_B24",
+          "doi-asserted-by": "crossref",
+          "first-page": "26",
+          "DOI": "10.9783/9780812204308.26",
+          "volume-title": "The American Mortgage System: Crisis and Reform",
+          "author": "GERARDI,",
+          "year": "2011"
+        },
+        {
+          "key": "2021020118562370400_B25",
+          "doi-asserted-by": "crossref",
+          "first-page": "301",
+          "DOI": "10.7208/chicago/9780226030616.003.0008",
+          "volume-title": "Housing and the Financial Crisis",
+          "author": "GLAESER,",
+          "year": "2013"
+        },
+        {
+          "key": "2021020118562370400_B26",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.3386/w21037",
+          "article-title": "An Extrapolative Model of House Price Dynamics",
+          "author": "GLAESER,",
+          "year": "2015,"
+        },
+        {
+          "year": "2007",
+          "article-title": "FHA: Decline in Agency’s Market Share was Associated with Product and Process Developments of Other Market Participants",
+          "key": "2021020118562370400_B27"
+        },
+        {
+          "key": "2021020118562370400_B28",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.2139/ssrn.2735491",
+          "article-title": "The mortgage credit channel of macroeconomic transmission",
+          "author": "GREENWALD,",
+          "year": "2016"
+        },
+        {
+          "key": "2021020118562370400_B29",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.2139/ssrn.1926858",
+          "article-title": "Real Estate Investors, the Leverage Cycle, and the Housing Market Crisis",
+          "author": "HAUGHWOUT,",
+          "year": "2011"
+        },
+        {
+          "key": "2021020118562370400_B30",
+          "first-page": "1",
+          "article-title": "Problems for a Fundamental Theory of House Prices",
+          "volume": "95",
+          "author": "HORNSTEIN,",
+          "year": "2009",
+          "journal-title": "Federal Reserve Bank of Richmond Economic Quarterly"
+        },
+        {
+          "year": "2007",
+          "author": "INTERNAL REVENUE",
+          "article-title": "Statistics of Income 2007: Individual Income Tax Returns (Publication 1304, Revised 07-2009)",
+          "key": "2021020118562370400_B31"
+        },
+        {
+          "key": "2021020118562370400_B32",
+          "doi-asserted-by": "crossref",
+          "first-page": "117",
+          "DOI": "10.2307/41166472",
+          "article-title": "Mortgage Guarantee Programs and the Subprime Crisis",
+          "volume": "51",
+          "author": "JAFFEE,",
+          "year": "2008",
+          "journal-title": "California Management Review"
+        },
+        {
+          "key": "2021020118562370400_B33",
+          "doi-asserted-by": "crossref",
+          "first-page": "1317",
+          "DOI": "10.1086/701440",
+          "article-title": "Credit Supply and the Housing Boom",
+          "volume": "127",
+          "author": "JUSTINIANO,",
+          "year": "2019",
+          "journal-title": "Journal of Political Economy"
+        },
+        {
+          "volume-title": "The Housing Boom and Bust: Model Meets Evidence”",
+          "year": "2019",
+          "author": "KAPLAN,",
+          "key": "2021020118562370400_B34"
+        },
+        {
+          "key": "2021020118562370400_B35",
+          "doi-asserted-by": "crossref",
+          "first-page": "307",
+          "DOI": "10.1162/qjec.2010.125.1.307",
+          "article-title": "Did Securitization Lead to Lax Screening? Evidence from Subprime Loans",
+          "volume": "125",
+          "author": "KEYS,",
+          "year": "2010",
+          "journal-title": "Quarterly Journal of Economics"
+        },
+        {
+          "key": "2021020118562370400_B36",
+          "doi-asserted-by": "crossref",
+          "first-page": "255",
+          "DOI": "10.1111/j.1538-4616.2011.00374.x",
+          "article-title": "Winners and Losers in Housing Markets",
+          "volume": "43",
+          "author": "KIYOTAKI,",
+          "year": "2011",
+          "journal-title": "Journal of Money, Credit and Banking"
+        },
+        {
+          "key": "2021020118562370400_B37",
+          "doi-asserted-by": "crossref",
+          "first-page": "1217",
+          "DOI": "10.1257/aer.20110683",
+          "article-title": "Inequality, Leverage, and Crises",
+          "volume": "105",
+          "author": "KUMHOF,",
+          "year": "2015",
+          "journal-title": "American Economic Review"
+        },
+        {
+          "key": "2021020118562370400_B38",
+          "doi-asserted-by": "crossref",
+          "first-page": "1371",
+          "DOI": "10.1257/aer.20111662",
+          "article-title": "The Housing Market(s) of San Diego",
+          "volume": "105",
+          "author": "LANDVOIGT,",
+          "year": "2015",
+          "journal-title": "American Economic Review"
+        },
+        {
+          "year": "2018",
+          "author": "LOEWENSTEIN,",
+          "article-title": "Consumption of Housing during the 2000s Boom: Evidence and Theory",
+          "key": "2021020118562370400_B39"
+        },
+        {
+          "key": "2021020118562370400_B40",
+          "doi-asserted-by": "crossref",
+          "first-page": "27",
+          "DOI": "10.1257/jep.23.1.27",
+          "article-title": "The Rise in Mortgage Defaults",
+          "volume": "23",
+          "author": "MAYER,",
+          "year": "2009",
+          "journal-title": "Journal of Economic Perspectives"
+        },
+        {
+          "key": "2021020118562370400_B41",
+          "doi-asserted-by": "crossref",
+          "first-page": "1449",
+          "DOI": "10.1162/qjec.2009.124.4.1449",
+          "article-title": "The Consequences of Mortgage Credit Expansion: Evidence from the US Mortgage Default Crisis",
+          "volume": "124",
+          "author": "MIAN,",
+          "year": "2009",
+          "journal-title": "Quarterly Journal of Economics"
+        },
+        {
+          "key": "2021020118562370400_B42",
+          "doi-asserted-by": "crossref",
+          "first-page": "1832",
+          "DOI": "10.1093/rfs/hhw104",
+          "article-title": "Fraudulent Income Overstatement on Mortgage Applications during the Credit Expansion of 2002 to 2005",
+          "volume": "30",
+          "author": "MIAN,",
+          "year": "2017",
+          "journal-title": "Review of Financial Studies"
+        },
+        {
+          "key": "2021020118562370400_B43",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.3386/w24509",
+          "article-title": "Mortgage-backed Securities and the Financial Crisis of 2008: A Post Mortem",
+          "author": "OSPINA,",
+          "year": "2018"
+        },
+        {
+          "key": "2021020118562370400_B44",
+          "doi-asserted-by": "crossref",
+          "first-page": "729",
+          "DOI": "10.2307/1883123",
+          "article-title": "Tax Subsidies to Owner-occupied Housing: An Asset-market Approach",
+          "volume": "99",
+          "author": "POTERBA,",
+          "year": "1984",
+          "journal-title": "Quarterly Journal of Economics"
+        },
+        {
+          "key": "2021020118562370400_B45",
+          "doi-asserted-by": "crossref",
+          "first-page": "854",
+          "DOI": "10.1016/j.jmoneco.2013.04.017",
+          "article-title": "The Equilibrium Effect of Fundamentals on House Prices and Rents",
+          "volume": "60",
+          "author": "SOMMER,",
+          "year": "2013",
+          "journal-title": "Journal of Monetary Economics"
+        }
+      ],
+      "container-title": [
+        "The Review of Economic Studies"
+      ],
+      "language": "en",
+      "link": [
+        {
+          "URL": "http://academic.oup.com/restud/advance-article-pdf/doi/10.1093/restud/rdaa034/33794441/rdaa034.pdf",
+          "content-type": "application/pdf",
+          "content-version": "am",
+          "intended-application": "syndication"
+        },
+        {
+          "URL": "http://academic.oup.com/restud/article-pdf/88/1/229/36167381/rdaa034.pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "syndication"
+        },
+        {
+          "URL": "http://academic.oup.com/restud/article-pdf/88/1/229/36167381/rdaa034.pdf",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2024,
+            8,
+            10
+          ]
+        ],
+        "date-time": "2024-08-10T21:12:05Z",
+        "timestamp": 1723324325000
+      },
+      "score": 0.0,
+      "resource": {
+        "primary": {
+          "URL": "https://academic.oup.com/restud/article/88/1/229/5889966"
+        }
+      },
+      "issued": {
+        "date-parts": [
+          [
+            2020,
+            8,
+            8
+          ]
+        ]
+      },
+      "references-count": 45,
+      "journal-issue": {
+        "issue": "1",
+        "published-online": {
+          "date-parts": [
+            [
+              2020,
+              8,
+              8
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2021,
+              2,
+              1
+            ]
+          ]
+        }
+      },
+      "URL": "https://doi.org/10.1093/restud/rdaa034",
+      "ISSN": [
+        "0034-6527",
+        "1467-937X"
+      ],
+      "issn-type": [
+        {
+          "type": "print",
+          "value": "0034-6527"
+        },
+        {
+          "type": "electronic",
+          "value": "1467-937X"
+        }
+      ],
+      "published-other": {
+        "date-parts": [
+          [
+            2021,
+            1,
+            1
+          ]
+        ]
+      },
+      "published": {
+        "date-parts": [
+          [
+            2020,
+            8,
+            8
+          ]
+        ]
+      }
+    },
+    {
+      "indexed": {
+        "date-parts": [
+          [
+            2025,
+            6,
+            12
+          ]
+        ],
         "date-time": "2025-06-12T04:18:10Z",
         "timestamp": 1749701890403
       },
@@ -13952,628 +14574,6 @@
             2020,
             9,
             17
-          ]
-        ]
-      }
-    },
-    {
-      "indexed": {
-        "date-parts": [
-          [
-            2025,
-            6,
-            12
-          ]
-        ],
-        "date-time": "2025-06-12T11:05:04Z",
-        "timestamp": 1749726304996
-      },
-      "reference-count": 45,
-      "publisher": "Oxford University Press (OUP)",
-      "issue": "1",
-      "license": [
-        {
-          "start": {
-            "date-parts": [
-              [
-                2020,
-                8,
-                8
-              ]
-            ],
-            "date-time": "2020-08-08T00:00:00Z",
-            "timestamp": 1596844800000
-          },
-          "content-version": "vor",
-          "delay-in-days": 0,
-          "URL": "https://academic.oup.com/journals/pages/open_access/funder_policies/chorus/standard_publication_model"
-        }
-      ],
-      "content-domain": {
-        "domain": [],
-        "crossmark-restriction": false
-      },
-      "published-print": {
-        "date-parts": [
-          [
-            2021,
-            2,
-            1
-          ]
-        ]
-      },
-      "abstract": "<jats:title>Abstract</jats:title><jats:p>In this paper, we use two comprehensive micro-data sets to study how the distribution of mortgage debt evolved during the 2000s housing boom. We show that the allocation of mortgage debt across the income distribution remained stable, as did the allocation of real estate assets. Any theory of the boom must replicate these facts, and a general equilibrium model shows that doing so requires two elements: (1) an exogenous shock that increases expected house price growth or, alternatively, reduces interest rates and (2) financial markets that endogenously relax borrowing constraints in response to the shock. Empirically, the endogenous relaxation of constraints was largely accomplished with subprime lending, which allowed the mortgage debt of low-income households to increase at the same rate as that of high-income households.</jats:p>",
-      "DOI": "10.1093/restud/rdaa034",
-      "type": "journal-article",
-      "created": {
-        "date-parts": [
-          [
-            2020,
-            7,
-            27
-          ]
-        ],
-        "date-time": "2020-07-27T11:27:00Z",
-        "timestamp": 1595849220000
-      },
-      "page": "229-259",
-      "source": "Crossref",
-      "is-referenced-by-count": 40,
-      "title": [
-        "Cross-Sectional Patterns of Mortgage Debt during the Housing Boom: Evidence and Implications"
-      ],
-      "prefix": "10.1093",
-      "volume": "88",
-      "author": [
-        {
-          "given": "Christopher L",
-          "family": "Foote",
-          "sequence": "first",
-          "affiliation": [
-            {
-              "name": "Federal Reserve Bank of Boston"
-            }
-          ]
-        },
-        {
-          "given": "Lara",
-          "family": "Loewenstein",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Federal Reserve Bank of Cleveland"
-            }
-          ]
-        },
-        {
-          "given": "Paul S",
-          "family": "Willen",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Federal Reserve Bank of Boston"
-            }
-          ]
-        }
-      ],
-      "member": "286",
-      "published-online": {
-        "date-parts": [
-          [
-            2020,
-            8,
-            8
-          ]
-        ]
-      },
-      "reference": [
-        {
-          "key": "2021020118562370400_B1",
-          "doi-asserted-by": "crossref",
-          "first-page": "1635",
-          "DOI": "10.1093/rfs/hhw018",
-          "article-title": "Loan Originations and Defaults in the Mortgage Crisis: The Role of the Middle Class",
-          "volume": "29",
-          "author": "ADELINO,",
-          "year": "2016",
-          "journal-title": "Review of Financial Studies"
-        },
-        {
-          "key": "2021020118562370400_B2",
-          "doi-asserted-by": "crossref",
-          "DOI": "10.3386/w23740",
-          "article-title": "Credit Growth and the Financial Crisis: A New Narrative",
-          "author": "ALBANESI,",
-          "year": "2017"
-        },
-        {
-          "key": "2021020118562370400_B3",
-          "doi-asserted-by": "crossref",
-          "DOI": "10.3386/w22816",
-          "article-title": "Housing Demand, Cost-of-Living Inequality, and the Affordability Crisis",
-          "author": "ALBOUY,",
-          "year": "2016"
-        },
-        {
-          "key": "2021020118562370400_B4",
-          "doi-asserted-by": "crossref",
-          "first-page": "147",
-          "DOI": "10.1257/aer.p20151054",
-          "article-title": "The Great Recession and Credit Trends across Income Groups",
-          "volume": "105",
-          "author": "AMROMIN,",
-          "year": "2015",
-          "journal-title": "American Economic Review"
-        },
-        {
-          "key": "2021020118562370400_B5",
-          "doi-asserted-by": "crossref",
-          "first-page": "284",
-          "DOI": "10.1016/j.jmoneco.2015.02.005",
-          "article-title": "The Ins and Outs of Mortgage Debt during the Housing Boom and Bust",
-          "volume": "76",
-          "author": "BHUTTA,",
-          "year": "2015",
-          "journal-title": "Journal of Monetary Economics"
-        },
-        {
-          "key": "2021020118562370400_B6",
-          "doi-asserted-by": "crossref",
-          "first-page": "1742",
-          "DOI": "10.1257/aer.20140040",
-          "article-title": "Interest Rates and Equity Extraction during the Housing Boom",
-          "volume": "106",
-          "author": "BHUTTA,",
-          "year": "2016",
-          "journal-title": "American Economic Review"
-        },
-        {
-          "year": "1989, 1992, 1995, 1998, 2001, 2004, 2007, 2010, 2013",
-          "journal-title": "Survey of Consumer Finances: Summary Extract Public Data",
-          "key": "2021020118562370400_B7"
-        },
-        {
-          "key": "2021020118562370400_B8",
-          "doi-asserted-by": "crossref",
-          "first-page": "1088",
-          "DOI": "10.1086/686732",
-          "article-title": "Understanding Booms and Busts in Housing Markets",
-          "volume": "124",
-          "author": "BURNSIDE,",
-          "year": "2016",
-          "journal-title": "Journal of Political Economy"
-        },
-        {
-          "key": "2021020118562370400_B9",
-          "first-page": "1553",
-          "article-title": "Household Finance (Presidential Address to the American Finance Association)",
-          "volume": "61",
-          "author": "CAMPBELL,",
-          "year": "2006",
-          "journal-title": "Journal of Finance"
-        },
-        {
-          "key": "2021020118562370400_B10",
-          "doi-asserted-by": "crossref",
-          "first-page": "265",
-          "DOI": "10.1353/eca.2012.0014",
-          "article-title": "What Have They Been Thinking? Homebuyer Behavior in Hot and Cold Markets",
-          "volume": "45",
-          "author": "CASE,",
-          "year": "2012",
-          "journal-title": "Brookings Papers on Economic Activity"
-        },
-        {
-          "key": "2021020118562370400_B11",
-          "doi-asserted-by": "crossref",
-          "DOI": "10.21799/frbp.wp.2011.30",
-          "volume-title": "Collateral Damage: Sizing and Assessing the Subprime CDO Crisis",
-          "author": "CORDELL,",
-          "year": "2012"
-        },
-        {
-          "key": "2021020118562370400_B12",
-          "doi-asserted-by": "crossref",
-          "first-page": "140",
-          "DOI": "10.1086/689606",
-          "article-title": "The Macroeconomic Effects of Housing Wealth, Housing Finance, and Limited Risk Sharing in General Equilibrium",
-          "volume": "125",
-          "author": "FAVILUKIS,",
-          "year": "2017",
-          "journal-title": "Journal of Political Economy"
-        },
-        {
-          "volume-title": "Underwriting Manual: Underwriting Analysis Under Title II, Section 203 of the National Housing Act",
-          "year": "1947",
-          "key": "2021020118562370400_B13"
-        },
-        {
-          "year": "2015",
-          "author": "FERREIRA,",
-          "article-title": "A New Look at the US Foreclosure Crisis: Panel Data Evidence of Prime and Subprime Borrowers from 1997 to 2012",
-          "key": "2021020118562370400_B14"
-        },
-        {
-          "volume-title": "The Financial Crisis Inquiry Report: Final Report of the National Commission on the Causes of the Financial and Economic Crisis in the United States",
-          "year": "2011",
-          "key": "2021020118562370400_B15"
-        },
-        {
-          "key": "2021020118562370400_B16",
-          "first-page": "136",
-          "volume-title": "Rethinking the Financial Crisis",
-          "author": "FOOTE,",
-          "year": "2012"
-        },
-        {
-          "key": "2021020118562370400_B17",
-          "doi-asserted-by": "crossref",
-          "DOI": "10.26509/frbc-wp-201816",
-          "article-title": "Technological Innovation in Mortgage Underwriting and the Growth in Credit: 1985–2015",
-          "author": "FOOTE,",
-          "year": "2018"
-        },
-        {
-          "key": "2021020118562370400_B18",
-          "doi-asserted-by": "crossref",
-          "first-page": "1",
-          "DOI": "10.1086/663989",
-          "article-title": "Natural Expectations, Macroeconomic Dynamics, and Asset Pricing",
-          "volume": "26",
-          "author": "FUSTER,",
-          "year": "2012",
-          "journal-title": "NBER Macroeconomics Annual"
-        },
-        {
-          "key": "2021020118562370400_B19",
-          "doi-asserted-by": "crossref",
-          "first-page": "67",
-          "DOI": "10.1257/jep.24.4.67",
-          "article-title": "Natural Expectations and Macroeconomic Fluctuations",
-          "volume": "24",
-          "author": "FUSTER,",
-          "year": "2010",
-          "journal-title": "Journal of Economic Perspectives"
-        },
-        {
-          "year": "2018",
-          "author": "GALLIN,",
-          "article-title": "Measuring Aggregate Housing Wealth: New Insights from Machine Learning",
-          "key": "2021020118562370400_B20"
-        },
-        {
-          "volume-title": "A Crisis of Beliefs: Investor Psychology and Financial Fragility",
-          "year": "2018",
-          "author": "GENNAIOLI,",
-          "key": "2021020118562370400_B21"
-        },
-        {
-          "key": "2021020118562370400_B22",
-          "doi-asserted-by": "crossref",
-          "first-page": "69",
-          "DOI": "10.1353/eca.0.0017",
-          "article-title": "Making Sense of the Subprime Crisis",
-          "volume": "39",
-          "author": "GERARDI,",
-          "year": "2008",
-          "journal-title": "Brookings Papers on Economic Activity"
-        },
-        {
-          "key": "2021020118562370400_B23",
-          "doi-asserted-by": "crossref",
-          "DOI": "10.2202/1935-1682.2232",
-          "article-title": "Subprime Mortgages, Foreclosures, and Urban Neighborhoods",
-          "volume": "9",
-          "author": "GERARDI,",
-          "year": "2009",
-          "journal-title": "B.E. Journal of Economic Analysis & Policy"
-        },
-        {
-          "key": "2021020118562370400_B24",
-          "doi-asserted-by": "crossref",
-          "first-page": "26",
-          "DOI": "10.9783/9780812204308.26",
-          "volume-title": "The American Mortgage System: Crisis and Reform",
-          "author": "GERARDI,",
-          "year": "2011"
-        },
-        {
-          "key": "2021020118562370400_B25",
-          "doi-asserted-by": "crossref",
-          "first-page": "301",
-          "DOI": "10.7208/chicago/9780226030616.003.0008",
-          "volume-title": "Housing and the Financial Crisis",
-          "author": "GLAESER,",
-          "year": "2013"
-        },
-        {
-          "key": "2021020118562370400_B26",
-          "doi-asserted-by": "crossref",
-          "DOI": "10.3386/w21037",
-          "article-title": "An Extrapolative Model of House Price Dynamics",
-          "author": "GLAESER,",
-          "year": "2015,"
-        },
-        {
-          "year": "2007",
-          "article-title": "FHA: Decline in Agency’s Market Share was Associated with Product and Process Developments of Other Market Participants",
-          "key": "2021020118562370400_B27"
-        },
-        {
-          "key": "2021020118562370400_B28",
-          "doi-asserted-by": "crossref",
-          "DOI": "10.2139/ssrn.2735491",
-          "article-title": "The mortgage credit channel of macroeconomic transmission",
-          "author": "GREENWALD,",
-          "year": "2016"
-        },
-        {
-          "key": "2021020118562370400_B29",
-          "doi-asserted-by": "crossref",
-          "DOI": "10.2139/ssrn.1926858",
-          "article-title": "Real Estate Investors, the Leverage Cycle, and the Housing Market Crisis",
-          "author": "HAUGHWOUT,",
-          "year": "2011"
-        },
-        {
-          "key": "2021020118562370400_B30",
-          "first-page": "1",
-          "article-title": "Problems for a Fundamental Theory of House Prices",
-          "volume": "95",
-          "author": "HORNSTEIN,",
-          "year": "2009",
-          "journal-title": "Federal Reserve Bank of Richmond Economic Quarterly"
-        },
-        {
-          "year": "2007",
-          "author": "INTERNAL REVENUE",
-          "article-title": "Statistics of Income 2007: Individual Income Tax Returns (Publication 1304, Revised 07-2009)",
-          "key": "2021020118562370400_B31"
-        },
-        {
-          "key": "2021020118562370400_B32",
-          "doi-asserted-by": "crossref",
-          "first-page": "117",
-          "DOI": "10.2307/41166472",
-          "article-title": "Mortgage Guarantee Programs and the Subprime Crisis",
-          "volume": "51",
-          "author": "JAFFEE,",
-          "year": "2008",
-          "journal-title": "California Management Review"
-        },
-        {
-          "key": "2021020118562370400_B33",
-          "doi-asserted-by": "crossref",
-          "first-page": "1317",
-          "DOI": "10.1086/701440",
-          "article-title": "Credit Supply and the Housing Boom",
-          "volume": "127",
-          "author": "JUSTINIANO,",
-          "year": "2019",
-          "journal-title": "Journal of Political Economy"
-        },
-        {
-          "volume-title": "The Housing Boom and Bust: Model Meets Evidence”",
-          "year": "2019",
-          "author": "KAPLAN,",
-          "key": "2021020118562370400_B34"
-        },
-        {
-          "key": "2021020118562370400_B35",
-          "doi-asserted-by": "crossref",
-          "first-page": "307",
-          "DOI": "10.1162/qjec.2010.125.1.307",
-          "article-title": "Did Securitization Lead to Lax Screening? Evidence from Subprime Loans",
-          "volume": "125",
-          "author": "KEYS,",
-          "year": "2010",
-          "journal-title": "Quarterly Journal of Economics"
-        },
-        {
-          "key": "2021020118562370400_B36",
-          "doi-asserted-by": "crossref",
-          "first-page": "255",
-          "DOI": "10.1111/j.1538-4616.2011.00374.x",
-          "article-title": "Winners and Losers in Housing Markets",
-          "volume": "43",
-          "author": "KIYOTAKI,",
-          "year": "2011",
-          "journal-title": "Journal of Money, Credit and Banking"
-        },
-        {
-          "key": "2021020118562370400_B37",
-          "doi-asserted-by": "crossref",
-          "first-page": "1217",
-          "DOI": "10.1257/aer.20110683",
-          "article-title": "Inequality, Leverage, and Crises",
-          "volume": "105",
-          "author": "KUMHOF,",
-          "year": "2015",
-          "journal-title": "American Economic Review"
-        },
-        {
-          "key": "2021020118562370400_B38",
-          "doi-asserted-by": "crossref",
-          "first-page": "1371",
-          "DOI": "10.1257/aer.20111662",
-          "article-title": "The Housing Market(s) of San Diego",
-          "volume": "105",
-          "author": "LANDVOIGT,",
-          "year": "2015",
-          "journal-title": "American Economic Review"
-        },
-        {
-          "year": "2018",
-          "author": "LOEWENSTEIN,",
-          "article-title": "Consumption of Housing during the 2000s Boom: Evidence and Theory",
-          "key": "2021020118562370400_B39"
-        },
-        {
-          "key": "2021020118562370400_B40",
-          "doi-asserted-by": "crossref",
-          "first-page": "27",
-          "DOI": "10.1257/jep.23.1.27",
-          "article-title": "The Rise in Mortgage Defaults",
-          "volume": "23",
-          "author": "MAYER,",
-          "year": "2009",
-          "journal-title": "Journal of Economic Perspectives"
-        },
-        {
-          "key": "2021020118562370400_B41",
-          "doi-asserted-by": "crossref",
-          "first-page": "1449",
-          "DOI": "10.1162/qjec.2009.124.4.1449",
-          "article-title": "The Consequences of Mortgage Credit Expansion: Evidence from the US Mortgage Default Crisis",
-          "volume": "124",
-          "author": "MIAN,",
-          "year": "2009",
-          "journal-title": "Quarterly Journal of Economics"
-        },
-        {
-          "key": "2021020118562370400_B42",
-          "doi-asserted-by": "crossref",
-          "first-page": "1832",
-          "DOI": "10.1093/rfs/hhw104",
-          "article-title": "Fraudulent Income Overstatement on Mortgage Applications during the Credit Expansion of 2002 to 2005",
-          "volume": "30",
-          "author": "MIAN,",
-          "year": "2017",
-          "journal-title": "Review of Financial Studies"
-        },
-        {
-          "key": "2021020118562370400_B43",
-          "doi-asserted-by": "crossref",
-          "DOI": "10.3386/w24509",
-          "article-title": "Mortgage-backed Securities and the Financial Crisis of 2008: A Post Mortem",
-          "author": "OSPINA,",
-          "year": "2018"
-        },
-        {
-          "key": "2021020118562370400_B44",
-          "doi-asserted-by": "crossref",
-          "first-page": "729",
-          "DOI": "10.2307/1883123",
-          "article-title": "Tax Subsidies to Owner-occupied Housing: An Asset-market Approach",
-          "volume": "99",
-          "author": "POTERBA,",
-          "year": "1984",
-          "journal-title": "Quarterly Journal of Economics"
-        },
-        {
-          "key": "2021020118562370400_B45",
-          "doi-asserted-by": "crossref",
-          "first-page": "854",
-          "DOI": "10.1016/j.jmoneco.2013.04.017",
-          "article-title": "The Equilibrium Effect of Fundamentals on House Prices and Rents",
-          "volume": "60",
-          "author": "SOMMER,",
-          "year": "2013",
-          "journal-title": "Journal of Monetary Economics"
-        }
-      ],
-      "container-title": [
-        "The Review of Economic Studies"
-      ],
-      "language": "en",
-      "link": [
-        {
-          "URL": "http://academic.oup.com/restud/advance-article-pdf/doi/10.1093/restud/rdaa034/33794441/rdaa034.pdf",
-          "content-type": "application/pdf",
-          "content-version": "am",
-          "intended-application": "syndication"
-        },
-        {
-          "URL": "http://academic.oup.com/restud/article-pdf/88/1/229/36167381/rdaa034.pdf",
-          "content-type": "application/pdf",
-          "content-version": "vor",
-          "intended-application": "syndication"
-        },
-        {
-          "URL": "http://academic.oup.com/restud/article-pdf/88/1/229/36167381/rdaa034.pdf",
-          "content-type": "unspecified",
-          "content-version": "vor",
-          "intended-application": "similarity-checking"
-        }
-      ],
-      "deposited": {
-        "date-parts": [
-          [
-            2024,
-            8,
-            10
-          ]
-        ],
-        "date-time": "2024-08-10T21:12:05Z",
-        "timestamp": 1723324325000
-      },
-      "score": 0.0,
-      "resource": {
-        "primary": {
-          "URL": "https://academic.oup.com/restud/article/88/1/229/5889966"
-        }
-      },
-      "issued": {
-        "date-parts": [
-          [
-            2020,
-            8,
-            8
-          ]
-        ]
-      },
-      "references-count": 45,
-      "journal-issue": {
-        "issue": "1",
-        "published-online": {
-          "date-parts": [
-            [
-              2020,
-              8,
-              8
-            ]
-          ]
-        },
-        "published-print": {
-          "date-parts": [
-            [
-              2021,
-              2,
-              1
-            ]
-          ]
-        }
-      },
-      "URL": "https://doi.org/10.1093/restud/rdaa034",
-      "ISSN": [
-        "0034-6527",
-        "1467-937X"
-      ],
-      "issn-type": [
-        {
-          "type": "print",
-          "value": "0034-6527"
-        },
-        {
-          "type": "electronic",
-          "value": "1467-937X"
-        }
-      ],
-      "published-other": {
-        "date-parts": [
-          [
-            2021,
-            1,
-            1
-          ]
-        ]
-      },
-      "published": {
-        "date-parts": [
-          [
-            2020,
-            8,
-            8
           ]
         ]
       }
@@ -16692,819 +16692,6 @@
           [
             2025,
             5,
-            5
-          ]
-        ],
-        "date-time": "2025-05-05T02:44:11Z",
-        "timestamp": 1746413051349
-      },
-      "reference-count": 62,
-      "publisher": "Oxford University Press (OUP)",
-      "issue": "5",
-      "license": [
-        {
-          "start": {
-            "date-parts": [
-              [
-                2020,
-                12,
-                24
-              ]
-            ],
-            "date-time": "2020-12-24T00:00:00Z",
-            "timestamp": 1608768000000
-          },
-          "content-version": "vor",
-          "delay-in-days": 0,
-          "URL": "https://academic.oup.com/journals/pages/open_access/funder_policies/chorus/standard_publication_model"
-        }
-      ],
-      "content-domain": {
-        "domain": [],
-        "crossmark-restriction": false
-      },
-      "published-print": {
-        "date-parts": [
-          [
-            2021,
-            9,
-            11
-          ]
-        ]
-      },
-      "abstract": "<jats:title>Abstract</jats:title><jats:p>I consider the aggregate impact of low intermediate input intensity in the agricultural sector of developing countries. In a dynamic general equilibrium model with idiosyncratic shocks, incomplete markets, and subsistence requirements, farmers in developing countries use fewer intermediate inputs because it limits their exposure to uninsurable shocks. The calibrated model implies that Indian agricultural productivity would increase by 16% if markets were complete, driven by quantitatively important increases in both the average real intermediate share and measured TFP through lower misallocation. I then extend the results to consider the importance of risk in other contexts. First, the introduction of insurance decreases cross-country differences in agricultural labour productivity by 14%. Second, scaling the introduction of improved seeds to decrease downside risk reduces inequality by reallocating resources from rich to poor farmers via equilibrium effects. This reallocation substantially increases aggregate productivity relative to what would be expected from extrapolating the partial equilibrium impact.</jats:p>",
-      "DOI": "10.1093/restud/rdaa084",
-      "type": "journal-article",
-      "created": {
-        "date-parts": [
-          [
-            2020,
-            12,
-            3
-          ]
-        ],
-        "date-time": "2020-12-03T12:38:59Z",
-        "timestamp": 1606999139000
-      },
-      "page": "2275-2307",
-      "source": "Crossref",
-      "is-referenced-by-count": 42,
-      "title": [
-        "The Equilibrium Impact of Agricultural Risk on Intermediate Inputs and Aggregate Productivity"
-      ],
-      "prefix": "10.1093",
-      "volume": "88",
-      "author": [
-        {
-          "given": "Kevin",
-          "family": "Donovan",
-          "sequence": "first",
-          "affiliation": [
-            {
-              "name": "Yale School of Management"
-            }
-          ]
-        }
-      ],
-      "member": "286",
-      "published-online": {
-        "date-parts": [
-          [
-            2020,
-            12,
-            24
-          ]
-        ]
-      },
-      "reference": [
-        {
-          "key": "2021091117573787800_B1",
-          "doi-asserted-by": "crossref",
-          "first-page": "489",
-          "DOI": "10.1111/j.1468-2354.2011.00636.x",
-          "article-title": "Transportation Costs, Agricultural Productivity, and Cross-Country Income Differences",
-          "volume": "52",
-          "author": "ADAMOPOULOS,",
-          "year": "2011",
-          "journal-title": "International Economic Review,"
-        },
-        {
-          "key": "2021091117573787800_B2",
-          "article-title": "Spatial Integration and Agricultural Productivity: Quantifying the Impact of New Roads",
-          "author": "ADAMOPOULOS,"
-        },
-        {
-          "key": "2021091117573787800_B3",
-          "article-title": "Misallocation, Selection and Productivity: A Quantitative Analysis with Panel Data from China",
-          "author": "ADAMOPOULOS,",
-          "year": "2019"
-        },
-        {
-          "key": "2021091117573787800_B4",
-          "doi-asserted-by": "crossref",
-          "first-page": "1667",
-          "DOI": "10.1257/aer.104.6.1667",
-          "article-title": "The Size Distribution of Farms and International Productivity Differences",
-          "volume": "104",
-          "author": "ADAMOPOULOS,",
-          "year": "2014",
-          "journal-title": "American Economic Review,"
-        },
-        {
-          "key": "2021091117573787800_B5",
-          "doi-asserted-by": "crossref",
-          "DOI": "10.3386/w24532",
-          "article-title": "Geography and Agricultural Productivity: Cross-Country Evidence from Micro Plot-Level Data",
-          "author": "ADAMOPOULOS,",
-          "year": "2018"
-        },
-        {
-          "key": "2021091117573787800_B6",
-          "doi-asserted-by": "crossref",
-          "first-page": "659",
-          "DOI": "10.2307/2118417",
-          "article-title": "Uninsured idiosyncratic risk and aggregate saving",
-          "volume": "109",
-          "author": "AIYAGARI,",
-          "year": "1994",
-          "journal-title": "Quarterly Journal of Economics,"
-        },
-        {
-          "key": "2021091117573787800_B7",
-          "doi-asserted-by": "crossref",
-          "first-page": "583",
-          "DOI": "10.1086/692165",
-          "article-title": "Continued Existence of Cows Disproved Central Tenets of Capitalism?",
-          "volume": "65",
-          "author": "ANAGOL,",
-          "year": "2017",
-          "journal-title": "Economic Development and Cultural Change,"
-        },
-        {
-          "key": "2021091117573787800_B8",
-          "doi-asserted-by": "crossref",
-          "DOI": "10.3386/w21251",
-          "article-title": "Linkages and Economic Development",
-          "author": "BARTELME,",
-          "year": "2015"
-        },
-        {
-          "key": "2021091117573787800_B9",
-          "article-title": "Scaling Up Agricultural Policy Interventions: Theory and Evidence from Uganda",
-          "author": "BERGQUIST,",
-          "year": "2019"
-        },
-        {
-          "key": "2021091117573787800_B10",
-          "doi-asserted-by": "crossref",
-          "first-page": "1965",
-          "DOI": "10.3982/ECTA15828",
-          "article-title": "Eliminating Uncertainty in Market Access: The Impact of New Bridges in Rural Nicaragua",
-          "volume": "88",
-          "author": "BROOKS,",
-          "year": "2020",
-          "journal-title": "Econometrica"
-        },
-        {
-          "key": "2021091117573787800_B11",
-          "article-title": "The Macroeconomics of Microfinance",
-          "author": "BUERA,",
-          "year": "2020",
-          "journal-title": "Review of Economic Studies"
-        },
-        {
-          "key": "2021091117573787800_B12",
-          "doi-asserted-by": "crossref",
-          "first-page": "1964",
-          "DOI": "10.1257/aer.101.5.1964",
-          "article-title": "Finance and Development: A Tale of Two Sectors",
-          "volume": "101",
-          "author": "BUERA,",
-          "year": "2011",
-          "journal-title": "American Economic Review"
-        },
-        {
-          "key": "2021091117573787800_B13",
-          "doi-asserted-by": "crossref",
-          "first-page": "845",
-          "DOI": "10.1016/j.jet.2011.01.003",
-          "article-title": "Self-insurance vs. Self-financing: A Welfare Analysis of the Persistence of Shocks",
-          "volume": "146",
-          "author": "BUERA,",
-          "year": "2011",
-          "journal-title": "Journal of Economic Theory"
-        },
-        {
-          "key": "2021091117573787800_B14",
-          "doi-asserted-by": "crossref",
-          "first-page": "287",
-          "DOI": "10.1162/REST_a_00476",
-          "article-title": "The Effect of Microinsurance on Economic Activities: Evidence from a Randomized Field Experiment",
-          "volume": "97",
-          "author": "CAI,",
-          "year": "2015",
-          "journal-title": "Review of Economics and Statistics"
-        },
-        {
-          "key": "2021091117573787800_B15",
-          "doi-asserted-by": "crossref",
-          "first-page": "679",
-          "DOI": "10.1016/S1574-0684(05)01009-9",
-          "article-title": "Accounting for Cross-Country Income Differences",
-          "author": "CASELLI,",
-          "year": "2005",
-          "journal-title": "Handbook of Economic Growth"
-        },
-        {
-          "key": "2021091117573787800_B16",
-          "doi-asserted-by": "crossref",
-          "DOI": "10.1093/qje/qjaa028",
-          "article-title": "Capital Obsolescence and Agricultural Productivity",
-          "author": "CAUNEDO,",
-          "year": "2020",
-          "journal-title": "Quarterly Journal of Economics"
-        },
-        {
-          "key": "2021091117573787800_B17",
-          "doi-asserted-by": "crossref",
-          "DOI": "10.1016/j.jdeveco.2019.102388",
-          "article-title": "Technology Adoption, Capital Deepening, and International Productivity Differences",
-          "volume": "143",
-          "author": "CHEN,",
-          "year": "2020",
-          "journal-title": "Journal of Development Economics"
-        },
-        {
-          "key": "2021091117573787800_B18",
-          "first-page": "104",
-          "article-title": "Barriers to Household Risk Management: Evidence from India",
-          "volume": "5",
-          "author": "Cole,",
-          "year": "2013",
-          "journal-title": "American Economic Journal: Applied Economics"
-        },
-        {
-          "key": "2021091117573787800_B19",
-          "doi-asserted-by": "crossref",
-          "first-page": "1935",
-          "DOI": "10.1093/rfs/hhw080",
-          "article-title": "How Does Risk Management Influence Production Decisions? Evidence from a Field Experiment",
-          "volume": "30",
-          "author": "COLE,",
-          "year": "2017",
-          "journal-title": "Review of Financial Studies"
-        },
-        {
-          "key": "2021091117573787800_B20",
-          "doi-asserted-by": "crossref",
-          "first-page": "159",
-          "DOI": "10.1016/j.jdeveco.2010.08.003",
-          "article-title": "Consumption Risk, Technology Adoption and Poverty Traps: Evidence from Ethiopia",
-          "volume": "96",
-          "author": "DERCON,",
-          "year": "2011",
-          "journal-title": "Journal of Development Economics"
-        },
-        {
-          "key": "2021091117573787800_B21",
-          "doi-asserted-by": "crossref",
-          "first-page": "1537",
-          "DOI": "10.1257/aer.20150474",
-          "article-title": "Technological Innovations, Downside Risk, and the Modernization of Agriculture",
-          "volume": "106",
-          "author": "EMERICK,",
-          "year": "2016",
-          "journal-title": "American Economic Review"
-        },
-        {
-          "key": "2021091117573787800_B22",
-          "doi-asserted-by": "crossref",
-          "article-title": "Income Differences, Productivity and Input-Output Networks",
-          "author": "FADINGER,",
-          "DOI": "10.1257/mac.20180342"
-        },
-        {
-          "key": "2021091117573787800_B23",
-          "doi-asserted-by": "crossref",
-          "first-page": "273",
-          "DOI": "10.1016/S0304-3878(98)00037-6",
-          "article-title": "Drought and Saving in West Africa: Are Livestock a Buffer Stock?",
-          "volume": "55",
-          "author": "FAFCHAMPS,",
-          "year": "1998",
-          "journal-title": "Journal of Development Economics"
-        },
-        {
-          "key": "2021091117573787800_B24",
-          "article-title": "The Aggregate Effects of “Free” Secondary Schooling in the Developing World",
-          "author": "FUJIMOTO,",
-          "year": "2019"
-        },
-        {
-          "key": "2021091117573787800_B25",
-          "doi-asserted-by": "crossref",
-          "first-page": "173",
-          "DOI": "10.1016/j.jebo.2017.09.005",
-          "article-title": "The Effect of Social Pressure on Expenditures in Malawi",
-          "volume": "143",
-          "author": "GOLDBERG,",
-          "year": "2017",
-          "journal-title": "Journal of Economic Behavior and Organization"
-        },
-        {
-          "key": "2021091117573787800_B26",
-          "doi-asserted-by": "crossref",
-          "first-page": "939",
-          "DOI": "10.1093/qje/qjt056",
-          "article-title": "The Agricultural Productivity Gap",
-          "volume": "129",
-          "author": "GOLLIN,",
-          "year": "2014",
-          "journal-title": "Quarterly Journal of Economics"
-        },
-        {
-          "key": "2021091117573787800_B27",
-          "doi-asserted-by": "crossref",
-          "first-page": "827",
-          "DOI": "10.1016/j.red.2004.05.003",
-          "article-title": "Farm Work, Home Work and International Productivity Differences",
-          "volume": "7",
-          "author": "GOLLIN,",
-          "year": "2004",
-          "journal-title": "Review of Economic Dynamics"
-        },
-        {
-          "key": "2021091117573787800_B28",
-          "doi-asserted-by": "crossref",
-          "first-page": "38",
-          "DOI": "10.1016/j.jdeveco.2013.10.007",
-          "article-title": "Productivity, Transport Costs, and Subsistence Agriculture",
-          "volume": "107",
-          "author": "GOLLIN,",
-          "year": "2014",
-          "journal-title": "Journal of Development Economics"
-        },
-        {
-          "key": "2021091117573787800_B29",
-          "doi-asserted-by": "crossref",
-          "first-page": "135",
-          "DOI": "10.1016/j.jdeveco.2018.11.001",
-          "article-title": "Communal Land and Agricultural Productivity",
-          "volume": "138",
-          "author": "GOTTLIEB,",
-          "year": "2019",
-          "journal-title": "Journal of Development Economics"
-        },
-        {
-          "key": "2021091117573787800_B30",
-          "doi-asserted-by": "crossref",
-          "first-page": "1081",
-          "DOI": "10.3982/ECTA11530",
-          "article-title": "An Equilibrium Model of the African HIV/AID Epidemic",
-          "volume": "87",
-          "author": "GREENWOOD,",
-          "year": "2019",
-          "journal-title": "Econometrica"
-        },
-        {
-          "key": "2021091117573787800_B31",
-          "doi-asserted-by": "crossref",
-          "first-page": "2752",
-          "DOI": "10.1257/aer.103.7.2752",
-          "article-title": "Two Perspectives on Preferences and Structural Transformation",
-          "volume": "103",
-          "author": "HERRENDORF,",
-          "year": "2013",
-          "journal-title": "American Economic Review"
-        },
-        {
-          "key": "2021091117573787800_B32",
-          "doi-asserted-by": "crossref",
-          "first-page": "855",
-          "DOI": "10.1016/B978-0-444-53540-5.00006-9",
-          "article-title": "Growth and Structural Transformation",
-          "author": "HERRENDORF,",
-          "year": "2014",
-          "journal-title": "Handbook of Economic Growth"
-        },
-        {
-          "key": "2021091117573787800_B33",
-          "doi-asserted-by": "crossref",
-          "first-page": "1003",
-          "DOI": "10.1016/j.red.2014.10.006",
-          "article-title": "Why is Measured Productivity so Low in Agriculture?",
-          "volume": "18",
-          "author": "HERRENDORF,",
-          "year": "2015",
-          "journal-title": "Review of Economic Dynamics"
-        },
-        {
-          "key": "2021091117573787800_B34",
-          "doi-asserted-by": "crossref",
-          "first-page": "562",
-          "DOI": "10.1257/aer.97.3.562",
-          "article-title": "Relative Prices and Relative Prosperity",
-          "volume": "97",
-          "author": "HSIEH,",
-          "year": "2007",
-          "journal-title": "American Economic Review"
-        },
-        {
-          "key": "2021091117573787800_B35",
-          "doi-asserted-by": "crossref",
-          "first-page": "1403",
-          "DOI": "10.1162/qjec.2009.124.4.1403",
-          "article-title": "Misallocation and manufacturing tfp in china and india",
-          "volume": "124",
-          "author": "HSIEH,",
-          "year": "2009",
-          "journal-title": "Quarterly Journal of Economics"
-        },
-        {
-          "key": "2021091117573787800_B36",
-          "doi-asserted-by": "crossref",
-          "first-page": "231",
-          "DOI": "10.1093/restud/rdv033",
-          "article-title": "Does Africa Need a Rotten Kin Theorem? Experimental Evidence from Village Economics",
-          "volume": "83",
-          "author": "JAKIELA,",
-          "year": "2016",
-          "journal-title": "Review of Economic Studies"
-        },
-        {
-          "key": "2021091117573787800_B37",
-          "doi-asserted-by": "crossref",
-          "first-page": "276",
-          "DOI": "10.2307/1239732",
-          "article-title": "Production Function Estimation and Related Risk Considerations",
-          "volume": "61",
-          "author": "JUST,",
-          "year": "1979",
-          "journal-title": "American Journal of Agricultural Economics"
-        },
-        {
-          "key": "2021091117573787800_B38",
-          "doi-asserted-by": "crossref",
-          "first-page": "1357",
-          "DOI": "10.3982/ECTA7079",
-          "article-title": "A Structural Evaluation of a Large-Scale Quasi-Experimental Microfinance Initiative",
-          "volume": "79",
-          "author": "KABOSKI,",
-          "year": "2011",
-          "journal-title": "Econometrica"
-        },
-        {
-          "key": "2021091117573787800_B39",
-          "doi-asserted-by": "crossref",
-          "first-page": "597",
-          "DOI": "10.1093/qje/qju002",
-          "article-title": "Agricultural Decisions After Relaxing Credit and Risk Constraints",
-          "volume": "129",
-          "author": "KARLAN,",
-          "year": "2014",
-          "journal-title": "Quarterly Journal of Economics"
-        },
-        {
-          "key": "2021091117573787800_B40",
-          "doi-asserted-by": "crossref",
-          "first-page": "36",
-          "DOI": "10.1111/roiw.12101",
-          "article-title": "Savings By and For the Poor: A Research Review and Agenda",
-          "volume": "60",
-          "author": "KARLAN,",
-          "year": "2014",
-          "journal-title": "The Review of Income and Wealth"
-        },
-        {
-          "key": "2021091117573787800_B41",
-          "doi-asserted-by": "crossref",
-          "first-page": "413",
-          "DOI": "10.1016/j.jdeveco.2006.01.011",
-          "article-title": "Consumption Smoothing? Livestock, Insurance and Drought in Rural Burkina Faso",
-          "volume": "79",
-          "author": "KAZIANGA,",
-          "year": "2006",
-          "journal-title": "Journal of Development Economics"
-        },
-        {
-          "key": "2021091117573787800_B42",
-          "doi-asserted-by": "crossref",
-          "first-page": "50",
-          "DOI": "10.1162/003465399767923818",
-          "article-title": "Smoothing Consumption by Smoothing Income: Hours-of-Work Responses to Idiosyncratic Agricultural Shocks in Rural India",
-          "volume": "81",
-          "author": "KOCHAR,",
-          "year": "1999",
-          "journal-title": "Review of Economics and Statistics"
-        },
-        {
-          "key": "2021091117573787800_B43",
-          "doi-asserted-by": "crossref",
-          "first-page": "869",
-          "DOI": "10.1111/1467-937X.00193",
-          "article-title": "Beyond balanced growth",
-          "volume": "68",
-          "author": "KONGSAMUT,",
-          "year": "2001",
-          "journal-title": "Review of Economic Studies"
-        },
-        {
-          "key": "2021091117573787800_B44",
-          "article-title": "The Welfare Effects of Encouraging Rural-Urban Migration",
-          "author": "LAGAKOS,",
-          "year": "2020"
-        },
-        {
-          "key": "2021091117573787800_B45",
-          "doi-asserted-by": "crossref",
-          "first-page": "948",
-          "DOI": "10.1257/aer.103.2.948",
-          "article-title": "Selection, Agriculture, and Cross-Country Productivity Differences",
-          "volume": "103",
-          "author": "LAGAKOS,",
-          "year": "2013",
-          "journal-title": "American Economic Review"
-        },
-        {
-          "key": "2021091117573787800_B46",
-          "doi-asserted-by": "crossref",
-          "first-page": "422",
-          "DOI": "10.1257/aer.104.2.422",
-          "article-title": "Finance and Misallocation: Evidence from Plant-Level Data",
-          "volume": "104",
-          "author": "MIDRIGAN,",
-          "year": "2014",
-          "journal-title": "American Economic Review"
-        },
-        {
-          "key": "2021091117573787800_B47",
-          "article-title": "Selling Formal Insurance to the Informally Insured",
-          "author": "MOBARAK,",
-          "year": "2014"
-        },
-        {
-          "key": "2021091117573787800_B48",
-          "doi-asserted-by": "crossref",
-          "first-page": "3186",
-          "DOI": "10.1257/aer.104.10.3186",
-          "article-title": "Productivity Losses from Financial Frictions: Can Self-Financing Undo Capital Misallocation?",
-          "volume": "104",
-          "author": "MOLL,",
-          "year": "2014",
-          "journal-title": "American Economic Review"
-        },
-        {
-          "key": "2021091117573787800_B49",
-          "article-title": "Intercountry Comparisons of Agricultural Output and Productivity",
-          "author": "PRASADA RAO,",
-          "year": "1993"
-        },
-        {
-          "key": "2021091117573787800_B50",
-          "doi-asserted-by": "crossref",
-          "first-page": "707",
-          "DOI": "10.1016/j.red.2008.05.002",
-          "article-title": "Policy Distortions and Aggregate Productivity with Heterogeneous Establishments",
-          "volume": "11",
-          "author": "RESTUCCIA,",
-          "year": "2008",
-          "journal-title": "Review of Economic Dynamics"
-        },
-        {
-          "key": "2021091117573787800_B51",
-          "doi-asserted-by": "crossref",
-          "DOI": "10.3386/w23128",
-          "article-title": "Land Misallocation and Productivity",
-          "author": "RESTUCCIA,",
-          "year": "2017"
-        },
-        {
-          "key": "2021091117573787800_B52",
-          "doi-asserted-by": "crossref",
-          "first-page": "234",
-          "DOI": "10.1016/j.jmoneco.2007.11.006",
-          "article-title": "Agriculture and Aggregate Productivity: A Quantitative Cross-country Analysis",
-          "volume": "55",
-          "author": "RESTUCCIA,",
-          "year": "2008",
-          "journal-title": "Journal of Monetary Economics"
-        },
-        {
-          "key": "2021091117573787800_B53",
-          "doi-asserted-by": "crossref",
-          "first-page": "223",
-          "DOI": "10.1086/261874",
-          "article-title": "Credit Market Constraints, Consumption Smoothing, and the Accumulation of Durable Production Assets in Low-Income Countries: Investments in Bullocks in India",
-          "volume": "101",
-          "author": "ROSENZWEIG,",
-          "year": "1993",
-          "journal-title": "Journal of Political Economy"
-        },
-        {
-          "key": "2021091117573787800_B54",
-          "doi-asserted-by": "crossref",
-          "first-page": "2690",
-          "DOI": "10.1086/706859",
-          "article-title": "Domestic Trade Frictions and Agriculture",
-          "volume": "128",
-          "author": "SOTELO,",
-          "journal-title": "Journal of Political Economy"
-        },
-        {
-          "key": "2021091117573787800_B55",
-          "doi-asserted-by": "crossref",
-          "first-page": "575",
-          "DOI": "10.1111/roie.12178",
-          "article-title": "An Illustrated User Guide to the World Input-Output Database: The Case of Global Automotive Production",
-          "volume": "23",
-          "author": "TIMMER,",
-          "year": "2015",
-          "journal-title": "Review of International Economics"
-        },
-        {
-          "key": "2021091117573787800_B56",
-          "first-page": "226",
-          "article-title": "The Missing Food Problem: Trade, Agriculture, and International Productivity Differences",
-          "volume": "7",
-          "author": "TOMBE,",
-          "year": "2015",
-          "journal-title": "American Economic Journal: Macroeconomics"
-        },
-        {
-          "key": "2021091117573787800_B57",
-          "doi-asserted-by": "crossref",
-          "first-page": "1",
-          "DOI": "10.2307/1243883",
-          "article-title": "Production Risk and the Evolution of Varietal Technology",
-          "volume": "77",
-          "author": "TRAXLER,",
-          "year": "1995",
-          "journal-title": "American Journal of Agricultural Economics"
-        },
-        {
-          "key": "2021091117573787800_B58",
-          "first-page": "1287",
-          "article-title": "Risk and Saving in Northern Nigeria",
-          "volume": "85",
-          "author": "UDRY,",
-          "year": "1995",
-          "journal-title": "American Economic Review"
-        },
-        {
-          "key": "2021091117573787800_B59",
-          "author": "UNITED",
-          "year": "2015",
-          "journal-title": "National Account Statistics: Main Aggregates and Detailed Tables (Table 2.3)"
-        },
-        {
-          "key": "2021091117573787800_B60",
-          "doi-asserted-by": "crossref",
-          "first-page": "325",
-          "DOI": "10.1016/j.jdeveco.2008.03.004",
-          "article-title": "How Important Are Dual Economy Effects for Aggregate Productivity?",
-          "volume": "88",
-          "author": "VOLLRATH,",
-          "year": "2009",
-          "journal-title": "Journal of Development Economics"
-        },
-        {
-          "key": "2021091117573787800_B61",
-          "author": "WORLD",
-          "year": "2018",
-          "journal-title": "World Development Indicators"
-        },
-        {
-          "key": "2021091117573787800_B62",
-          "doi-asserted-by": "crossref",
-          "first-page": "367",
-          "DOI": "10.1016/j.jmoneco.2013.01.002",
-          "article-title": "Modernization of Agriculture and Long-Term Growth",
-          "volume": "60",
-          "author": "YANG,",
-          "year": "2013",
-          "journal-title": "Journal of Monetary Economics"
-        }
-      ],
-      "container-title": [
-        "The Review of Economic Studies"
-      ],
-      "language": "en",
-      "link": [
-        {
-          "URL": "http://academic.oup.com/restud/advance-article-pdf/doi/10.1093/restud/rdaa084/36216693/rdaa084.pdf",
-          "content-type": "application/pdf",
-          "content-version": "am",
-          "intended-application": "syndication"
-        },
-        {
-          "URL": "http://academic.oup.com/restud/article-pdf/88/5/2275/40350184/rdaa084.pdf",
-          "content-type": "application/pdf",
-          "content-version": "vor",
-          "intended-application": "syndication"
-        },
-        {
-          "URL": "http://academic.oup.com/restud/article-pdf/88/5/2275/40350184/rdaa084.pdf",
-          "content-type": "unspecified",
-          "content-version": "vor",
-          "intended-application": "similarity-checking"
-        }
-      ],
-      "deposited": {
-        "date-parts": [
-          [
-            2022,
-            12,
-            2
-          ]
-        ],
-        "date-time": "2022-12-02T04:16:02Z",
-        "timestamp": 1669954562000
-      },
-      "score": 0.0,
-      "resource": {
-        "primary": {
-          "URL": "https://academic.oup.com/restud/article/88/5/2275/6046948"
-        }
-      },
-      "editor": [
-        {
-          "given": "Michele",
-          "family": "Tertilt",
-          "sequence": "additional",
-          "affiliation": []
-        }
-      ],
-      "issued": {
-        "date-parts": [
-          [
-            2020,
-            12,
-            24
-          ]
-        ]
-      },
-      "references-count": 62,
-      "journal-issue": {
-        "issue": "5",
-        "published-online": {
-          "date-parts": [
-            [
-              2020,
-              12,
-              24
-            ]
-          ]
-        },
-        "published-print": {
-          "date-parts": [
-            [
-              2021,
-              9,
-              11
-            ]
-          ]
-        }
-      },
-      "URL": "https://doi.org/10.1093/restud/rdaa084",
-      "ISSN": [
-        "0034-6527",
-        "1467-937X"
-      ],
-      "issn-type": [
-        {
-          "value": "0034-6527",
-          "type": "print"
-        },
-        {
-          "value": "1467-937X",
-          "type": "electronic"
-        }
-      ],
-      "published-other": {
-        "date-parts": [
-          [
-            2021,
-            10,
-            1
-          ]
-        ]
-      },
-      "published": {
-        "date-parts": [
-          [
-            2020,
-            12,
-            24
-          ]
-        ]
-      }
-    },
-    {
-      "indexed": {
-        "date-parts": [
-          [
-            2025,
-            5,
             28
           ]
         ],
@@ -19442,6 +18629,819 @@
             2020,
             1,
             6
+          ]
+        ]
+      }
+    },
+    {
+      "indexed": {
+        "date-parts": [
+          [
+            2025,
+            6,
+            14
+          ]
+        ],
+        "date-time": "2025-06-14T04:26:03Z",
+        "timestamp": 1749875163183
+      },
+      "reference-count": 62,
+      "publisher": "Oxford University Press (OUP)",
+      "issue": "5",
+      "license": [
+        {
+          "start": {
+            "date-parts": [
+              [
+                2020,
+                12,
+                24
+              ]
+            ],
+            "date-time": "2020-12-24T00:00:00Z",
+            "timestamp": 1608768000000
+          },
+          "content-version": "vor",
+          "delay-in-days": 0,
+          "URL": "https://academic.oup.com/journals/pages/open_access/funder_policies/chorus/standard_publication_model"
+        }
+      ],
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "published-print": {
+        "date-parts": [
+          [
+            2021,
+            9,
+            11
+          ]
+        ]
+      },
+      "abstract": "<jats:title>Abstract</jats:title><jats:p>I consider the aggregate impact of low intermediate input intensity in the agricultural sector of developing countries. In a dynamic general equilibrium model with idiosyncratic shocks, incomplete markets, and subsistence requirements, farmers in developing countries use fewer intermediate inputs because it limits their exposure to uninsurable shocks. The calibrated model implies that Indian agricultural productivity would increase by 16% if markets were complete, driven by quantitatively important increases in both the average real intermediate share and measured TFP through lower misallocation. I then extend the results to consider the importance of risk in other contexts. First, the introduction of insurance decreases cross-country differences in agricultural labour productivity by 14%. Second, scaling the introduction of improved seeds to decrease downside risk reduces inequality by reallocating resources from rich to poor farmers via equilibrium effects. This reallocation substantially increases aggregate productivity relative to what would be expected from extrapolating the partial equilibrium impact.</jats:p>",
+      "DOI": "10.1093/restud/rdaa084",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2020,
+            12,
+            3
+          ]
+        ],
+        "date-time": "2020-12-03T12:38:59Z",
+        "timestamp": 1606999139000
+      },
+      "page": "2275-2307",
+      "source": "Crossref",
+      "is-referenced-by-count": 48,
+      "title": [
+        "The Equilibrium Impact of Agricultural Risk on Intermediate Inputs and Aggregate Productivity"
+      ],
+      "prefix": "10.1093",
+      "volume": "88",
+      "author": [
+        {
+          "given": "Kevin",
+          "family": "Donovan",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Yale School of Management"
+            }
+          ]
+        }
+      ],
+      "member": "286",
+      "published-online": {
+        "date-parts": [
+          [
+            2020,
+            12,
+            24
+          ]
+        ]
+      },
+      "reference": [
+        {
+          "key": "2021091117573787800_B1",
+          "doi-asserted-by": "crossref",
+          "first-page": "489",
+          "DOI": "10.1111/j.1468-2354.2011.00636.x",
+          "article-title": "Transportation Costs, Agricultural Productivity, and Cross-Country Income Differences",
+          "volume": "52",
+          "author": "ADAMOPOULOS,",
+          "year": "2011",
+          "journal-title": "International Economic Review,"
+        },
+        {
+          "key": "2021091117573787800_B2",
+          "article-title": "Spatial Integration and Agricultural Productivity: Quantifying the Impact of New Roads",
+          "author": "ADAMOPOULOS,"
+        },
+        {
+          "key": "2021091117573787800_B3",
+          "article-title": "Misallocation, Selection and Productivity: A Quantitative Analysis with Panel Data from China",
+          "author": "ADAMOPOULOS,",
+          "year": "2019"
+        },
+        {
+          "key": "2021091117573787800_B4",
+          "doi-asserted-by": "crossref",
+          "first-page": "1667",
+          "DOI": "10.1257/aer.104.6.1667",
+          "article-title": "The Size Distribution of Farms and International Productivity Differences",
+          "volume": "104",
+          "author": "ADAMOPOULOS,",
+          "year": "2014",
+          "journal-title": "American Economic Review,"
+        },
+        {
+          "key": "2021091117573787800_B5",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.3386/w24532",
+          "article-title": "Geography and Agricultural Productivity: Cross-Country Evidence from Micro Plot-Level Data",
+          "author": "ADAMOPOULOS,",
+          "year": "2018"
+        },
+        {
+          "key": "2021091117573787800_B6",
+          "doi-asserted-by": "crossref",
+          "first-page": "659",
+          "DOI": "10.2307/2118417",
+          "article-title": "Uninsured idiosyncratic risk and aggregate saving",
+          "volume": "109",
+          "author": "AIYAGARI,",
+          "year": "1994",
+          "journal-title": "Quarterly Journal of Economics,"
+        },
+        {
+          "key": "2021091117573787800_B7",
+          "doi-asserted-by": "crossref",
+          "first-page": "583",
+          "DOI": "10.1086/692165",
+          "article-title": "Continued Existence of Cows Disproved Central Tenets of Capitalism?",
+          "volume": "65",
+          "author": "ANAGOL,",
+          "year": "2017",
+          "journal-title": "Economic Development and Cultural Change,"
+        },
+        {
+          "key": "2021091117573787800_B8",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.3386/w21251",
+          "article-title": "Linkages and Economic Development",
+          "author": "BARTELME,",
+          "year": "2015"
+        },
+        {
+          "key": "2021091117573787800_B9",
+          "article-title": "Scaling Up Agricultural Policy Interventions: Theory and Evidence from Uganda",
+          "author": "BERGQUIST,",
+          "year": "2019"
+        },
+        {
+          "key": "2021091117573787800_B10",
+          "doi-asserted-by": "crossref",
+          "first-page": "1965",
+          "DOI": "10.3982/ECTA15828",
+          "article-title": "Eliminating Uncertainty in Market Access: The Impact of New Bridges in Rural Nicaragua",
+          "volume": "88",
+          "author": "BROOKS,",
+          "year": "2020",
+          "journal-title": "Econometrica"
+        },
+        {
+          "key": "2021091117573787800_B11",
+          "article-title": "The Macroeconomics of Microfinance",
+          "author": "BUERA,",
+          "year": "2020",
+          "journal-title": "Review of Economic Studies"
+        },
+        {
+          "key": "2021091117573787800_B12",
+          "doi-asserted-by": "crossref",
+          "first-page": "1964",
+          "DOI": "10.1257/aer.101.5.1964",
+          "article-title": "Finance and Development: A Tale of Two Sectors",
+          "volume": "101",
+          "author": "BUERA,",
+          "year": "2011",
+          "journal-title": "American Economic Review"
+        },
+        {
+          "key": "2021091117573787800_B13",
+          "doi-asserted-by": "crossref",
+          "first-page": "845",
+          "DOI": "10.1016/j.jet.2011.01.003",
+          "article-title": "Self-insurance vs. Self-financing: A Welfare Analysis of the Persistence of Shocks",
+          "volume": "146",
+          "author": "BUERA,",
+          "year": "2011",
+          "journal-title": "Journal of Economic Theory"
+        },
+        {
+          "key": "2021091117573787800_B14",
+          "doi-asserted-by": "crossref",
+          "first-page": "287",
+          "DOI": "10.1162/REST_a_00476",
+          "article-title": "The Effect of Microinsurance on Economic Activities: Evidence from a Randomized Field Experiment",
+          "volume": "97",
+          "author": "CAI,",
+          "year": "2015",
+          "journal-title": "Review of Economics and Statistics"
+        },
+        {
+          "key": "2021091117573787800_B15",
+          "doi-asserted-by": "crossref",
+          "first-page": "679",
+          "DOI": "10.1016/S1574-0684(05)01009-9",
+          "article-title": "Accounting for Cross-Country Income Differences",
+          "author": "CASELLI,",
+          "year": "2005",
+          "journal-title": "Handbook of Economic Growth"
+        },
+        {
+          "key": "2021091117573787800_B16",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.1093/qje/qjaa028",
+          "article-title": "Capital Obsolescence and Agricultural Productivity",
+          "author": "CAUNEDO,",
+          "year": "2020",
+          "journal-title": "Quarterly Journal of Economics"
+        },
+        {
+          "key": "2021091117573787800_B17",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.1016/j.jdeveco.2019.102388",
+          "article-title": "Technology Adoption, Capital Deepening, and International Productivity Differences",
+          "volume": "143",
+          "author": "CHEN,",
+          "year": "2020",
+          "journal-title": "Journal of Development Economics"
+        },
+        {
+          "key": "2021091117573787800_B18",
+          "first-page": "104",
+          "article-title": "Barriers to Household Risk Management: Evidence from India",
+          "volume": "5",
+          "author": "Cole,",
+          "year": "2013",
+          "journal-title": "American Economic Journal: Applied Economics"
+        },
+        {
+          "key": "2021091117573787800_B19",
+          "doi-asserted-by": "crossref",
+          "first-page": "1935",
+          "DOI": "10.1093/rfs/hhw080",
+          "article-title": "How Does Risk Management Influence Production Decisions? Evidence from a Field Experiment",
+          "volume": "30",
+          "author": "COLE,",
+          "year": "2017",
+          "journal-title": "Review of Financial Studies"
+        },
+        {
+          "key": "2021091117573787800_B20",
+          "doi-asserted-by": "crossref",
+          "first-page": "159",
+          "DOI": "10.1016/j.jdeveco.2010.08.003",
+          "article-title": "Consumption Risk, Technology Adoption and Poverty Traps: Evidence from Ethiopia",
+          "volume": "96",
+          "author": "DERCON,",
+          "year": "2011",
+          "journal-title": "Journal of Development Economics"
+        },
+        {
+          "key": "2021091117573787800_B21",
+          "doi-asserted-by": "crossref",
+          "first-page": "1537",
+          "DOI": "10.1257/aer.20150474",
+          "article-title": "Technological Innovations, Downside Risk, and the Modernization of Agriculture",
+          "volume": "106",
+          "author": "EMERICK,",
+          "year": "2016",
+          "journal-title": "American Economic Review"
+        },
+        {
+          "key": "2021091117573787800_B22",
+          "doi-asserted-by": "crossref",
+          "article-title": "Income Differences, Productivity and Input-Output Networks",
+          "author": "FADINGER,",
+          "DOI": "10.1257/mac.20180342"
+        },
+        {
+          "key": "2021091117573787800_B23",
+          "doi-asserted-by": "crossref",
+          "first-page": "273",
+          "DOI": "10.1016/S0304-3878(98)00037-6",
+          "article-title": "Drought and Saving in West Africa: Are Livestock a Buffer Stock?",
+          "volume": "55",
+          "author": "FAFCHAMPS,",
+          "year": "1998",
+          "journal-title": "Journal of Development Economics"
+        },
+        {
+          "key": "2021091117573787800_B24",
+          "article-title": "The Aggregate Effects of “Free” Secondary Schooling in the Developing World",
+          "author": "FUJIMOTO,",
+          "year": "2019"
+        },
+        {
+          "key": "2021091117573787800_B25",
+          "doi-asserted-by": "crossref",
+          "first-page": "173",
+          "DOI": "10.1016/j.jebo.2017.09.005",
+          "article-title": "The Effect of Social Pressure on Expenditures in Malawi",
+          "volume": "143",
+          "author": "GOLDBERG,",
+          "year": "2017",
+          "journal-title": "Journal of Economic Behavior and Organization"
+        },
+        {
+          "key": "2021091117573787800_B26",
+          "doi-asserted-by": "crossref",
+          "first-page": "939",
+          "DOI": "10.1093/qje/qjt056",
+          "article-title": "The Agricultural Productivity Gap",
+          "volume": "129",
+          "author": "GOLLIN,",
+          "year": "2014",
+          "journal-title": "Quarterly Journal of Economics"
+        },
+        {
+          "key": "2021091117573787800_B27",
+          "doi-asserted-by": "crossref",
+          "first-page": "827",
+          "DOI": "10.1016/j.red.2004.05.003",
+          "article-title": "Farm Work, Home Work and International Productivity Differences",
+          "volume": "7",
+          "author": "GOLLIN,",
+          "year": "2004",
+          "journal-title": "Review of Economic Dynamics"
+        },
+        {
+          "key": "2021091117573787800_B28",
+          "doi-asserted-by": "crossref",
+          "first-page": "38",
+          "DOI": "10.1016/j.jdeveco.2013.10.007",
+          "article-title": "Productivity, Transport Costs, and Subsistence Agriculture",
+          "volume": "107",
+          "author": "GOLLIN,",
+          "year": "2014",
+          "journal-title": "Journal of Development Economics"
+        },
+        {
+          "key": "2021091117573787800_B29",
+          "doi-asserted-by": "crossref",
+          "first-page": "135",
+          "DOI": "10.1016/j.jdeveco.2018.11.001",
+          "article-title": "Communal Land and Agricultural Productivity",
+          "volume": "138",
+          "author": "GOTTLIEB,",
+          "year": "2019",
+          "journal-title": "Journal of Development Economics"
+        },
+        {
+          "key": "2021091117573787800_B30",
+          "doi-asserted-by": "crossref",
+          "first-page": "1081",
+          "DOI": "10.3982/ECTA11530",
+          "article-title": "An Equilibrium Model of the African HIV/AID Epidemic",
+          "volume": "87",
+          "author": "GREENWOOD,",
+          "year": "2019",
+          "journal-title": "Econometrica"
+        },
+        {
+          "key": "2021091117573787800_B31",
+          "doi-asserted-by": "crossref",
+          "first-page": "2752",
+          "DOI": "10.1257/aer.103.7.2752",
+          "article-title": "Two Perspectives on Preferences and Structural Transformation",
+          "volume": "103",
+          "author": "HERRENDORF,",
+          "year": "2013",
+          "journal-title": "American Economic Review"
+        },
+        {
+          "key": "2021091117573787800_B32",
+          "doi-asserted-by": "crossref",
+          "first-page": "855",
+          "DOI": "10.1016/B978-0-444-53540-5.00006-9",
+          "article-title": "Growth and Structural Transformation",
+          "author": "HERRENDORF,",
+          "year": "2014",
+          "journal-title": "Handbook of Economic Growth"
+        },
+        {
+          "key": "2021091117573787800_B33",
+          "doi-asserted-by": "crossref",
+          "first-page": "1003",
+          "DOI": "10.1016/j.red.2014.10.006",
+          "article-title": "Why is Measured Productivity so Low in Agriculture?",
+          "volume": "18",
+          "author": "HERRENDORF,",
+          "year": "2015",
+          "journal-title": "Review of Economic Dynamics"
+        },
+        {
+          "key": "2021091117573787800_B34",
+          "doi-asserted-by": "crossref",
+          "first-page": "562",
+          "DOI": "10.1257/aer.97.3.562",
+          "article-title": "Relative Prices and Relative Prosperity",
+          "volume": "97",
+          "author": "HSIEH,",
+          "year": "2007",
+          "journal-title": "American Economic Review"
+        },
+        {
+          "key": "2021091117573787800_B35",
+          "doi-asserted-by": "crossref",
+          "first-page": "1403",
+          "DOI": "10.1162/qjec.2009.124.4.1403",
+          "article-title": "Misallocation and manufacturing tfp in china and india",
+          "volume": "124",
+          "author": "HSIEH,",
+          "year": "2009",
+          "journal-title": "Quarterly Journal of Economics"
+        },
+        {
+          "key": "2021091117573787800_B36",
+          "doi-asserted-by": "crossref",
+          "first-page": "231",
+          "DOI": "10.1093/restud/rdv033",
+          "article-title": "Does Africa Need a Rotten Kin Theorem? Experimental Evidence from Village Economics",
+          "volume": "83",
+          "author": "JAKIELA,",
+          "year": "2016",
+          "journal-title": "Review of Economic Studies"
+        },
+        {
+          "key": "2021091117573787800_B37",
+          "doi-asserted-by": "crossref",
+          "first-page": "276",
+          "DOI": "10.2307/1239732",
+          "article-title": "Production Function Estimation and Related Risk Considerations",
+          "volume": "61",
+          "author": "JUST,",
+          "year": "1979",
+          "journal-title": "American Journal of Agricultural Economics"
+        },
+        {
+          "key": "2021091117573787800_B38",
+          "doi-asserted-by": "crossref",
+          "first-page": "1357",
+          "DOI": "10.3982/ECTA7079",
+          "article-title": "A Structural Evaluation of a Large-Scale Quasi-Experimental Microfinance Initiative",
+          "volume": "79",
+          "author": "KABOSKI,",
+          "year": "2011",
+          "journal-title": "Econometrica"
+        },
+        {
+          "key": "2021091117573787800_B39",
+          "doi-asserted-by": "crossref",
+          "first-page": "597",
+          "DOI": "10.1093/qje/qju002",
+          "article-title": "Agricultural Decisions After Relaxing Credit and Risk Constraints",
+          "volume": "129",
+          "author": "KARLAN,",
+          "year": "2014",
+          "journal-title": "Quarterly Journal of Economics"
+        },
+        {
+          "key": "2021091117573787800_B40",
+          "doi-asserted-by": "crossref",
+          "first-page": "36",
+          "DOI": "10.1111/roiw.12101",
+          "article-title": "Savings By and For the Poor: A Research Review and Agenda",
+          "volume": "60",
+          "author": "KARLAN,",
+          "year": "2014",
+          "journal-title": "The Review of Income and Wealth"
+        },
+        {
+          "key": "2021091117573787800_B41",
+          "doi-asserted-by": "crossref",
+          "first-page": "413",
+          "DOI": "10.1016/j.jdeveco.2006.01.011",
+          "article-title": "Consumption Smoothing? Livestock, Insurance and Drought in Rural Burkina Faso",
+          "volume": "79",
+          "author": "KAZIANGA,",
+          "year": "2006",
+          "journal-title": "Journal of Development Economics"
+        },
+        {
+          "key": "2021091117573787800_B42",
+          "doi-asserted-by": "crossref",
+          "first-page": "50",
+          "DOI": "10.1162/003465399767923818",
+          "article-title": "Smoothing Consumption by Smoothing Income: Hours-of-Work Responses to Idiosyncratic Agricultural Shocks in Rural India",
+          "volume": "81",
+          "author": "KOCHAR,",
+          "year": "1999",
+          "journal-title": "Review of Economics and Statistics"
+        },
+        {
+          "key": "2021091117573787800_B43",
+          "doi-asserted-by": "crossref",
+          "first-page": "869",
+          "DOI": "10.1111/1467-937X.00193",
+          "article-title": "Beyond balanced growth",
+          "volume": "68",
+          "author": "KONGSAMUT,",
+          "year": "2001",
+          "journal-title": "Review of Economic Studies"
+        },
+        {
+          "key": "2021091117573787800_B44",
+          "article-title": "The Welfare Effects of Encouraging Rural-Urban Migration",
+          "author": "LAGAKOS,",
+          "year": "2020"
+        },
+        {
+          "key": "2021091117573787800_B45",
+          "doi-asserted-by": "crossref",
+          "first-page": "948",
+          "DOI": "10.1257/aer.103.2.948",
+          "article-title": "Selection, Agriculture, and Cross-Country Productivity Differences",
+          "volume": "103",
+          "author": "LAGAKOS,",
+          "year": "2013",
+          "journal-title": "American Economic Review"
+        },
+        {
+          "key": "2021091117573787800_B46",
+          "doi-asserted-by": "crossref",
+          "first-page": "422",
+          "DOI": "10.1257/aer.104.2.422",
+          "article-title": "Finance and Misallocation: Evidence from Plant-Level Data",
+          "volume": "104",
+          "author": "MIDRIGAN,",
+          "year": "2014",
+          "journal-title": "American Economic Review"
+        },
+        {
+          "key": "2021091117573787800_B47",
+          "article-title": "Selling Formal Insurance to the Informally Insured",
+          "author": "MOBARAK,",
+          "year": "2014"
+        },
+        {
+          "key": "2021091117573787800_B48",
+          "doi-asserted-by": "crossref",
+          "first-page": "3186",
+          "DOI": "10.1257/aer.104.10.3186",
+          "article-title": "Productivity Losses from Financial Frictions: Can Self-Financing Undo Capital Misallocation?",
+          "volume": "104",
+          "author": "MOLL,",
+          "year": "2014",
+          "journal-title": "American Economic Review"
+        },
+        {
+          "key": "2021091117573787800_B49",
+          "article-title": "Intercountry Comparisons of Agricultural Output and Productivity",
+          "author": "PRASADA RAO,",
+          "year": "1993"
+        },
+        {
+          "key": "2021091117573787800_B50",
+          "doi-asserted-by": "crossref",
+          "first-page": "707",
+          "DOI": "10.1016/j.red.2008.05.002",
+          "article-title": "Policy Distortions and Aggregate Productivity with Heterogeneous Establishments",
+          "volume": "11",
+          "author": "RESTUCCIA,",
+          "year": "2008",
+          "journal-title": "Review of Economic Dynamics"
+        },
+        {
+          "key": "2021091117573787800_B51",
+          "doi-asserted-by": "crossref",
+          "DOI": "10.3386/w23128",
+          "article-title": "Land Misallocation and Productivity",
+          "author": "RESTUCCIA,",
+          "year": "2017"
+        },
+        {
+          "key": "2021091117573787800_B52",
+          "doi-asserted-by": "crossref",
+          "first-page": "234",
+          "DOI": "10.1016/j.jmoneco.2007.11.006",
+          "article-title": "Agriculture and Aggregate Productivity: A Quantitative Cross-country Analysis",
+          "volume": "55",
+          "author": "RESTUCCIA,",
+          "year": "2008",
+          "journal-title": "Journal of Monetary Economics"
+        },
+        {
+          "key": "2021091117573787800_B53",
+          "doi-asserted-by": "crossref",
+          "first-page": "223",
+          "DOI": "10.1086/261874",
+          "article-title": "Credit Market Constraints, Consumption Smoothing, and the Accumulation of Durable Production Assets in Low-Income Countries: Investments in Bullocks in India",
+          "volume": "101",
+          "author": "ROSENZWEIG,",
+          "year": "1993",
+          "journal-title": "Journal of Political Economy"
+        },
+        {
+          "key": "2021091117573787800_B54",
+          "doi-asserted-by": "crossref",
+          "first-page": "2690",
+          "DOI": "10.1086/706859",
+          "article-title": "Domestic Trade Frictions and Agriculture",
+          "volume": "128",
+          "author": "SOTELO,",
+          "journal-title": "Journal of Political Economy"
+        },
+        {
+          "key": "2021091117573787800_B55",
+          "doi-asserted-by": "crossref",
+          "first-page": "575",
+          "DOI": "10.1111/roie.12178",
+          "article-title": "An Illustrated User Guide to the World Input-Output Database: The Case of Global Automotive Production",
+          "volume": "23",
+          "author": "TIMMER,",
+          "year": "2015",
+          "journal-title": "Review of International Economics"
+        },
+        {
+          "key": "2021091117573787800_B56",
+          "first-page": "226",
+          "article-title": "The Missing Food Problem: Trade, Agriculture, and International Productivity Differences",
+          "volume": "7",
+          "author": "TOMBE,",
+          "year": "2015",
+          "journal-title": "American Economic Journal: Macroeconomics"
+        },
+        {
+          "key": "2021091117573787800_B57",
+          "doi-asserted-by": "crossref",
+          "first-page": "1",
+          "DOI": "10.2307/1243883",
+          "article-title": "Production Risk and the Evolution of Varietal Technology",
+          "volume": "77",
+          "author": "TRAXLER,",
+          "year": "1995",
+          "journal-title": "American Journal of Agricultural Economics"
+        },
+        {
+          "key": "2021091117573787800_B58",
+          "first-page": "1287",
+          "article-title": "Risk and Saving in Northern Nigeria",
+          "volume": "85",
+          "author": "UDRY,",
+          "year": "1995",
+          "journal-title": "American Economic Review"
+        },
+        {
+          "key": "2021091117573787800_B59",
+          "author": "UNITED",
+          "year": "2015",
+          "journal-title": "National Account Statistics: Main Aggregates and Detailed Tables (Table 2.3)"
+        },
+        {
+          "key": "2021091117573787800_B60",
+          "doi-asserted-by": "crossref",
+          "first-page": "325",
+          "DOI": "10.1016/j.jdeveco.2008.03.004",
+          "article-title": "How Important Are Dual Economy Effects for Aggregate Productivity?",
+          "volume": "88",
+          "author": "VOLLRATH,",
+          "year": "2009",
+          "journal-title": "Journal of Development Economics"
+        },
+        {
+          "key": "2021091117573787800_B61",
+          "author": "WORLD",
+          "year": "2018",
+          "journal-title": "World Development Indicators"
+        },
+        {
+          "key": "2021091117573787800_B62",
+          "doi-asserted-by": "crossref",
+          "first-page": "367",
+          "DOI": "10.1016/j.jmoneco.2013.01.002",
+          "article-title": "Modernization of Agriculture and Long-Term Growth",
+          "volume": "60",
+          "author": "YANG,",
+          "year": "2013",
+          "journal-title": "Journal of Monetary Economics"
+        }
+      ],
+      "container-title": [
+        "The Review of Economic Studies"
+      ],
+      "language": "en",
+      "link": [
+        {
+          "URL": "http://academic.oup.com/restud/advance-article-pdf/doi/10.1093/restud/rdaa084/36216693/rdaa084.pdf",
+          "content-type": "application/pdf",
+          "content-version": "am",
+          "intended-application": "syndication"
+        },
+        {
+          "URL": "http://academic.oup.com/restud/article-pdf/88/5/2275/40350184/rdaa084.pdf",
+          "content-type": "application/pdf",
+          "content-version": "vor",
+          "intended-application": "syndication"
+        },
+        {
+          "URL": "http://academic.oup.com/restud/article-pdf/88/5/2275/40350184/rdaa084.pdf",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2022,
+            12,
+            2
+          ]
+        ],
+        "date-time": "2022-12-02T04:16:02Z",
+        "timestamp": 1669954562000
+      },
+      "score": 0.0,
+      "resource": {
+        "primary": {
+          "URL": "https://academic.oup.com/restud/article/88/5/2275/6046948"
+        }
+      },
+      "editor": [
+        {
+          "given": "Michele",
+          "family": "Tertilt",
+          "sequence": "additional",
+          "affiliation": []
+        }
+      ],
+      "issued": {
+        "date-parts": [
+          [
+            2020,
+            12,
+            24
+          ]
+        ]
+      },
+      "references-count": 62,
+      "journal-issue": {
+        "issue": "5",
+        "published-online": {
+          "date-parts": [
+            [
+              2020,
+              12,
+              24
+            ]
+          ]
+        },
+        "published-print": {
+          "date-parts": [
+            [
+              2021,
+              9,
+              11
+            ]
+          ]
+        }
+      },
+      "URL": "https://doi.org/10.1093/restud/rdaa084",
+      "ISSN": [
+        "0034-6527",
+        "1467-937X"
+      ],
+      "issn-type": [
+        {
+          "value": "0034-6527",
+          "type": "print"
+        },
+        {
+          "value": "1467-937X",
+          "type": "electronic"
+        }
+      ],
+      "published-other": {
+        "date-parts": [
+          [
+            2021,
+            10,
+            1
+          ]
+        ]
+      },
+      "published": {
+        "date-parts": [
+          [
+            2020,
+            12,
+            24
           ]
         ]
       }
@@ -25926,11 +25926,11 @@
           [
             2025,
             6,
-            10
+            13
           ]
         ],
-        "date-time": "2025-06-10T20:06:17Z",
-        "timestamp": 1749585977093
+        "date-time": "2025-06-13T23:45:39Z",
+        "timestamp": 1749858339318
       },
       "reference-count": 64,
       "publisher": "Oxford University Press (OUP)",
@@ -25982,7 +25982,7 @@
       },
       "page": "2511-2541",
       "source": "Crossref",
-      "is-referenced-by-count": 67,
+      "is-referenced-by-count": 68,
       "title": [
         "Human Capital Development and Parental Investment in India"
       ],
@@ -43242,11 +43242,11 @@
           [
             2025,
             6,
-            13
+            14
           ]
         ],
-        "date-time": "2025-06-13T17:47:08Z",
-        "timestamp": 1749836828947
+        "date-time": "2025-06-14T14:47:43Z",
+        "timestamp": 1749912463831
       },
       "reference-count": 44,
       "publisher": "Oxford University Press (OUP)",
@@ -43298,7 +43298,7 @@
       },
       "page": "2290-2321",
       "source": "Crossref",
-      "is-referenced-by-count": 61,
+      "is-referenced-by-count": 62,
       "title": [
         "Child-Related Transfers, Household Labour Supply, and Welfare"
       ],
@@ -43872,11 +43872,11 @@
           [
             2025,
             6,
-            10
+            14
           ]
         ],
-        "date-time": "2025-06-10T12:49:07Z",
-        "timestamp": 1749559747815
+        "date-time": "2025-06-14T00:07:23Z",
+        "timestamp": 1749859643347
       },
       "reference-count": 79,
       "publisher": "Oxford University Press (OUP)",
@@ -47541,11 +47541,11 @@
           [
             2025,
             6,
-            12
+            14
           ]
         ],
-        "date-time": "2025-06-12T01:17:47Z",
-        "timestamp": 1749691067924,
+        "date-time": "2025-06-14T11:03:31Z",
+        "timestamp": 1749899011216,
         "version": "3.37.3"
       },
       "reference-count": 57,
@@ -47651,7 +47651,7 @@
       },
       "page": "1831-1862",
       "source": "Crossref",
-      "is-referenced-by-count": 189,
+      "is-referenced-by-count": 195,
       "title": [
         "Property Rights, Land Misallocation, and Agricultural Efficiency in China"
       ],
@@ -65035,11 +65035,11 @@
           [
             2025,
             6,
-            9
+            14
           ]
         ],
-        "date-time": "2025-06-09T14:28:14Z",
-        "timestamp": 1749479294165
+        "date-time": "2025-06-14T11:03:31Z",
+        "timestamp": 1749899011367
       },
       "reference-count": 76,
       "publisher": "Oxford University Press (OUP)",

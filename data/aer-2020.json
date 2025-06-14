@@ -4309,251 +4309,6 @@
           [
             2025,
             5,
-            15
-          ]
-        ],
-        "date-time": "2025-05-15T06:26:02Z",
-        "timestamp": 1747290362676
-      },
-      "reference-count": 19,
-      "publisher": "American Economic Association",
-      "issue": "7",
-      "content-domain": {
-        "domain": [],
-        "crossmark-restriction": false
-      },
-      "short-container-title": [
-        "American Economic Review"
-      ],
-      "published-print": {
-        "date-parts": [
-          [
-            2020,
-            7,
-            1
-          ]
-        ]
-      },
-      "DOI": "10.1257/aer.110.7.1937",
-      "type": "journal-article",
-      "created": {
-        "date-parts": [
-          [
-            2020,
-            6,
-            30
-          ]
-        ],
-        "date-time": "2020-06-30T12:52:06Z",
-        "timestamp": 1593521526000
-      },
-      "page": "1937-1951",
-      "source": "Crossref",
-      "is-referenced-by-count": 37,
-      "title": [
-        "Field Experiments and the Practice of Economics"
-      ],
-      "prefix": "10.1257",
-      "volume": "110",
-      "author": [
-        {
-          "given": "Abhijit Vinayak",
-          "family": "Banerjee",
-          "sequence": "first",
-          "affiliation": [
-            {
-              "name": "Department of Economics, Massachusetts Institute of Technology (email: )"
-            }
-          ]
-        }
-      ],
-      "member": "11",
-      "reference": [
-        {
-          "key": "p_1",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/jpet.12322"
-        },
-        {
-          "key": "p_2",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/jep.24.2.3"
-        },
-        {
-          "key": "p_3",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/restud/rdr015"
-        },
-        {
-          "key": "p_5",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/qje/qjx003"
-        },
-        {
-          "key": "p_6",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/2118364"
-        },
-        {
-          "key": "p_7",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/2298059"
-        },
-        {
-          "key": "p_10",
-          "first-page": "363",
-          "volume": "341",
-          "author": "Chandrasekhar Arun G.",
-          "year": "2013",
-          "journal-title": "Science"
-        },
-        {
-          "key": "p_13",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1023/A:1026205114860"
-        },
-        {
-          "issue": "6236",
-          "key": "p_18",
-          "first-page": "772",
-          "volume": "348",
-          "author": "Duflo Esther",
-          "year": "2015",
-          "journal-title": "Science"
-        },
-        {
-          "key": "p_20",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/wbro/lkx002"
-        },
-        {
-          "key": "p_25",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1086/261876"
-        },
-        {
-          "key": "p_27",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/2951598"
-        },
-        {
-          "key": "p_28",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/2233171"
-        },
-        {
-          "key": "p_30",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/qje/qjt024"
-        },
-        {
-          "key": "p_31",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/aer.102.4.1241"
-        },
-        {
-          "key": "p_32",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/2297811"
-        },
-        {
-          "key": "p_34",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.3982/ECTA5781"
-        },
-        {
-          "key": "p_36",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/app.20170299"
-        },
-        {
-          "key": "p_39",
-          "first-page": "21",
-          "author": "Petra",
-          "year": "2010",
-          "journal-title": "Annual Review of Economics (2)"
-        }
-      ],
-      "container-title": [
-        "American Economic Review"
-      ],
-      "language": "en",
-      "link": [
-        {
-          "URL": "https://pubs.aeaweb.org/doi/pdf/10.1257/aer.110.7.1937",
-          "content-type": "unspecified",
-          "content-version": "vor",
-          "intended-application": "similarity-checking"
-        }
-      ],
-      "deposited": {
-        "date-parts": [
-          [
-            2020,
-            6,
-            30
-          ]
-        ],
-        "date-time": "2020-06-30T12:53:30Z",
-        "timestamp": 1593521610000
-      },
-      "score": 0.0,
-      "resource": {
-        "primary": {
-          "URL": "https://pubs.aeaweb.org/doi/10.1257/aer.110.7.1937"
-        }
-      },
-      "issued": {
-        "date-parts": [
-          [
-            2020,
-            7,
-            1
-          ]
-        ]
-      },
-      "references-count": 19,
-      "journal-issue": {
-        "issue": "7",
-        "published-print": {
-          "date-parts": [
-            [
-              2020,
-              7,
-              1
-            ]
-          ]
-        }
-      },
-      "alternative-id": [
-        "10.1257/aer.110.7.1937"
-      ],
-      "URL": "https://doi.org/10.1257/aer.110.7.1937",
-      "ISSN": [
-        "0002-8282"
-      ],
-      "issn-type": [
-        {
-          "value": "0002-8282",
-          "type": "print"
-        }
-      ],
-      "published": {
-        "date-parts": [
-          [
-            2020,
-            7,
-            1
-          ]
-        ]
-      }
-    },
-    {
-      "indexed": {
-        "date-parts": [
-          [
-            2025,
-            5,
             19
           ]
         ],
@@ -4924,11 +4679,279 @@
           [
             2025,
             6,
-            10
+            13
           ]
         ],
-        "date-time": "2025-06-10T11:27:58Z",
-        "timestamp": 1749554878481
+        "date-time": "2025-06-13T17:47:14Z",
+        "timestamp": 1749836834307
+      },
+      "reference-count": 22,
+      "publisher": "American Economic Association",
+      "issue": "9",
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "American Economic Review"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2020,
+            9,
+            1
+          ]
+        ]
+      },
+      "abstract": "<jats:p> Data is nonrival: a person’s location history, medical records, and driving data can be used by many firms simultaneously. Nonrivalry leads to increasing returns. As a result, there may be social gains to data being used broadly across firms, even in the presence of privacy considerations. Fearing creative destruction, firms may choose to hoard their data, leading to the inefficient use of nonrival data. Giving data property rights to consumers can generate allocations that are close to optimal. Consumers balance their concerns for privacy against the economic gains that come from selling data broadly. (JEL C80, D11, D21, D83, E22, K11, O34) </jats:p>",
+      "DOI": "10.1257/aer.20191330",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2020,
+            9,
+            1
+          ]
+        ],
+        "date-time": "2020-09-01T11:47:28Z",
+        "timestamp": 1598960848000
+      },
+      "page": "2819-2858",
+      "source": "Crossref",
+      "is-referenced-by-count": 410,
+      "title": [
+        "Nonrivalry and the Economics of Data"
+      ],
+      "prefix": "10.1257",
+      "volume": "110",
+      "author": [
+        {
+          "given": "Charles I.",
+          "family": "Jones",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Stanford University, Graduate School of Business, and NBER (email: )"
+            }
+          ]
+        },
+        {
+          "given": "Christopher",
+          "family": "Tonetti",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Stanford University, Graduate School of Business, and NBER (email: )"
+            }
+          ]
+        }
+      ],
+      "member": "11",
+      "reference": [
+        {
+          "key": "p_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/aer.20170627"
+        },
+        {
+          "key": "p_3",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/jel.54.2.442"
+        },
+        {
+          "key": "p_4",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/2951599"
+        },
+        {
+          "key": "p_6",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.3982/ECTA12144"
+        },
+        {
+          "key": "p_7",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/jeea.12153"
+        },
+        {
+          "key": "p_10",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/pandp.20181003"
+        },
+        {
+          "key": "p_13",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/pandp.20191000"
+        },
+        {
+          "key": "p_14",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jmoneco.2018.05.013"
+        },
+        {
+          "key": "p_15",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0165-1765(96)00834-8"
+        },
+        {
+          "key": "p_16",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1146/annurev-economics-080315-015439"
+        },
+        {
+          "key": "p_19",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s001990050324"
+        },
+        {
+          "key": "p_20",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/466560"
+        },
+        {
+          "issue": "3",
+          "key": "p_21",
+          "first-page": "297",
+          "volume": "67",
+          "author": "Dixit Avinash K",
+          "year": "1977",
+          "journal-title": "American Economic Review"
+        },
+        {
+          "key": "p_23",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/qje/qjx021"
+        },
+        {
+          "key": "p_25",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/aer.20171349"
+        },
+        {
+          "key": "p_26",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1287/mnsc.1100.1246"
+        },
+        {
+          "key": "p_28",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/jep.33.1.131"
+        },
+        {
+          "key": "p_32",
+          "volume": "21",
+          "author": "Lee Kai-Fu",
+          "year": "2018",
+          "journal-title": "MIT Technology Review"
+        },
+        {
+          "key": "p_33",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1287/mnsc.2017.2858"
+        },
+        {
+          "key": "p_34",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/673886"
+        },
+        {
+          "key": "p_36",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/261725"
+        },
+        {
+          "key": "p_39",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jet.2003.12.008"
+        }
+      ],
+      "container-title": [
+        "American Economic Review"
+      ],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://pubs.aeaweb.org/doi/pdf/10.1257/aer.20191330",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2020,
+            9,
+            1
+          ]
+        ],
+        "date-time": "2020-09-01T11:48:14Z",
+        "timestamp": 1598960894000
+      },
+      "score": 0.0,
+      "resource": {
+        "primary": {
+          "URL": "https://pubs.aeaweb.org/doi/10.1257/aer.20191330"
+        }
+      },
+      "issued": {
+        "date-parts": [
+          [
+            2020,
+            9,
+            1
+          ]
+        ]
+      },
+      "references-count": 22,
+      "journal-issue": {
+        "issue": "9",
+        "published-print": {
+          "date-parts": [
+            [
+              2020,
+              9,
+              1
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1257/aer.20191330"
+      ],
+      "URL": "https://doi.org/10.1257/aer.20191330",
+      "ISSN": [
+        "0002-8282"
+      ],
+      "issn-type": [
+        {
+          "value": "0002-8282",
+          "type": "print"
+        }
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2020,
+            9,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "indexed": {
+        "date-parts": [
+          [
+            2025,
+            6,
+            14
+          ]
+        ],
+        "date-time": "2025-06-14T12:25:16Z",
+        "timestamp": 1749903916700
       },
       "reference-count": 34,
       "publisher": "American Economic Association",
@@ -5260,15 +5283,15 @@
           [
             2025,
             6,
-            13
+            14
           ]
         ],
-        "date-time": "2025-06-13T17:47:14Z",
-        "timestamp": 1749836834307
+        "date-time": "2025-06-14T15:31:15Z",
+        "timestamp": 1749915075431
       },
-      "reference-count": 22,
+      "reference-count": 19,
       "publisher": "American Economic Association",
-      "issue": "9",
+      "issue": "7",
       "content-domain": {
         "domain": [],
         "crossmark-restriction": false
@@ -5280,51 +5303,40 @@
         "date-parts": [
           [
             2020,
-            9,
+            7,
             1
           ]
         ]
       },
-      "abstract": "<jats:p> Data is nonrival: a person’s location history, medical records, and driving data can be used by many firms simultaneously. Nonrivalry leads to increasing returns. As a result, there may be social gains to data being used broadly across firms, even in the presence of privacy considerations. Fearing creative destruction, firms may choose to hoard their data, leading to the inefficient use of nonrival data. Giving data property rights to consumers can generate allocations that are close to optimal. Consumers balance their concerns for privacy against the economic gains that come from selling data broadly. (JEL C80, D11, D21, D83, E22, K11, O34) </jats:p>",
-      "DOI": "10.1257/aer.20191330",
+      "DOI": "10.1257/aer.110.7.1937",
       "type": "journal-article",
       "created": {
         "date-parts": [
           [
             2020,
-            9,
-            1
+            6,
+            30
           ]
         ],
-        "date-time": "2020-09-01T11:47:28Z",
-        "timestamp": 1598960848000
+        "date-time": "2020-06-30T12:52:06Z",
+        "timestamp": 1593521526000
       },
-      "page": "2819-2858",
+      "page": "1937-1951",
       "source": "Crossref",
-      "is-referenced-by-count": 410,
+      "is-referenced-by-count": 37,
       "title": [
-        "Nonrivalry and the Economics of Data"
+        "Field Experiments and the Practice of Economics"
       ],
       "prefix": "10.1257",
       "volume": "110",
       "author": [
         {
-          "given": "Charles I.",
-          "family": "Jones",
+          "given": "Abhijit Vinayak",
+          "family": "Banerjee",
           "sequence": "first",
           "affiliation": [
             {
-              "name": "Stanford University, Graduate School of Business, and NBER (email: )"
-            }
-          ]
-        },
-        {
-          "given": "Christopher",
-          "family": "Tonetti",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Stanford University, Graduate School of Business, and NBER (email: )"
+              "name": "Department of Economics, Massachusetts Institute of Technology (email: )"
             }
           ]
         }
@@ -5334,118 +5346,106 @@
         {
           "key": "p_1",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1257/aer.20170627"
+          "DOI": "10.1111/jpet.12322"
+        },
+        {
+          "key": "p_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/jep.24.2.3"
         },
         {
           "key": "p_3",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1257/jel.54.2.442"
+          "DOI": "10.1093/restud/rdr015"
         },
         {
-          "key": "p_4",
+          "key": "p_5",
           "doi-asserted-by": "publisher",
-          "DOI": "10.2307/2951599"
+          "DOI": "10.1093/qje/qjx003"
         },
         {
           "key": "p_6",
           "doi-asserted-by": "publisher",
-          "DOI": "10.3982/ECTA12144"
+          "DOI": "10.2307/2118364"
         },
         {
           "key": "p_7",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1111/jeea.12153"
+          "DOI": "10.2307/2298059"
         },
         {
           "key": "p_10",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/pandp.20181003"
+          "first-page": "363",
+          "volume": "341",
+          "author": "Chandrasekhar Arun G.",
+          "year": "2013",
+          "journal-title": "Science"
         },
         {
           "key": "p_13",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1257/pandp.20191000"
+          "DOI": "10.1023/A:1026205114860"
         },
         {
-          "key": "p_14",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jmoneco.2018.05.013"
-        },
-        {
-          "key": "p_15",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/0165-1765(96)00834-8"
-        },
-        {
-          "key": "p_16",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1146/annurev-economics-080315-015439"
-        },
-        {
-          "key": "p_19",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1007/s001990050324"
+          "issue": "6236",
+          "key": "p_18",
+          "first-page": "772",
+          "volume": "348",
+          "author": "Duflo Esther",
+          "year": "2015",
+          "journal-title": "Science"
         },
         {
           "key": "p_20",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1086/466560"
-        },
-        {
-          "issue": "3",
-          "key": "p_21",
-          "first-page": "297",
-          "volume": "67",
-          "author": "Dixit Avinash K",
-          "year": "1977",
-          "journal-title": "American Economic Review"
-        },
-        {
-          "key": "p_23",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/qje/qjx021"
+          "DOI": "10.1093/wbro/lkx002"
         },
         {
           "key": "p_25",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1257/aer.20171349"
+          "DOI": "10.1086/261876"
         },
         {
-          "key": "p_26",
+          "key": "p_27",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1287/mnsc.1100.1246"
+          "DOI": "10.2307/2951598"
         },
         {
           "key": "p_28",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1257/jep.33.1.131"
+          "DOI": "10.2307/2233171"
+        },
+        {
+          "key": "p_30",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/qje/qjt024"
+        },
+        {
+          "key": "p_31",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/aer.102.4.1241"
         },
         {
           "key": "p_32",
-          "volume": "21",
-          "author": "Lee Kai-Fu",
-          "year": "2018",
-          "journal-title": "MIT Technology Review"
-        },
-        {
-          "key": "p_33",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1287/mnsc.2017.2858"
+          "DOI": "10.2307/2297811"
         },
         {
           "key": "p_34",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1086/673886"
+          "DOI": "10.3982/ECTA5781"
         },
         {
           "key": "p_36",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1086/261725"
+          "DOI": "10.1257/app.20170299"
         },
         {
           "key": "p_39",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jet.2003.12.008"
+          "first-page": "21",
+          "author": "Petra",
+          "year": "2010",
+          "journal-title": "Annual Review of Economics (2)"
         }
       ],
       "container-title": [
@@ -5454,7 +5454,7 @@
       "language": "en",
       "link": [
         {
-          "URL": "https://pubs.aeaweb.org/doi/pdf/10.1257/aer.20191330",
+          "URL": "https://pubs.aeaweb.org/doi/pdf/10.1257/aer.110.7.1937",
           "content-type": "unspecified",
           "content-version": "vor",
           "intended-application": "similarity-checking"
@@ -5464,45 +5464,45 @@
         "date-parts": [
           [
             2020,
-            9,
-            1
+            6,
+            30
           ]
         ],
-        "date-time": "2020-09-01T11:48:14Z",
-        "timestamp": 1598960894000
+        "date-time": "2020-06-30T12:53:30Z",
+        "timestamp": 1593521610000
       },
       "score": 0.0,
       "resource": {
         "primary": {
-          "URL": "https://pubs.aeaweb.org/doi/10.1257/aer.20191330"
+          "URL": "https://pubs.aeaweb.org/doi/10.1257/aer.110.7.1937"
         }
       },
       "issued": {
         "date-parts": [
           [
             2020,
-            9,
+            7,
             1
           ]
         ]
       },
-      "references-count": 22,
+      "references-count": 19,
       "journal-issue": {
-        "issue": "9",
+        "issue": "7",
         "published-print": {
           "date-parts": [
             [
               2020,
-              9,
+              7,
               1
             ]
           ]
         }
       },
       "alternative-id": [
-        "10.1257/aer.20191330"
+        "10.1257/aer.110.7.1937"
       ],
-      "URL": "https://doi.org/10.1257/aer.20191330",
+      "URL": "https://doi.org/10.1257/aer.110.7.1937",
       "ISSN": [
         "0002-8282"
       ],
@@ -5516,7 +5516,7 @@
         "date-parts": [
           [
             2020,
-            9,
+            7,
             1
           ]
         ]
@@ -14394,12 +14394,12 @@
             12
           ]
         ],
-        "date-time": "2025-06-12T05:25:22Z",
-        "timestamp": 1749705922940
+        "date-time": "2025-06-12T20:46:58Z",
+        "timestamp": 1749761218846
       },
-      "reference-count": 43,
+      "reference-count": 32,
       "publisher": "American Economic Association",
-      "issue": "8",
+      "issue": "7",
       "content-domain": {
         "domain": [],
         "crossmark-restriction": false
@@ -14411,41 +14411,61 @@
         "date-parts": [
           [
             2020,
-            8,
+            7,
             1
           ]
         ]
       },
-      "abstract": "<jats:p> This paper analyzes how bounded rationality affects monetary and fiscal policy via an empirically relevant enrichment of the New Keynesian model. It models agents’ partial myopia toward distant atypical events using a new microfounded “cognitive discounting” parameter. Compared to the rational model, (i) there is no forward guidance puzzle; (ii) the Taylor principle changes: with passive monetary policy but enough myopia equilibria are determinate and economies stable; (iii) the zero lower bound is much less costly; (iv) price-level targeting is not optimal; (v) fiscal stimulus is effective; (vi) the model is “ neo-Fisherian” in the long run, Keynesian in the short run. (JEL E12, E31, E43, E52, E62, E70) </jats:p>",
-      "DOI": "10.1257/aer.20162005",
+      "abstract": "<jats:p> We estimate the price effect of US import restrictions on washers. The 2012 and 2016 antidumping duties against South Korea and China were accompanied by downward or minor price movements along with production relocation to other export platform countries. With the 2018 tariffs, on nearly all source countries, the price of washers increased nearly 12 percent. Interestingly, the price of dryers—not subject to tariffs—increased by an equivalent amount. Factoring in dryer prices and price increases by domestic brands, the 2018 tariffs on washers imply a tariff elasticity of consumer prices of above one. (JEL F13, F14, F23, L68, 019, P33) </jats:p>",
+      "DOI": "10.1257/aer.20190611",
       "type": "journal-article",
       "created": {
         "date-parts": [
           [
             2020,
-            7,
-            28
+            6,
+            30
           ]
         ],
-        "date-time": "2020-07-28T12:01:15Z",
-        "timestamp": 1595937675000
+        "date-time": "2020-06-30T12:52:06Z",
+        "timestamp": 1593521526000
       },
-      "page": "2271-2327",
+      "page": "2103-2127",
       "source": "Crossref",
-      "is-referenced-by-count": 233,
+      "is-referenced-by-count": 148,
       "title": [
-        "A Behavioral New Keynesian Model"
+        "The Production Relocation and Price Effects of US Trade Policy: The Case of Washing Machines"
       ],
       "prefix": "10.1257",
       "volume": "110",
       "author": [
         {
-          "given": "Xavier",
-          "family": "Gabaix",
+          "given": "Aaron",
+          "family": "Flaaen",
           "sequence": "first",
           "affiliation": [
             {
-              "name": "Harvard University, NBER, and CEPR (email: )"
+              "name": "Board of Governors of the Federal Reserve (email: )"
+            }
+          ]
+        },
+        {
+          "given": "Ali",
+          "family": "Hortaçsu",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Chicago and NBER ()"
+            }
+          ]
+        },
+        {
+          "given": "Felix",
+          "family": "Tintelnot",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "University of Chicago and NBER (email: )"
             }
           ]
         }
@@ -14453,231 +14473,174 @@
       "member": "11",
       "reference": [
         {
-          "key": "p_7",
+          "key": "p_2",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1257/aer.20161996"
+          "DOI": "10.1257/jep.33.4.187"
         },
         {
-          "key": "p_8",
+          "key": "p_3",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1538-4616.2011.00495.x"
+          "DOI": "10.1257/pol.5.1.239"
+        },
+        {
+          "key": "p_9",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/jel.20151192"
         },
         {
           "key": "p_10",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jet.2007.07.008"
+          "DOI": "10.1257/aeri.20180358"
+        },
+        {
+          "key": "p_11",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/379944"
         },
         {
           "key": "p_12",
           "doi-asserted-by": "publisher",
-          "DOI": "10.2307/1912186"
+          "DOI": "10.1016/S0022-1996(01)00135-0"
+        },
+        {
+          "issue": "4",
+          "key": "p_13",
+          "first-page": "520",
+          "volume": "87",
+          "author": "Brainard S. Lael.",
+          "year": "1997",
+          "journal-title": "American Economic Review"
+        },
+        {
+          "key": "p_14",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/aer.98.5.2032"
         },
         {
           "key": "p_15",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1162/qjec.2010.125.2.859"
+          "DOI": "10.1162/qjec.2006.121.2.541"
         },
         {
-          "key": "p_16",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/S0304-3932(02)00144-7"
-        },
-        {
-          "issue": "1",
           "key": "p_17",
-          "first-page": "223",
-          "volume": "85",
-          "author": "Caballero Ricardo J",
-          "year": "2018",
-          "journal-title": "Review of Economic Studies"
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/qje/qjz019"
+        },
+        {
+          "key": "p_18",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/JEEA.2007.5.4.776"
+        },
+        {
+          "key": "p_19",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/0033553053970151"
+        },
+        {
+          "key": "p_20",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/qje/qjz036"
+        },
+        {
+          "key": "p_21",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0022-1996(89)90076-7"
         },
         {
           "key": "p_22",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1257/mac.20150147"
+          "DOI": "10.1162/qjec.122.1.1"
+        },
+        {
+          "key": "p_23",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jinteco.2018.04.005"
         },
         {
           "key": "p_24",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1086/426038"
+          "DOI": "10.1162/qjec.2006.121.2.505"
         },
         {
-          "key": "p_25",
+          "key": "p_27",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1257/jel.37.4.1661"
-        },
-        {
-          "key": "p_26",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/003355300554692"
+          "DOI": "10.1257/aer.20180384"
         },
         {
           "key": "p_28",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1086/665662"
+          "DOI": "10.1257/000282804322970814"
         },
         {
           "key": "p_29",
+          "first-page": "17",
+          "author": "Hitsch Günter",
+          "year": "2017",
+          "journal-title": "Chicago Booth Research Paper"
+        },
+        {
+          "key": "p_30",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1257/aer.20110306"
+          "DOI": "10.1016/0022-1996(92)90038-L"
         },
         {
           "key": "p_31",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1093/qje/qjs023"
+          "DOI": "10.1086/259771"
         },
         {
           "key": "p_32",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/mac.20170367"
+          "first-page": "12",
+          "author": "Hufbauer Gary C",
+          "year": "2012",
+          "journal-title": "Peterson Institute for International Economics Policy Brief"
         },
         {
           "key": "p_33",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1353/eca.2003.0010"
+          "first-page": "1890",
+          "author": "Irwin Douglas A",
+          "year": "2019",
+          "journal-title": "Sugar Duties"
         },
         {
-          "key": "p_34",
+          "key": "p_37",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1016/S0304-3932(03)00036-9"
-        },
-        {
-          "key": "p_35",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/jel.20160889"
+          "DOI": "10.1016/j.jinteco.2016.09.008"
         },
         {
           "key": "p_38",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1257/aer.20151079"
+          "DOI": "10.1257/aer.98.2.430"
         },
         {
           "key": "p_39",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1257/aer.20171400"
+          "DOI": "10.1016/j.jinteco.2011.07.006"
         },
         {
-          "key": "p_40",
+          "key": "p_44",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1111/jmcb.12184"
+          "DOI": "10.1111/j.1467-6451.2012.00477.x"
         },
         {
-          "key": "p_41",
+          "key": "p_45",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jmoneco.2003.10.004"
+          "DOI": "10.1093/qje/qjw037"
         },
         {
-          "key": "p_43",
+          "key": "p_47",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1093/qje/qju024"
-        },
-        {
-          "key": "p_48",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/qjec.2006.121.2.505"
-        },
-        {
-          "key": "p_52",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/S0304-3932(99)00023-9"
-        },
-        {
-          "key": "p_53",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/JEEA.2007.5.1.227"
+          "DOI": "10.1257/0002828042002633"
         },
         {
           "key": "p_54",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1257/aer.20170537"
+          "DOI": "10.1016/S0022-1996(97)00050-0"
         },
         {
           "key": "p_55",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1257/aer.20170110"
-        },
-        {
-          "key": "p_56",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/qje/qju035"
-        },
-        {
-          "key": "p_57",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.econlet.2019.07.007"
-        },
-        {
-          "key": "p_58",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jmoneco.2005.08.007"
-        },
-        {
-          "key": "p_59",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/restud/rdv027"
-        },
-        {
-          "key": "p_60",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/qje/qjv037"
-        },
-        {
-          "key": "p_61",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/003355302320935034"
-        },
-        {
-          "key": "p_62",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1353/eca.2011.0003"
-        },
-        {
-          "key": "p_63",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/aer.20150063"
-        },
-        {
-          "key": "p_64",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/ecca.12226"
-        },
-        {
-          "issue": "3",
-          "key": "p_66",
-          "first-page": "587",
-          "volume": "88",
-          "author": "Morris Stephen",
-          "year": "1998",
-          "journal-title": "American Economic Review"
-        },
-        {
-          "issue": "5",
-          "key": "p_67",
-          "first-page": "1313",
-          "volume": "85",
-          "author": "Nagel Rosemarie",
-          "year": "1995",
-          "journal-title": "American Economic Review"
-        },
-        {
-          "key": "p_68",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jedc.2019.05.013"
-        },
-        {
-          "key": "p_69",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jmoneco.2007.12.008"
-        },
-        {
-          "key": "p_70",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/aer.97.3.586"
-        },
-        {
-          "key": "p_75",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1146/annurev-economics-080511-110857"
+          "DOI": "10.1016/S0022-1996(02)00051-X"
         }
       ],
       "container-title": [
@@ -14686,7 +14649,7 @@
       "language": "en",
       "link": [
         {
-          "URL": "https://pubs.aeaweb.org/doi/pdf/10.1257/aer.20162005",
+          "URL": "https://pubs.aeaweb.org/doi/pdf/10.1257/aer.20190611",
           "content-type": "unspecified",
           "content-version": "vor",
           "intended-application": "similarity-checking"
@@ -14696,45 +14659,45 @@
         "date-parts": [
           [
             2020,
-            7,
-            28
+            6,
+            30
           ]
         ],
-        "date-time": "2020-07-28T12:01:25Z",
-        "timestamp": 1595937685000
+        "date-time": "2020-06-30T12:53:00Z",
+        "timestamp": 1593521580000
       },
       "score": 0.0,
       "resource": {
         "primary": {
-          "URL": "https://pubs.aeaweb.org/doi/10.1257/aer.20162005"
+          "URL": "https://pubs.aeaweb.org/doi/10.1257/aer.20190611"
         }
       },
       "issued": {
         "date-parts": [
           [
             2020,
-            8,
+            7,
             1
           ]
         ]
       },
-      "references-count": 43,
+      "references-count": 32,
       "journal-issue": {
-        "issue": "8",
+        "issue": "7",
         "published-print": {
           "date-parts": [
             [
               2020,
-              8,
+              7,
               1
             ]
           ]
         }
       },
       "alternative-id": [
-        "10.1257/aer.20162005"
+        "10.1257/aer.20190611"
       ],
-      "URL": "https://doi.org/10.1257/aer.20162005",
+      "URL": "https://doi.org/10.1257/aer.20190611",
       "ISSN": [
         "0002-8282"
       ],
@@ -14748,7 +14711,7 @@
         "date-parts": [
           [
             2020,
-            8,
+            7,
             1
           ]
         ]
@@ -15110,12 +15073,12 @@
             12
           ]
         ],
-        "date-time": "2025-06-12T20:46:58Z",
-        "timestamp": 1749761218846
+        "date-time": "2025-06-12T05:25:22Z",
+        "timestamp": 1749705922940
       },
-      "reference-count": 32,
+      "reference-count": 43,
       "publisher": "American Economic Association",
-      "issue": "7",
+      "issue": "8",
       "content-domain": {
         "domain": [],
         "crossmark-restriction": false
@@ -15127,61 +15090,41 @@
         "date-parts": [
           [
             2020,
-            7,
+            8,
             1
           ]
         ]
       },
-      "abstract": "<jats:p> We estimate the price effect of US import restrictions on washers. The 2012 and 2016 antidumping duties against South Korea and China were accompanied by downward or minor price movements along with production relocation to other export platform countries. With the 2018 tariffs, on nearly all source countries, the price of washers increased nearly 12 percent. Interestingly, the price of dryers—not subject to tariffs—increased by an equivalent amount. Factoring in dryer prices and price increases by domestic brands, the 2018 tariffs on washers imply a tariff elasticity of consumer prices of above one. (JEL F13, F14, F23, L68, 019, P33) </jats:p>",
-      "DOI": "10.1257/aer.20190611",
+      "abstract": "<jats:p> This paper analyzes how bounded rationality affects monetary and fiscal policy via an empirically relevant enrichment of the New Keynesian model. It models agents’ partial myopia toward distant atypical events using a new microfounded “cognitive discounting” parameter. Compared to the rational model, (i) there is no forward guidance puzzle; (ii) the Taylor principle changes: with passive monetary policy but enough myopia equilibria are determinate and economies stable; (iii) the zero lower bound is much less costly; (iv) price-level targeting is not optimal; (v) fiscal stimulus is effective; (vi) the model is “ neo-Fisherian” in the long run, Keynesian in the short run. (JEL E12, E31, E43, E52, E62, E70) </jats:p>",
+      "DOI": "10.1257/aer.20162005",
       "type": "journal-article",
       "created": {
         "date-parts": [
           [
             2020,
-            6,
-            30
+            7,
+            28
           ]
         ],
-        "date-time": "2020-06-30T12:52:06Z",
-        "timestamp": 1593521526000
+        "date-time": "2020-07-28T12:01:15Z",
+        "timestamp": 1595937675000
       },
-      "page": "2103-2127",
+      "page": "2271-2327",
       "source": "Crossref",
-      "is-referenced-by-count": 148,
+      "is-referenced-by-count": 233,
       "title": [
-        "The Production Relocation and Price Effects of US Trade Policy: The Case of Washing Machines"
+        "A Behavioral New Keynesian Model"
       ],
       "prefix": "10.1257",
       "volume": "110",
       "author": [
         {
-          "given": "Aaron",
-          "family": "Flaaen",
+          "given": "Xavier",
+          "family": "Gabaix",
           "sequence": "first",
           "affiliation": [
             {
-              "name": "Board of Governors of the Federal Reserve (email: )"
-            }
-          ]
-        },
-        {
-          "given": "Ali",
-          "family": "Hortaçsu",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "University of Chicago and NBER ()"
-            }
-          ]
-        },
-        {
-          "given": "Felix",
-          "family": "Tintelnot",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "University of Chicago and NBER (email: )"
+              "name": "Harvard University, NBER, and CEPR (email: )"
             }
           ]
         }
@@ -15189,174 +15132,231 @@
       "member": "11",
       "reference": [
         {
-          "key": "p_2",
+          "key": "p_7",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1257/jep.33.4.187"
+          "DOI": "10.1257/aer.20161996"
         },
         {
-          "key": "p_3",
+          "key": "p_8",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1257/pol.5.1.239"
-        },
-        {
-          "key": "p_9",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/jel.20151192"
+          "DOI": "10.1111/j.1538-4616.2011.00495.x"
         },
         {
           "key": "p_10",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1257/aeri.20180358"
-        },
-        {
-          "key": "p_11",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1086/379944"
+          "DOI": "10.1016/j.jet.2007.07.008"
         },
         {
           "key": "p_12",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1016/S0022-1996(01)00135-0"
-        },
-        {
-          "issue": "4",
-          "key": "p_13",
-          "first-page": "520",
-          "volume": "87",
-          "author": "Brainard S. Lael.",
-          "year": "1997",
-          "journal-title": "American Economic Review"
-        },
-        {
-          "key": "p_14",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/aer.98.5.2032"
+          "DOI": "10.2307/1912186"
         },
         {
           "key": "p_15",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1162/qjec.2006.121.2.541"
+          "DOI": "10.1162/qjec.2010.125.2.859"
         },
         {
+          "key": "p_16",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0304-3932(02)00144-7"
+        },
+        {
+          "issue": "1",
           "key": "p_17",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/qje/qjz019"
-        },
-        {
-          "key": "p_18",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/JEEA.2007.5.4.776"
-        },
-        {
-          "key": "p_19",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/0033553053970151"
-        },
-        {
-          "key": "p_20",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/qje/qjz036"
-        },
-        {
-          "key": "p_21",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/0022-1996(89)90076-7"
+          "first-page": "223",
+          "volume": "85",
+          "author": "Caballero Ricardo J",
+          "year": "2018",
+          "journal-title": "Review of Economic Studies"
         },
         {
           "key": "p_22",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1162/qjec.122.1.1"
-        },
-        {
-          "key": "p_23",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jinteco.2018.04.005"
+          "DOI": "10.1257/mac.20150147"
         },
         {
           "key": "p_24",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1162/qjec.2006.121.2.505"
+          "DOI": "10.1086/426038"
         },
         {
-          "key": "p_27",
+          "key": "p_25",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1257/aer.20180384"
+          "DOI": "10.1257/jel.37.4.1661"
+        },
+        {
+          "key": "p_26",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/003355300554692"
         },
         {
           "key": "p_28",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1257/000282804322970814"
+          "DOI": "10.1086/665662"
         },
         {
           "key": "p_29",
-          "first-page": "17",
-          "author": "Hitsch Günter",
-          "year": "2017",
-          "journal-title": "Chicago Booth Research Paper"
-        },
-        {
-          "key": "p_30",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1016/0022-1996(92)90038-L"
+          "DOI": "10.1257/aer.20110306"
         },
         {
           "key": "p_31",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1086/259771"
+          "DOI": "10.1093/qje/qjs023"
         },
         {
           "key": "p_32",
-          "first-page": "12",
-          "author": "Hufbauer Gary C",
-          "year": "2012",
-          "journal-title": "Peterson Institute for International Economics Policy Brief"
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/mac.20170367"
         },
         {
           "key": "p_33",
-          "first-page": "1890",
-          "author": "Irwin Douglas A",
-          "year": "2019",
-          "journal-title": "Sugar Duties"
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1353/eca.2003.0010"
         },
         {
-          "key": "p_37",
+          "key": "p_34",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jinteco.2016.09.008"
+          "DOI": "10.1016/S0304-3932(03)00036-9"
+        },
+        {
+          "key": "p_35",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/jel.20160889"
         },
         {
           "key": "p_38",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1257/aer.98.2.430"
+          "DOI": "10.1257/aer.20151079"
         },
         {
           "key": "p_39",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jinteco.2011.07.006"
+          "DOI": "10.1257/aer.20171400"
         },
         {
-          "key": "p_44",
+          "key": "p_40",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1467-6451.2012.00477.x"
+          "DOI": "10.1111/jmcb.12184"
         },
         {
-          "key": "p_45",
+          "key": "p_41",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1093/qje/qjw037"
+          "DOI": "10.1016/j.jmoneco.2003.10.004"
         },
         {
-          "key": "p_47",
+          "key": "p_43",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1257/0002828042002633"
+          "DOI": "10.1093/qje/qju024"
+        },
+        {
+          "key": "p_48",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/qjec.2006.121.2.505"
+        },
+        {
+          "key": "p_52",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0304-3932(99)00023-9"
+        },
+        {
+          "key": "p_53",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/JEEA.2007.5.1.227"
         },
         {
           "key": "p_54",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1016/S0022-1996(97)00050-0"
+          "DOI": "10.1257/aer.20170537"
         },
         {
           "key": "p_55",
           "doi-asserted-by": "publisher",
-          "DOI": "10.1016/S0022-1996(02)00051-X"
+          "DOI": "10.1257/aer.20170110"
+        },
+        {
+          "key": "p_56",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/qje/qju035"
+        },
+        {
+          "key": "p_57",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.econlet.2019.07.007"
+        },
+        {
+          "key": "p_58",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jmoneco.2005.08.007"
+        },
+        {
+          "key": "p_59",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/restud/rdv027"
+        },
+        {
+          "key": "p_60",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/qje/qjv037"
+        },
+        {
+          "key": "p_61",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/003355302320935034"
+        },
+        {
+          "key": "p_62",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1353/eca.2011.0003"
+        },
+        {
+          "key": "p_63",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/aer.20150063"
+        },
+        {
+          "key": "p_64",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/ecca.12226"
+        },
+        {
+          "issue": "3",
+          "key": "p_66",
+          "first-page": "587",
+          "volume": "88",
+          "author": "Morris Stephen",
+          "year": "1998",
+          "journal-title": "American Economic Review"
+        },
+        {
+          "issue": "5",
+          "key": "p_67",
+          "first-page": "1313",
+          "volume": "85",
+          "author": "Nagel Rosemarie",
+          "year": "1995",
+          "journal-title": "American Economic Review"
+        },
+        {
+          "key": "p_68",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jedc.2019.05.013"
+        },
+        {
+          "key": "p_69",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jmoneco.2007.12.008"
+        },
+        {
+          "key": "p_70",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/aer.97.3.586"
+        },
+        {
+          "key": "p_75",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1146/annurev-economics-080511-110857"
         }
       ],
       "container-title": [
@@ -15365,7 +15365,7 @@
       "language": "en",
       "link": [
         {
-          "URL": "https://pubs.aeaweb.org/doi/pdf/10.1257/aer.20190611",
+          "URL": "https://pubs.aeaweb.org/doi/pdf/10.1257/aer.20162005",
           "content-type": "unspecified",
           "content-version": "vor",
           "intended-application": "similarity-checking"
@@ -15375,45 +15375,45 @@
         "date-parts": [
           [
             2020,
-            6,
-            30
+            7,
+            28
           ]
         ],
-        "date-time": "2020-06-30T12:53:00Z",
-        "timestamp": 1593521580000
+        "date-time": "2020-07-28T12:01:25Z",
+        "timestamp": 1595937685000
       },
       "score": 0.0,
       "resource": {
         "primary": {
-          "URL": "https://pubs.aeaweb.org/doi/10.1257/aer.20190611"
+          "URL": "https://pubs.aeaweb.org/doi/10.1257/aer.20162005"
         }
       },
       "issued": {
         "date-parts": [
           [
             2020,
-            7,
+            8,
             1
           ]
         ]
       },
-      "references-count": 32,
+      "references-count": 43,
       "journal-issue": {
-        "issue": "7",
+        "issue": "8",
         "published-print": {
           "date-parts": [
             [
               2020,
-              7,
+              8,
               1
             ]
           ]
         }
       },
       "alternative-id": [
-        "10.1257/aer.20190611"
+        "10.1257/aer.20162005"
       ],
-      "URL": "https://doi.org/10.1257/aer.20190611",
+      "URL": "https://doi.org/10.1257/aer.20162005",
       "ISSN": [
         "0002-8282"
       ],
@@ -15427,7 +15427,7 @@
         "date-parts": [
           [
             2020,
-            7,
+            8,
             1
           ]
         ]
@@ -15866,11 +15866,11 @@
           [
             2025,
             6,
-            13
+            14
           ]
         ],
-        "date-time": "2025-06-13T10:27:43Z",
-        "timestamp": 1749810463207
+        "date-time": "2025-06-14T15:47:58Z",
+        "timestamp": 1749916078380
       },
       "reference-count": 43,
       "publisher": "American Economic Association",
@@ -17398,11 +17398,11 @@
           [
             2025,
             6,
-            13
+            14
           ]
         ],
-        "date-time": "2025-06-13T22:05:05Z",
-        "timestamp": 1749852305584
+        "date-time": "2025-06-14T19:02:48Z",
+        "timestamp": 1749927768568
       },
       "reference-count": 14,
       "publisher": "American Economic Association",
@@ -17439,7 +17439,7 @@
       },
       "page": "2964-2996",
       "source": "Crossref",
-      "is-referenced-by-count": 3016,
+      "is-referenced-by-count": 3019,
       "title": [
         "Two-Way Fixed Effects Estimators with Heterogeneous Treatment Effects"
       ],
@@ -19110,11 +19110,11 @@
           [
             2025,
             6,
-            12
+            14
           ]
         ],
-        "date-time": "2025-06-12T16:28:53Z",
-        "timestamp": 1749745733869
+        "date-time": "2025-06-14T15:12:50Z",
+        "timestamp": 1749913970179
       },
       "reference-count": 28,
       "publisher": "American Economic Association",
@@ -19151,7 +19151,7 @@
       },
       "page": "2377-2421",
       "source": "Crossref",
-      "is-referenced-by-count": 141,
+      "is-referenced-by-count": 142,
       "title": [
         "Cities in Bad Shape: Urban Geometry in India"
       ],
@@ -19968,11 +19968,11 @@
           [
             2025,
             6,
-            13
+            14
           ]
         ],
-        "date-time": "2025-06-13T02:05:49Z",
-        "timestamp": 1749780349954
+        "date-time": "2025-06-14T00:07:19Z",
+        "timestamp": 1749859639056
       },
       "reference-count": 44,
       "publisher": "American Economic Association",
@@ -20009,7 +20009,7 @@
       },
       "page": "337-363",
       "source": "Crossref",
-      "is-referenced-by-count": 200,
+      "is-referenced-by-count": 199,
       "title": [
         "The Dynamics of Motivated Beliefs"
       ],
@@ -20340,11 +20340,11 @@
           [
             2025,
             6,
-            13
+            14
           ]
         ],
-        "date-time": "2025-06-13T18:40:44Z",
-        "timestamp": 1749840044152
+        "date-time": "2025-06-14T16:05:59Z",
+        "timestamp": 1749917159341
       },
       "reference-count": 56,
       "publisher": "American Economic Association",
@@ -21321,297 +21321,6 @@
           [
             2025,
             6,
-            6
-          ]
-        ],
-        "date-time": "2025-06-06T10:45:12Z",
-        "timestamp": 1749206712798
-      },
-      "reference-count": 26,
-      "publisher": "American Economic Association",
-      "issue": "6",
-      "content-domain": {
-        "domain": [],
-        "crossmark-restriction": false
-      },
-      "short-container-title": [
-        "American Economic Review"
-      ],
-      "published-print": {
-        "date-parts": [
-          [
-            2020,
-            6,
-            1
-          ]
-        ]
-      },
-      "abstract": "<jats:p> We provide empirical evidence of a novel liquidity-based transmission mechanism through which monetary policy influences asset markets, develop a model of this mechanism, and assess the ability of the quantitative theory to match the evidence. (JEL E44, E52, G12, G14, G35) </jats:p>",
-      "DOI": "10.1257/aer.20170045",
-      "type": "journal-article",
-      "created": {
-        "date-parts": [
-          [
-            2020,
-            5,
-            28
-          ]
-        ],
-        "date-time": "2020-05-28T12:03:21Z",
-        "timestamp": 1590667401000
-      },
-      "page": "1635-1672",
-      "source": "Crossref",
-      "is-referenced-by-count": 38,
-      "title": [
-        "Turnover Liquidity and the Transmission of Monetary Policy"
-      ],
-      "prefix": "10.1257",
-      "volume": "110",
-      "author": [
-        {
-          "given": "Ricardo",
-          "family": "Lagos",
-          "sequence": "first",
-          "affiliation": [
-            {
-              "name": "Department of Economics, New York University (email: )"
-            }
-          ]
-        },
-        {
-          "given": "Shengxing",
-          "family": "Zhang",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Department of Economics, London School of Economics (email: )"
-            }
-          ]
-        }
-      ],
-      "member": "11",
-      "reference": [
-        {
-          "key": "p_1",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/rfs/hht053"
-        },
-        {
-          "key": "p_2",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1540-6261.2005.00760.x"
-        },
-        {
-          "key": "p_3",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/000282802320189069"
-        },
-        {
-          "key": "p_4",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/0304-3932(89)90025-1"
-        },
-        {
-          "key": "p_5",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1468-0262.2005.00639.x"
-        },
-        {
-          "key": "p_6",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/rfs/hhm037"
-        },
-        {
-          "key": "p_7",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1086/261535"
-        },
-        {
-          "key": "p_8",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jedc.2010.02.006"
-        },
-        {
-          "key": "p_9",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jet.2008.07.006"
-        },
-        {
-          "key": "p_10",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/mac.20130329"
-        },
-        {
-          "key": "p_11",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jeconom.2003.10.030"
-        },
-        {
-          "key": "p_12",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/aer.20131513"
-        },
-        {
-          "key": "p_13",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1198/073500106000000387"
-        },
-        {
-          "key": "p_14",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/S0304-4076(02)00207-5"
-        },
-        {
-          "key": "p_15",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/1884166"
-        },
-        {
-          "key": "p_16",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/jel.46.4.871"
-        },
-        {
-          "key": "p_17",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/rest.90.2.216"
-        },
-        {
-          "key": "p_18",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/S0304-3932(01)00055-1"
-        },
-        {
-          "key": "p_19",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.3982/ECTA7250"
-        },
-        {
-          "key": "p_20",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jet.2011.10.001"
-        },
-        {
-          "key": "p_23",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jfineco.2004.05.008"
-        },
-        {
-          "key": "p_24",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/aer.103.4.1212"
-        },
-        {
-          "key": "p_25",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jmoneco.2004.02.004"
-        },
-        {
-          "key": "p_28",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1540-6261.1997.tb04816.x"
-        },
-        {
-          "key": "p_29",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1540-6261.2008.01360.x"
-        },
-        {
-          "key": "p_30",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1467-937X.2007.00451.x"
-        }
-      ],
-      "container-title": [
-        "American Economic Review"
-      ],
-      "language": "en",
-      "link": [
-        {
-          "URL": "https://pubs.aeaweb.org/doi/pdf/10.1257/aer.20170045",
-          "content-type": "unspecified",
-          "content-version": "vor",
-          "intended-application": "similarity-checking"
-        }
-      ],
-      "deposited": {
-        "date-parts": [
-          [
-            2020,
-            6,
-            2
-          ]
-        ],
-        "date-time": "2020-06-02T20:25:41Z",
-        "timestamp": 1591129541000
-      },
-      "score": 0.0,
-      "resource": {
-        "primary": {
-          "URL": "https://pubs.aeaweb.org/doi/10.1257/aer.20170045"
-        }
-      },
-      "issued": {
-        "date-parts": [
-          [
-            2020,
-            6,
-            1
-          ]
-        ]
-      },
-      "references-count": 26,
-      "journal-issue": {
-        "issue": "6",
-        "published-print": {
-          "date-parts": [
-            [
-              2020,
-              6,
-              1
-            ]
-          ]
-        }
-      },
-      "alternative-id": [
-        "10.1257/aer.20170045"
-      ],
-      "URL": "https://doi.org/10.1257/aer.20170045",
-      "relation": {
-        "has-preprint": [
-          {
-            "id-type": "doi",
-            "id": "10.21034/wp.734",
-            "asserted-by": "object"
-          }
-        ]
-      },
-      "ISSN": [
-        "0002-8282"
-      ],
-      "issn-type": [
-        {
-          "value": "0002-8282",
-          "type": "print"
-        }
-      ],
-      "published": {
-        "date-parts": [
-          [
-            2020,
-            6,
-            1
-          ]
-        ]
-      }
-    },
-    {
-      "indexed": {
-        "date-parts": [
-          [
-            2025,
-            6,
             11
           ]
         ],
@@ -21992,11 +21701,11 @@
           [
             2025,
             6,
-            13
+            14
           ]
         ],
-        "date-time": "2025-06-13T10:45:54Z",
-        "timestamp": 1749811554839
+        "date-time": "2025-06-14T16:06:11Z",
+        "timestamp": 1749917171101
       },
       "reference-count": 72,
       "publisher": "American Economic Association",
@@ -22504,6 +22213,297 @@
           [
             2020,
             11,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "indexed": {
+        "date-parts": [
+          [
+            2025,
+            6,
+            14
+          ]
+        ],
+        "date-time": "2025-06-14T15:31:10Z",
+        "timestamp": 1749915070775
+      },
+      "reference-count": 26,
+      "publisher": "American Economic Association",
+      "issue": "6",
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "American Economic Review"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2020,
+            6,
+            1
+          ]
+        ]
+      },
+      "abstract": "<jats:p> We provide empirical evidence of a novel liquidity-based transmission mechanism through which monetary policy influences asset markets, develop a model of this mechanism, and assess the ability of the quantitative theory to match the evidence. (JEL E44, E52, G12, G14, G35) </jats:p>",
+      "DOI": "10.1257/aer.20170045",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2020,
+            5,
+            28
+          ]
+        ],
+        "date-time": "2020-05-28T12:03:21Z",
+        "timestamp": 1590667401000
+      },
+      "page": "1635-1672",
+      "source": "Crossref",
+      "is-referenced-by-count": 39,
+      "title": [
+        "Turnover Liquidity and the Transmission of Monetary Policy"
+      ],
+      "prefix": "10.1257",
+      "volume": "110",
+      "author": [
+        {
+          "given": "Ricardo",
+          "family": "Lagos",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Department of Economics, New York University (email: )"
+            }
+          ]
+        },
+        {
+          "given": "Shengxing",
+          "family": "Zhang",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Department of Economics, London School of Economics (email: )"
+            }
+          ]
+        }
+      ],
+      "member": "11",
+      "reference": [
+        {
+          "key": "p_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/rfs/hht053"
+        },
+        {
+          "key": "p_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1540-6261.2005.00760.x"
+        },
+        {
+          "key": "p_3",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/000282802320189069"
+        },
+        {
+          "key": "p_4",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0304-3932(89)90025-1"
+        },
+        {
+          "key": "p_5",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1468-0262.2005.00639.x"
+        },
+        {
+          "key": "p_6",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/rfs/hhm037"
+        },
+        {
+          "key": "p_7",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/261535"
+        },
+        {
+          "key": "p_8",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jedc.2010.02.006"
+        },
+        {
+          "key": "p_9",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jet.2008.07.006"
+        },
+        {
+          "key": "p_10",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/mac.20130329"
+        },
+        {
+          "key": "p_11",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jeconom.2003.10.030"
+        },
+        {
+          "key": "p_12",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/aer.20131513"
+        },
+        {
+          "key": "p_13",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1198/073500106000000387"
+        },
+        {
+          "key": "p_14",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0304-4076(02)00207-5"
+        },
+        {
+          "key": "p_15",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/1884166"
+        },
+        {
+          "key": "p_16",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/jel.46.4.871"
+        },
+        {
+          "key": "p_17",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/rest.90.2.216"
+        },
+        {
+          "key": "p_18",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0304-3932(01)00055-1"
+        },
+        {
+          "key": "p_19",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.3982/ECTA7250"
+        },
+        {
+          "key": "p_20",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jet.2011.10.001"
+        },
+        {
+          "key": "p_23",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jfineco.2004.05.008"
+        },
+        {
+          "key": "p_24",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/aer.103.4.1212"
+        },
+        {
+          "key": "p_25",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jmoneco.2004.02.004"
+        },
+        {
+          "key": "p_28",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1540-6261.1997.tb04816.x"
+        },
+        {
+          "key": "p_29",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1540-6261.2008.01360.x"
+        },
+        {
+          "key": "p_30",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1467-937X.2007.00451.x"
+        }
+      ],
+      "container-title": [
+        "American Economic Review"
+      ],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://pubs.aeaweb.org/doi/pdf/10.1257/aer.20170045",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2020,
+            6,
+            2
+          ]
+        ],
+        "date-time": "2020-06-02T20:25:41Z",
+        "timestamp": 1591129541000
+      },
+      "score": 0.0,
+      "resource": {
+        "primary": {
+          "URL": "https://pubs.aeaweb.org/doi/10.1257/aer.20170045"
+        }
+      },
+      "issued": {
+        "date-parts": [
+          [
+            2020,
+            6,
+            1
+          ]
+        ]
+      },
+      "references-count": 26,
+      "journal-issue": {
+        "issue": "6",
+        "published-print": {
+          "date-parts": [
+            [
+              2020,
+              6,
+              1
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1257/aer.20170045"
+      ],
+      "URL": "https://doi.org/10.1257/aer.20170045",
+      "relation": {
+        "has-preprint": [
+          {
+            "id-type": "doi",
+            "id": "10.21034/wp.734",
+            "asserted-by": "object"
+          }
+        ]
+      },
+      "ISSN": [
+        "0002-8282"
+      ],
+      "issn-type": [
+        {
+          "value": "0002-8282",
+          "type": "print"
+        }
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2020,
+            6,
             1
           ]
         ]
@@ -24763,11 +24763,11 @@
           [
             2025,
             6,
-            13
+            14
           ]
         ],
-        "date-time": "2025-06-13T18:05:46Z",
-        "timestamp": 1749837946221
+        "date-time": "2025-06-14T15:31:18Z",
+        "timestamp": 1749915078537
       },
       "reference-count": 34,
       "publisher": "American Economic Association",
@@ -24804,7 +24804,7 @@
       },
       "page": "2586-2624",
       "source": "Crossref",
-      "is-referenced-by-count": 1163,
+      "is-referenced-by-count": 1164,
       "title": [
         "Bartik Instruments: What, When, Why, and How"
       ],
@@ -34370,563 +34370,6 @@
           [
             2025,
             6,
-            12
-          ]
-        ],
-        "date-time": "2025-06-12T04:18:17Z",
-        "timestamp": 1749701897090
-      },
-      "reference-count": 77,
-      "publisher": "American Economic Association",
-      "issue": "11",
-      "content-domain": {
-        "domain": [],
-        "crossmark-restriction": false
-      },
-      "short-container-title": [
-        "American Economic Review"
-      ],
-      "published-print": {
-        "date-parts": [
-          [
-            2020,
-            11,
-            1
-          ]
-        ]
-      },
-      "abstract": "<jats:p> Natural resources can have a negative impact on the economy through corruption and civil conflict. This paper tests whether information can counteract this political resource curse. We implement a large-scale field experiment following the dissemination of information about a substantial natural gas discovery in Mozambique. We measure outcomes related to the behavior of citizens and local leaders through georeferenced conflict data, behavioral activities, lab-in-the-field experiments, and surveys. We find that information targeting citizens and their involvement in public deliberations increases local mobilization and decreases violence. By contrast, when information reaches only local leaders, it increases elite capture and rent-seeking. (JEL C73, D72, D74, O13, O17, Q33, Q34) </jats:p>",
-      "DOI": "10.1257/aer.20190842",
-      "type": "journal-article",
-      "created": {
-        "date-parts": [
-          [
-            2020,
-            10,
-            28
-          ]
-        ],
-        "date-time": "2020-10-28T12:05:43Z",
-        "timestamp": 1603886743000
-      },
-      "page": "3431-3453",
-      "source": "Crossref",
-      "is-referenced-by-count": 56,
-      "title": [
-        "Does Information Break the Political Resource Curse? Experimental Evidence from Mozambique"
-      ],
-      "prefix": "10.1257",
-      "volume": "110",
-      "author": [
-        {
-          "given": "Alex",
-          "family": "Armand",
-          "sequence": "first",
-          "affiliation": [
-            {
-              "name": "Nova School of Business and Economics, Universidade Nova de Lisboa, NOVAFRICA, and Institute for Fiscal Studies (email: )"
-            }
-          ]
-        },
-        {
-          "given": "Alexander",
-          "family": "Coutts",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Nova School of Business and Economics, Universidade Nova de Lisboa, and NOVAFRICA (email: )"
-            }
-          ]
-        },
-        {
-          "given": "Pedro C.",
-          "family": "Vicente",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Nova School of Business and Economics, Universidade Nova de Lisboa, BREAD, and NOVAFRICA (email: )"
-            }
-          ]
-        },
-        {
-          "given": "Inês",
-          "family": "Vilela",
-          "sequence": "additional",
-          "affiliation": [
-            {
-              "name": "Royal Holloway, University of London, and Nova School of Business and Economics, Universidade Nova de Lisboa, and NOVAFRICA (email: )"
-            }
-          ]
-        }
-      ],
-      "member": "11",
-      "reference": [
-        {
-          "key": "p_1",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/REST_a_00611"
-        },
-        {
-          "key": "p_2",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jdeveco.2012.08.008"
-        },
-        {
-          "key": "p_3",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/pol.5.2.1"
-        },
-        {
-          "key": "p_4",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/qje/qjw030"
-        },
-        {
-          "key": "p_5",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/aer.20181135"
-        },
-        {
-          "key": "p_6",
-          "first-page": "0",
-          "volume": "2493",
-          "author": "Armand Alex",
-          "year": "2017",
-          "journal-title": "AEA RCT Registry. https://doi.org/10.1257/rct."
-        },
-        {
-          "key": "p_7",
-          "unstructured": "Armand, Alex, Alexander Coutts, Pedro C. Vicente, and Inês Vilela. 2020. \"Replication Data for: Does Information Break the Political Resource Curse? Experimental Evidence from Mozambique.\" American Economic Association [publisher], Inter-university Consortium for Political and Social Research [distributor]. https://doi.org/10.3886/E119785V1."
-        },
-        {
-          "key": "p_8",
-          "unstructured": "Auty, Richard M. 1993. Sustaining Development in Mineral Economies: The Resource Curse Thesis. London: Routledge."
-        },
-        {
-          "key": "p_9",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/S0304-3878(00)00067-5"
-        },
-        {
-          "key": "p_10",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1086/696226"
-        },
-        {
-          "key": "p_11",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/wber/lhr009"
-        },
-        {
-          "key": "p_12",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/mac.6.4.1"
-        },
-        {
-          "key": "p_13",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1086/259394"
-        },
-        {
-          "key": "p_14",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/jep.28.2.29"
-        },
-        {
-          "key": "p_15",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/restud/rdt044"
-        },
-        {
-          "key": "p_16",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/aer.20150774"
-        },
-        {
-          "key": "p_17",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.euroecorev.2009.10.004"
-        },
-        {
-          "key": "p_18",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1017/S0003055415000520"
-        },
-        {
-          "key": "p_19",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/aer.20150503"
-        },
-        {
-          "key": "p_20",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/jel.48.1.3"
-        },
-        {
-          "key": "p_21",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/aer.103.5.1759"
-        },
-        {
-          "key": "p_22",
-          "unstructured": "Buur, Lars, and Helene Maria Kyed. 2005. State Recognition of Traditional Authority in Mozambique: The Nexus of Community Representation and State Assistance. Uppsala: Nordic Africa Institute."
-        },
-        {
-          "key": "p_23",
-          "first-page": "5",
-          "volume": "2018",
-          "author": "Cappelen Alexander W",
-          "year": "2018",
-          "journal-title": "Chr. Michelsen Institute Working Paper"
-        },
-        {
-          "key": "p_24",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/oep/gpp023"
-        },
-        {
-          "key": "p_25",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/app.5.1.208"
-        },
-        {
-          "key": "p_26",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/qje/qje027"
-        },
-        {
-          "key": "p_27",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/oep/gpf064"
-        },
-        {
-          "key": "p_28",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/ecoj.12109"
-        },
-        {
-          "key": "p_29",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/2232670"
-        },
-        {
-          "key": "p_30",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1542-4774.2011.01025.x"
-        },
-        {
-          "key": "p_31",
-          "unstructured": "De la Cuesta, Brandon, Helen V. Milner, Daniel Lafayette Nielson, and Stephen Knack. 2017. \"Taxation without Representation: Experimental Evidence from Ghana and Uganda on Citizen Action toward Taxes, Oil, and Aid.\" World Bank Policy Research Working Paper 8137."
-        },
-        {
-          "key": "p_32",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/restud/rdt009"
-        },
-        {
-          "key": "p_33",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1177/0022002705277544"
-        },
-        {
-          "key": "p_34",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/aer.99.2.287"
-        },
-        {
-          "key": "p_35",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1017/S0003055403000534"
-        },
-        {
-          "key": "p_36",
-          "unstructured": "Ferraz, Claudio, and Joana Monteiro. 2014. \"Learning to Punish: Resource Windfalls and Political Accountability in Brazil.\" Unpublished."
-        },
-        {
-          "key": "p_37",
-          "unstructured": "Freedom House. 2017. Freedom in the World 2017. Washington, DC: Freedom House."
-        },
-        {
-          "key": "p_38",
-          "doi-asserted-by": "crossref",
-          "unstructured": "Frühauf, Anne. 2014. \"Mozambique's LNG Revolution: A Political Risk Outlook for the Rovuma LNG Ventures.\" Oxford Institute for Energy Studies Working Paper 86.",
-          "DOI": "10.26889/9781784670016"
-        },
-        {
-          "key": "p_39",
-          "unstructured": "Gelb, Alan. 1988. Oil Windfalls: Blessing or Curse? New York: Oxford University Press."
-        },
-        {
-          "key": "p_40",
-          "unstructured": "Global Data Lab. 2016. Subnational Human Development Index (SHDI). Nijmegen, Netherlands: Institute for Management Research, Radboud University."
-        },
-        {
-          "issue": "4",
-          "key": "p_41",
-          "first-page": "912",
-          "volume": "81",
-          "author": "Grossman Herschel I",
-          "year": "1991",
-          "journal-title": "American Economic Review"
-        },
-        {
-          "key": "p_42",
-          "unstructured": "Habibe, S., S. Forquilha, and J. Pereira. 2019. Islamic Radicalization in Northern Mozambique: The Case of Mocímboa da Praia. Cadernos IESE 17E, Maputo: Instituto de Estudos Sociais e Económicos."
-        },
-        {
-          "key": "p_43",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1353/wp.2007.0008"
-        },
-        {
-          "key": "p_44",
-          "doi-asserted-by": "crossref",
-          "unstructured": "International Monetary Fund (IMF). 2016. \"Republic of Mozambique.\" IMF Country Report 16/10. Washington, DC: International Monetary Fund. http://www.imf.org/external/pubs/ft/scr/2016/ cr1609.pdf.",
-          "DOI": "10.5089/9781513539065.002"
-        },
-        {
-          "key": "p_45",
-          "unstructured": "Instituto Nacional de Estatística (INE). 2015. Estatisticas e Indicadores Sociais. Instituto Nacional de Estatística, República de Moçambique."
-        },
-        {
-          "key": "p_46",
-          "unstructured": "INP/MIREME. 2014. \"Plano Director do Gás Natural.\" Intituto Nacional de Petróleos and Ministério dos Recursos Minerais e Energia, República de Moçambique."
-        },
-        {
-          "key": "p_47",
-          "doi-asserted-by": "crossref",
-          "unstructured": "Karl, Terry Lynn. 1997. The Paradox of Plenty: Oil Booms and Petro-States. Berkeley: University of California Press.",
-          "DOI": "10.1525/9780520918696"
-        },
-        {
-          "key": "p_48",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1468-0262.2007.00733.x"
-        },
-        {
-          "key": "p_49",
-          "first-page": "1",
-          "volume": "2",
-          "author": "Leetaru Kalev",
-          "year": "2013",
-          "journal-title": "ISA Annual Convention"
-        },
-        {
-          "key": "p_50",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1007/s11127-011-9820-0"
-        },
-        {
-          "key": "p_51",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jdeveco.2012.01.002"
-        },
-        {
-          "key": "p_52",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1468-0297.2006.01045.x"
-        },
-        {
-          "key": "p_53",
-          "doi-asserted-by": "crossref",
-          "unstructured": "Melina, Giovanni, and Yi Xiong. 2013. Natural Gas, Public Investment and Debt Sustainability in Mozambique. Washington DC: International Monetary Fund.",
-          "DOI": "10.5089/9781484326404.001"
-        },
-        {
-          "key": "p_54",
-          "unstructured": "NRGI. 2017. 2017 Resource Governance Index. New York: Natural Resource Governance Institute."
-        },
-        {
-          "key": "p_55",
-          "unstructured": "Nuvunga, Adriano. 2013. \"Política de Eleições em Moçambique: As Experiências de Angoche e Nicoadala.\" In Desafios para Mocambique, edited by Luís de Brito et al., 39-54. Maputo: IESE."
-        },
-        {
-          "key": "p_56",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1017/S0003055413000415"
-        },
-        {
-          "key": "p_57",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1177/0022343310378914"
-        },
-        {
-          "key": "p_58",
-          "unstructured": "Raven, J. C. 1936. \"Mental Tests Used in Genetic Studies: The Performance of Related Individuals on Tests Mainly Educative and Mainly Reproductive.\" University of London MSc. Thesis."
-        },
-        {
-          "key": "p_59",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/0033553041382120"
-        },
-        {
-          "key": "p_60",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jdeveco.2013.09.004"
-        },
-        {
-          "key": "p_61",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1468-0262.2005.00615.x"
-        },
-        {
-          "key": "p_62",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.spl.2016.02.012"
-        },
-        {
-          "key": "p_63",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1353/wp.2001.0011"
-        },
-        {
-          "key": "p_64",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1177/0022343304043773"
-        },
-        {
-          "key": "p_65",
-          "doi-asserted-by": "crossref",
-          "unstructured": "Ross, Michael L. 2012. The Oil Curse: How Petroleum Wealth Shapes the Development of Nations. Princeton, NJ: Princeton University Press.",
-          "DOI": "10.1515/9781400841929"
-        },
-        {
-          "key": "p_66",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/S0304-3878(99)00005-X"
-        },
-        {
-          "key": "p_67",
-          "unstructured": "Sandrea, R. 2006. \"Global Natural Gas Reserves: A Heuristic Viewpoint.\" In Middle East Economic Survey 49. Cyprus: Middle East Petroleum and Economic Publications."
-        },
-        {
-          "key": "p_68",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1177/0956797611417632"
-        },
-        {
-          "key": "p_69",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1177/0010414006288724"
-        },
-        {
-          "key": "p_70",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.2517-6161.1996.tb02080.x"
-        },
-        {
-          "key": "p_71",
-          "unstructured": "Toews, Gerhard, and Pierre-Louis Vezina. 2016. \"Resource Discoveries and FDI Bonanzas.\" Oxford Centre for the Analysis of Resource Rich Economies Working Paper 199."
-        },
-        {
-          "key": "p_72",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/aer.89.1.22"
-        },
-        {
-          "key": "p_73",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/S0304-3878(01)00195-X"
-        },
-        {
-          "key": "p_74",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/S0047-2727(99)00092-4"
-        },
-        {
-          "key": "p_75",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jdeveco.2009.01.005"
-        },
-        {
-          "key": "p_76",
-          "unstructured": "World Bank. 2014. \"How Wealthy Is Mozambique After the Discovery of Coal and Gas? Measuring Wealth in Mozambique Using the Wealth Accounting Framework.\" World Bank Mozambique Policy Note 86086."
-        },
-        {
-          "key": "p_77",
-          "unstructured": "World Bank. 2017. World Development Indicators 2017. Washington, DC: The World Bank."
-        }
-      ],
-      "container-title": [
-        "American Economic Review"
-      ],
-      "language": "en",
-      "link": [
-        {
-          "URL": "https://pubs.aeaweb.org/doi/pdf/10.1257/aer.20190842",
-          "content-type": "unspecified",
-          "content-version": "vor",
-          "intended-application": "similarity-checking"
-        }
-      ],
-      "deposited": {
-        "date-parts": [
-          [
-            2020,
-            10,
-            28
-          ]
-        ],
-        "date-time": "2020-10-28T12:06:47Z",
-        "timestamp": 1603886807000
-      },
-      "score": 0.0,
-      "resource": {
-        "primary": {
-          "URL": "https://pubs.aeaweb.org/doi/10.1257/aer.20190842"
-        }
-      },
-      "issued": {
-        "date-parts": [
-          [
-            2020,
-            11,
-            1
-          ]
-        ]
-      },
-      "references-count": 77,
-      "journal-issue": {
-        "issue": "11",
-        "published-print": {
-          "date-parts": [
-            [
-              2020,
-              11,
-              1
-            ]
-          ]
-        }
-      },
-      "alternative-id": [
-        "10.1257/aer.20190842"
-      ],
-      "URL": "https://doi.org/10.1257/aer.20190842",
-      "ISSN": [
-        "0002-8282"
-      ],
-      "issn-type": [
-        {
-          "value": "0002-8282",
-          "type": "print"
-        }
-      ],
-      "published": {
-        "date-parts": [
-          [
-            2020,
-            11,
-            1
-          ]
-        ]
-      }
-    },
-    {
-      "indexed": {
-        "date-parts": [
-          [
-            2025,
-            6,
             13
           ]
         ],
@@ -35525,6 +34968,563 @@
           [
             2025,
             6,
+            14
+          ]
+        ],
+        "date-time": "2025-06-14T09:42:53Z",
+        "timestamp": 1749894173070
+      },
+      "reference-count": 77,
+      "publisher": "American Economic Association",
+      "issue": "11",
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "American Economic Review"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2020,
+            11,
+            1
+          ]
+        ]
+      },
+      "abstract": "<jats:p> Natural resources can have a negative impact on the economy through corruption and civil conflict. This paper tests whether information can counteract this political resource curse. We implement a large-scale field experiment following the dissemination of information about a substantial natural gas discovery in Mozambique. We measure outcomes related to the behavior of citizens and local leaders through georeferenced conflict data, behavioral activities, lab-in-the-field experiments, and surveys. We find that information targeting citizens and their involvement in public deliberations increases local mobilization and decreases violence. By contrast, when information reaches only local leaders, it increases elite capture and rent-seeking. (JEL C73, D72, D74, O13, O17, Q33, Q34) </jats:p>",
+      "DOI": "10.1257/aer.20190842",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2020,
+            10,
+            28
+          ]
+        ],
+        "date-time": "2020-10-28T12:05:43Z",
+        "timestamp": 1603886743000
+      },
+      "page": "3431-3453",
+      "source": "Crossref",
+      "is-referenced-by-count": 56,
+      "title": [
+        "Does Information Break the Political Resource Curse? Experimental Evidence from Mozambique"
+      ],
+      "prefix": "10.1257",
+      "volume": "110",
+      "author": [
+        {
+          "given": "Alex",
+          "family": "Armand",
+          "sequence": "first",
+          "affiliation": [
+            {
+              "name": "Nova School of Business and Economics, Universidade Nova de Lisboa, NOVAFRICA, and Institute for Fiscal Studies (email: )"
+            }
+          ]
+        },
+        {
+          "given": "Alexander",
+          "family": "Coutts",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Nova School of Business and Economics, Universidade Nova de Lisboa, and NOVAFRICA (email: )"
+            }
+          ]
+        },
+        {
+          "given": "Pedro C.",
+          "family": "Vicente",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Nova School of Business and Economics, Universidade Nova de Lisboa, BREAD, and NOVAFRICA (email: )"
+            }
+          ]
+        },
+        {
+          "given": "Inês",
+          "family": "Vilela",
+          "sequence": "additional",
+          "affiliation": [
+            {
+              "name": "Royal Holloway, University of London, and Nova School of Business and Economics, Universidade Nova de Lisboa, and NOVAFRICA (email: )"
+            }
+          ]
+        }
+      ],
+      "member": "11",
+      "reference": [
+        {
+          "key": "p_1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/REST_a_00611"
+        },
+        {
+          "key": "p_2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jdeveco.2012.08.008"
+        },
+        {
+          "key": "p_3",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/pol.5.2.1"
+        },
+        {
+          "key": "p_4",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/qje/qjw030"
+        },
+        {
+          "key": "p_5",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/aer.20181135"
+        },
+        {
+          "key": "p_6",
+          "first-page": "0",
+          "volume": "2493",
+          "author": "Armand Alex",
+          "year": "2017",
+          "journal-title": "AEA RCT Registry. https://doi.org/10.1257/rct."
+        },
+        {
+          "key": "p_7",
+          "unstructured": "Armand, Alex, Alexander Coutts, Pedro C. Vicente, and Inês Vilela. 2020. \"Replication Data for: Does Information Break the Political Resource Curse? Experimental Evidence from Mozambique.\" American Economic Association [publisher], Inter-university Consortium for Political and Social Research [distributor]. https://doi.org/10.3886/E119785V1."
+        },
+        {
+          "key": "p_8",
+          "unstructured": "Auty, Richard M. 1993. Sustaining Development in Mineral Economies: The Resource Curse Thesis. London: Routledge."
+        },
+        {
+          "key": "p_9",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0304-3878(00)00067-5"
+        },
+        {
+          "key": "p_10",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/696226"
+        },
+        {
+          "key": "p_11",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/wber/lhr009"
+        },
+        {
+          "key": "p_12",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/mac.6.4.1"
+        },
+        {
+          "key": "p_13",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/259394"
+        },
+        {
+          "key": "p_14",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/jep.28.2.29"
+        },
+        {
+          "key": "p_15",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/restud/rdt044"
+        },
+        {
+          "key": "p_16",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/aer.20150774"
+        },
+        {
+          "key": "p_17",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.euroecorev.2009.10.004"
+        },
+        {
+          "key": "p_18",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1017/S0003055415000520"
+        },
+        {
+          "key": "p_19",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/aer.20150503"
+        },
+        {
+          "key": "p_20",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/jel.48.1.3"
+        },
+        {
+          "key": "p_21",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/aer.103.5.1759"
+        },
+        {
+          "key": "p_22",
+          "unstructured": "Buur, Lars, and Helene Maria Kyed. 2005. State Recognition of Traditional Authority in Mozambique: The Nexus of Community Representation and State Assistance. Uppsala: Nordic Africa Institute."
+        },
+        {
+          "key": "p_23",
+          "first-page": "5",
+          "volume": "2018",
+          "author": "Cappelen Alexander W",
+          "year": "2018",
+          "journal-title": "Chr. Michelsen Institute Working Paper"
+        },
+        {
+          "key": "p_24",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/oep/gpp023"
+        },
+        {
+          "key": "p_25",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/app.5.1.208"
+        },
+        {
+          "key": "p_26",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/qje/qje027"
+        },
+        {
+          "key": "p_27",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/oep/gpf064"
+        },
+        {
+          "key": "p_28",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/ecoj.12109"
+        },
+        {
+          "key": "p_29",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/2232670"
+        },
+        {
+          "key": "p_30",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1542-4774.2011.01025.x"
+        },
+        {
+          "key": "p_31",
+          "unstructured": "De la Cuesta, Brandon, Helen V. Milner, Daniel Lafayette Nielson, and Stephen Knack. 2017. \"Taxation without Representation: Experimental Evidence from Ghana and Uganda on Citizen Action toward Taxes, Oil, and Aid.\" World Bank Policy Research Working Paper 8137."
+        },
+        {
+          "key": "p_32",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/restud/rdt009"
+        },
+        {
+          "key": "p_33",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/0022002705277544"
+        },
+        {
+          "key": "p_34",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/aer.99.2.287"
+        },
+        {
+          "key": "p_35",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1017/S0003055403000534"
+        },
+        {
+          "key": "p_36",
+          "unstructured": "Ferraz, Claudio, and Joana Monteiro. 2014. \"Learning to Punish: Resource Windfalls and Political Accountability in Brazil.\" Unpublished."
+        },
+        {
+          "key": "p_37",
+          "unstructured": "Freedom House. 2017. Freedom in the World 2017. Washington, DC: Freedom House."
+        },
+        {
+          "key": "p_38",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Frühauf, Anne. 2014. \"Mozambique's LNG Revolution: A Political Risk Outlook for the Rovuma LNG Ventures.\" Oxford Institute for Energy Studies Working Paper 86.",
+          "DOI": "10.26889/9781784670016"
+        },
+        {
+          "key": "p_39",
+          "unstructured": "Gelb, Alan. 1988. Oil Windfalls: Blessing or Curse? New York: Oxford University Press."
+        },
+        {
+          "key": "p_40",
+          "unstructured": "Global Data Lab. 2016. Subnational Human Development Index (SHDI). Nijmegen, Netherlands: Institute for Management Research, Radboud University."
+        },
+        {
+          "issue": "4",
+          "key": "p_41",
+          "first-page": "912",
+          "volume": "81",
+          "author": "Grossman Herschel I",
+          "year": "1991",
+          "journal-title": "American Economic Review"
+        },
+        {
+          "key": "p_42",
+          "unstructured": "Habibe, S., S. Forquilha, and J. Pereira. 2019. Islamic Radicalization in Northern Mozambique: The Case of Mocímboa da Praia. Cadernos IESE 17E, Maputo: Instituto de Estudos Sociais e Económicos."
+        },
+        {
+          "key": "p_43",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1353/wp.2007.0008"
+        },
+        {
+          "key": "p_44",
+          "doi-asserted-by": "crossref",
+          "unstructured": "International Monetary Fund (IMF). 2016. \"Republic of Mozambique.\" IMF Country Report 16/10. Washington, DC: International Monetary Fund. http://www.imf.org/external/pubs/ft/scr/2016/ cr1609.pdf.",
+          "DOI": "10.5089/9781513539065.002"
+        },
+        {
+          "key": "p_45",
+          "unstructured": "Instituto Nacional de Estatística (INE). 2015. Estatisticas e Indicadores Sociais. Instituto Nacional de Estatística, República de Moçambique."
+        },
+        {
+          "key": "p_46",
+          "unstructured": "INP/MIREME. 2014. \"Plano Director do Gás Natural.\" Intituto Nacional de Petróleos and Ministério dos Recursos Minerais e Energia, República de Moçambique."
+        },
+        {
+          "key": "p_47",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Karl, Terry Lynn. 1997. The Paradox of Plenty: Oil Booms and Petro-States. Berkeley: University of California Press.",
+          "DOI": "10.1525/9780520918696"
+        },
+        {
+          "key": "p_48",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1468-0262.2007.00733.x"
+        },
+        {
+          "key": "p_49",
+          "first-page": "1",
+          "volume": "2",
+          "author": "Leetaru Kalev",
+          "year": "2013",
+          "journal-title": "ISA Annual Convention"
+        },
+        {
+          "key": "p_50",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s11127-011-9820-0"
+        },
+        {
+          "key": "p_51",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jdeveco.2012.01.002"
+        },
+        {
+          "key": "p_52",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1468-0297.2006.01045.x"
+        },
+        {
+          "key": "p_53",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Melina, Giovanni, and Yi Xiong. 2013. Natural Gas, Public Investment and Debt Sustainability in Mozambique. Washington DC: International Monetary Fund.",
+          "DOI": "10.5089/9781484326404.001"
+        },
+        {
+          "key": "p_54",
+          "unstructured": "NRGI. 2017. 2017 Resource Governance Index. New York: Natural Resource Governance Institute."
+        },
+        {
+          "key": "p_55",
+          "unstructured": "Nuvunga, Adriano. 2013. \"Política de Eleições em Moçambique: As Experiências de Angoche e Nicoadala.\" In Desafios para Mocambique, edited by Luís de Brito et al., 39-54. Maputo: IESE."
+        },
+        {
+          "key": "p_56",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1017/S0003055413000415"
+        },
+        {
+          "key": "p_57",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/0022343310378914"
+        },
+        {
+          "key": "p_58",
+          "unstructured": "Raven, J. C. 1936. \"Mental Tests Used in Genetic Studies: The Performance of Related Individuals on Tests Mainly Educative and Mainly Reproductive.\" University of London MSc. Thesis."
+        },
+        {
+          "key": "p_59",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/0033553041382120"
+        },
+        {
+          "key": "p_60",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jdeveco.2013.09.004"
+        },
+        {
+          "key": "p_61",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1468-0262.2005.00615.x"
+        },
+        {
+          "key": "p_62",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.spl.2016.02.012"
+        },
+        {
+          "key": "p_63",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1353/wp.2001.0011"
+        },
+        {
+          "key": "p_64",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/0022343304043773"
+        },
+        {
+          "key": "p_65",
+          "doi-asserted-by": "crossref",
+          "unstructured": "Ross, Michael L. 2012. The Oil Curse: How Petroleum Wealth Shapes the Development of Nations. Princeton, NJ: Princeton University Press.",
+          "DOI": "10.1515/9781400841929"
+        },
+        {
+          "key": "p_66",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0304-3878(99)00005-X"
+        },
+        {
+          "key": "p_67",
+          "unstructured": "Sandrea, R. 2006. \"Global Natural Gas Reserves: A Heuristic Viewpoint.\" In Middle East Economic Survey 49. Cyprus: Middle East Petroleum and Economic Publications."
+        },
+        {
+          "key": "p_68",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/0956797611417632"
+        },
+        {
+          "key": "p_69",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/0010414006288724"
+        },
+        {
+          "key": "p_70",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.2517-6161.1996.tb02080.x"
+        },
+        {
+          "key": "p_71",
+          "unstructured": "Toews, Gerhard, and Pierre-Louis Vezina. 2016. \"Resource Discoveries and FDI Bonanzas.\" Oxford Centre for the Analysis of Resource Rich Economies Working Paper 199."
+        },
+        {
+          "key": "p_72",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/aer.89.1.22"
+        },
+        {
+          "key": "p_73",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0304-3878(01)00195-X"
+        },
+        {
+          "key": "p_74",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0047-2727(99)00092-4"
+        },
+        {
+          "key": "p_75",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jdeveco.2009.01.005"
+        },
+        {
+          "key": "p_76",
+          "unstructured": "World Bank. 2014. \"How Wealthy Is Mozambique After the Discovery of Coal and Gas? Measuring Wealth in Mozambique Using the Wealth Accounting Framework.\" World Bank Mozambique Policy Note 86086."
+        },
+        {
+          "key": "p_77",
+          "unstructured": "World Bank. 2017. World Development Indicators 2017. Washington, DC: The World Bank."
+        }
+      ],
+      "container-title": [
+        "American Economic Review"
+      ],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://pubs.aeaweb.org/doi/pdf/10.1257/aer.20190842",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2020,
+            10,
+            28
+          ]
+        ],
+        "date-time": "2020-10-28T12:06:47Z",
+        "timestamp": 1603886807000
+      },
+      "score": 0.0,
+      "resource": {
+        "primary": {
+          "URL": "https://pubs.aeaweb.org/doi/10.1257/aer.20190842"
+        }
+      },
+      "issued": {
+        "date-parts": [
+          [
+            2020,
+            11,
+            1
+          ]
+        ]
+      },
+      "references-count": 77,
+      "journal-issue": {
+        "issue": "11",
+        "published-print": {
+          "date-parts": [
+            [
+              2020,
+              11,
+              1
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1257/aer.20190842"
+      ],
+      "URL": "https://doi.org/10.1257/aer.20190842",
+      "ISSN": [
+        "0002-8282"
+      ],
+      "issn-type": [
+        {
+          "value": "0002-8282",
+          "type": "print"
+        }
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2020,
+            11,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "indexed": {
+        "date-parts": [
+          [
+            2025,
+            6,
             13
           ]
         ],
@@ -35812,11 +35812,11 @@
           [
             2025,
             6,
-            13
+            14
           ]
         ],
-        "date-time": "2025-06-13T11:07:02Z",
-        "timestamp": 1749812822798
+        "date-time": "2025-06-14T00:37:15Z",
+        "timestamp": 1749861435415
       },
       "reference-count": 32,
       "publisher": "American Economic Association",
@@ -37176,11 +37176,11 @@
           [
             2025,
             6,
-            13
+            14
           ]
         ],
-        "date-time": "2025-06-13T15:27:40Z",
-        "timestamp": 1749828460548
+        "date-time": "2025-06-14T02:58:10Z",
+        "timestamp": 1749869890487
       },
       "reference-count": 68,
       "publisher": "American Economic Association",
@@ -40909,11 +40909,11 @@
           [
             2025,
             6,
-            13
+            14
           ]
         ],
-        "date-time": "2025-06-13T17:47:08Z",
-        "timestamp": 1749836828216
+        "date-time": "2025-06-14T11:42:49Z",
+        "timestamp": 1749901369538
       },
       "reference-count": 71,
       "publisher": "American Economic Association",
@@ -43504,11 +43504,11 @@
           [
             2025,
             6,
-            13
+            14
           ]
         ],
-        "date-time": "2025-06-13T11:06:53Z",
-        "timestamp": 1749812813807
+        "date-time": "2025-06-14T07:43:00Z",
+        "timestamp": 1749886980666
       },
       "reference-count": 39,
       "publisher": "American Economic Association",

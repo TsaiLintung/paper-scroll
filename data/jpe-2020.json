@@ -520,431 +520,6 @@
         "date-parts": [
           [
             2025,
-            5,
-            7
-          ]
-        ],
-        "date-time": "2025-05-07T16:13:11Z",
-        "timestamp": 1746634391649
-      },
-      "reference-count": 42,
-      "publisher": "University of Chicago Press",
-      "issue": "5",
-      "content-domain": {
-        "domain": [],
-        "crossmark-restriction": false
-      },
-      "short-container-title": [
-        "Journal of Political Economy"
-      ],
-      "published-print": {
-        "date-parts": [
-          [
-            2020,
-            5
-          ]
-        ]
-      },
-      "DOI": "10.1086/705549",
-      "type": "journal-article",
-      "created": {
-        "date-parts": [
-          [
-            2019,
-            7,
-            23
-          ]
-        ],
-        "date-time": "2019-07-23T19:13:16Z",
-        "timestamp": 1563909196000
-      },
-      "page": "1673-1711",
-      "source": "Crossref",
-      "is-referenced-by-count": 30,
-      "title": [
-        "When Fair Isn’t Fair: Understanding Choice Reversals Involving Social Preferences"
-      ],
-      "prefix": "10.1086",
-      "volume": "128",
-      "author": [
-        {
-          "given": "James",
-          "family": "Andreoni",
-          "sequence": "first",
-          "affiliation": []
-        },
-        {
-          "given": "Deniz",
-          "family": "Aydin",
-          "sequence": "additional",
-          "affiliation": []
-        },
-        {
-          "given": "Blake",
-          "family": "Barton",
-          "sequence": "additional",
-          "affiliation": []
-        },
-        {
-          "given": "B. Douglas",
-          "family": "Bernheim",
-          "sequence": "additional",
-          "affiliation": []
-        },
-        {
-          "given": "Jeffrey",
-          "family": "Naecker",
-          "sequence": "additional",
-          "affiliation": []
-        }
-      ],
-      "member": "200",
-      "reference": [
-        {
-          "key": "rf1",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/1468-2451.00382"
-        },
-        {
-          "key": "rf2",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.3982/ECTA7384"
-        },
-        {
-          "key": "rf4",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1006/game.2001.0904"
-        },
-        {
-          "issue": "3",
-          "key": "rf5",
-          "first-page": "672",
-          "volume": "93",
-          "author": "Andreoni James",
-          "year": "2003",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf3",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/1468-0262.00302"
-        },
-        {
-          "key": "rf6",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1086/375383"
-        },
-        {
-          "key": "rf7",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/1924516"
-        },
-        {
-          "issue": "1",
-          "key": "rf8",
-          "first-page": "335",
-          "volume": "89",
-          "author": "Bohnet Iris",
-          "year": "1999",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf10",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1468-0297.2005.01032.x"
-        },
-        {
-          "issue": "1",
-          "key": "rf9",
-          "first-page": "166",
-          "volume": "90",
-          "author": "Bolton Gary E",
-          "year": "2000",
-          "journal-title": "A.E.R."
-        },
-        {
-          "issue": "1",
-          "key": "rf11",
-          "first-page": "415",
-          "volume": "103",
-          "author": "Brock J. Michelle",
-          "year": "2013",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf12",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/jep.11.4.167"
-        },
-        {
-          "issue": "4",
-          "key": "rf13",
-          "first-page": "1398",
-          "volume": "103",
-          "author": "Cappelen Alexander W",
-          "year": "2013",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf14",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/003355302760193904"
-        },
-        {
-          "issue": "1",
-          "key": "rf15",
-          "first-page": "46",
-          "volume": "85",
-          "author": "Coate Stephen",
-          "year": "1995",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf16",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/S0167-2681(98)00117-6"
-        },
-        {
-          "key": "rf17",
-          "first-page": "1",
-          "volume": "15",
-          "author": "DeWeaver Mark",
-          "year": "2002",
-          "journal-title": "Econ. Bull."
-        },
-        {
-          "issue": "4",
-          "key": "rf18",
-          "first-page": "759",
-          "volume": "57",
-          "author": "Diamond Peter A",
-          "year": "1967",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf19",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/mic.6.4.180"
-        },
-        {
-          "key": "rf20",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/003355399556151"
-        },
-        {
-          "key": "rf21",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1006/game.1994.1021"
-        },
-        {
-          "key": "rf22",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jebo.2011.09.004"
-        },
-        {
-          "key": "rf23",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jebo.2015.07.012"
-        },
-        {
-          "key": "rf24",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1086/257678"
-        },
-        {
-          "key": "rf25",
-          "volume-title": "CEPR Working Paper no. 4056",
-          "author": "Hauswald Robert"
-        },
-        {
-          "key": "rf26",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1007/BF02425259"
-        },
-        {
-          "key": "rf27",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/1914185"
-        },
-        {
-          "key": "rf28",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1007/s10683-007-9165-1"
-        },
-        {
-          "key": "rf29",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1515/bejte-2012-0008"
-        },
-        {
-          "key": "rf30",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1007/s10683-010-9253-5"
-        },
-        {
-          "issue": "4",
-          "key": "rf31",
-          "first-page": "1622",
-          "volume": "27",
-          "author": "Machina Mark J",
-          "year": "1989",
-          "journal-title": "J. Econ. Literature"
-        },
-        {
-          "key": "rf32",
-          "volume-title": "Portfolio Selection: Efficient Diversification of Investments",
-          "volume": "16",
-          "author": "Markowitz Harry M",
-          "year": "1968"
-        },
-        {
-          "key": "rf33",
-          "first-page": "3",
-          "volume": "18",
-          "author": "McClennen Edward F",
-          "year": "1989",
-          "journal-title": "Philosophy and Public Affairs"
-        },
-        {
-          "key": "rf34",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/1884542"
-        },
-        {
-          "key": "rf35",
-          "volume-title": "Modelling the Accumulation and Distribution of Wealth",
-          "author": "Menchik Paul L"
-        },
-        {
-          "issue": "5",
-          "key": "rf36",
-          "first-page": "1281",
-          "volume": "83",
-          "author": "Rabin Matthew",
-          "year": "1993",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf37",
-          "volume-title": "Decision Analysis: Introductory Lectures on Choices under Uncertainty.",
-          "author": "Raiffa Howard",
-          "year": "1968"
-        },
-        {
-          "issue": "7",
-          "key": "rf38",
-          "first-page": "3084",
-          "volume": "103",
-          "author": "Saito Kota",
-          "year": "2013",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf40",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1007/s11166-016-9249-4"
-        },
-        {
-          "key": "rf41",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.econlet.2010.08.031"
-        },
-        {
-          "key": "rf42",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1007/BF01237524"
-        },
-        {
-          "issue": "4",
-          "key": "rf43",
-          "first-page": "874",
-          "volume": "86",
-          "author": "Wilhelm Mark O",
-          "year": "1996",
-          "journal-title": "A.E.R."
-        }
-      ],
-      "container-title": [
-        "Journal of Political Economy"
-      ],
-      "language": "en",
-      "link": [
-        {
-          "URL": "https://www.journals.uchicago.edu/doi/pdf/10.1086/705549",
-          "content-type": "unspecified",
-          "content-version": "vor",
-          "intended-application": "similarity-checking"
-        }
-      ],
-      "deposited": {
-        "date-parts": [
-          [
-            2020,
-            5,
-            11
-          ]
-        ],
-        "date-time": "2020-05-11T15:02:02Z",
-        "timestamp": 1589209322000
-      },
-      "score": 0.0,
-      "resource": {
-        "primary": {
-          "URL": "https://www.journals.uchicago.edu/doi/10.1086/705549"
-        }
-      },
-      "issued": {
-        "date-parts": [
-          [
-            2020,
-            5
-          ]
-        ]
-      },
-      "references-count": 42,
-      "journal-issue": {
-        "issue": "5",
-        "published-print": {
-          "date-parts": [
-            [
-              2020,
-              5
-            ]
-          ]
-        }
-      },
-      "alternative-id": [
-        "10.1086/705549"
-      ],
-      "URL": "https://doi.org/10.1086/705549",
-      "ISSN": [
-        "0022-3808",
-        "1537-534X"
-      ],
-      "issn-type": [
-        {
-          "value": "0022-3808",
-          "type": "print"
-        },
-        {
-          "value": "1537-534X",
-          "type": "electronic"
-        }
-      ],
-      "published": {
-        "date-parts": [
-          [
-            2020,
-            5
-          ]
-        ]
-      }
-    },
-    {
-      "indexed": {
-        "date-parts": [
-          [
-            2025,
             6,
             5
           ]
@@ -2162,6 +1737,431 @@
           [
             2020,
             4
+          ]
+        ]
+      }
+    },
+    {
+      "indexed": {
+        "date-parts": [
+          [
+            2025,
+            6,
+            14
+          ]
+        ],
+        "date-time": "2025-06-14T10:03:30Z",
+        "timestamp": 1749895410874
+      },
+      "reference-count": 42,
+      "publisher": "University of Chicago Press",
+      "issue": "5",
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Journal of Political Economy"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2020,
+            5
+          ]
+        ]
+      },
+      "DOI": "10.1086/705549",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2019,
+            7,
+            23
+          ]
+        ],
+        "date-time": "2019-07-23T19:13:16Z",
+        "timestamp": 1563909196000
+      },
+      "page": "1673-1711",
+      "source": "Crossref",
+      "is-referenced-by-count": 30,
+      "title": [
+        "When Fair Isn’t Fair: Understanding Choice Reversals Involving Social Preferences"
+      ],
+      "prefix": "10.1086",
+      "volume": "128",
+      "author": [
+        {
+          "given": "James",
+          "family": "Andreoni",
+          "sequence": "first",
+          "affiliation": []
+        },
+        {
+          "given": "Deniz",
+          "family": "Aydin",
+          "sequence": "additional",
+          "affiliation": []
+        },
+        {
+          "given": "Blake",
+          "family": "Barton",
+          "sequence": "additional",
+          "affiliation": []
+        },
+        {
+          "given": "B. Douglas",
+          "family": "Bernheim",
+          "sequence": "additional",
+          "affiliation": []
+        },
+        {
+          "given": "Jeffrey",
+          "family": "Naecker",
+          "sequence": "additional",
+          "affiliation": []
+        }
+      ],
+      "member": "200",
+      "reference": [
+        {
+          "key": "rf1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/1468-2451.00382"
+        },
+        {
+          "key": "rf2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.3982/ECTA7384"
+        },
+        {
+          "key": "rf4",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1006/game.2001.0904"
+        },
+        {
+          "issue": "3",
+          "key": "rf5",
+          "first-page": "672",
+          "volume": "93",
+          "author": "Andreoni James",
+          "year": "2003",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf3",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/1468-0262.00302"
+        },
+        {
+          "key": "rf6",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/375383"
+        },
+        {
+          "key": "rf7",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/1924516"
+        },
+        {
+          "issue": "1",
+          "key": "rf8",
+          "first-page": "335",
+          "volume": "89",
+          "author": "Bohnet Iris",
+          "year": "1999",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf10",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1468-0297.2005.01032.x"
+        },
+        {
+          "issue": "1",
+          "key": "rf9",
+          "first-page": "166",
+          "volume": "90",
+          "author": "Bolton Gary E",
+          "year": "2000",
+          "journal-title": "A.E.R."
+        },
+        {
+          "issue": "1",
+          "key": "rf11",
+          "first-page": "415",
+          "volume": "103",
+          "author": "Brock J. Michelle",
+          "year": "2013",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf12",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/jep.11.4.167"
+        },
+        {
+          "issue": "4",
+          "key": "rf13",
+          "first-page": "1398",
+          "volume": "103",
+          "author": "Cappelen Alexander W",
+          "year": "2013",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf14",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/003355302760193904"
+        },
+        {
+          "issue": "1",
+          "key": "rf15",
+          "first-page": "46",
+          "volume": "85",
+          "author": "Coate Stephen",
+          "year": "1995",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf16",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0167-2681(98)00117-6"
+        },
+        {
+          "key": "rf17",
+          "first-page": "1",
+          "volume": "15",
+          "author": "DeWeaver Mark",
+          "year": "2002",
+          "journal-title": "Econ. Bull."
+        },
+        {
+          "issue": "4",
+          "key": "rf18",
+          "first-page": "759",
+          "volume": "57",
+          "author": "Diamond Peter A",
+          "year": "1967",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf19",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/mic.6.4.180"
+        },
+        {
+          "key": "rf20",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/003355399556151"
+        },
+        {
+          "key": "rf21",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1006/game.1994.1021"
+        },
+        {
+          "key": "rf22",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jebo.2011.09.004"
+        },
+        {
+          "key": "rf23",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jebo.2015.07.012"
+        },
+        {
+          "key": "rf24",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/257678"
+        },
+        {
+          "key": "rf25",
+          "volume-title": "CEPR Working Paper no. 4056",
+          "author": "Hauswald Robert"
+        },
+        {
+          "key": "rf26",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/BF02425259"
+        },
+        {
+          "key": "rf27",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/1914185"
+        },
+        {
+          "key": "rf28",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s10683-007-9165-1"
+        },
+        {
+          "key": "rf29",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1515/bejte-2012-0008"
+        },
+        {
+          "key": "rf30",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s10683-010-9253-5"
+        },
+        {
+          "issue": "4",
+          "key": "rf31",
+          "first-page": "1622",
+          "volume": "27",
+          "author": "Machina Mark J",
+          "year": "1989",
+          "journal-title": "J. Econ. Literature"
+        },
+        {
+          "key": "rf32",
+          "volume-title": "Portfolio Selection: Efficient Diversification of Investments",
+          "volume": "16",
+          "author": "Markowitz Harry M",
+          "year": "1968"
+        },
+        {
+          "key": "rf33",
+          "first-page": "3",
+          "volume": "18",
+          "author": "McClennen Edward F",
+          "year": "1989",
+          "journal-title": "Philosophy and Public Affairs"
+        },
+        {
+          "key": "rf34",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/1884542"
+        },
+        {
+          "key": "rf35",
+          "volume-title": "Modelling the Accumulation and Distribution of Wealth",
+          "author": "Menchik Paul L"
+        },
+        {
+          "issue": "5",
+          "key": "rf36",
+          "first-page": "1281",
+          "volume": "83",
+          "author": "Rabin Matthew",
+          "year": "1993",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf37",
+          "volume-title": "Decision Analysis: Introductory Lectures on Choices under Uncertainty.",
+          "author": "Raiffa Howard",
+          "year": "1968"
+        },
+        {
+          "issue": "7",
+          "key": "rf38",
+          "first-page": "3084",
+          "volume": "103",
+          "author": "Saito Kota",
+          "year": "2013",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf40",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s11166-016-9249-4"
+        },
+        {
+          "key": "rf41",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.econlet.2010.08.031"
+        },
+        {
+          "key": "rf42",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/BF01237524"
+        },
+        {
+          "issue": "4",
+          "key": "rf43",
+          "first-page": "874",
+          "volume": "86",
+          "author": "Wilhelm Mark O",
+          "year": "1996",
+          "journal-title": "A.E.R."
+        }
+      ],
+      "container-title": [
+        "Journal of Political Economy"
+      ],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://www.journals.uchicago.edu/doi/pdf/10.1086/705549",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2020,
+            5,
+            11
+          ]
+        ],
+        "date-time": "2020-05-11T15:02:02Z",
+        "timestamp": 1589209322000
+      },
+      "score": 0.0,
+      "resource": {
+        "primary": {
+          "URL": "https://www.journals.uchicago.edu/doi/10.1086/705549"
+        }
+      },
+      "issued": {
+        "date-parts": [
+          [
+            2020,
+            5
+          ]
+        ]
+      },
+      "references-count": 42,
+      "journal-issue": {
+        "issue": "5",
+        "published-print": {
+          "date-parts": [
+            [
+              2020,
+              5
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1086/705549"
+      ],
+      "URL": "https://doi.org/10.1086/705549",
+      "ISSN": [
+        "0022-3808",
+        "1537-534X"
+      ],
+      "issn-type": [
+        {
+          "value": "0022-3808",
+          "type": "print"
+        },
+        {
+          "value": "1537-534X",
+          "type": "electronic"
+        }
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2020,
+            5
           ]
         ]
       }
@@ -8290,344 +8290,6 @@
           [
             2025,
             5,
-            15
-          ]
-        ],
-        "date-time": "2025-05-15T10:51:31Z",
-        "timestamp": 1747306291125
-      },
-      "reference-count": 34,
-      "publisher": "University of Chicago Press",
-      "issue": "8",
-      "content-domain": {
-        "domain": [],
-        "crossmark-restriction": false
-      },
-      "short-container-title": [
-        "Journal of Political Economy"
-      ],
-      "published-print": {
-        "date-parts": [
-          [
-            2020,
-            8
-          ]
-        ]
-      },
-      "DOI": "10.1086/707767",
-      "type": "journal-article",
-      "created": {
-        "date-parts": [
-          [
-            2019,
-            12,
-            18
-          ]
-        ],
-        "date-time": "2019-12-18T17:44:28Z",
-        "timestamp": 1576691068000
-      },
-      "page": "3186-3219",
-      "source": "Crossref",
-      "is-referenced-by-count": 17,
-      "title": [
-        "The Strategy and Technology of Conflict"
-      ],
-      "prefix": "10.1086",
-      "volume": "128",
-      "author": [
-        {
-          "given": "Sandeep",
-          "family": "Baliga",
-          "sequence": "first",
-          "affiliation": []
-        },
-        {
-          "given": "Tomas",
-          "family": "Sjöström",
-          "sequence": "additional",
-          "affiliation": []
-        }
-      ],
-      "member": "200",
-      "reference": [
-        {
-          "key": "rf1",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/1468-0262.00094"
-        },
-        {
-          "key": "rf2",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1561/100.00011066"
-        },
-        {
-          "issue": "6",
-          "key": "rf4",
-          "first-page": "2897",
-          "volume": "102",
-          "author": "Baliga Sandeep",
-          "year": "2012",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf5",
-          "first-page": "235",
-          "volume": "29",
-          "author": "Baliga Sandeep",
-          "year": "2013",
-          "journal-title": "Korean Econ. Rev."
-        },
-        {
-          "key": "rf6",
-          "volume-title": "Principles of International Politics",
-          "author": "Bueno de Mesquita Bruce"
-        },
-        {
-          "key": "rf7",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1017/S0003055410000274"
-        },
-        {
-          "key": "rf8",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/qjec.2010.125.4.1821"
-        },
-        {
-          "key": "rf9",
-          "volume-title": "The Sleepwalkers: How Europe Went to War in 1914.",
-          "author": "Clark Christopher",
-          "year": "2014"
-        },
-        {
-          "key": "rf10",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/1912604"
-        },
-        {
-          "key": "rf11",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1126/science.1100735"
-        },
-        {
-          "key": "rf12",
-          "volume-title": "Siege Warfare: The Fortress in the Early Modern World 1494–1660.",
-          "author": "Duffy Christopher",
-          "year": "1997"
-        },
-        {
-          "issue": "4",
-          "key": "rf13",
-          "first-page": "1629",
-          "volume": "98",
-          "author": "Ellingsen Tore",
-          "year": "2008",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf14",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.geb.2014.05.016"
-        },
-        {
-          "key": "rf15",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1017/S0020818300033324"
-        },
-        {
-          "key": "rf16",
-          "volume-title": "Working paper, Stanford Univ.",
-          "author": "Fearon James"
-        },
-        {
-          "issue": "2",
-          "key": "rf17",
-          "first-page": "361",
-          "volume": "74",
-          "author": "Fudenberg Drew",
-          "year": "1984",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf18",
-          "volume-title": "New Directions in the Study of China’s Foreign Policy",
-          "author": "Garver John"
-        },
-        {
-          "key": "rf19",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1086/691054"
-        },
-        {
-          "key": "rf20",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1007/BF01737554"
-        },
-        {
-          "key": "rf22",
-          "volume-title": "CEPR Working Paper no. DP13917",
-          "author": "Herrera Helios"
-        },
-        {
-          "key": "rf23",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/jcws.2006.8.3.165"
-        },
-        {
-          "key": "rf24",
-          "volume-title": "Perception and Misperception in International Politics",
-          "author": "Jervis Robert"
-        },
-        {
-          "key": "rf25",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/2009958"
-        },
-        {
-          "key": "rf26",
-          "first-page": "321",
-          "volume": "50",
-          "author": "Kambe Shinsuke",
-          "year": "1999",
-          "journal-title": "Games and Econ. Behavior"
-        },
-        {
-          "key": "rf21",
-          "volume-title": "Deterrent or Defence",
-          "author": "Liddell Hart Basil Henry"
-        },
-        {
-          "key": "rf27",
-          "doi-asserted-by": "crossref",
-          "volume-title": "The Pursuit of Power",
-          "author": "McNeil William",
-          "DOI": "10.7208/chicago/9780226160191.001.0001"
-        },
-        {
-          "key": "rf28",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1086/700761"
-        },
-        {
-          "key": "rf29",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/2938316"
-        },
-        {
-          "key": "rf30",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/1906951"
-        },
-        {
-          "key": "rf31",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1146/annurev-polisci-051215-022729"
-        },
-        {
-          "key": "rf32",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/20039319"
-        },
-        {
-          "key": "rf33",
-          "volume-title": "The Strategy of Conflict",
-          "author": "Schelling Thomas"
-        },
-        {
-          "key": "rf34",
-          "doi-asserted-by": "crossref",
-          "volume-title": "Arms and Influence",
-          "author": "Schelling Thomas",
-          "DOI": "10.2307/j.ctvxkn7f8"
-        },
-        {
-          "key": "rf35",
-          "volume-title": "Balance of Power",
-          "author": "Snyder Glenn"
-        }
-      ],
-      "container-title": [
-        "Journal of Political Economy"
-      ],
-      "language": "en",
-      "link": [
-        {
-          "URL": "https://www.journals.uchicago.edu/doi/pdf/10.1086/707767",
-          "content-type": "unspecified",
-          "content-version": "vor",
-          "intended-application": "similarity-checking"
-        }
-      ],
-      "deposited": {
-        "date-parts": [
-          [
-            2020,
-            8,
-            3
-          ]
-        ],
-        "date-time": "2020-08-03T20:26:53Z",
-        "timestamp": 1596486413000
-      },
-      "score": 0.0,
-      "resource": {
-        "primary": {
-          "URL": "https://www.journals.uchicago.edu/doi/10.1086/707767"
-        }
-      },
-      "issued": {
-        "date-parts": [
-          [
-            2020,
-            8
-          ]
-        ]
-      },
-      "references-count": 34,
-      "journal-issue": {
-        "issue": "8",
-        "published-print": {
-          "date-parts": [
-            [
-              2020,
-              8
-            ]
-          ]
-        }
-      },
-      "alternative-id": [
-        "10.1086/707767"
-      ],
-      "URL": "https://doi.org/10.1086/707767",
-      "ISSN": [
-        "0022-3808",
-        "1537-534X"
-      ],
-      "issn-type": [
-        {
-          "value": "0022-3808",
-          "type": "print"
-        },
-        {
-          "value": "1537-534X",
-          "type": "electronic"
-        }
-      ],
-      "published": {
-        "date-parts": [
-          [
-            2020,
-            8
-          ]
-        ]
-      }
-    },
-    {
-      "indexed": {
-        "date-parts": [
-          [
-            2025,
-            5,
             17
           ]
         ],
@@ -9091,6 +8753,344 @@
           [
             2020,
             2
+          ]
+        ]
+      }
+    },
+    {
+      "indexed": {
+        "date-parts": [
+          [
+            2025,
+            5,
+            15
+          ]
+        ],
+        "date-time": "2025-05-15T10:51:31Z",
+        "timestamp": 1747306291125
+      },
+      "reference-count": 34,
+      "publisher": "University of Chicago Press",
+      "issue": "8",
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Journal of Political Economy"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2020,
+            8
+          ]
+        ]
+      },
+      "DOI": "10.1086/707767",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2019,
+            12,
+            18
+          ]
+        ],
+        "date-time": "2019-12-18T17:44:28Z",
+        "timestamp": 1576691068000
+      },
+      "page": "3186-3219",
+      "source": "Crossref",
+      "is-referenced-by-count": 17,
+      "title": [
+        "The Strategy and Technology of Conflict"
+      ],
+      "prefix": "10.1086",
+      "volume": "128",
+      "author": [
+        {
+          "given": "Sandeep",
+          "family": "Baliga",
+          "sequence": "first",
+          "affiliation": []
+        },
+        {
+          "given": "Tomas",
+          "family": "Sjöström",
+          "sequence": "additional",
+          "affiliation": []
+        }
+      ],
+      "member": "200",
+      "reference": [
+        {
+          "key": "rf1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/1468-0262.00094"
+        },
+        {
+          "key": "rf2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1561/100.00011066"
+        },
+        {
+          "issue": "6",
+          "key": "rf4",
+          "first-page": "2897",
+          "volume": "102",
+          "author": "Baliga Sandeep",
+          "year": "2012",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf5",
+          "first-page": "235",
+          "volume": "29",
+          "author": "Baliga Sandeep",
+          "year": "2013",
+          "journal-title": "Korean Econ. Rev."
+        },
+        {
+          "key": "rf6",
+          "volume-title": "Principles of International Politics",
+          "author": "Bueno de Mesquita Bruce"
+        },
+        {
+          "key": "rf7",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1017/S0003055410000274"
+        },
+        {
+          "key": "rf8",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/qjec.2010.125.4.1821"
+        },
+        {
+          "key": "rf9",
+          "volume-title": "The Sleepwalkers: How Europe Went to War in 1914.",
+          "author": "Clark Christopher",
+          "year": "2014"
+        },
+        {
+          "key": "rf10",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/1912604"
+        },
+        {
+          "key": "rf11",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.1100735"
+        },
+        {
+          "key": "rf12",
+          "volume-title": "Siege Warfare: The Fortress in the Early Modern World 1494–1660.",
+          "author": "Duffy Christopher",
+          "year": "1997"
+        },
+        {
+          "issue": "4",
+          "key": "rf13",
+          "first-page": "1629",
+          "volume": "98",
+          "author": "Ellingsen Tore",
+          "year": "2008",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf14",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.geb.2014.05.016"
+        },
+        {
+          "key": "rf15",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1017/S0020818300033324"
+        },
+        {
+          "key": "rf16",
+          "volume-title": "Working paper, Stanford Univ.",
+          "author": "Fearon James"
+        },
+        {
+          "issue": "2",
+          "key": "rf17",
+          "first-page": "361",
+          "volume": "74",
+          "author": "Fudenberg Drew",
+          "year": "1984",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf18",
+          "volume-title": "New Directions in the Study of China’s Foreign Policy",
+          "author": "Garver John"
+        },
+        {
+          "key": "rf19",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/691054"
+        },
+        {
+          "key": "rf20",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/BF01737554"
+        },
+        {
+          "key": "rf22",
+          "volume-title": "CEPR Working Paper no. DP13917",
+          "author": "Herrera Helios"
+        },
+        {
+          "key": "rf23",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/jcws.2006.8.3.165"
+        },
+        {
+          "key": "rf24",
+          "volume-title": "Perception and Misperception in International Politics",
+          "author": "Jervis Robert"
+        },
+        {
+          "key": "rf25",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/2009958"
+        },
+        {
+          "key": "rf26",
+          "first-page": "321",
+          "volume": "50",
+          "author": "Kambe Shinsuke",
+          "year": "1999",
+          "journal-title": "Games and Econ. Behavior"
+        },
+        {
+          "key": "rf21",
+          "volume-title": "Deterrent or Defence",
+          "author": "Liddell Hart Basil Henry"
+        },
+        {
+          "key": "rf27",
+          "doi-asserted-by": "crossref",
+          "volume-title": "The Pursuit of Power",
+          "author": "McNeil William",
+          "DOI": "10.7208/chicago/9780226160191.001.0001"
+        },
+        {
+          "key": "rf28",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/700761"
+        },
+        {
+          "key": "rf29",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/2938316"
+        },
+        {
+          "key": "rf30",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/1906951"
+        },
+        {
+          "key": "rf31",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1146/annurev-polisci-051215-022729"
+        },
+        {
+          "key": "rf32",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/20039319"
+        },
+        {
+          "key": "rf33",
+          "volume-title": "The Strategy of Conflict",
+          "author": "Schelling Thomas"
+        },
+        {
+          "key": "rf34",
+          "doi-asserted-by": "crossref",
+          "volume-title": "Arms and Influence",
+          "author": "Schelling Thomas",
+          "DOI": "10.2307/j.ctvxkn7f8"
+        },
+        {
+          "key": "rf35",
+          "volume-title": "Balance of Power",
+          "author": "Snyder Glenn"
+        }
+      ],
+      "container-title": [
+        "Journal of Political Economy"
+      ],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://www.journals.uchicago.edu/doi/pdf/10.1086/707767",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2020,
+            8,
+            3
+          ]
+        ],
+        "date-time": "2020-08-03T20:26:53Z",
+        "timestamp": 1596486413000
+      },
+      "score": 0.0,
+      "resource": {
+        "primary": {
+          "URL": "https://www.journals.uchicago.edu/doi/10.1086/707767"
+        }
+      },
+      "issued": {
+        "date-parts": [
+          [
+            2020,
+            8
+          ]
+        ]
+      },
+      "references-count": 34,
+      "journal-issue": {
+        "issue": "8",
+        "published-print": {
+          "date-parts": [
+            [
+              2020,
+              8
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1086/707767"
+      ],
+      "URL": "https://doi.org/10.1086/707767",
+      "ISSN": [
+        "0022-3808",
+        "1537-534X"
+      ],
+      "issn-type": [
+        {
+          "value": "0022-3808",
+          "type": "print"
+        },
+        {
+          "value": "1537-534X",
+          "type": "electronic"
+        }
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2020,
+            8
           ]
         ]
       }
@@ -14269,11 +14269,11 @@
           [
             2025,
             6,
-            11
+            14
           ]
         ],
-        "date-time": "2025-06-11T22:48:25Z",
-        "timestamp": 1749682105650
+        "date-time": "2025-06-14T10:03:31Z",
+        "timestamp": 1749895411394
       },
       "reference-count": 65,
       "publisher": "University of Chicago Press",
@@ -14308,7 +14308,7 @@
       },
       "page": "1753-1788",
       "source": "Crossref",
-      "is-referenced-by-count": 217,
+      "is-referenced-by-count": 216,
       "title": [
         "Cutthroat Capitalism versus Cuddly Socialism: Are Americans More Meritocratic and Efficiency-Seeking than Scandinavians?"
       ],
@@ -17809,409 +17809,6 @@
           [
             2025,
             6,
-            5
-          ]
-        ],
-        "date-time": "2025-06-05T20:06:52Z",
-        "timestamp": 1749154012661
-      },
-      "reference-count": 47,
-      "publisher": "University of Chicago Press",
-      "issue": "6",
-      "content-domain": {
-        "domain": [],
-        "crossmark-restriction": false
-      },
-      "short-container-title": [
-        "Journal of Political Economy"
-      ],
-      "published-print": {
-        "date-parts": [
-          [
-            2020,
-            6
-          ]
-        ]
-      },
-      "DOI": "10.1086/705720",
-      "type": "journal-article",
-      "created": {
-        "date-parts": [
-          [
-            2019,
-            8,
-            2
-          ]
-        ],
-        "date-time": "2019-08-02T14:37:11Z",
-        "timestamp": 1564756631000
-      },
-      "page": "2329-2374",
-      "source": "Crossref",
-      "is-referenced-by-count": 91,
-      "title": [
-        "Segmentation versus Agglomeration: Competition between Platforms with Competitive Sellers"
-      ],
-      "prefix": "10.1086",
-      "volume": "128",
-      "author": [
-        {
-          "given": "Heiko",
-          "family": "Karle",
-          "sequence": "first",
-          "affiliation": []
-        },
-        {
-          "given": "Martin",
-          "family": "Peitz",
-          "sequence": "additional",
-          "affiliation": []
-        },
-        {
-          "given": "Markus",
-          "family": "Reisinger",
-          "sequence": "additional",
-          "affiliation": []
-        }
-      ],
-      "member": "200",
-      "reference": [
-        {
-          "key": "rf1",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1007/s11151-018-9671-7"
-        },
-        {
-          "key": "rf2",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/2556072"
-        },
-        {
-          "key": "rf3",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1756-2171.2006.tb00037.x"
-        },
-        {
-          "key": "rf4",
-          "volume-title": "Contributions to the Theory of Games IV",
-          "author": "Aumann R."
-        },
-        {
-          "key": "rf5",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/1593721"
-        },
-        {
-          "key": "rf6",
-          "first-page": "454",
-          "volume": "91",
-          "author": "Baye M. R.",
-          "year": "2001",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf7",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/1593702"
-        },
-        {
-          "key": "rf8",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.ijindorg.2018.03.014"
-        },
-        {
-          "key": "rf9",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1468-2354.2008.00529.x"
-        },
-        {
-          "key": "rf10",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/0022-0531(87)90099-8"
-        },
-        {
-          "key": "rf11",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/0022-0531(87)90100-1"
-        },
-        {
-          "key": "rf12",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1086/250003"
-        },
-        {
-          "key": "rf13",
-          "volume-title": "The Mathematical Groundwork of Economics",
-          "author": "Bowley A. L."
-        },
-        {
-          "key": "rf14",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/2298085"
-        },
-        {
-          "key": "rf15",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1086/261786"
-        },
-        {
-          "key": "rf16",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1086/339714"
-        },
-        {
-          "key": "rf17",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1086/605358"
-        },
-        {
-          "key": "rf19",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.ijindorg.2015.02.003"
-        },
-        {
-          "key": "rf20",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/S0014-2921(01)00123-4"
-        },
-        {
-          "key": "rf21",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/1593720"
-        },
-        {
-          "key": "rf22",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/2950628"
-        },
-        {
-          "key": "rf23",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1756-2171.2007.tb00045.x"
-        },
-        {
-          "key": "rf24",
-          "first-page": "1092",
-          "volume": "80",
-          "author": "Dudey M.",
-          "year": "1990",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf25",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1287/mksc.22.2.222.16036"
-        },
-        {
-          "key": "rf26",
-          "first-page": "111",
-          "volume": "1",
-          "author": "Edgeworth F.",
-          "year": "1925",
-          "journal-title": "Papers Relating to Political Economy"
-        },
-        {
-          "key": "rf27",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/003355303322552793"
-        },
-        {
-          "key": "rf28",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/154247604323015472"
-        },
-        {
-          "key": "rf29",
-          "first-page": "151",
-          "volume": "3",
-          "author": "Evans D.",
-          "year": "2007",
-          "journal-title": "Competition Policy Internat."
-        },
-        {
-          "key": "rf30",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.euroecorev.2008.08.003"
-        },
-        {
-          "key": "rf31",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/S0014-2921(96)00063-3"
-        },
-        {
-          "key": "rf32",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/1756-2171.12050"
-        },
-        {
-          "key": "rf33",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1756-2171.2006.tb00039.x"
-        },
-        {
-          "key": "rf34",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1287/mnsc.2017.2797"
-        },
-        {
-          "key": "rf35",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1007/s11151-010-9257-5"
-        },
-        {
-          "key": "rf36",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.ijindorg.2018.03.008"
-        },
-        {
-          "key": "rf37",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/0034-6527.00315"
-        },
-        {
-          "key": "rf38",
-          "first-page": "2960",
-          "volume": "103",
-          "author": "Lee R.",
-          "year": "2013",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf39",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/1911701"
-        },
-        {
-          "key": "rf40",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/JEEA.2007.5.6.1130"
-        },
-        {
-          "key": "rf41",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/154247603322493212"
-        },
-        {
-          "key": "rf42",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1756-2171.2006.tb00036.x"
-        },
-        {
-          "key": "rf44",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/3003323"
-        },
-        {
-          "key": "rf45",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/2696351"
-        },
-        {
-          "key": "rf46",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/2555525"
-        },
-        {
-          "key": "rf47",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/2098007"
-        },
-        {
-          "key": "rf48",
-          "first-page": "651",
-          "volume": "70",
-          "author": "Varian H. R.",
-          "year": "1980",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf49",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/1885694"
-        }
-      ],
-      "container-title": [
-        "Journal of Political Economy"
-      ],
-      "language": "en",
-      "link": [
-        {
-          "URL": "https://www.journals.uchicago.edu/doi/pdf/10.1086/705720",
-          "content-type": "unspecified",
-          "content-version": "vor",
-          "intended-application": "similarity-checking"
-        }
-      ],
-      "deposited": {
-        "date-parts": [
-          [
-            2020,
-            5,
-            22
-          ]
-        ],
-        "date-time": "2020-05-22T15:19:57Z",
-        "timestamp": 1590160797000
-      },
-      "score": 0.0,
-      "resource": {
-        "primary": {
-          "URL": "https://www.journals.uchicago.edu/doi/10.1086/705720"
-        }
-      },
-      "issued": {
-        "date-parts": [
-          [
-            2020,
-            6
-          ]
-        ]
-      },
-      "references-count": 47,
-      "journal-issue": {
-        "issue": "6",
-        "published-print": {
-          "date-parts": [
-            [
-              2020,
-              6
-            ]
-          ]
-        }
-      },
-      "alternative-id": [
-        "10.1086/705720"
-      ],
-      "URL": "https://doi.org/10.1086/705720",
-      "ISSN": [
-        "0022-3808",
-        "1537-534X"
-      ],
-      "issn-type": [
-        {
-          "value": "0022-3808",
-          "type": "print"
-        },
-        {
-          "value": "1537-534X",
-          "type": "electronic"
-        }
-      ],
-      "published": {
-        "date-parts": [
-          [
-            2020,
-            6
-          ]
-        ]
-      }
-    },
-    {
-      "indexed": {
-        "date-parts": [
-          [
-            2025,
-            6,
             8
           ]
         ],
@@ -18835,6 +18432,409 @@
       "indexed": {
         "date-parts": [
           [
+            2025,
+            6,
+            5
+          ]
+        ],
+        "date-time": "2025-06-05T20:06:52Z",
+        "timestamp": 1749154012661
+      },
+      "reference-count": 47,
+      "publisher": "University of Chicago Press",
+      "issue": "6",
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Journal of Political Economy"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2020,
+            6
+          ]
+        ]
+      },
+      "DOI": "10.1086/705720",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2019,
+            8,
+            2
+          ]
+        ],
+        "date-time": "2019-08-02T14:37:11Z",
+        "timestamp": 1564756631000
+      },
+      "page": "2329-2374",
+      "source": "Crossref",
+      "is-referenced-by-count": 91,
+      "title": [
+        "Segmentation versus Agglomeration: Competition between Platforms with Competitive Sellers"
+      ],
+      "prefix": "10.1086",
+      "volume": "128",
+      "author": [
+        {
+          "given": "Heiko",
+          "family": "Karle",
+          "sequence": "first",
+          "affiliation": []
+        },
+        {
+          "given": "Martin",
+          "family": "Peitz",
+          "sequence": "additional",
+          "affiliation": []
+        },
+        {
+          "given": "Markus",
+          "family": "Reisinger",
+          "sequence": "additional",
+          "affiliation": []
+        }
+      ],
+      "member": "200",
+      "reference": [
+        {
+          "key": "rf1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s11151-018-9671-7"
+        },
+        {
+          "key": "rf2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/2556072"
+        },
+        {
+          "key": "rf3",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1756-2171.2006.tb00037.x"
+        },
+        {
+          "key": "rf4",
+          "volume-title": "Contributions to the Theory of Games IV",
+          "author": "Aumann R."
+        },
+        {
+          "key": "rf5",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/1593721"
+        },
+        {
+          "key": "rf6",
+          "first-page": "454",
+          "volume": "91",
+          "author": "Baye M. R.",
+          "year": "2001",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf7",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/1593702"
+        },
+        {
+          "key": "rf8",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.ijindorg.2018.03.014"
+        },
+        {
+          "key": "rf9",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1468-2354.2008.00529.x"
+        },
+        {
+          "key": "rf10",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0022-0531(87)90099-8"
+        },
+        {
+          "key": "rf11",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0022-0531(87)90100-1"
+        },
+        {
+          "key": "rf12",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/250003"
+        },
+        {
+          "key": "rf13",
+          "volume-title": "The Mathematical Groundwork of Economics",
+          "author": "Bowley A. L."
+        },
+        {
+          "key": "rf14",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/2298085"
+        },
+        {
+          "key": "rf15",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/261786"
+        },
+        {
+          "key": "rf16",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/339714"
+        },
+        {
+          "key": "rf17",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/605358"
+        },
+        {
+          "key": "rf19",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.ijindorg.2015.02.003"
+        },
+        {
+          "key": "rf20",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0014-2921(01)00123-4"
+        },
+        {
+          "key": "rf21",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/1593720"
+        },
+        {
+          "key": "rf22",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/2950628"
+        },
+        {
+          "key": "rf23",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1756-2171.2007.tb00045.x"
+        },
+        {
+          "key": "rf24",
+          "first-page": "1092",
+          "volume": "80",
+          "author": "Dudey M.",
+          "year": "1990",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf25",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1287/mksc.22.2.222.16036"
+        },
+        {
+          "key": "rf26",
+          "first-page": "111",
+          "volume": "1",
+          "author": "Edgeworth F.",
+          "year": "1925",
+          "journal-title": "Papers Relating to Political Economy"
+        },
+        {
+          "key": "rf27",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/003355303322552793"
+        },
+        {
+          "key": "rf28",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/154247604323015472"
+        },
+        {
+          "key": "rf29",
+          "first-page": "151",
+          "volume": "3",
+          "author": "Evans D.",
+          "year": "2007",
+          "journal-title": "Competition Policy Internat."
+        },
+        {
+          "key": "rf30",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.euroecorev.2008.08.003"
+        },
+        {
+          "key": "rf31",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0014-2921(96)00063-3"
+        },
+        {
+          "key": "rf32",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/1756-2171.12050"
+        },
+        {
+          "key": "rf33",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1756-2171.2006.tb00039.x"
+        },
+        {
+          "key": "rf34",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1287/mnsc.2017.2797"
+        },
+        {
+          "key": "rf35",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s11151-010-9257-5"
+        },
+        {
+          "key": "rf36",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.ijindorg.2018.03.008"
+        },
+        {
+          "key": "rf37",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/0034-6527.00315"
+        },
+        {
+          "key": "rf38",
+          "first-page": "2960",
+          "volume": "103",
+          "author": "Lee R.",
+          "year": "2013",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf39",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/1911701"
+        },
+        {
+          "key": "rf40",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/JEEA.2007.5.6.1130"
+        },
+        {
+          "key": "rf41",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/154247603322493212"
+        },
+        {
+          "key": "rf42",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1756-2171.2006.tb00036.x"
+        },
+        {
+          "key": "rf44",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/3003323"
+        },
+        {
+          "key": "rf45",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/2696351"
+        },
+        {
+          "key": "rf46",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/2555525"
+        },
+        {
+          "key": "rf47",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/2098007"
+        },
+        {
+          "key": "rf48",
+          "first-page": "651",
+          "volume": "70",
+          "author": "Varian H. R.",
+          "year": "1980",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf49",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/1885694"
+        }
+      ],
+      "container-title": [
+        "Journal of Political Economy"
+      ],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://www.journals.uchicago.edu/doi/pdf/10.1086/705720",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2020,
+            5,
+            22
+          ]
+        ],
+        "date-time": "2020-05-22T15:19:57Z",
+        "timestamp": 1590160797000
+      },
+      "score": 0.0,
+      "resource": {
+        "primary": {
+          "URL": "https://www.journals.uchicago.edu/doi/10.1086/705720"
+        }
+      },
+      "issued": {
+        "date-parts": [
+          [
+            2020,
+            6
+          ]
+        ]
+      },
+      "references-count": 47,
+      "journal-issue": {
+        "issue": "6",
+        "published-print": {
+          "date-parts": [
+            [
+              2020,
+              6
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1086/705720"
+      ],
+      "URL": "https://doi.org/10.1086/705720",
+      "ISSN": [
+        "0022-3808",
+        "1537-534X"
+      ],
+      "issn-type": [
+        {
+          "value": "0022-3808",
+          "type": "print"
+        },
+        {
+          "value": "1537-534X",
+          "type": "electronic"
+        }
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2020,
+            6
+          ]
+        ]
+      }
+    },
+    {
+      "indexed": {
+        "date-parts": [
+          [
             2022,
             4,
             2
@@ -18962,6 +18962,425 @@
         ]
       },
       "article-number": "711485"
+    },
+    {
+      "indexed": {
+        "date-parts": [
+          [
+            2025,
+            6,
+            9
+          ]
+        ],
+        "date-time": "2025-06-09T17:47:46Z",
+        "timestamp": 1749491266499
+      },
+      "reference-count": 44,
+      "publisher": "University of Chicago Press",
+      "issue": "9",
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Journal of Political Economy"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2020,
+            9,
+            1
+          ]
+        ]
+      },
+      "DOI": "10.1086/708815",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2020,
+            3,
+            2
+          ]
+        ],
+        "date-time": "2020-03-02T16:00:43Z",
+        "timestamp": 1583164843000
+      },
+      "page": "3469-3519",
+      "source": "Crossref",
+      "is-referenced-by-count": 215,
+      "title": [
+        "Income and Wealth Inequality in America, 1949–2016"
+      ],
+      "prefix": "10.1086",
+      "volume": "128",
+      "author": [
+        {
+          "given": "Moritz",
+          "family": "Kuhn",
+          "sequence": "first",
+          "affiliation": []
+        },
+        {
+          "given": "Moritz",
+          "family": "Schularick",
+          "sequence": "additional",
+          "affiliation": []
+        },
+        {
+          "given": "Ulrike I.",
+          "family": "Steins",
+          "sequence": "additional",
+          "affiliation": []
+        }
+      ],
+      "member": "200",
+      "reference": [
+        {
+          "key": "rf1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/jep.30.2.3"
+        },
+        {
+          "issue": "1",
+          "key": "rf3",
+          "first-page": "19",
+          "volume": "102",
+          "author": "Bartscher A. K.",
+          "year": "2020",
+          "journal-title": "Fed. Reserve Bank St. Louis Rev."
+        },
+        {
+          "key": "rf5",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/qje/qjy003"
+        },
+        {
+          "key": "rf6",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/jel.20161390"
+        },
+        {
+          "issue": "5",
+          "key": "rf7",
+          "first-page": "593",
+          "volume": "107",
+          "author": "Benhabib J.",
+          "year": "2017",
+          "journal-title": "A.E.R."
+        },
+        {
+          "issue": "3",
+          "key": "rf8",
+          "first-page": "1",
+          "volume": "103",
+          "author": "Bricker J.",
+          "year": "2017",
+          "journal-title": "Fed. Res. Bull."
+        },
+        {
+          "key": "rf10",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1353/eca.2016.0016"
+        },
+        {
+          "key": "rf11",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1475-4991.2008.00305.x"
+        },
+        {
+          "key": "rf12",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/REST_a_00200"
+        },
+        {
+          "key": "rf13",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/375382"
+        },
+        {
+          "key": "rf14",
+          "volume-title": "United States: Evidence from the Survey of Consumer Finances.",
+          "author": "Dettling L. J.",
+          "year": "2015"
+        },
+        {
+          "issue": "1",
+          "key": "rf60",
+          "first-page": "2",
+          "volume": "34",
+          "author": "Díaz-Giménez J.",
+          "year": "2011",
+          "journal-title": "Fed. Reserve Bank Minneapolis Q. Rev."
+        },
+        {
+          "key": "rf17",
+          "first-page": "06",
+          "volume": "2017",
+          "author": "Fella G.",
+          "year": "2017",
+          "journal-title": "Rev. Econ. Dynamics 26, https://10.1016/j.red."
+        },
+        {
+          "key": "rf18",
+          "volume-title": "Amsterdam: Elsevier.",
+          "volume": "102",
+          "author": "Fortin N.",
+          "year": "2011"
+        },
+        {
+          "key": "rf19",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/jep.21.2.71"
+        },
+        {
+          "key": "rf20",
+          "volume-title": "Washington",
+          "author": "Furth S."
+        },
+        {
+          "key": "rf21",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.3982/ECTA13569"
+        },
+        {
+          "key": "rf24",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1475-4991.2005.00153.x"
+        },
+        {
+          "key": "rf61",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.red.2009.10.010"
+        },
+        {
+          "key": "rf25",
+          "volume-title": "Chicago: Univ",
+          "author": "Henriques A. M.",
+          "year": "2014"
+        },
+        {
+          "key": "rf27",
+          "volume-title": "Wealth Distribution: A Quantitative-Theoretic Investigation.",
+          "author": "Hubmer J.",
+          "year": "2017"
+        },
+        {
+          "key": "rf28",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/qje/qjz012"
+        },
+        {
+          "key": "rf29",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/690241"
+        },
+        {
+          "key": "rf30",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.3982/ECTA10528"
+        },
+        {
+          "key": "rf31",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1353/eca.2014.0002"
+        },
+        {
+          "key": "rf32",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jmoneco.2015.10.004"
+        },
+        {
+          "key": "rf33",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.3233/SJI-160275"
+        },
+        {
+          "key": "rf34",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1475-4991.1999.tb00328.x"
+        },
+        {
+          "issue": "2",
+          "key": "rf62",
+          "first-page": "331",
+          "volume": "107",
+          "author": "Knoll K.",
+          "year": "2017",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf35",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/jep.29.1.47"
+        },
+        {
+          "key": "rf36",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.17310/ntj.2004.2S.05"
+        },
+        {
+          "key": "rf37",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/qjec.2010.125.1.91"
+        },
+        {
+          "key": "rf38",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/250034"
+        },
+        {
+          "key": "rf39",
+          "author": "Kuhn M.",
+          "year": "2016",
+          "journal-title": "Fed. Reserve Bank Minneapolis Q. Rev. 37 (1)."
+        },
+        {
+          "key": "rf40",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/qje/qjq004"
+        },
+        {
+          "key": "rf41",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/00335530360535135"
+        },
+        {
+          "key": "rf42",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/qje/qjx043"
+        },
+        {
+          "key": "rf43",
+          "volume-title": "Cambridge, MA: NBER.",
+          "author": "Sabelhaus J.",
+          "year": "2015"
+        },
+        {
+          "key": "rf44",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/qje/qjw004"
+        },
+        {
+          "key": "rf45",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/0167-9473(95)00057-7"
+        },
+        {
+          "key": "rf47",
+          "volume-title": "Top Heavy: The Increasing Inequality of Wealth in America and What Can Be Done about It.",
+          "author": "Wolff E. N.",
+          "year": "2002"
+        },
+        {
+          "issue": "6",
+          "key": "rf48",
+          "first-page": "24",
+          "volume": "2",
+          "author": "Wolff E. N.",
+          "year": "2016",
+          "journal-title": "J. Social Sciences"
+        },
+        {
+          "key": "rf49",
+          "volume-title": "Working Paper no. 24085, NBER",
+          "author": "Wolff E. N."
+        },
+        {
+          "key": "rf50",
+          "volume-title": "Conference on Economic Opportunity and Inequality, Fed. Reserve Bank of Boston, October 17",
+          "author": "Yellen J.",
+          "year": "2014"
+        }
+      ],
+      "container-title": [
+        "Journal of Political Economy"
+      ],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://www.journals.uchicago.edu/doi/pdf/10.1086/708815",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2020,
+            9,
+            4
+          ]
+        ],
+        "date-time": "2020-09-04T17:45:11Z",
+        "timestamp": 1599241511000
+      },
+      "score": 0.0,
+      "resource": {
+        "primary": {
+          "URL": "https://www.journals.uchicago.edu/doi/10.1086/708815"
+        }
+      },
+      "issued": {
+        "date-parts": [
+          [
+            2020,
+            9,
+            1
+          ]
+        ]
+      },
+      "references-count": 44,
+      "journal-issue": {
+        "issue": "9",
+        "published-print": {
+          "date-parts": [
+            [
+              2020,
+              9,
+              1
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1086/708815"
+      ],
+      "URL": "https://doi.org/10.1086/708815",
+      "relation": {
+        "has-preprint": [
+          {
+            "id-type": "doi",
+            "id": "10.21034/iwp.9",
+            "asserted-by": "object"
+          }
+        ]
+      },
+      "ISSN": [
+        "0022-3808",
+        "1537-534X"
+      ],
+      "issn-type": [
+        {
+          "value": "0022-3808",
+          "type": "print"
+        },
+        {
+          "value": "1537-534X",
+          "type": "electronic"
+        }
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2020,
+            9,
+            1
+          ]
+        ]
+      }
     },
     {
       "indexed": {
@@ -19385,425 +19804,6 @@
           [
             2020,
             10,
-            1
-          ]
-        ]
-      }
-    },
-    {
-      "indexed": {
-        "date-parts": [
-          [
-            2025,
-            6,
-            9
-          ]
-        ],
-        "date-time": "2025-06-09T17:47:46Z",
-        "timestamp": 1749491266499
-      },
-      "reference-count": 44,
-      "publisher": "University of Chicago Press",
-      "issue": "9",
-      "content-domain": {
-        "domain": [],
-        "crossmark-restriction": false
-      },
-      "short-container-title": [
-        "Journal of Political Economy"
-      ],
-      "published-print": {
-        "date-parts": [
-          [
-            2020,
-            9,
-            1
-          ]
-        ]
-      },
-      "DOI": "10.1086/708815",
-      "type": "journal-article",
-      "created": {
-        "date-parts": [
-          [
-            2020,
-            3,
-            2
-          ]
-        ],
-        "date-time": "2020-03-02T16:00:43Z",
-        "timestamp": 1583164843000
-      },
-      "page": "3469-3519",
-      "source": "Crossref",
-      "is-referenced-by-count": 215,
-      "title": [
-        "Income and Wealth Inequality in America, 1949–2016"
-      ],
-      "prefix": "10.1086",
-      "volume": "128",
-      "author": [
-        {
-          "given": "Moritz",
-          "family": "Kuhn",
-          "sequence": "first",
-          "affiliation": []
-        },
-        {
-          "given": "Moritz",
-          "family": "Schularick",
-          "sequence": "additional",
-          "affiliation": []
-        },
-        {
-          "given": "Ulrike I.",
-          "family": "Steins",
-          "sequence": "additional",
-          "affiliation": []
-        }
-      ],
-      "member": "200",
-      "reference": [
-        {
-          "key": "rf1",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/jep.30.2.3"
-        },
-        {
-          "issue": "1",
-          "key": "rf3",
-          "first-page": "19",
-          "volume": "102",
-          "author": "Bartscher A. K.",
-          "year": "2020",
-          "journal-title": "Fed. Reserve Bank St. Louis Rev."
-        },
-        {
-          "key": "rf5",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/qje/qjy003"
-        },
-        {
-          "key": "rf6",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/jel.20161390"
-        },
-        {
-          "issue": "5",
-          "key": "rf7",
-          "first-page": "593",
-          "volume": "107",
-          "author": "Benhabib J.",
-          "year": "2017",
-          "journal-title": "A.E.R."
-        },
-        {
-          "issue": "3",
-          "key": "rf8",
-          "first-page": "1",
-          "volume": "103",
-          "author": "Bricker J.",
-          "year": "2017",
-          "journal-title": "Fed. Res. Bull."
-        },
-        {
-          "key": "rf10",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1353/eca.2016.0016"
-        },
-        {
-          "key": "rf11",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1475-4991.2008.00305.x"
-        },
-        {
-          "key": "rf12",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/REST_a_00200"
-        },
-        {
-          "key": "rf13",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1086/375382"
-        },
-        {
-          "key": "rf14",
-          "volume-title": "United States: Evidence from the Survey of Consumer Finances.",
-          "author": "Dettling L. J.",
-          "year": "2015"
-        },
-        {
-          "issue": "1",
-          "key": "rf60",
-          "first-page": "2",
-          "volume": "34",
-          "author": "Díaz-Giménez J.",
-          "year": "2011",
-          "journal-title": "Fed. Reserve Bank Minneapolis Q. Rev."
-        },
-        {
-          "key": "rf17",
-          "first-page": "06",
-          "volume": "2017",
-          "author": "Fella G.",
-          "year": "2017",
-          "journal-title": "Rev. Econ. Dynamics 26, https://10.1016/j.red."
-        },
-        {
-          "key": "rf18",
-          "volume-title": "Amsterdam: Elsevier.",
-          "volume": "102",
-          "author": "Fortin N.",
-          "year": "2011"
-        },
-        {
-          "key": "rf19",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/jep.21.2.71"
-        },
-        {
-          "key": "rf20",
-          "volume-title": "Washington",
-          "author": "Furth S."
-        },
-        {
-          "key": "rf21",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.3982/ECTA13569"
-        },
-        {
-          "key": "rf24",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1475-4991.2005.00153.x"
-        },
-        {
-          "key": "rf61",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.red.2009.10.010"
-        },
-        {
-          "key": "rf25",
-          "volume-title": "Chicago: Univ",
-          "author": "Henriques A. M.",
-          "year": "2014"
-        },
-        {
-          "key": "rf27",
-          "volume-title": "Wealth Distribution: A Quantitative-Theoretic Investigation.",
-          "author": "Hubmer J.",
-          "year": "2017"
-        },
-        {
-          "key": "rf28",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/qje/qjz012"
-        },
-        {
-          "key": "rf29",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1086/690241"
-        },
-        {
-          "key": "rf30",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.3982/ECTA10528"
-        },
-        {
-          "key": "rf31",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1353/eca.2014.0002"
-        },
-        {
-          "key": "rf32",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jmoneco.2015.10.004"
-        },
-        {
-          "key": "rf33",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.3233/SJI-160275"
-        },
-        {
-          "key": "rf34",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1475-4991.1999.tb00328.x"
-        },
-        {
-          "issue": "2",
-          "key": "rf62",
-          "first-page": "331",
-          "volume": "107",
-          "author": "Knoll K.",
-          "year": "2017",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf35",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/jep.29.1.47"
-        },
-        {
-          "key": "rf36",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.17310/ntj.2004.2S.05"
-        },
-        {
-          "key": "rf37",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/qjec.2010.125.1.91"
-        },
-        {
-          "key": "rf38",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1086/250034"
-        },
-        {
-          "key": "rf39",
-          "author": "Kuhn M.",
-          "year": "2016",
-          "journal-title": "Fed. Reserve Bank Minneapolis Q. Rev. 37 (1)."
-        },
-        {
-          "key": "rf40",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/qje/qjq004"
-        },
-        {
-          "key": "rf41",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/00335530360535135"
-        },
-        {
-          "key": "rf42",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/qje/qjx043"
-        },
-        {
-          "key": "rf43",
-          "volume-title": "Cambridge, MA: NBER.",
-          "author": "Sabelhaus J.",
-          "year": "2015"
-        },
-        {
-          "key": "rf44",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/qje/qjw004"
-        },
-        {
-          "key": "rf45",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/0167-9473(95)00057-7"
-        },
-        {
-          "key": "rf47",
-          "volume-title": "Top Heavy: The Increasing Inequality of Wealth in America and What Can Be Done about It.",
-          "author": "Wolff E. N.",
-          "year": "2002"
-        },
-        {
-          "issue": "6",
-          "key": "rf48",
-          "first-page": "24",
-          "volume": "2",
-          "author": "Wolff E. N.",
-          "year": "2016",
-          "journal-title": "J. Social Sciences"
-        },
-        {
-          "key": "rf49",
-          "volume-title": "Working Paper no. 24085, NBER",
-          "author": "Wolff E. N."
-        },
-        {
-          "key": "rf50",
-          "volume-title": "Conference on Economic Opportunity and Inequality, Fed. Reserve Bank of Boston, October 17",
-          "author": "Yellen J.",
-          "year": "2014"
-        }
-      ],
-      "container-title": [
-        "Journal of Political Economy"
-      ],
-      "language": "en",
-      "link": [
-        {
-          "URL": "https://www.journals.uchicago.edu/doi/pdf/10.1086/708815",
-          "content-type": "unspecified",
-          "content-version": "vor",
-          "intended-application": "similarity-checking"
-        }
-      ],
-      "deposited": {
-        "date-parts": [
-          [
-            2020,
-            9,
-            4
-          ]
-        ],
-        "date-time": "2020-09-04T17:45:11Z",
-        "timestamp": 1599241511000
-      },
-      "score": 0.0,
-      "resource": {
-        "primary": {
-          "URL": "https://www.journals.uchicago.edu/doi/10.1086/708815"
-        }
-      },
-      "issued": {
-        "date-parts": [
-          [
-            2020,
-            9,
-            1
-          ]
-        ]
-      },
-      "references-count": 44,
-      "journal-issue": {
-        "issue": "9",
-        "published-print": {
-          "date-parts": [
-            [
-              2020,
-              9,
-              1
-            ]
-          ]
-        }
-      },
-      "alternative-id": [
-        "10.1086/708815"
-      ],
-      "URL": "https://doi.org/10.1086/708815",
-      "relation": {
-        "has-preprint": [
-          {
-            "id-type": "doi",
-            "id": "10.21034/iwp.9",
-            "asserted-by": "object"
-          }
-        ]
-      },
-      "ISSN": [
-        "0022-3808",
-        "1537-534X"
-      ],
-      "issn-type": [
-        {
-          "value": "0022-3808",
-          "type": "print"
-        },
-        {
-          "value": "1537-534X",
-          "type": "electronic"
-        }
-      ],
-      "published": {
-        "date-parts": [
-          [
-            2020,
-            9,
             1
           ]
         ]
@@ -22670,11 +22670,11 @@
           [
             2025,
             6,
-            13
+            14
           ]
         ],
-        "date-time": "2025-06-13T14:26:02Z",
-        "timestamp": 1749824762377
+        "date-time": "2025-06-14T04:25:53Z",
+        "timestamp": 1749875153269
       },
       "reference-count": 48,
       "publisher": "University of Chicago Press",
@@ -30670,359 +30670,6 @@
           [
             2025,
             6,
-            12
-          ]
-        ],
-        "date-time": "2025-06-12T02:26:23Z",
-        "timestamp": 1749695183215
-      },
-      "reference-count": 33,
-      "publisher": "University of Chicago Press",
-      "issue": "12",
-      "content-domain": {
-        "domain": [],
-        "crossmark-restriction": false
-      },
-      "short-container-title": [
-        "Journal of Political Economy"
-      ],
-      "published-print": {
-        "date-parts": [
-          [
-            2020,
-            12,
-            1
-          ]
-        ]
-      },
-      "DOI": "10.1086/710558",
-      "type": "journal-article",
-      "created": {
-        "date-parts": [
-          [
-            2020,
-            6,
-            29
-          ]
-        ],
-        "date-time": "2020-06-29T14:45:33Z",
-        "timestamp": 1593441933000
-      },
-      "page": "4438-4474",
-      "source": "Crossref",
-      "is-referenced-by-count": 95,
-      "title": [
-        "What Goes Up May Not Come Down: Asymmetric Incidence of Value-Added Taxes"
-      ],
-      "prefix": "10.1086",
-      "volume": "128",
-      "author": [
-        {
-          "given": "Youssef",
-          "family": "Benzarti",
-          "sequence": "first",
-          "affiliation": []
-        },
-        {
-          "given": "Dorian",
-          "family": "Carloni",
-          "sequence": "additional",
-          "affiliation": []
-        },
-        {
-          "given": "Jarkko",
-          "family": "Harju",
-          "sequence": "additional",
-          "affiliation": []
-        },
-        {
-          "given": "Tuomas",
-          "family": "Kosonen",
-          "sequence": "additional",
-          "affiliation": []
-        }
-      ],
-      "member": "200",
-      "reference": [
-        {
-          "key": "rf1",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.3982/ECTA6474"
-        },
-        {
-          "key": "rf3",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/jel.50.3.770"
-        },
-        {
-          "key": "rf4",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1007/s10797-019-09566-5"
-        },
-        {
-          "key": "rf6",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/pol.20170504"
-        },
-        {
-          "key": "rf7",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/003355397555118"
-        },
-        {
-          "key": "rf8",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.3406/estat.2008.7033"
-        },
-        {
-          "key": "rf9",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1007/s10797-012-9226-z"
-        },
-        {
-          "key": "rf10",
-          "volume-title": "conference of the National Tax Association",
-          "author": "Chirakijja Janjala",
-          "year": "2009"
-        },
-        {
-          "key": "rf11",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/biomet/asn055"
-        },
-        {
-          "key": "rf12",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jpubeco.2007.05.011"
-        },
-        {
-          "key": "rf13",
-          "author": "European Commission",
-          "year": "1999",
-          "journal-title": "Official J. European Union"
-        },
-        {
-          "key": "rf14",
-          "author": "European Commission",
-          "year": "2006",
-          "journal-title": "Official J. European Union"
-        },
-        {
-          "key": "rf15",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1086/tpe.13.20061866"
-        },
-        {
-          "key": "rf16",
-          "volume-title": "Taxation in the Global Economy",
-          "author": "Feldstein Martin"
-        },
-        {
-          "key": "rf17",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jpubeco.2014.04.005"
-        },
-        {
-          "issue": "2",
-          "key": "rf18",
-          "first-page": "393",
-          "volume": "108",
-          "author": "Fuest Clemens",
-          "year": "2018",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf19",
-          "volume-title": "Metcalf",
-          "volume": "4",
-          "author": "Fullerton Don",
-          "year": "2002"
-        },
-        {
-          "key": "rf20",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/ecoj.12576"
-        },
-        {
-          "key": "rf21",
-          "volume-title": "Working Paper no. 17642 (December), NBER",
-          "author": "Golosov Mikhail"
-        },
-        {
-          "key": "rf22",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.ejpoleco.2016.07.004"
-        },
-        {
-          "key": "rf23",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/2971733"
-        },
-        {
-          "key": "rf25",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.3368/jhr.50.2.373"
-        },
-        {
-          "issue": "4",
-          "key": "rf26",
-          "first-page": "778",
-          "volume": "91",
-          "author": "Imbens Guido W",
-          "year": "2001",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf27",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/mac.20160054"
-        },
-        {
-          "issue": "2",
-          "key": "rf28",
-          "first-page": "130",
-          "volume": "96",
-          "author": "Kopczuk Wojciech",
-          "year": "2006",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf29",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jpubeco.2015.09.006"
-        },
-        {
-          "key": "rf30",
-          "volume-title": "Handbook of Public Economics",
-          "volume": "2",
-          "author": "Kotlikoff Laurence"
-        },
-        {
-          "key": "rf31",
-          "volume-title": "Dimensions of Tax Design: The Mirrlees Review",
-          "author": "Mirrlees James"
-        },
-        {
-          "issue": "9",
-          "key": "rf32",
-          "first-page": "3031",
-          "volume": "109",
-          "author": "Naritomi Joana",
-          "year": "2019",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf33",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1086/262126"
-        },
-        {
-          "key": "rf34",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1540-5982.2011.01680.x"
-        },
-        {
-          "issue": "8",
-          "key": "rf35",
-          "first-page": "2539",
-          "volume": "105",
-          "author": "Pomeranz Dina",
-          "year": "2015",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf36",
-          "doi-asserted-by": "crossref",
-          "volume-title": "Tax Systems",
-          "author": "Slemrod Joel",
-          "DOI": "10.7551/mitpress/9780262026727.001.0001"
-        }
-      ],
-      "container-title": [
-        "Journal of Political Economy"
-      ],
-      "language": "en",
-      "link": [
-        {
-          "URL": "https://www.journals.uchicago.edu/doi/pdf/10.1086/710558",
-          "content-type": "unspecified",
-          "content-version": "vor",
-          "intended-application": "similarity-checking"
-        }
-      ],
-      "deposited": {
-        "date-parts": [
-          [
-            2020,
-            12,
-            1
-          ]
-        ],
-        "date-time": "2020-12-01T19:08:10Z",
-        "timestamp": 1606849690000
-      },
-      "score": 0.0,
-      "resource": {
-        "primary": {
-          "URL": "https://www.journals.uchicago.edu/doi/10.1086/710558"
-        }
-      },
-      "issued": {
-        "date-parts": [
-          [
-            2020,
-            12,
-            1
-          ]
-        ]
-      },
-      "references-count": 33,
-      "journal-issue": {
-        "issue": "12",
-        "published-print": {
-          "date-parts": [
-            [
-              2020,
-              12,
-              1
-            ]
-          ]
-        }
-      },
-      "alternative-id": [
-        "10.1086/710558"
-      ],
-      "URL": "https://doi.org/10.1086/710558",
-      "ISSN": [
-        "0022-3808",
-        "1537-534X"
-      ],
-      "issn-type": [
-        {
-          "value": "0022-3808",
-          "type": "print"
-        },
-        {
-          "value": "1537-534X",
-          "type": "electronic"
-        }
-      ],
-      "published": {
-        "date-parts": [
-          [
-            2020,
-            12,
-            1
-          ]
-        ]
-      }
-    },
-    {
-      "indexed": {
-        "date-parts": [
-          [
-            2025,
-            6,
             4
           ]
         ],
@@ -31466,6 +31113,359 @@
           [
             2020,
             11,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "indexed": {
+        "date-parts": [
+          [
+            2025,
+            6,
+            14
+          ]
+        ],
+        "date-time": "2025-06-14T13:43:28Z",
+        "timestamp": 1749908608204
+      },
+      "reference-count": 33,
+      "publisher": "University of Chicago Press",
+      "issue": "12",
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Journal of Political Economy"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2020,
+            12,
+            1
+          ]
+        ]
+      },
+      "DOI": "10.1086/710558",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2020,
+            6,
+            29
+          ]
+        ],
+        "date-time": "2020-06-29T14:45:33Z",
+        "timestamp": 1593441933000
+      },
+      "page": "4438-4474",
+      "source": "Crossref",
+      "is-referenced-by-count": 95,
+      "title": [
+        "What Goes Up May Not Come Down: Asymmetric Incidence of Value-Added Taxes"
+      ],
+      "prefix": "10.1086",
+      "volume": "128",
+      "author": [
+        {
+          "given": "Youssef",
+          "family": "Benzarti",
+          "sequence": "first",
+          "affiliation": []
+        },
+        {
+          "given": "Dorian",
+          "family": "Carloni",
+          "sequence": "additional",
+          "affiliation": []
+        },
+        {
+          "given": "Jarkko",
+          "family": "Harju",
+          "sequence": "additional",
+          "affiliation": []
+        },
+        {
+          "given": "Tuomas",
+          "family": "Kosonen",
+          "sequence": "additional",
+          "affiliation": []
+        }
+      ],
+      "member": "200",
+      "reference": [
+        {
+          "key": "rf1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.3982/ECTA6474"
+        },
+        {
+          "key": "rf3",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/jel.50.3.770"
+        },
+        {
+          "key": "rf4",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s10797-019-09566-5"
+        },
+        {
+          "key": "rf6",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/pol.20170504"
+        },
+        {
+          "key": "rf7",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/003355397555118"
+        },
+        {
+          "key": "rf8",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.3406/estat.2008.7033"
+        },
+        {
+          "key": "rf9",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1007/s10797-012-9226-z"
+        },
+        {
+          "key": "rf10",
+          "volume-title": "conference of the National Tax Association",
+          "author": "Chirakijja Janjala",
+          "year": "2009"
+        },
+        {
+          "key": "rf11",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/biomet/asn055"
+        },
+        {
+          "key": "rf12",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jpubeco.2007.05.011"
+        },
+        {
+          "key": "rf13",
+          "author": "European Commission",
+          "year": "1999",
+          "journal-title": "Official J. European Union"
+        },
+        {
+          "key": "rf14",
+          "author": "European Commission",
+          "year": "2006",
+          "journal-title": "Official J. European Union"
+        },
+        {
+          "key": "rf15",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/tpe.13.20061866"
+        },
+        {
+          "key": "rf16",
+          "volume-title": "Taxation in the Global Economy",
+          "author": "Feldstein Martin"
+        },
+        {
+          "key": "rf17",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jpubeco.2014.04.005"
+        },
+        {
+          "issue": "2",
+          "key": "rf18",
+          "first-page": "393",
+          "volume": "108",
+          "author": "Fuest Clemens",
+          "year": "2018",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf19",
+          "volume-title": "Metcalf",
+          "volume": "4",
+          "author": "Fullerton Don",
+          "year": "2002"
+        },
+        {
+          "key": "rf20",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/ecoj.12576"
+        },
+        {
+          "key": "rf21",
+          "volume-title": "Working Paper no. 17642 (December), NBER",
+          "author": "Golosov Mikhail"
+        },
+        {
+          "key": "rf22",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.ejpoleco.2016.07.004"
+        },
+        {
+          "key": "rf23",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/2971733"
+        },
+        {
+          "key": "rf25",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.3368/jhr.50.2.373"
+        },
+        {
+          "issue": "4",
+          "key": "rf26",
+          "first-page": "778",
+          "volume": "91",
+          "author": "Imbens Guido W",
+          "year": "2001",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf27",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/mac.20160054"
+        },
+        {
+          "issue": "2",
+          "key": "rf28",
+          "first-page": "130",
+          "volume": "96",
+          "author": "Kopczuk Wojciech",
+          "year": "2006",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf29",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jpubeco.2015.09.006"
+        },
+        {
+          "key": "rf30",
+          "volume-title": "Handbook of Public Economics",
+          "volume": "2",
+          "author": "Kotlikoff Laurence"
+        },
+        {
+          "key": "rf31",
+          "volume-title": "Dimensions of Tax Design: The Mirrlees Review",
+          "author": "Mirrlees James"
+        },
+        {
+          "issue": "9",
+          "key": "rf32",
+          "first-page": "3031",
+          "volume": "109",
+          "author": "Naritomi Joana",
+          "year": "2019",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf33",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/262126"
+        },
+        {
+          "key": "rf34",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1540-5982.2011.01680.x"
+        },
+        {
+          "issue": "8",
+          "key": "rf35",
+          "first-page": "2539",
+          "volume": "105",
+          "author": "Pomeranz Dina",
+          "year": "2015",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf36",
+          "doi-asserted-by": "crossref",
+          "volume-title": "Tax Systems",
+          "author": "Slemrod Joel",
+          "DOI": "10.7551/mitpress/9780262026727.001.0001"
+        }
+      ],
+      "container-title": [
+        "Journal of Political Economy"
+      ],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://www.journals.uchicago.edu/doi/pdf/10.1086/710558",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2020,
+            12,
+            1
+          ]
+        ],
+        "date-time": "2020-12-01T19:08:10Z",
+        "timestamp": 1606849690000
+      },
+      "score": 0.0,
+      "resource": {
+        "primary": {
+          "URL": "https://www.journals.uchicago.edu/doi/10.1086/710558"
+        }
+      },
+      "issued": {
+        "date-parts": [
+          [
+            2020,
+            12,
+            1
+          ]
+        ]
+      },
+      "references-count": 33,
+      "journal-issue": {
+        "issue": "12",
+        "published-print": {
+          "date-parts": [
+            [
+              2020,
+              12,
+              1
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1086/710558"
+      ],
+      "URL": "https://doi.org/10.1086/710558",
+      "ISSN": [
+        "0022-3808",
+        "1537-534X"
+      ],
+      "issn-type": [
+        {
+          "value": "0022-3808",
+          "type": "print"
+        },
+        {
+          "value": "1537-534X",
+          "type": "electronic"
+        }
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2020,
+            12,
             1
           ]
         ]
@@ -32134,6 +32134,511 @@
           [
             2025,
             6,
+            10
+          ]
+        ],
+        "date-time": "2025-06-10T01:52:07Z",
+        "timestamp": 1749520327835
+      },
+      "reference-count": 66,
+      "publisher": "University of Chicago Press",
+      "issue": "10",
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Journal of Political Economy"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2020,
+            10,
+            1
+          ]
+        ]
+      },
+      "DOI": "10.1086/709993",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2020,
+            5,
+            18
+          ]
+        ],
+        "date-time": "2020-05-18T13:57:12Z",
+        "timestamp": 1589810232000
+      },
+      "page": "3940-3997",
+      "source": "Crossref",
+      "is-referenced-by-count": 104,
+      "title": [
+        "The Economic Origins of Conflict in Africa"
+      ],
+      "prefix": "10.1086",
+      "volume": "128",
+      "author": [
+        {
+          "given": "Eoin",
+          "family": "McGuirk",
+          "sequence": "first",
+          "affiliation": []
+        },
+        {
+          "given": "Marshall",
+          "family": "Burke",
+          "sequence": "additional",
+          "affiliation": []
+        }
+      ],
+      "member": "200",
+      "reference": [
+        {
+          "issue": "1",
+          "key": "rf1",
+          "first-page": "113",
+          "volume": "93",
+          "author": "Abadie Alberto",
+          "year": "2003",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf2",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.worlddev.2011.04.020"
+        },
+        {
+          "key": "rf3",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/mac.6.4.1"
+        },
+        {
+          "key": "rf4",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/ajae/aau038"
+        },
+        {
+          "key": "rf5",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/REST_a_00521"
+        },
+        {
+          "issue": "6",
+          "key": "rf6",
+          "first-page": "1564",
+          "volume": "107",
+          "author": "Berman Nicolas",
+          "year": "2017",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf9",
+          "volume-title": "Working Paper no. 14585 (December)",
+          "author": "Besley Timothy"
+        },
+        {
+          "key": "rf7",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.3982/ECTA8073"
+        },
+        {
+          "key": "rf8",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/qje/qjr025"
+        },
+        {
+          "key": "rf10",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1017/S0003055415000520"
+        },
+        {
+          "key": "rf11",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1468-0297.2010.02353.x"
+        },
+        {
+          "key": "rf12",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1146/annurev-economics-080614-115430"
+        },
+        {
+          "key": "rf13",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1561/100.00008072"
+        },
+        {
+          "key": "rf14",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/app.3.4.215"
+        },
+        {
+          "key": "rf15",
+          "volume-title": "Breaking the Conflict Trap: Civil War and Development Policy. Publication no. 13938",
+          "author": "Collier Paul"
+        },
+        {
+          "key": "rf16",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/oep/gpf064"
+        },
+        {
+          "key": "rf17",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/0022002705277551"
+        },
+        {
+          "key": "rf18",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0304-4076(98)00084-0"
+        },
+        {
+          "key": "rf19",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/mac.5.1.49"
+        },
+        {
+          "key": "rf20",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1542-4774.2011.01025.x"
+        },
+        {
+          "key": "rf22",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/2234068"
+        },
+        {
+          "key": "rf21",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jdeveco.2006.01.013"
+        },
+        {
+          "key": "rf23",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/jel.52.3.740"
+        },
+        {
+          "key": "rf24",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/REST_a_00046"
+        },
+        {
+          "key": "rf25",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/restud/rdt009"
+        },
+        {
+          "key": "rf26",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jdeveco.2012.03.003"
+        },
+        {
+          "issue": "25",
+          "key": "rf27",
+          "first-page": "2540",
+          "volume": "39",
+          "author": "Political Weekly",
+          "year": "2004",
+          "journal-title": "Econ. and Polit. Weekly"
+        },
+        {
+          "key": "rf28",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1017/S0003055403000534"
+        },
+        {
+          "key": "rf29",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.worlddev.2014.10.032"
+        },
+        {
+          "key": "rf30",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1017/S0003055403000613"
+        },
+        {
+          "key": "rf31",
+          "volume-title": "Why Men Rebel",
+          "author": "Gurr Ted Robert",
+          "year": "1970"
+        },
+        {
+          "key": "rf32",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/rest_a_00730"
+        },
+        {
+          "key": "rf33",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/ajae/aav045"
+        },
+        {
+          "key": "rf34",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1146/annurev-resource-100815-095303"
+        },
+        {
+          "key": "rf35",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/0022343314561599"
+        },
+        {
+          "issue": "2",
+          "key": "rf36",
+          "first-page": "130",
+          "volume": "81",
+          "author": "Hirshleifer Jack",
+          "year": "1991",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf37",
+          "volume-title": "Ethnic Groups in Conflict",
+          "author": "Horowitz Donald L"
+        },
+        {
+          "key": "rf38",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.1009510107"
+        },
+        {
+          "key": "rf39",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1126/science.1235367"
+        },
+        {
+          "key": "rf40",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1540-5907.2008.00322.x"
+        },
+        {
+          "key": "rf41",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1574-0862.2008.00347.x"
+        },
+        {
+          "key": "rf42",
+          "volume-title": "Policy Research Working Paper no. 7011",
+          "author": "Ivanic Maros"
+        },
+        {
+          "key": "rf43",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.worlddev.2012.03.024"
+        },
+        {
+          "key": "rf44",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1006/redy.2001.0133"
+        },
+        {
+          "key": "rf45",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/0022343313493455"
+        },
+        {
+          "key": "rf46",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.3982/ECTA9613"
+        },
+        {
+          "key": "rf47",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/0034-6527.00365"
+        },
+        {
+          "key": "rf48",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/app.3.4.228"
+        },
+        {
+          "key": "rf49",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/421174"
+        },
+        {
+          "key": "rf50",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1525/aa.1957.59.4.02a00090"
+        },
+        {
+          "key": "rf51",
+          "volume-title": "Washington, DC: Internat. Food Policy Res. Inst.",
+          "author": "Nelson Gerald C",
+          "year": "2010"
+        },
+        {
+          "issue": "6",
+          "key": "rf52",
+          "first-page": "1630",
+          "volume": "104",
+          "author": "Nunn Nathan",
+          "year": "2014",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf53",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/089533004773563502"
+        },
+        {
+          "key": "rf54",
+          "volume-title": "The Better Angels of Our Nature: Why Violence Has Declined",
+          "author": "Pinker Steven"
+        },
+        {
+          "key": "rf55",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/0022343310378914"
+        },
+        {
+          "key": "rf56",
+          "volume-title": "Foley",
+          "author": "Ramankutty Navin",
+          "year": "2008"
+        },
+        {
+          "key": "rf57",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1146/annurev-polisci-052213-040359"
+        },
+        {
+          "key": "rf58",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jdeveco.2014.12.007"
+        },
+        {
+          "key": "rf59",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/0022343313484347"
+        },
+        {
+          "key": "rf60",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/0022343311431287"
+        },
+        {
+          "key": "rf61",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/oep/gpw015"
+        },
+        {
+          "key": "rf62",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.foodpol.2012.12.006"
+        },
+        {
+          "key": "rf63",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1467-8276.2007.01031.x"
+        },
+        {
+          "issue": "3",
+          "key": "rf64",
+          "first-page": "7",
+          "volume": "27",
+          "author": "Wong Jenny",
+          "year": "2005",
+          "journal-title": "Harvard Internat. Rev."
+        },
+        {
+          "key": "rf65",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1017/S0022278X03004427"
+        },
+        {
+          "key": "rf66",
+          "volume-title": "Year 5, issue 17",
+          "author": "World Bank"
+        }
+      ],
+      "container-title": [
+        "Journal of Political Economy"
+      ],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://www.journals.uchicago.edu/doi/pdf/10.1086/709993",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2020,
+            10,
+            16
+          ]
+        ],
+        "date-time": "2020-10-16T18:20:31Z",
+        "timestamp": 1602872431000
+      },
+      "score": 0.0,
+      "resource": {
+        "primary": {
+          "URL": "https://www.journals.uchicago.edu/doi/10.1086/709993"
+        }
+      },
+      "issued": {
+        "date-parts": [
+          [
+            2020,
+            10,
+            1
+          ]
+        ]
+      },
+      "references-count": 66,
+      "journal-issue": {
+        "issue": "10",
+        "published-print": {
+          "date-parts": [
+            [
+              2020,
+              10,
+              1
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1086/709993"
+      ],
+      "URL": "https://doi.org/10.1086/709993",
+      "ISSN": [
+        "0022-3808",
+        "1537-534X"
+      ],
+      "issn-type": [
+        {
+          "value": "0022-3808",
+          "type": "print"
+        },
+        {
+          "value": "1537-534X",
+          "type": "electronic"
+        }
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2020,
+            10,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "indexed": {
+        "date-parts": [
+          [
+            2025,
+            6,
             3
           ]
         ],
@@ -32679,511 +33184,6 @@
         "date-parts": [
           [
             2020,
-            1
-          ]
-        ]
-      }
-    },
-    {
-      "indexed": {
-        "date-parts": [
-          [
-            2025,
-            6,
-            10
-          ]
-        ],
-        "date-time": "2025-06-10T01:52:07Z",
-        "timestamp": 1749520327835
-      },
-      "reference-count": 66,
-      "publisher": "University of Chicago Press",
-      "issue": "10",
-      "content-domain": {
-        "domain": [],
-        "crossmark-restriction": false
-      },
-      "short-container-title": [
-        "Journal of Political Economy"
-      ],
-      "published-print": {
-        "date-parts": [
-          [
-            2020,
-            10,
-            1
-          ]
-        ]
-      },
-      "DOI": "10.1086/709993",
-      "type": "journal-article",
-      "created": {
-        "date-parts": [
-          [
-            2020,
-            5,
-            18
-          ]
-        ],
-        "date-time": "2020-05-18T13:57:12Z",
-        "timestamp": 1589810232000
-      },
-      "page": "3940-3997",
-      "source": "Crossref",
-      "is-referenced-by-count": 104,
-      "title": [
-        "The Economic Origins of Conflict in Africa"
-      ],
-      "prefix": "10.1086",
-      "volume": "128",
-      "author": [
-        {
-          "given": "Eoin",
-          "family": "McGuirk",
-          "sequence": "first",
-          "affiliation": []
-        },
-        {
-          "given": "Marshall",
-          "family": "Burke",
-          "sequence": "additional",
-          "affiliation": []
-        }
-      ],
-      "member": "200",
-      "reference": [
-        {
-          "issue": "1",
-          "key": "rf1",
-          "first-page": "113",
-          "volume": "93",
-          "author": "Abadie Alberto",
-          "year": "2003",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf2",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.worlddev.2011.04.020"
-        },
-        {
-          "key": "rf3",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/mac.6.4.1"
-        },
-        {
-          "key": "rf4",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/ajae/aau038"
-        },
-        {
-          "key": "rf5",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/REST_a_00521"
-        },
-        {
-          "issue": "6",
-          "key": "rf6",
-          "first-page": "1564",
-          "volume": "107",
-          "author": "Berman Nicolas",
-          "year": "2017",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf9",
-          "volume-title": "Working Paper no. 14585 (December)",
-          "author": "Besley Timothy"
-        },
-        {
-          "key": "rf7",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.3982/ECTA8073"
-        },
-        {
-          "key": "rf8",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/qje/qjr025"
-        },
-        {
-          "key": "rf10",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1017/S0003055415000520"
-        },
-        {
-          "key": "rf11",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1468-0297.2010.02353.x"
-        },
-        {
-          "key": "rf12",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1146/annurev-economics-080614-115430"
-        },
-        {
-          "key": "rf13",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1561/100.00008072"
-        },
-        {
-          "key": "rf14",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/app.3.4.215"
-        },
-        {
-          "key": "rf15",
-          "volume-title": "Breaking the Conflict Trap: Civil War and Development Policy. Publication no. 13938",
-          "author": "Collier Paul"
-        },
-        {
-          "key": "rf16",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/oep/gpf064"
-        },
-        {
-          "key": "rf17",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1177/0022002705277551"
-        },
-        {
-          "key": "rf18",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/S0304-4076(98)00084-0"
-        },
-        {
-          "key": "rf19",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/mac.5.1.49"
-        },
-        {
-          "key": "rf20",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1542-4774.2011.01025.x"
-        },
-        {
-          "key": "rf22",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/2234068"
-        },
-        {
-          "key": "rf21",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jdeveco.2006.01.013"
-        },
-        {
-          "key": "rf23",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/jel.52.3.740"
-        },
-        {
-          "key": "rf24",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/REST_a_00046"
-        },
-        {
-          "key": "rf25",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/restud/rdt009"
-        },
-        {
-          "key": "rf26",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jdeveco.2012.03.003"
-        },
-        {
-          "issue": "25",
-          "key": "rf27",
-          "first-page": "2540",
-          "volume": "39",
-          "author": "Political Weekly",
-          "year": "2004",
-          "journal-title": "Econ. and Polit. Weekly"
-        },
-        {
-          "key": "rf28",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1017/S0003055403000534"
-        },
-        {
-          "key": "rf29",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.worlddev.2014.10.032"
-        },
-        {
-          "key": "rf30",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1017/S0003055403000613"
-        },
-        {
-          "key": "rf31",
-          "volume-title": "Why Men Rebel",
-          "author": "Gurr Ted Robert",
-          "year": "1970"
-        },
-        {
-          "key": "rf32",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/rest_a_00730"
-        },
-        {
-          "key": "rf33",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/ajae/aav045"
-        },
-        {
-          "key": "rf34",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1146/annurev-resource-100815-095303"
-        },
-        {
-          "key": "rf35",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1177/0022343314561599"
-        },
-        {
-          "issue": "2",
-          "key": "rf36",
-          "first-page": "130",
-          "volume": "81",
-          "author": "Hirshleifer Jack",
-          "year": "1991",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf37",
-          "volume-title": "Ethnic Groups in Conflict",
-          "author": "Horowitz Donald L"
-        },
-        {
-          "key": "rf38",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1073/pnas.1009510107"
-        },
-        {
-          "key": "rf39",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1126/science.1235367"
-        },
-        {
-          "key": "rf40",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1540-5907.2008.00322.x"
-        },
-        {
-          "key": "rf41",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1574-0862.2008.00347.x"
-        },
-        {
-          "key": "rf42",
-          "volume-title": "Policy Research Working Paper no. 7011",
-          "author": "Ivanic Maros"
-        },
-        {
-          "key": "rf43",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.worlddev.2012.03.024"
-        },
-        {
-          "key": "rf44",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1006/redy.2001.0133"
-        },
-        {
-          "key": "rf45",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1177/0022343313493455"
-        },
-        {
-          "key": "rf46",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.3982/ECTA9613"
-        },
-        {
-          "key": "rf47",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/0034-6527.00365"
-        },
-        {
-          "key": "rf48",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/app.3.4.228"
-        },
-        {
-          "key": "rf49",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1086/421174"
-        },
-        {
-          "key": "rf50",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1525/aa.1957.59.4.02a00090"
-        },
-        {
-          "key": "rf51",
-          "volume-title": "Washington, DC: Internat. Food Policy Res. Inst.",
-          "author": "Nelson Gerald C",
-          "year": "2010"
-        },
-        {
-          "issue": "6",
-          "key": "rf52",
-          "first-page": "1630",
-          "volume": "104",
-          "author": "Nunn Nathan",
-          "year": "2014",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf53",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/089533004773563502"
-        },
-        {
-          "key": "rf54",
-          "volume-title": "The Better Angels of Our Nature: Why Violence Has Declined",
-          "author": "Pinker Steven"
-        },
-        {
-          "key": "rf55",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1177/0022343310378914"
-        },
-        {
-          "key": "rf56",
-          "volume-title": "Foley",
-          "author": "Ramankutty Navin",
-          "year": "2008"
-        },
-        {
-          "key": "rf57",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1146/annurev-polisci-052213-040359"
-        },
-        {
-          "key": "rf58",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jdeveco.2014.12.007"
-        },
-        {
-          "key": "rf59",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1177/0022343313484347"
-        },
-        {
-          "key": "rf60",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1177/0022343311431287"
-        },
-        {
-          "key": "rf61",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/oep/gpw015"
-        },
-        {
-          "key": "rf62",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.foodpol.2012.12.006"
-        },
-        {
-          "key": "rf63",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1467-8276.2007.01031.x"
-        },
-        {
-          "issue": "3",
-          "key": "rf64",
-          "first-page": "7",
-          "volume": "27",
-          "author": "Wong Jenny",
-          "year": "2005",
-          "journal-title": "Harvard Internat. Rev."
-        },
-        {
-          "key": "rf65",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1017/S0022278X03004427"
-        },
-        {
-          "key": "rf66",
-          "volume-title": "Year 5, issue 17",
-          "author": "World Bank"
-        }
-      ],
-      "container-title": [
-        "Journal of Political Economy"
-      ],
-      "language": "en",
-      "link": [
-        {
-          "URL": "https://www.journals.uchicago.edu/doi/pdf/10.1086/709993",
-          "content-type": "unspecified",
-          "content-version": "vor",
-          "intended-application": "similarity-checking"
-        }
-      ],
-      "deposited": {
-        "date-parts": [
-          [
-            2020,
-            10,
-            16
-          ]
-        ],
-        "date-time": "2020-10-16T18:20:31Z",
-        "timestamp": 1602872431000
-      },
-      "score": 0.0,
-      "resource": {
-        "primary": {
-          "URL": "https://www.journals.uchicago.edu/doi/10.1086/709993"
-        }
-      },
-      "issued": {
-        "date-parts": [
-          [
-            2020,
-            10,
-            1
-          ]
-        ]
-      },
-      "references-count": 66,
-      "journal-issue": {
-        "issue": "10",
-        "published-print": {
-          "date-parts": [
-            [
-              2020,
-              10,
-              1
-            ]
-          ]
-        }
-      },
-      "alternative-id": [
-        "10.1086/709993"
-      ],
-      "URL": "https://doi.org/10.1086/709993",
-      "ISSN": [
-        "0022-3808",
-        "1537-534X"
-      ],
-      "issn-type": [
-        {
-          "value": "0022-3808",
-          "type": "print"
-        },
-        {
-          "value": "1537-534X",
-          "type": "electronic"
-        }
-      ],
-      "published": {
-        "date-parts": [
-          [
-            2020,
-            10,
             1
           ]
         ]
@@ -34034,11 +34034,11 @@
           [
             2025,
             6,
-            9
+            13
           ]
         ],
-        "date-time": "2025-06-09T19:45:47Z",
-        "timestamp": 1749498347305
+        "date-time": "2025-06-13T23:45:36Z",
+        "timestamp": 1749858336271
       },
       "reference-count": 51,
       "publisher": "University of Chicago Press",
@@ -34073,7 +34073,7 @@
       },
       "page": "2690-2738",
       "source": "Crossref",
-      "is-referenced-by-count": 79,
+      "is-referenced-by-count": 80,
       "title": [
         "Domestic Trade Frictions and Agriculture"
       ],
@@ -38546,11 +38546,11 @@
           [
             2025,
             6,
-            13
+            14
           ]
         ],
-        "date-time": "2025-06-13T16:24:17Z",
-        "timestamp": 1749831857358
+        "date-time": "2025-06-14T16:05:53Z",
+        "timestamp": 1749917153771
       },
       "reference-count": 51,
       "publisher": "University of Chicago Press",
@@ -38585,7 +38585,7 @@
       },
       "page": "2188-2244",
       "source": "Crossref",
-      "is-referenced-by-count": 1871,
+      "is-referenced-by-count": 1872,
       "title": [
         "Robots and Jobs: Evidence from US Labor Markets"
       ],
@@ -42236,400 +42236,6 @@
           [
             2025,
             6,
-            10
-          ]
-        ],
-        "date-time": "2025-06-10T10:06:22Z",
-        "timestamp": 1749549982483
-      },
-      "reference-count": 43,
-      "publisher": "University of Chicago Press",
-      "issue": "4",
-      "content-domain": {
-        "domain": [],
-        "crossmark-restriction": false
-      },
-      "short-container-title": [
-        "Journal of Political Economy"
-      ],
-      "published-print": {
-        "date-parts": [
-          [
-            2020,
-            4
-          ]
-        ]
-      },
-      "DOI": "10.1086/705331",
-      "type": "journal-article",
-      "created": {
-        "date-parts": [
-          [
-            2019,
-            7,
-            3
-          ]
-        ],
-        "date-time": "2019-07-03T16:15:03Z",
-        "timestamp": 1562170503000
-      },
-      "page": "1325-1369",
-      "source": "Crossref",
-      "is-referenced-by-count": 177,
-      "title": [
-        "CEO Behavior and Firm Performance"
-      ],
-      "prefix": "10.1086",
-      "volume": "128",
-      "author": [
-        {
-          "given": "Oriana",
-          "family": "Bandiera",
-          "sequence": "first",
-          "affiliation": []
-        },
-        {
-          "given": "Andrea",
-          "family": "Prat",
-          "sequence": "additional",
-          "affiliation": []
-        },
-        {
-          "given": "Stephen",
-          "family": "Hansen",
-          "sequence": "additional",
-          "affiliation": []
-        },
-        {
-          "given": "Raffaella",
-          "family": "Sadun",
-          "sequence": "additional",
-          "affiliation": []
-        }
-      ],
-      "member": "200",
-      "reference": [
-        {
-          "key": "rf1",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/003355303322552801"
-        },
-        {
-          "key": "rf3",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1086/679672"
-        },
-        {
-          "key": "rf4",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/rfs/hhx138"
-        },
-        {
-          "key": "rf5",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1086/694107"
-        },
-        {
-          "key": "rf6",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/qjec.122.2.647"
-        },
-        {
-          "key": "rf7",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/003355303322552775"
-        },
-        {
-          "key": "rf8",
-          "first-page": "993",
-          "volume": "3",
-          "author": "Blei David M",
-          "year": "2003",
-          "journal-title": "J. Machine Learning Res."
-        },
-        {
-          "key": "rf9",
-          "volume-title": "Working Paper no. 22327 (June), NBER",
-          "author": "Bloom Nicholas"
-        },
-        {
-          "key": "rf10",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/qjec.2007.122.4.1351"
-        },
-        {
-          "key": "rf11",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/restud/rds041"
-        },
-        {
-          "key": "rf12",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/qje/qjx049"
-        },
-        {
-          "key": "rf15",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1468-0335.1937.tb00002.x"
-        },
-        {
-          "key": "rf16",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/qje/qjx022"
-        },
-        {
-          "key": "rf18",
-          "volume-title": "The Effective Executive",
-          "author": "Drucker Peter"
-        },
-        {
-          "key": "rf19",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1214/07-AOAS126"
-        },
-        {
-          "issue": "10",
-          "key": "rf20",
-          "first-page": "3150",
-          "volume": "105",
-          "author": "Feenstra Robert C",
-          "year": "2015",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf21",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/qjec.2008.123.1.49"
-        },
-        {
-          "key": "rf22",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/qje/qjs050"
-        },
-        {
-          "key": "rf23",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jfineco.2013.01.010"
-        },
-        {
-          "key": "rf24",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1073/pnas.0307752101"
-        },
-        {
-          "key": "rf25",
-          "volume-title": "Handbook of Mixed Membership Models and Their Applications",
-          "author": "Gross Justin H"
-        },
-        {
-          "key": "rf26",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.5465/amr.1984.4277628"
-        },
-        {
-          "key": "rf26a",
-          "volume-title": "HBR’s 10 Must Reads on Leadership, 40",
-          "author": "Harvard Business Review"
-        },
-        {
-          "issue": "5",
-          "key": "rf27",
-          "first-page": "1188",
-          "volume": "88",
-          "author": "Hermalin Benjamin E",
-          "year": "1998",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf28",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jebo.2005.05.005"
-        },
-        {
-          "key": "rf29",
-          "volume-title": "How Do Managers Matter? Evidence from Performance Metrics and Employee Surveys in a Firm",
-          "author": "Hoffman Mitchell"
-        },
-        {
-          "key": "rf30",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1540-6261.2012.01739.x"
-        },
-        {
-          "issue": "3",
-          "key": "rf32",
-          "first-page": "103",
-          "volume": "68",
-          "author": "Kotter John P",
-          "year": "1990",
-          "journal-title": "Harvard Bus. Rev."
-        },
-        {
-          "key": "rf34",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/0022-1082.00115"
-        },
-        {
-          "key": "rf33",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/S0304-405X(00)00065-9"
-        },
-        {
-          "key": "rf35",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1086/681097"
-        },
-        {
-          "key": "rf36",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.3982/QE244"
-        },
-        {
-          "key": "rf37",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1540-6261.2005.00813.x"
-        },
-        {
-          "key": "rf38",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1162/qjec.2009.124.4.1593"
-        },
-        {
-          "key": "rf39",
-          "volume-title": "The Nature of Managerial Work",
-          "author": "Mintzberg Henry"
-        },
-        {
-          "key": "rf40",
-          "doi-asserted-by": "crossref",
-          "volume-title": "The Structuring of Organizations",
-          "author": "Mintzberg Henry",
-          "DOI": "10.1007/978-1-349-20317-8_23"
-        },
-        {
-          "key": "rf41",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jfineco.2015.08.011"
-        },
-        {
-          "key": "rf43",
-          "doi-asserted-by": "crossref",
-          "volume-title": "The Modern Firm: Organizational Design for Performance and Growth",
-          "author": "Roberts John",
-          "DOI": "10.1093/oso/9780198293767.001.0001"
-        },
-        {
-          "key": "rf44",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/jel.49.2.326"
-        },
-        {
-          "issue": "3",
-          "key": "rf45",
-          "first-page": "642",
-          "volume": "98",
-          "author": "Tervio Marko",
-          "year": "2008",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf46",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/1467-9868.00196"
-        },
-        {
-          "key": "rf47",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jbankfin.2019.05.003"
-        },
-        {
-          "key": "rf48",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1756-2171.2010.00114.x"
-        }
-      ],
-      "container-title": [
-        "Journal of Political Economy"
-      ],
-      "language": "en",
-      "link": [
-        {
-          "URL": "https://www.journals.uchicago.edu/doi/pdf/10.1086/705331",
-          "content-type": "unspecified",
-          "content-version": "vor",
-          "intended-application": "similarity-checking"
-        }
-      ],
-      "deposited": {
-        "date-parts": [
-          [
-            2024,
-            7,
-            20
-          ]
-        ],
-        "date-time": "2024-07-20T16:00:36Z",
-        "timestamp": 1721491236000
-      },
-      "score": 0.0,
-      "resource": {
-        "primary": {
-          "URL": "https://www.journals.uchicago.edu/doi/10.1086/705331"
-        }
-      },
-      "issued": {
-        "date-parts": [
-          [
-            2020,
-            4
-          ]
-        ]
-      },
-      "references-count": 43,
-      "journal-issue": {
-        "issue": "4",
-        "published-print": {
-          "date-parts": [
-            [
-              2020,
-              4
-            ]
-          ]
-        }
-      },
-      "alternative-id": [
-        "10.1086/705331"
-      ],
-      "URL": "https://doi.org/10.1086/705331",
-      "ISSN": [
-        "0022-3808",
-        "1537-534X"
-      ],
-      "issn-type": [
-        {
-          "value": "0022-3808",
-          "type": "print"
-        },
-        {
-          "value": "1537-534X",
-          "type": "electronic"
-        }
-      ],
-      "published": {
-        "date-parts": [
-          [
-            2020,
-            4
-          ]
-        ]
-      }
-    },
-    {
-      "indexed": {
-        "date-parts": [
-          [
-            2025,
-            6,
             11
           ]
         ],
@@ -43262,6 +42868,400 @@
             2020,
             9,
             1
+          ]
+        ]
+      }
+    },
+    {
+      "indexed": {
+        "date-parts": [
+          [
+            2025,
+            6,
+            14
+          ]
+        ],
+        "date-time": "2025-06-14T09:42:39Z",
+        "timestamp": 1749894159648
+      },
+      "reference-count": 43,
+      "publisher": "University of Chicago Press",
+      "issue": "4",
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Journal of Political Economy"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2020,
+            4
+          ]
+        ]
+      },
+      "DOI": "10.1086/705331",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2019,
+            7,
+            3
+          ]
+        ],
+        "date-time": "2019-07-03T16:15:03Z",
+        "timestamp": 1562170503000
+      },
+      "page": "1325-1369",
+      "source": "Crossref",
+      "is-referenced-by-count": 177,
+      "title": [
+        "CEO Behavior and Firm Performance"
+      ],
+      "prefix": "10.1086",
+      "volume": "128",
+      "author": [
+        {
+          "given": "Oriana",
+          "family": "Bandiera",
+          "sequence": "first",
+          "affiliation": []
+        },
+        {
+          "given": "Andrea",
+          "family": "Prat",
+          "sequence": "additional",
+          "affiliation": []
+        },
+        {
+          "given": "Stephen",
+          "family": "Hansen",
+          "sequence": "additional",
+          "affiliation": []
+        },
+        {
+          "given": "Raffaella",
+          "family": "Sadun",
+          "sequence": "additional",
+          "affiliation": []
+        }
+      ],
+      "member": "200",
+      "reference": [
+        {
+          "key": "rf1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/003355303322552801"
+        },
+        {
+          "key": "rf3",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/679672"
+        },
+        {
+          "key": "rf4",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/rfs/hhx138"
+        },
+        {
+          "key": "rf5",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/694107"
+        },
+        {
+          "key": "rf6",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/qjec.122.2.647"
+        },
+        {
+          "key": "rf7",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/003355303322552775"
+        },
+        {
+          "key": "rf8",
+          "first-page": "993",
+          "volume": "3",
+          "author": "Blei David M",
+          "year": "2003",
+          "journal-title": "J. Machine Learning Res."
+        },
+        {
+          "key": "rf9",
+          "volume-title": "Working Paper no. 22327 (June), NBER",
+          "author": "Bloom Nicholas"
+        },
+        {
+          "key": "rf10",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/qjec.2007.122.4.1351"
+        },
+        {
+          "key": "rf11",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/restud/rds041"
+        },
+        {
+          "key": "rf12",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/qje/qjx049"
+        },
+        {
+          "key": "rf15",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1468-0335.1937.tb00002.x"
+        },
+        {
+          "key": "rf16",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/qje/qjx022"
+        },
+        {
+          "key": "rf18",
+          "volume-title": "The Effective Executive",
+          "author": "Drucker Peter"
+        },
+        {
+          "key": "rf19",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1214/07-AOAS126"
+        },
+        {
+          "issue": "10",
+          "key": "rf20",
+          "first-page": "3150",
+          "volume": "105",
+          "author": "Feenstra Robert C",
+          "year": "2015",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf21",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/qjec.2008.123.1.49"
+        },
+        {
+          "key": "rf22",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/qje/qjs050"
+        },
+        {
+          "key": "rf23",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jfineco.2013.01.010"
+        },
+        {
+          "key": "rf24",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1073/pnas.0307752101"
+        },
+        {
+          "key": "rf25",
+          "volume-title": "Handbook of Mixed Membership Models and Their Applications",
+          "author": "Gross Justin H"
+        },
+        {
+          "key": "rf26",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.5465/amr.1984.4277628"
+        },
+        {
+          "key": "rf26a",
+          "volume-title": "HBR’s 10 Must Reads on Leadership, 40",
+          "author": "Harvard Business Review"
+        },
+        {
+          "issue": "5",
+          "key": "rf27",
+          "first-page": "1188",
+          "volume": "88",
+          "author": "Hermalin Benjamin E",
+          "year": "1998",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf28",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jebo.2005.05.005"
+        },
+        {
+          "key": "rf29",
+          "volume-title": "How Do Managers Matter? Evidence from Performance Metrics and Employee Surveys in a Firm",
+          "author": "Hoffman Mitchell"
+        },
+        {
+          "key": "rf30",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1540-6261.2012.01739.x"
+        },
+        {
+          "issue": "3",
+          "key": "rf32",
+          "first-page": "103",
+          "volume": "68",
+          "author": "Kotter John P",
+          "year": "1990",
+          "journal-title": "Harvard Bus. Rev."
+        },
+        {
+          "key": "rf34",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/0022-1082.00115"
+        },
+        {
+          "key": "rf33",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/S0304-405X(00)00065-9"
+        },
+        {
+          "key": "rf35",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/681097"
+        },
+        {
+          "key": "rf36",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.3982/QE244"
+        },
+        {
+          "key": "rf37",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1540-6261.2005.00813.x"
+        },
+        {
+          "key": "rf38",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1162/qjec.2009.124.4.1593"
+        },
+        {
+          "key": "rf39",
+          "volume-title": "The Nature of Managerial Work",
+          "author": "Mintzberg Henry"
+        },
+        {
+          "key": "rf40",
+          "doi-asserted-by": "crossref",
+          "volume-title": "The Structuring of Organizations",
+          "author": "Mintzberg Henry",
+          "DOI": "10.1007/978-1-349-20317-8_23"
+        },
+        {
+          "key": "rf41",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jfineco.2015.08.011"
+        },
+        {
+          "key": "rf43",
+          "doi-asserted-by": "crossref",
+          "volume-title": "The Modern Firm: Organizational Design for Performance and Growth",
+          "author": "Roberts John",
+          "DOI": "10.1093/oso/9780198293767.001.0001"
+        },
+        {
+          "key": "rf44",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/jel.49.2.326"
+        },
+        {
+          "issue": "3",
+          "key": "rf45",
+          "first-page": "642",
+          "volume": "98",
+          "author": "Tervio Marko",
+          "year": "2008",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf46",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/1467-9868.00196"
+        },
+        {
+          "key": "rf47",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jbankfin.2019.05.003"
+        },
+        {
+          "key": "rf48",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1756-2171.2010.00114.x"
+        }
+      ],
+      "container-title": [
+        "Journal of Political Economy"
+      ],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://www.journals.uchicago.edu/doi/pdf/10.1086/705331",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2024,
+            7,
+            20
+          ]
+        ],
+        "date-time": "2024-07-20T16:00:36Z",
+        "timestamp": 1721491236000
+      },
+      "score": 0.0,
+      "resource": {
+        "primary": {
+          "URL": "https://www.journals.uchicago.edu/doi/10.1086/705331"
+        }
+      },
+      "issued": {
+        "date-parts": [
+          [
+            2020,
+            4
+          ]
+        ]
+      },
+      "references-count": 43,
+      "journal-issue": {
+        "issue": "4",
+        "published-print": {
+          "date-parts": [
+            [
+              2020,
+              4
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1086/705331"
+      ],
+      "URL": "https://doi.org/10.1086/705331",
+      "ISSN": [
+        "0022-3808",
+        "1537-534X"
+      ],
+      "issn-type": [
+        {
+          "value": "0022-3808",
+          "type": "print"
+        },
+        {
+          "value": "1537-534X",
+          "type": "electronic"
+        }
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2020,
+            4
           ]
         ]
       }
@@ -44034,6 +44034,559 @@
           [
             2025,
             6,
+            11
+          ]
+        ],
+        "date-time": "2025-06-11T14:30:02Z",
+        "timestamp": 1749652202244
+      },
+      "reference-count": 26,
+      "publisher": "University of Chicago Press",
+      "issue": "3",
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Journal of Political Economy"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2020,
+            3
+          ]
+        ]
+      },
+      "DOI": "10.1086/704754",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2019,
+            6,
+            5
+          ]
+        ],
+        "date-time": "2019-06-05T10:07:04Z",
+        "timestamp": 1559729224000
+      },
+      "page": "907-947",
+      "source": "Crossref",
+      "is-referenced-by-count": 57,
+      "title": [
+        "Lying and Deception in Games"
+      ],
+      "prefix": "10.1086",
+      "volume": "128",
+      "author": [
+        {
+          "given": "Joel",
+          "family": "Sobel",
+          "sequence": "first",
+          "affiliation": []
+        }
+      ],
+      "member": "200",
+      "reference": [
+        {
+          "key": "rf1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.3982/ECTA14673"
+        },
+        {
+          "issue": "7",
+          "key": "rf2",
+          "first-page": "2811",
+          "volume": "103",
+          "author": "Anderson Axel",
+          "year": "2013",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf3",
+          "volume-title": "The Honest Truth About Dishonesty: How We Lie to Everyone—Especially Ourselves",
+          "author": "Ariely Dan"
+        },
+        {
+          "key": "rf4",
+          "volume-title": "De Mendacio",
+          "volume": "3",
+          "author": "Augustine"
+        },
+        {
+          "key": "rf5",
+          "doi-asserted-by": "crossref",
+          "volume-title": "How to Do Things with Words",
+          "author": "Austin John L",
+          "DOI": "10.1093/acprof:oso/9780198245537.001.0001"
+        },
+        {
+          "key": "rf6",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jet.2010.08.001"
+        },
+        {
+          "key": "rf7",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.0012-9682.2008.00819.x"
+        },
+        {
+          "key": "rf8",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1353/lan.1981.0002"
+        },
+        {
+          "issue": "1",
+          "key": "rf10",
+          "first-page": "133",
+          "volume": "93",
+          "author": "Crawford Vincent P",
+          "year": "2003",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf11",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/1913390"
+        },
+        {
+          "key": "rf12",
+          "volume-title": "Communication with Detectable Deceit",
+          "author": "Dziuda Wioletta"
+        },
+        {
+          "key": "rf13",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1257/mic.2.1.1"
+        },
+        {
+          "key": "rf15",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/jeea.12014"
+        },
+        {
+          "key": "rf16",
+          "volume-title": "On Bullshit",
+          "author": "Frankfurt Harry"
+        },
+        {
+          "issue": "1",
+          "key": "rf17",
+          "first-page": "384",
+          "volume": "95",
+          "author": "Gneezy Uri",
+          "year": "2005",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf17a",
+          "volume-title": "Wojciech Olszewski, and Joel Sobel.",
+          "author": "Gordon Sidartha",
+          "year": "2020"
+        },
+        {
+          "key": "rf18",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/466995"
+        },
+        {
+          "key": "rf19",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1530-9134.2006.00106.x"
+        },
+        {
+          "key": "rf20",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1467-937X.2007.00418.x"
+        },
+        {
+          "key": "rf21",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/j.1467-937X.2009.00559.x"
+        },
+        {
+          "key": "rf22",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jet.2006.04.003"
+        },
+        {
+          "key": "rf25",
+          "volume-title": "Projection Equilibrium: Definition and Applications to Social Investment and Persuasion",
+          "author": "Madarász Kristóf"
+        },
+        {
+          "key": "rf27",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/3003562"
+        },
+        {
+          "key": "rf28",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/3087449"
+        },
+        {
+          "key": "rf30",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1037/pspi0000081"
+        },
+        {
+          "key": "rf31",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/2297732"
+        }
+      ],
+      "container-title": [
+        "Journal of Political Economy"
+      ],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://www.journals.uchicago.edu/doi/pdf/10.1086/704754",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2020,
+            2,
+            27
+          ]
+        ],
+        "date-time": "2020-02-27T15:54:47Z",
+        "timestamp": 1582818887000
+      },
+      "score": 0.0,
+      "resource": {
+        "primary": {
+          "URL": "https://www.journals.uchicago.edu/doi/10.1086/704754"
+        }
+      },
+      "issued": {
+        "date-parts": [
+          [
+            2020,
+            3
+          ]
+        ]
+      },
+      "references-count": 26,
+      "journal-issue": {
+        "issue": "3",
+        "published-print": {
+          "date-parts": [
+            [
+              2020,
+              3
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1086/704754"
+      ],
+      "URL": "https://doi.org/10.1086/704754",
+      "ISSN": [
+        "0022-3808",
+        "1537-534X"
+      ],
+      "issn-type": [
+        {
+          "value": "0022-3808",
+          "type": "print"
+        },
+        {
+          "value": "1537-534X",
+          "type": "electronic"
+        }
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2020,
+            3
+          ]
+        ]
+      }
+    },
+    {
+      "indexed": {
+        "date-parts": [
+          [
+            2025,
+            6,
+            5
+          ]
+        ],
+        "date-time": "2025-06-05T15:42:44Z",
+        "timestamp": 1749138164881
+      },
+      "reference-count": 20,
+      "publisher": "University of Chicago Press",
+      "issue": "7",
+      "content-domain": {
+        "domain": [],
+        "crossmark-restriction": false
+      },
+      "short-container-title": [
+        "Journal of Political Economy"
+      ],
+      "published-print": {
+        "date-parts": [
+          [
+            2020,
+            7
+          ]
+        ]
+      },
+      "DOI": "10.1086/706687",
+      "type": "journal-article",
+      "created": {
+        "date-parts": [
+          [
+            2019,
+            10,
+            3
+          ]
+        ],
+        "date-time": "2019-10-03T14:16:17Z",
+        "timestamp": 1570112177000
+      },
+      "page": "2542-2578",
+      "source": "Crossref",
+      "is-referenced-by-count": 58,
+      "title": [
+        "Persuading the Principal to Wait"
+      ],
+      "prefix": "10.1086",
+      "volume": "128",
+      "author": [
+        {
+          "given": "Dmitry",
+          "family": "Orlov",
+          "sequence": "first",
+          "affiliation": []
+        },
+        {
+          "given": "Andrzej",
+          "family": "Skrzypacz",
+          "sequence": "additional",
+          "affiliation": []
+        },
+        {
+          "given": "Pavel",
+          "family": "Zryumov",
+          "sequence": "additional",
+          "affiliation": []
+        }
+      ],
+      "member": "200",
+      "reference": [
+        {
+          "key": "rf1",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1111/1756-2171.12111"
+        },
+        {
+          "key": "rf2",
+          "volume-title": "Repeated Games with Incomplete Information",
+          "author": "Aumann Robert J"
+        },
+        {
+          "key": "rf4",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jet.2006.08.005"
+        },
+        {
+          "key": "rf5",
+          "volume-title": "Pindyck",
+          "author": "Dixit Robert K",
+          "year": "2012"
+        },
+        {
+          "issue": "1",
+          "key": "rf6",
+          "first-page": "31",
+          "volume": "107",
+          "author": "Ely Jeffrey C",
+          "year": "2017",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf7",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/704387"
+        },
+        {
+          "issue": "9",
+          "key": "rf9",
+          "first-page": "2552",
+          "volume": "106",
+          "author": "Grenadier Steven R",
+          "year": "2016",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf8",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jfineco.2004.02.004"
+        },
+        {
+          "key": "rf10",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1093/rfs/hhz051"
+        },
+        {
+          "key": "rf11",
+          "volume-title": "Brownian Models of Performance and Control, 155–70.",
+          "author": "Harrison J. Michael."
+        },
+        {
+          "issue": "3",
+          "key": "rf12",
+          "first-page": "911",
+          "volume": "109",
+          "author": "Henry Emeric",
+          "year": "2019",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf13",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1086/688874"
+        },
+        {
+          "issue": "6",
+          "key": "rf14",
+          "first-page": "2590",
+          "volume": "101",
+          "author": "Kamenica Emir",
+          "year": "2011",
+          "journal-title": "A.E.R."
+        },
+        {
+          "key": "rf15",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.jet.2015.03.001"
+        },
+        {
+          "key": "rf16",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/1884175"
+        },
+        {
+          "key": "rf17",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1177/0306312705052103"
+        },
+        {
+          "key": "rf18",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.2307/1913154"
+        },
+        {
+          "key": "rf19",
+          "doi-asserted-by": "crossref",
+          "volume-title": "A User’s Guide to Measure Theoretic Probability",
+          "author": "Pollard David",
+          "DOI": "10.1017/CBO9780511811555"
+        },
+        {
+          "key": "rf20",
+          "doi-asserted-by": "publisher",
+          "DOI": "10.1016/j.geb.2017.04.010"
+        },
+        {
+          "key": "rf22",
+          "volume-title": "The Economics of Inaction: Stochastic Control Models with Fixed Costs",
+          "author": "Stokey Nancy L"
+        }
+      ],
+      "container-title": [
+        "Journal of Political Economy"
+      ],
+      "language": "en",
+      "link": [
+        {
+          "URL": "https://www.journals.uchicago.edu/doi/pdf/10.1086/706687",
+          "content-type": "unspecified",
+          "content-version": "vor",
+          "intended-application": "similarity-checking"
+        }
+      ],
+      "deposited": {
+        "date-parts": [
+          [
+            2020,
+            6,
+            24
+          ]
+        ],
+        "date-time": "2020-06-24T20:31:44Z",
+        "timestamp": 1593030704000
+      },
+      "score": 0.0,
+      "resource": {
+        "primary": {
+          "URL": "https://www.journals.uchicago.edu/doi/10.1086/706687"
+        }
+      },
+      "issued": {
+        "date-parts": [
+          [
+            2020,
+            7
+          ]
+        ]
+      },
+      "references-count": 20,
+      "journal-issue": {
+        "issue": "7",
+        "published-print": {
+          "date-parts": [
+            [
+              2020,
+              7
+            ]
+          ]
+        }
+      },
+      "alternative-id": [
+        "10.1086/706687"
+      ],
+      "URL": "https://doi.org/10.1086/706687",
+      "ISSN": [
+        "0022-3808",
+        "1537-534X"
+      ],
+      "issn-type": [
+        {
+          "value": "0022-3808",
+          "type": "print"
+        },
+        {
+          "value": "1537-534X",
+          "type": "electronic"
+        }
+      ],
+      "published": {
+        "date-parts": [
+          [
+            2020,
+            7
+          ]
+        ]
+      }
+    },
+    {
+      "indexed": {
+        "date-parts": [
+          [
+            2025,
+            6,
             4
           ]
         ],
@@ -44481,275 +45034,6 @@
           [
             2025,
             6,
-            5
-          ]
-        ],
-        "date-time": "2025-06-05T15:42:44Z",
-        "timestamp": 1749138164881
-      },
-      "reference-count": 20,
-      "publisher": "University of Chicago Press",
-      "issue": "7",
-      "content-domain": {
-        "domain": [],
-        "crossmark-restriction": false
-      },
-      "short-container-title": [
-        "Journal of Political Economy"
-      ],
-      "published-print": {
-        "date-parts": [
-          [
-            2020,
-            7
-          ]
-        ]
-      },
-      "DOI": "10.1086/706687",
-      "type": "journal-article",
-      "created": {
-        "date-parts": [
-          [
-            2019,
-            10,
-            3
-          ]
-        ],
-        "date-time": "2019-10-03T14:16:17Z",
-        "timestamp": 1570112177000
-      },
-      "page": "2542-2578",
-      "source": "Crossref",
-      "is-referenced-by-count": 58,
-      "title": [
-        "Persuading the Principal to Wait"
-      ],
-      "prefix": "10.1086",
-      "volume": "128",
-      "author": [
-        {
-          "given": "Dmitry",
-          "family": "Orlov",
-          "sequence": "first",
-          "affiliation": []
-        },
-        {
-          "given": "Andrzej",
-          "family": "Skrzypacz",
-          "sequence": "additional",
-          "affiliation": []
-        },
-        {
-          "given": "Pavel",
-          "family": "Zryumov",
-          "sequence": "additional",
-          "affiliation": []
-        }
-      ],
-      "member": "200",
-      "reference": [
-        {
-          "key": "rf1",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/1756-2171.12111"
-        },
-        {
-          "key": "rf2",
-          "volume-title": "Repeated Games with Incomplete Information",
-          "author": "Aumann Robert J"
-        },
-        {
-          "key": "rf4",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jet.2006.08.005"
-        },
-        {
-          "key": "rf5",
-          "volume-title": "Pindyck",
-          "author": "Dixit Robert K",
-          "year": "2012"
-        },
-        {
-          "issue": "1",
-          "key": "rf6",
-          "first-page": "31",
-          "volume": "107",
-          "author": "Ely Jeffrey C",
-          "year": "2017",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf7",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1086/704387"
-        },
-        {
-          "issue": "9",
-          "key": "rf9",
-          "first-page": "2552",
-          "volume": "106",
-          "author": "Grenadier Steven R",
-          "year": "2016",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf8",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jfineco.2004.02.004"
-        },
-        {
-          "key": "rf10",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1093/rfs/hhz051"
-        },
-        {
-          "key": "rf11",
-          "volume-title": "Brownian Models of Performance and Control, 155–70.",
-          "author": "Harrison J. Michael."
-        },
-        {
-          "issue": "3",
-          "key": "rf12",
-          "first-page": "911",
-          "volume": "109",
-          "author": "Henry Emeric",
-          "year": "2019",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf13",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1086/688874"
-        },
-        {
-          "issue": "6",
-          "key": "rf14",
-          "first-page": "2590",
-          "volume": "101",
-          "author": "Kamenica Emir",
-          "year": "2011",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf15",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jet.2015.03.001"
-        },
-        {
-          "key": "rf16",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/1884175"
-        },
-        {
-          "key": "rf17",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1177/0306312705052103"
-        },
-        {
-          "key": "rf18",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/1913154"
-        },
-        {
-          "key": "rf19",
-          "doi-asserted-by": "crossref",
-          "volume-title": "A User’s Guide to Measure Theoretic Probability",
-          "author": "Pollard David",
-          "DOI": "10.1017/CBO9780511811555"
-        },
-        {
-          "key": "rf20",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.geb.2017.04.010"
-        },
-        {
-          "key": "rf22",
-          "volume-title": "The Economics of Inaction: Stochastic Control Models with Fixed Costs",
-          "author": "Stokey Nancy L"
-        }
-      ],
-      "container-title": [
-        "Journal of Political Economy"
-      ],
-      "language": "en",
-      "link": [
-        {
-          "URL": "https://www.journals.uchicago.edu/doi/pdf/10.1086/706687",
-          "content-type": "unspecified",
-          "content-version": "vor",
-          "intended-application": "similarity-checking"
-        }
-      ],
-      "deposited": {
-        "date-parts": [
-          [
-            2020,
-            6,
-            24
-          ]
-        ],
-        "date-time": "2020-06-24T20:31:44Z",
-        "timestamp": 1593030704000
-      },
-      "score": 0.0,
-      "resource": {
-        "primary": {
-          "URL": "https://www.journals.uchicago.edu/doi/10.1086/706687"
-        }
-      },
-      "issued": {
-        "date-parts": [
-          [
-            2020,
-            7
-          ]
-        ]
-      },
-      "references-count": 20,
-      "journal-issue": {
-        "issue": "7",
-        "published-print": {
-          "date-parts": [
-            [
-              2020,
-              7
-            ]
-          ]
-        }
-      },
-      "alternative-id": [
-        "10.1086/706687"
-      ],
-      "URL": "https://doi.org/10.1086/706687",
-      "ISSN": [
-        "0022-3808",
-        "1537-534X"
-      ],
-      "issn-type": [
-        {
-          "value": "0022-3808",
-          "type": "print"
-        },
-        {
-          "value": "1537-534X",
-          "type": "electronic"
-        }
-      ],
-      "published": {
-        "date-parts": [
-          [
-            2020,
-            7
-          ]
-        ]
-      }
-    },
-    {
-      "indexed": {
-        "date-parts": [
-          [
-            2025,
-            6,
             7
           ]
         ],
@@ -45140,290 +45424,6 @@
             2020,
             12,
             1
-          ]
-        ]
-      }
-    },
-    {
-      "indexed": {
-        "date-parts": [
-          [
-            2025,
-            6,
-            11
-          ]
-        ],
-        "date-time": "2025-06-11T14:30:02Z",
-        "timestamp": 1749652202244
-      },
-      "reference-count": 26,
-      "publisher": "University of Chicago Press",
-      "issue": "3",
-      "content-domain": {
-        "domain": [],
-        "crossmark-restriction": false
-      },
-      "short-container-title": [
-        "Journal of Political Economy"
-      ],
-      "published-print": {
-        "date-parts": [
-          [
-            2020,
-            3
-          ]
-        ]
-      },
-      "DOI": "10.1086/704754",
-      "type": "journal-article",
-      "created": {
-        "date-parts": [
-          [
-            2019,
-            6,
-            5
-          ]
-        ],
-        "date-time": "2019-06-05T10:07:04Z",
-        "timestamp": 1559729224000
-      },
-      "page": "907-947",
-      "source": "Crossref",
-      "is-referenced-by-count": 57,
-      "title": [
-        "Lying and Deception in Games"
-      ],
-      "prefix": "10.1086",
-      "volume": "128",
-      "author": [
-        {
-          "given": "Joel",
-          "family": "Sobel",
-          "sequence": "first",
-          "affiliation": []
-        }
-      ],
-      "member": "200",
-      "reference": [
-        {
-          "key": "rf1",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.3982/ECTA14673"
-        },
-        {
-          "issue": "7",
-          "key": "rf2",
-          "first-page": "2811",
-          "volume": "103",
-          "author": "Anderson Axel",
-          "year": "2013",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf3",
-          "volume-title": "The Honest Truth About Dishonesty: How We Lie to Everyone—Especially Ourselves",
-          "author": "Ariely Dan"
-        },
-        {
-          "key": "rf4",
-          "volume-title": "De Mendacio",
-          "volume": "3",
-          "author": "Augustine"
-        },
-        {
-          "key": "rf5",
-          "doi-asserted-by": "crossref",
-          "volume-title": "How to Do Things with Words",
-          "author": "Austin John L",
-          "DOI": "10.1093/acprof:oso/9780198245537.001.0001"
-        },
-        {
-          "key": "rf6",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jet.2010.08.001"
-        },
-        {
-          "key": "rf7",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.0012-9682.2008.00819.x"
-        },
-        {
-          "key": "rf8",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1353/lan.1981.0002"
-        },
-        {
-          "issue": "1",
-          "key": "rf10",
-          "first-page": "133",
-          "volume": "93",
-          "author": "Crawford Vincent P",
-          "year": "2003",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf11",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/1913390"
-        },
-        {
-          "key": "rf12",
-          "volume-title": "Communication with Detectable Deceit",
-          "author": "Dziuda Wioletta"
-        },
-        {
-          "key": "rf13",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1257/mic.2.1.1"
-        },
-        {
-          "key": "rf15",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/jeea.12014"
-        },
-        {
-          "key": "rf16",
-          "volume-title": "On Bullshit",
-          "author": "Frankfurt Harry"
-        },
-        {
-          "issue": "1",
-          "key": "rf17",
-          "first-page": "384",
-          "volume": "95",
-          "author": "Gneezy Uri",
-          "year": "2005",
-          "journal-title": "A.E.R."
-        },
-        {
-          "key": "rf17a",
-          "volume-title": "Wojciech Olszewski, and Joel Sobel.",
-          "author": "Gordon Sidartha",
-          "year": "2020"
-        },
-        {
-          "key": "rf18",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1086/466995"
-        },
-        {
-          "key": "rf19",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1530-9134.2006.00106.x"
-        },
-        {
-          "key": "rf20",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1467-937X.2007.00418.x"
-        },
-        {
-          "key": "rf21",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1111/j.1467-937X.2009.00559.x"
-        },
-        {
-          "key": "rf22",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1016/j.jet.2006.04.003"
-        },
-        {
-          "key": "rf25",
-          "volume-title": "Projection Equilibrium: Definition and Applications to Social Investment and Persuasion",
-          "author": "Madarász Kristóf"
-        },
-        {
-          "key": "rf27",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/3003562"
-        },
-        {
-          "key": "rf28",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/3087449"
-        },
-        {
-          "key": "rf30",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.1037/pspi0000081"
-        },
-        {
-          "key": "rf31",
-          "doi-asserted-by": "publisher",
-          "DOI": "10.2307/2297732"
-        }
-      ],
-      "container-title": [
-        "Journal of Political Economy"
-      ],
-      "language": "en",
-      "link": [
-        {
-          "URL": "https://www.journals.uchicago.edu/doi/pdf/10.1086/704754",
-          "content-type": "unspecified",
-          "content-version": "vor",
-          "intended-application": "similarity-checking"
-        }
-      ],
-      "deposited": {
-        "date-parts": [
-          [
-            2020,
-            2,
-            27
-          ]
-        ],
-        "date-time": "2020-02-27T15:54:47Z",
-        "timestamp": 1582818887000
-      },
-      "score": 0.0,
-      "resource": {
-        "primary": {
-          "URL": "https://www.journals.uchicago.edu/doi/10.1086/704754"
-        }
-      },
-      "issued": {
-        "date-parts": [
-          [
-            2020,
-            3
-          ]
-        ]
-      },
-      "references-count": 26,
-      "journal-issue": {
-        "issue": "3",
-        "published-print": {
-          "date-parts": [
-            [
-              2020,
-              3
-            ]
-          ]
-        }
-      },
-      "alternative-id": [
-        "10.1086/704754"
-      ],
-      "URL": "https://doi.org/10.1086/704754",
-      "ISSN": [
-        "0022-3808",
-        "1537-534X"
-      ],
-      "issn-type": [
-        {
-          "value": "0022-3808",
-          "type": "print"
-        },
-        {
-          "value": "1537-534X",
-          "type": "electronic"
-        }
-      ],
-      "published": {
-        "date-parts": [
-          [
-            2020,
-            3
           ]
         ]
       }
@@ -51316,11 +51316,11 @@
           [
             2025,
             6,
-            12
+            14
           ]
         ],
-        "date-time": "2025-06-12T02:26:16Z",
-        "timestamp": 1749695176378
+        "date-time": "2025-06-14T10:03:30Z",
+        "timestamp": 1749895410200
       },
       "reference-count": 45,
       "publisher": "University of Chicago Press",
@@ -51735,11 +51735,11 @@
           [
             2025,
             6,
-            12
+            14
           ]
         ],
-        "date-time": "2025-06-12T12:05:21Z",
-        "timestamp": 1749729921251
+        "date-time": "2025-06-14T08:02:03Z",
+        "timestamp": 1749888123747
       },
       "reference-count": 96,
       "publisher": "University of Chicago Press",
