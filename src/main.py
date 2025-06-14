@@ -1,31 +1,37 @@
 import flet as ft
-from paper import PaperDisplay
+from paper_display import PaperDisplay
 from back import update_journals
 
 def main(page: ft.Page):
     page.title = "paperscroll"
     page.vertical_alignment = ft.MainAxisAlignment.START
 
-    paper_info = PaperDisplay()
+    page.theme = ft.Theme(
+        font_family="Noto Sans",
+        color_scheme_seed=ft.Colors.RED,
+        use_material3=True,
+    )
 
-    def update_paper(e=None):
-        paper_info.update_random()
+    paper_info = PaperDisplay()
 
     def on_keyboard(e: ft.KeyboardEvent):
         if e.key == "Enter":
-            update_paper()
+            paper_info.update_random()
 
     page.on_keyboard_event = on_keyboard
     page.add(
         ft.Column([
-            ft.Row([ft.ElevatedButton(text="Paper", on_click=update_paper),
-                    ft.ElevatedButton(text="Update", on_click=update_journals)
+            ft.Row([ft.ElevatedButton(text="NEW", on_click=paper_info.update_random),
+                    ft.ElevatedButton(text="UPDATE", on_click=update_journals)
                     ]),
             paper_info
         ], expand=True)
     )
 
-ft.app(main)
+    # Load a paper at startup
+    paper_info.update_random()
+
+ft.app(main, assets_dir="asset")
 
 
 
