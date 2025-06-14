@@ -12,6 +12,7 @@ def main(page: ft.Page):
         use_material3=True,
     )
 
+
     paper_info = PaperDisplay()
 
     def on_keyboard(e: ft.KeyboardEvent):
@@ -21,10 +22,11 @@ def main(page: ft.Page):
     page.on_keyboard_event = on_keyboard
     page.add(
         ft.Column([
-            ft.Row([ft.ElevatedButton(text="NEW", on_click=paper_info.update_random),
-                    ft.ElevatedButton(text="UPDATE", on_click=update_journals)
+            ft.Row([ft.ElevatedButton(text="New", on_click=paper_info.update_random),
+                    ft.ElevatedButton(text="Update", on_click=update_journals)
                     ]),
             paper_info
+            
         ], expand=True)
     )
 

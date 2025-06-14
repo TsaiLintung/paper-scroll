@@ -19,6 +19,7 @@ class Paper:
         resp = requests.get(url, timeout=10)
         if resp.status_code != 200:
             print(f"Error fetching data for DOI {doi}: {resp.status_code}")
+            self.data = {}
             return
         paper = resp.json()
 

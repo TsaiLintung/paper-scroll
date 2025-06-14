@@ -11,6 +11,10 @@ class PaperDisplay(ft.Card):
         
         # setup displays
         self.title = ft.Text(value="", selectable=True, weight=ft.FontWeight.BOLD)
+        
+        self.subtitle = ft.Text(value="", selectable=True, font_family = "Noto Serif")
+        self.abstract = ft.Text(value="", selectable=True, font_family="Noto Serif", max_lines=8, overflow=ft.TextOverflow.VISIBLE)
+
         self.link = ft.IconButton(
             icon=ft.Icons.LINK,
             tooltip="Open DOI",
@@ -21,31 +25,36 @@ class PaperDisplay(ft.Card):
             ),
             expand=False,
         )
-        self.subtitle = ft.Text(value="", selectable=True, font_family = "Noto Serif")
-        self.abstract = ft.Text(value="", selectable=True, font_family = "Noto Serif")
+
+        self.pdf = ft.IconButton(
+            icon=ft.Icons.CLOSE,  # Default to a cross icon
+            tooltip="Download PDF",
+            url="",
+            style=ft.ButtonStyle(
+            bgcolor=None,
+            alignment=ft.Alignment(-1, 0),  # Left align
+            ),
+            expand=False,
+        )
+
+        bottom_row = [self.link, self.pdf]
+        
         self.content = ft.Container(
             content=ft.Column(
                 [
-                    ft.ListTile(
-                        title=self.title,
-                        subtitle=self.subtitle,
-                    ),
+                    self.title,
+                    self.subtitle,
                     ft.Divider(),
-                    ft.Container(
-                        content=self.abstract,
-                        padding=ft.Padding(15, 0, 0, 15),
-                    ),
+                    self.abstract,
                     ft.Divider(),
                     ft.Row(
-                        [
-                            self.link,
-                        ],
+                        bottom_row,
                         alignment=ft.MainAxisAlignment.START,
                     ),
                 ],
                 expand=True,
             ),
-            padding=10,
+            padding=20,
             expand=True,
         )
 
@@ -55,10 +64,17 @@ class PaperDisplay(ft.Card):
     def update_display(self):
         self.title.value = self.paper.get("title")
         doi = self.paper.get("doi")
-        self.link.text = doi
         self.link.url = doi
         self.abstract.value = self.paper.get("abstract")
         self.subtitle.value = self.paper.get_subtitle()
+
+        if self.paper.get("open_access").get("is_oa", False):
+            self.pdf.icon = ft.Icons.DOWNLOAD
+            self.pdf.url = self.paper.get("open_access").get("oa_url", "")
+        else: 
+            self.pdf.icon = ft.Icons.CLOSE
+            self.pdf.url = ""
+
         self.update()
 
     def update_random(self, e = None):
@@ -67,7 +83,7 @@ class PaperDisplay(ft.Card):
         while True:
             self.paper = Paper()
 
-            if self.paper.valid:
+            if getattr(self.paper, "valid", False):
                 break
-            print("Invalid paper, fetching another...")
+            print(f"Invalid paper: {self.paper.get('title')}, retrying...")
         self.update_display()
