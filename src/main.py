@@ -1,31 +1,60 @@
 import flet as ft
 from back import fetch_openalex, get_random_doi
 
+class PaperInfo(ft.Card):
+    """
+    A container for displaying paper information including title, DOI, and abstract.
+    """
+
+    def __init__(self):
+        super().__init__()
+        self.title = ft.Text(value="", selectable=True, width=600, weight=ft.FontWeight.BOLD)
+        self.doi_text = ft.Text(value="", selectable=True, width=600)
+        self.abstract = ft.Text(value="", selectable=True, width=600)
+        self.content = ft.Container(
+            content=ft.Column(
+            [
+                ft.ListTile(
+                leading=ft.Icon(ft.Icons.ARTICLE),
+                title=self.title,
+                subtitle=self.doi_text,
+                bgcolor=ft.Colors.GREY_200,
+                ),
+                ft.Container(
+                content=self.abstract,
+                padding=ft.Padding(10, 10, 10, 10),
+                ),
+            ]
+            ),
+            width=600,
+            padding=10,
+        )
+        self.shadow_color = ft.Colors.ON_SURFACE_VARIANT
+
+    def update_paper(self, doi, paper):
+        self.title.value = paper.get("title", "No title available")
+        self.doi_text.value = doi
+        self.abstract.value = paper.get("abstract", "No abstract available")
+        self.update()
 
 def main(page: ft.Page):
-    page.title = "paperscrool"
-    page.vertical_alignment = ft.MainAxisAlignment.CENTER
+    page.title = "paperscroll"
+    page.vertical_alignment = ft.MainAxisAlignment.START
 
-    title = ft.Text(value="", selectable=True, width=600)
-    doi_text = ft.Text(value="", selectable=True, width=600)
-    abstract = ft.Text(value="", selectable=True, width=600)
+    paper_info = PaperInfo()
+    
 
     def update_paper(e):
         doi = get_random_doi()
         paper = fetch_openalex(doi)
         if paper:
-            title.value = paper.get("title", "No title available")
-            doi_text.value = doi
-            abstract.value = paper.get("abstract", "No abstract available")
-
-        page.update()
+            paper_info.update_paper(doi, paper)
 
     page.add(
+
         ft.Column([
-            ft.IconButton(ft.Icons.ADD, on_click=update_paper),
-            title, 
-            doi_text, 
-            abstract
+            ft.ElevatedButton(text="Paper", on_click=update_paper),
+            paper_info
         ])
     )
 

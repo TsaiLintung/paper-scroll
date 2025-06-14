@@ -84,11 +84,8 @@ def fetch_openalex(doi):
         abstract = " ".join(word for _, word in words_positions)
     else:
         abstract = ""
-
-    linewidth = 80
-    wrapper = textwrap.TextWrapper(width=linewidth)
-    wrapped_abstract = wrapper.fill(text=abstract)
-    paper["abstract"] = wrapped_abstract
+        
+    paper["abstract"] = abstract
     return paper
 
 def get_random_doi():
