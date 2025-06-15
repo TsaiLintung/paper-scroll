@@ -12,6 +12,7 @@ class Backend:
         self.data_dir = data_dir
         self.config = config
         self._update_papers()
+        self.star_papers = [] # history of starred papers
 
     def _update_papers(self):
         """Update the list of papers from the data directory."""
@@ -120,7 +121,19 @@ class Backend:
             paper_data = self.fetch_openalex(doi)
             paper = Paper(doi, paper_data)
             valid = paper.valid
+
         return paper
+    
+    def star_paper(self, paper):
+        """Star a paper by adding it to the history."""
+        doi = paper.get("doi")
+        doi_list = [p.get("doi") for p in self.star_papers]
+        if paper.get("doi") not in doi_list:
+            self.star_papers.append(paper)
+            print(f"Starred paper with DOI: {doi}")
+        else:
+            print(f"Paper with DOI: {doi} is already starred.")
+        print(f"Starred papers: {[p.get("doi") for p in self.star_papers]}")
     
 class Paper:
     def __init__(self, doi, data):

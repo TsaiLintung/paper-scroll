@@ -25,7 +25,7 @@ def main(page: ft.Page):
 
     app_dir = os.getenv("FLET_APP_STORAGE_DATA")
 
-    bk = Backend(app_dir, CONFIG)
+    
 
     page.theme = ft.Theme(
         font_family="Noto Sans",
@@ -33,7 +33,9 @@ def main(page: ft.Page):
         use_material3=True,
     )
 
-    paper_display = PaperDisplay()
+    # the single backend instance
+    bk = Backend(app_dir, CONFIG)
+    paper_display = PaperDisplay(bk)
 
     def update_random(e = None):
         paper = bk.get_random_paper()

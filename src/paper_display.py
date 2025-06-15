@@ -5,12 +5,14 @@ class PaperDisplay(ft.Card):
     A container for displaying paper information including title, DOI, and abstract.
     """
 
-    def __init__(self):
+    def __init__(self, backend):
         super().__init__()
+
+        self.backend = backend
         
         # setup displays
+        self.paper = None
         self.title = ft.Text(value="", selectable=True, weight=ft.FontWeight.BOLD)
-        
         self.subtitle = ft.Text(value="", selectable=True, font_family = "Noto Serif")
         self.abstract = ft.Text(value="", selectable=True, font_family="Noto Serif", max_lines=8, overflow=ft.TextOverflow.VISIBLE)
 
@@ -47,7 +49,18 @@ class PaperDisplay(ft.Card):
             expand=False,
         )
 
-        bottom_row = [self.link, self.pdf, self.alex_link]
+        self.star = ft.IconButton(
+            icon=ft.Icons.STAR_BORDER,
+            tooltip="Star this paper",
+            style=ft.ButtonStyle(
+                bgcolor=None,
+                alignment=ft.Alignment(-1, 0),  # Left align
+            ),
+            expand=False,
+            on_click=lambda e: self.backend.star_paper(self.paper)
+        )
+
+        bottom_row = [self.link, self.pdf, self.alex_link, self.star]
         
         self.content = ft.Container(
             content=ft.Column(
@@ -74,9 +87,9 @@ class PaperDisplay(ft.Card):
         """
         Update the display with new paper information.
         """
+        self.paper = paper
         self.title.value = paper.get("display_name")
-        doi = paper.get("doi")
-        self.link.url = doi
+        self.link.url = self.paper.get("doi")
         self.alex_link.url = paper.get('id')
         self.abstract.value = paper.get("abstract")
         self.subtitle.value = paper.get("subtitle")
