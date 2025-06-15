@@ -8,19 +8,22 @@ import requests
 
 class Backend:
     """Backend class to handle fetching and processing of journal data from Crossref API."""
-    def __init__(self, data_dir):
+    def __init__(self, data_dir, config):
         self.data_dir = data_dir
-        with open(f"{self.data_dir}/config.json", "r", encoding="utf-8") as f:
-            self.config = json.load(f)
+        self.config = config
+        self._update_papers()
 
-        data_dir = os.path.join(self.data_dir, "data")
+    def _update_papers(self):
+        """Update the list of papers from the data directory."""
         self.papers = []
+        data_dir = os.path.join(self.data_dir, "journals")
         for filename in os.listdir(data_dir):
             if filename.endswith(".json"):
                 file_path = os.path.join(data_dir, filename)
                 with open(file_path, "r", encoding="utf-8") as f:
                     data = json.load(f)
                     self.papers.extend(data.get("items", []))
+
         
     def _fetch_crossref_journal_year(self, journal_issn, year):
         """
@@ -57,12 +60,13 @@ class Backend:
                 issn = journal["issn"]
                 name = journal["name"]
 
-                output_path = f"{self.data_dir}/data/{name}-{year}.json"
+                output_path = f"{self.data_dir}/journals/{name}-{year}.json"
                 if os.path.exists(output_path):
                     print(f"Data for Journal {name} in year {year} already exists. Skipping...")
                     continue
 
                 items = self._fetch_crossref_journal_year(issn, year)
+                items = [{"DOI": item.get("DOI")} for item in items]
 
                 data = {
                     "issn": issn,
@@ -85,10 +89,13 @@ class Backend:
         end_year = self.config["end_year"]
         journals = self.config["journals"]
         self._fetch_crossref(journals, start_year, end_year)
+        self._update_papers()
         print("Journals updated.")
 
     def get_random_doi(self):
         """Get a random DOI from the data directory."""
+        if self.papers == []:
+            return "https://doi.org/10.7717/peerj.4375"  # Default DOI if no papers are available
         item = random.choice(self.papers)
         return item.get("DOI")
     
