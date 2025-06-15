@@ -74,7 +74,7 @@ class PaperDisplay(ft.Card):
         """
         Update the display with new paper information.
         """
-        self.title.value = paper.get("title")
+        self.title.value = paper.get("display_name")
         doi = paper.get("doi")
         self.link.url = doi
         self.alex_link.url = paper.get('id')
