@@ -1,5 +1,4 @@
 import flet as ft
-from paper import Paper
 
 class PaperDisplay(ft.Card):
     """
@@ -60,32 +59,21 @@ class PaperDisplay(ft.Card):
 
         self.color = ft.Colors.WHITE
 
-        # init 
-        self.paper = Paper()
-
-    def update_display(self):
-        self.title.value = self.paper.get("title")
-        doi = self.paper.get("doi")
+    def update_paper(self, paper):
+        """
+        Update the display with new paper information.
+        """
+        self.title.value = paper.get("title")
+        doi = paper.get("doi")
         self.link.url = doi
-        self.abstract.value = self.paper.get("abstract")
-        self.subtitle.value = self.paper.get_subtitle()
+        self.abstract.value = paper.get("abstract")
+        self.subtitle.value = paper.get_subtitle()
 
-        if self.paper.get("open_access").get("is_oa", False):
+        if paper.get("open_access").get("is_oa", False):
             self.pdf.icon = ft.Icons.DOWNLOAD
-            self.pdf.url = self.paper.get("open_access").get("oa_url", "")
+            self.pdf.url = paper.get("open_access").get("oa_url", "")
         else: 
             self.pdf.icon = ft.Icons.CLOSE
             self.pdf.url = ""
 
         self.update()
-
-    def update_random(self, e = None):
-        
-        # Keep fetching random papers until we get one with a non-empty abstract
-        while True:
-            self.paper = Paper()
-
-            if getattr(self.paper, "valid", False):
-                break
-            print(f"Invalid paper: {self.paper.get('title')}, retrying...")
-        self.update_display()

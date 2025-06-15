@@ -1,6 +1,6 @@
 import flet as ft
 from paper_display import PaperDisplay
-from back import update_journals
+from back import Backend, Paper
 
 
 def main(page: ft.Page):
@@ -9,31 +9,39 @@ def main(page: ft.Page):
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     page.bgcolor = "#924046"
 
+    bk = Backend()
+
     page.theme = ft.Theme(
         font_family="Noto Sans",
         color_scheme_seed=ft.Colors.RED,
         use_material3=True,
     )
 
+    paper_display = PaperDisplay()
 
-    paper_info = PaperDisplay()
+    def update_random():
+        paper = bk.get_random_paper()
+        paper_display.update_paper(paper)
 
     def on_keyboard(e: ft.KeyboardEvent): 
+        e.handled = True
         if e.key == "Enter":
-            paper_info.update_random()
+
+            update_random()
         if e.key == "U":
-            update_journals()
+            bk.update_journals()
+        page.update()
 
     page.on_keyboard_event = on_keyboard
     page.add(
         ft.Column(
             [
-                paper_info,
+                paper_display
             ],
         )
     )
-
+    
     # Load a paper at startup
-    paper_info.update_random()
+    update_random()
 
 ft.app(main, assets_dir="asset")
