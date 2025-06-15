@@ -2,13 +2,16 @@ import flet as ft
 from paper_display import PaperDisplay
 from back import Backend
 
+# SET YOUR DATA DIRECTORY HERE
+DIR = "/Users/lttsai/Documents/GitHub/paper-scroll"
+
 def main(page: ft.Page):
     page.title = "paperscroll"
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     page.bgcolor = "#924046"
 
-    bk = Backend()
+    bk = Backend(DIR)
 
     page.theme = ft.Theme(
         font_family="Noto Sans",

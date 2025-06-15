@@ -6,12 +6,12 @@ import os
 import random
 import requests
 
-DIR = "/Users/lttsai/Documents/GitHub/paper-scroll"
-
 class Backend:
     """Backend class to handle fetching and processing of journal data from Crossref API."""
-    def __init__(self, data_dir=DIR):
+    def __init__(self, data_dir):
         self.data_dir = data_dir
+        with open(f"{self.data_dir}/config.json", "r", encoding="utf-8") as f:
+            self.config = json.load(f)
 
         data_dir = os.path.join(self.data_dir, "data")
         self.papers = []
@@ -80,11 +80,10 @@ class Backend:
         """Update journals by fetching data from Crossref API."""
 
         print("Updating journals...")
-        with open(f"{self.data_dir}/config.json", "r", encoding="utf-8") as f:
-            config = json.load(f)
-        start_year = config["start_year"]
-        end_year = config["end_year"]
-        journals = config["journals"]
+        
+        start_year = self.config["start_year"]
+        end_year = self.config["end_year"]
+        journals = self.config["journals"]
         self._fetch_crossref(journals, start_year, end_year)
         print("Journals updated.")
 
