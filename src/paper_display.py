@@ -36,7 +36,18 @@ class PaperDisplay(ft.Card):
             expand=False,
         )
 
-        bottom_row = [self.link, self.pdf]
+        self.alex_link = ft.IconButton(
+            icon=ft.Icons.WEB_STORIES,
+            tooltip="Open OpenAlex",
+            url="",
+            style=ft.ButtonStyle(
+                bgcolor=None,
+                alignment=ft.Alignment(-1, 0),  # Left align
+            ),
+            expand=False,
+        )
+
+        bottom_row = [self.link, self.pdf, self.alex_link]
         
         self.content = ft.Container(
             content=ft.Column(
@@ -66,8 +77,9 @@ class PaperDisplay(ft.Card):
         self.title.value = paper.get("title")
         doi = paper.get("doi")
         self.link.url = doi
+        self.alex_link.url = paper.get('id')
         self.abstract.value = paper.get("abstract")
-        self.subtitle.value = paper.get_subtitle()
+        self.subtitle.value = paper.get("subtitle")
 
         if paper.get("open_access").get("is_oa", False):
             self.pdf.icon = ft.Icons.DOWNLOAD

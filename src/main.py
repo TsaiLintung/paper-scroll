@@ -1,7 +1,6 @@
 import flet as ft
 from paper_display import PaperDisplay
-from back import Backend, Paper
-
+from back import Backend
 
 def main(page: ft.Page):
     page.title = "paperscroll"
@@ -24,9 +23,7 @@ def main(page: ft.Page):
         paper_display.update_paper(paper)
 
     def on_keyboard(e: ft.KeyboardEvent): 
-        e.handled = True
         if e.key == "Enter":
-
             update_random()
         if e.key == "U":
             bk.update_journals()
@@ -40,7 +37,7 @@ def main(page: ft.Page):
             ],
         )
     )
-    
+
     # Load a paper at startup
     update_random()
 
