@@ -21,6 +21,7 @@ def main(page: ft.Page):
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     page.bgcolor = "#924046"
+    page.window_width = 600
 
     app_dir = os.getenv("FLET_APP_STORAGE_DATA")
 
@@ -34,27 +35,46 @@ def main(page: ft.Page):
 
     paper_display = PaperDisplay()
 
-    def update_random():
+    def update_random(e = None):
         paper = bk.get_random_paper()
         paper_display.update_paper(paper)
 
-    def on_keyboard(e: ft.KeyboardEvent): 
+    def on_keyboard(e: ft.KeyboardEvent):
         if e.key == "Enter":
             update_random()
-        if e.key == "U":
-            bk.update_journals()
         page.update()
 
     page.on_keyboard_event = on_keyboard
+
+    def open_settings(e):
+        # Placeholder for settings dialog
+        pass
+
+    def get_hisory(e):
+        # Placeholder for history dialog
+        pass
+
+    sett = ft.FloatingActionButton(icon=ft.Icons.SETTINGS, on_click=open_settings)
+    roll = ft.FloatingActionButton(icon=ft.Icons.ARROW_FORWARD, on_click=update_random)
+    history = ft.FloatingActionButton(
+        icon=ft.Icons.HISTORY,
+        on_click=get_hisory)
+    update = ft.FloatingActionButton(icon=ft.Icons.UPDATE, on_click=bk.update_journals)
     page.add(
         ft.Column(
             [
-                paper_display
-            ],
-        )
+                paper_display,
+                ft.Row(
+                    [roll,update],
+                    alignment=ft.MainAxisAlignment.CENTER
+                ),
+            ]
+        ),
     )
+    page.add()
 
     # Load a paper at startup
     update_random()
+
 
 ft.app(main)

@@ -80,7 +80,7 @@ class Backend:
 
                 print(f"Fetched {len(items)} items for Journal {name} in year {year}")
 
-    def update_journals(self):
+    def update_journals(self, e = None):
         """Update journals by fetching data from Crossref API."""
 
         print("Updating journals...")
