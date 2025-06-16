@@ -69,10 +69,13 @@ def main(page: ft.Page):
     def update_history_view():
         history_papers_column.controls = []
         for paper in bk.get_starred_dois():
+            display = PaperDisplay(bk)
+            
             history_papers_column.controls.append(PaperDisplay(bk))
         page.update()
         for i, paper in enumerate(bk.get_starred_papers()):
             history_papers_column.controls[i].update_paper(paper)
+            history_papers_column.controls[i].toggle_condense()
         page.update()
 
     # settings view

@@ -12,7 +12,9 @@ class PaperDisplay(ft.Card):
         self.paper = paper
 
         self.title = ft.Text(value="", selectable=True, weight=ft.FontWeight.BOLD)
-        self.subtitle = ft.Text(value="", selectable=True, font_family="Noto Serif")
+        self.subtitle = ft.Text(
+            value="", selectable=True, font_family="Noto Serif", 
+            max_lines=2)
         self.abstract = ft.Text(
             value="",
             selectable=True,
@@ -64,36 +66,83 @@ class PaperDisplay(ft.Card):
                 alignment=ft.Alignment(-1, 0),  # Left align
             ),
             expand=False,
-            on_click=self._star
+            on_click=self._star,
         )
 
-        bottom_row = [self.link, self.pdf, self.alex_link, self.star]
+        # Condense button
+        self.condensed = False
+        self.condense_btn = ft.IconButton(
+            icon=ft.Icons.UNFOLD_LESS,
+            tooltip="Condense",
+            on_click=self.toggle_condense,
+            style=ft.ButtonStyle(
+                bgcolor=None,
+                alignment=ft.Alignment(-1, 0),
+            ),
+            expand=False,
+        )
+
+        self.divider1 = ft.Divider()
+        self.divider2 = ft.Divider()
+        self.bottom_row = ft.Row(
+            [self.link, self.pdf, self.alex_link, self.star],
+            alignment=ft.MainAxisAlignment.START,
+        )
 
         self.content = ft.Container(
             content=ft.Column(
                 [
-                    self.title,
-                    self.subtitle,
-                    ft.Divider(),
+                    ft.Row(
+                        [
+                            ft.Column([self.title, self.subtitle], expand=True),
+                            self.condense_btn,
+                        ],
+                        alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
+                    ),  # Align row content to the right
+                    self.divider1,
                     self.abstract,
-                    ft.Divider(),
-                    ft.Row(bottom_row, alignment=ft.MainAxisAlignment.START),
+                    self.divider2,
+                    self.bottom_row,
                 ]
             ),
-            padding=20,
+            padding=15,
         )
 
-    def _star(self, e = None):
+    def toggle_condense(self, e=None):
+        self.condensed = not self.condensed
+        if self.condensed:
+            self.abstract.visible = False
+            self.divider1.visible = False
+            self.divider2.visible = False
+            self.link.visible = False
+            self.pdf.visible = False
+            self.alex_link.visible = False
+            self.star.visible = False
+            self.condense_btn.icon = ft.Icons.UNFOLD_MORE
+            self.condense_btn.tooltip = "Expand"
+        else:
+            self.abstract.visible = True
+            self.divider1.visible = True
+            self.divider2.visible = True
+            self.link.visible = True
+            self.pdf.visible = True
+            self.alex_link.visible = True
+            self.star.visible = True
+            self.condense_btn.icon = ft.Icons.UNFOLD_LESS
+            self.condense_btn.tooltip = "Condense"
+        self.update()
+
+    def _star(self, e=None):
         if self.paper.is_starred():
             self.star.selected = False
             self.paper.unstar()
-        else: 
+        else:
             self.star.selected = True
             self.paper.star()
-            
+
         self.update()
 
-    def update_paper(self, paper = None):
+    def update_paper(self, paper=None):
         """
         Update the display with new paper information.
         """

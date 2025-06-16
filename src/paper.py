@@ -41,8 +41,8 @@ class Paper:
         journal = self.get("primary_location").get("source").get("display_name", "")
         authors = self.get("authorships")
         authors = ", ".join(author["author"]["display_name"] for author in authors)
-        year_authors = f"{year} · {authors}" if year and authors else ""
-        text = "\n".join(filter(None, [year_authors, journal]))
+        year_journal = f"{year} · {journal}" if year and authors else ""
+        text = "\n".join(filter(None, [year_journal, authors]))
         return text
 
     def _get_abstract(self):
