@@ -32,9 +32,14 @@ def main(page: ft.Page):
 
     bk = Backend(app_dir, CONFIG)
 
+    def update_random_paper():
+        paper = bk.get_random_paper()
+        main_paper_display.update_paper(paper)
+        page.update()
+
     def on_keyboard(e: ft.KeyboardEvent):
         if e.key == "Enter":
-            main_paper_display.update_random()
+            update_random_paper()
         page.update()
     page.on_keyboard_event = on_keyboard
 
@@ -133,7 +138,7 @@ def main(page: ft.Page):
     page.add(navigation_bar)
     page.go("/")
 
-    main_paper_display.update_random()
+    update_random_paper()
 
 
 ft.app(main)

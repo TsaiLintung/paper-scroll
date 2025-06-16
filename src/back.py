@@ -118,25 +118,11 @@ class Backend:
         while not valid:
             doi = self.get_random_doi()
             paper_data = self.fetch_openalex(doi)
-            paper = Paper(doi, paper_data)
+            paper = Paper(paper_data, self.starred_dir)
             valid = paper.valid
 
         return paper
     
-    def star_paper(self, paper):
-        """Star a paper by adding it to the history."""
-        doi = paper.get("doi")
-
-        if doi not in self.get_starred_dois():
-            # Write paper data to DOI.json in starred directory
-            doi_filename = f"{doi.replace('/', '_')}.json"
-            output_path = os.path.join(self.starred_dir, doi_filename)
-            with open(output_path, "w", encoding="utf-8") as f:
-                json.dump(paper.data, f, ensure_ascii=False, indent=2)
-            print(f"Starred paper with DOI: {doi}")
-        else:
-            print(f"Paper with DOI: {doi} is already starred.")
-
     def get_starred_dois(self):
         result = []
         for filename in os.listdir(self.starred_dir):
@@ -151,19 +137,43 @@ class Backend:
             output_path = os.path.join(self.starred_dir, doi_filename)
             with open(output_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
-                starred_papers.append(Paper(doi, data))
+                starred_papers.append(Paper(data, self.starred_dir))
         return starred_papers
     
 class Paper:
-    def __init__(self, doi, data):
-        self.doi = doi
+    def __init__(self, data, parent_dir):
         self.data = data
+        self.doi = data.get("doi", "")
         self.data["abstract"] = self._get_abstract()
         self.data["subtitle"] = self._get_subtitle()
         self.valid = bool(self.data.get("abstract")) and bool(self.data.get("authorships"))
 
+        doi_filename = f"{self.doi.replace('/', '_')}.json"
+        self.dir = os.path.join(parent_dir, doi_filename)
+
     def get(self, key):
         return self.data.get(key, "Not Available")
+    
+    def is_starred(self):
+        return os.path.exists(self.dir)
+    
+    def star(self):
+        """Star a paper by adding it to the history."""
+        doi = self.get("doi")
+        if not self.is_starred():
+            with open(self.dir, "w", encoding="utf-8") as f:
+                json.dump(self.data, f, ensure_ascii=False, indent=2)
+            print(f"Starred paper with DOI: {doi}")
+        else:
+            print(f"Paper with DOI: {doi} is already starred.")
+
+    def unstar(self):
+        """Unstar a paper by removing it from the history."""
+        if self.is_starred():
+            os.remove(self.dir)
+            print(f"Unstarred paper with DOI: {self.doi}")
+        else:
+            print(f"Paper with DOI: {self.doi} is not starred.")
    
     def _get_subtitle(self):
         year = self.get("publication_year")
