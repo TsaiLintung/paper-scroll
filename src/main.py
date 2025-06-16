@@ -3,12 +3,6 @@ import os
 from paper_display import PaperDisplay
 from back import Backend
 from settings import Settings
-import json
-
-
-with open("config.json", "r") as f:
-    config = json.load(f)
-
 
 class MyNavBar(ft.NavigationBar):
 
@@ -59,15 +53,15 @@ def main(page: ft.Page):
     )
 
     # the single backend instance
-    app_dir = os.getenv("FLET_APP_STORAGE_DATA")
+    data_dir = os.getenv("FLET_APP_STORAGE_DATA")
 
     # create folders if not exists: ~/data/journals, ~/data/starred
     for folder in ["journals", "starred"]:
-        path = os.path.join(app_dir, folder)
+        path = os.path.join(data_dir, folder)
         if not os.path.exists(path):
             os.makedirs(path)
 
-    bk = Backend(app_dir, config)
+    bk = Backend(data_dir)
 
     # Explore view ---------
 
@@ -78,7 +72,8 @@ def main(page: ft.Page):
 
     def on_keyboard(e: ft.KeyboardEvent):
         if e.key == "Enter":
-            update_random_paper()
+            if nav.selected_index == 0:
+                update_random_paper()
         page.update()
 
     page.on_keyboard_event = on_keyboard
@@ -150,6 +145,5 @@ def main(page: ft.Page):
     page.go("/")
 
     update_random_paper()
-
 
 ft.app(main)

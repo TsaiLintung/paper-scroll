@@ -10,11 +10,24 @@ from paper import Paper
 
 class Backend:
     """Backend class to handle fetching and processing of journal data from Crossref API."""
-    def __init__(self, data_dir, config):
+    def __init__(self, data_dir):
         self.data_dir = data_dir
         self.starred_dir = os.path.join(self.data_dir, "starred")
+
+        with open(os.path.join(data_dir, "config.json"), "r", encoding="utf-8") as f:
+            config = json.load(f)
         self.config = config
         self._update_papers()
+
+    def update_config(self, field, value):
+        """Update a specific field in the configuration."""
+        if field not in self.config:
+            print(f"Field '{field}' not found in configuration.")
+            return
+        self.config[field] = value
+        with open(os.path.join(self.data_dir, "config.json"), "w", encoding="utf-8") as f:
+            json.dump(self.config, f, ensure_ascii=False, indent=2)
+        print("Configuration saved.")
 
     def _update_papers(self):
         """Update the list of papers from the data directory."""

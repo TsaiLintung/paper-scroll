@@ -9,17 +9,18 @@ class Settings(ft.Column):
 
         update = ft.TextButton(text="Update", on_click=self.backend.update_journals)
 
-
         # set year range
         start_year = ft.TextField(
             label="Start year", value=self.backend.config["start_year"], 
             max_length=4,
-            width = 150
+            width = 150, 
+            on_submit=lambda e: self.submit_year(e, "start_year")
         )
         end_year = ft.TextField(
             label="End year", value=self.backend.config["end_year"], 
             max_length=4,
-            width = 150
+            width = 150,
+            on_submit=lambda e: self.submit_year(e, "end_year")
         )
         year_range = ft.Row([start_year, end_year], wrap = True)
 
@@ -54,8 +55,6 @@ class Settings(ft.Column):
                             ft.Divider(),
                             ft.Text("Journals", weight=ft.FontWeight.BOLD),
                             ft.Row(journals, wrap=True),
-                            ft.Divider(),
-                            ft.Text("Add Journal", weight=ft.FontWeight.BOLD),
                             add_journal, 
                             ft.Divider(),
                             update
@@ -68,3 +67,13 @@ class Settings(ft.Column):
         self.horizontal_alignment = ft.CrossAxisAlignment.START
         self.scroll = ft.ScrollMode.AUTO
         self.spacing = 20
+
+    def submit_year(self, e, field):
+        if not (e.control.value.isdigit() and 1000 <= int(e.control.value) <= 9999):
+            e.control.error_text = "Enter a valid year"
+            self.update()
+            return
+        e.control.error_text = None
+        self.update()
+        e.control.value = int(e.control.value)  # ensure integer format
+        self.backend.update_config(field, e.control.value)
