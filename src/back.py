@@ -25,8 +25,7 @@ class Backend:
             with open(file_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
                 self.papers.extend(data.get("items", []))
-
-        
+       
     def _fetch_crossref_journal_year(self, journal_issn, year):
         """
         Fetch all works from Crossref API for a given ISSN and year.
