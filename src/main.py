@@ -4,6 +4,25 @@ from paper_display import PaperDisplay
 from back import Backend
 from settings import Settings
 
+class StaredPapers(ft.Column):
+
+    def __init__(self, backend):
+        super().__init__()
+        self.backend = backend
+        self.controls = []
+        self.alignment = ft.MainAxisAlignment.CENTER
+        self.horizontal_alignment = ft.CrossAxisAlignment.CENTER
+        self.scroll = ft.ScrollMode.AUTO
+
+    def before_update(self):
+
+        self.controls = []
+        starred_papers = self.backend.get_starred_papers()
+        for paper in starred_papers:
+            self.controls.append(PaperDisplay(self.backend, condensed=True))
+        for i, paper in enumerate(starred_papers):
+            self.controls[i].update_paper(paper)
+
 class MyNavBar(ft.NavigationBar):
 
     def __init__(self, page):
@@ -87,29 +106,12 @@ def main(page: ft.Page):
 
     # Starred view ---------
 
-    starred_papers_column = ft.Column(
-        [],
-        alignment=ft.MainAxisAlignment.CENTER,
-        horizontal_alignment=ft.CrossAxisAlignment.CENTER,
-        scroll=ft.ScrollMode.AUTO,
-    )
-
+    starred_papers_column = StaredPapers(bk)
     starred_view = ft.Container(
         content=starred_papers_column,
         alignment=ft.alignment.center,
         expand=True,
     )
-
-    def update_starred_view():
-        starred_papers_column.controls = []
-        starred_papers = bk.get_starred_papers()
-        for paper in starred_papers:
-            starred_papers_column.controls.append(PaperDisplay(bk))
-        page.update()
-        for i, paper in enumerate(starred_papers):
-            starred_papers_column.controls[i].update_paper(paper)
-            starred_papers_column.controls[i].toggle_condense()
-        page.update()
 
     # settings view
     settings = Settings(bk)
@@ -122,7 +124,6 @@ def main(page: ft.Page):
     # Navigation ---------
 
     main_content = ft.Container(content=None, expand=True)
-
     nav = MyNavBar(page)
 
     def route_change(e):
@@ -133,7 +134,6 @@ def main(page: ft.Page):
         elif route == "/starred":
             main_content.content = starred_view
             nav.selected_index = 1
-            update_starred_view()
         elif route == "/settings":
             main_content.content = settings_view
             nav.selected_index = 2

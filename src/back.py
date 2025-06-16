@@ -5,6 +5,8 @@ import json
 import os
 import random
 import requests
+import flet as ft
+
 
 from paper import Paper
 
@@ -19,6 +21,9 @@ class Backend:
         self.config = config
         self._update_papers()
 
+        self.progress_bar = ft.ProgressBar(value=0, width=400, visible=False)
+        self.message = ft.Text("System Message ...")
+
     def update_config(self, field, value):
         """Update a specific field in the configuration."""
         if field not in self.config:
@@ -27,6 +32,7 @@ class Backend:
         self.config[field] = value
         with open(os.path.join(self.data_dir, "config.json"), "w", encoding="utf-8") as f:
             json.dump(self.config, f, ensure_ascii=False, indent=2)
+        self.update_journals()
         print("Configuration saved.")
 
     def add_journal(self, name, issn):
@@ -35,7 +41,6 @@ class Backend:
         new_journal = {"name": name, "issn": issn}
         self.config["journals"].append(new_journal)
         self.update_config("journals", self.config["journals"])
-        self.update_journals()
         print(f"Added journal: {name} with ISSN: {issn}")
 
     def remove_journal(self, issn):
@@ -48,7 +53,6 @@ class Backend:
                 print(f"Removed journal with ISSN: {issn}")
                 break
         self.update_config("journals", journals)
-        self.update_journals()
 
     def _update_papers(self):
         """Update the list of papers from the data directory."""
@@ -59,6 +63,8 @@ class Backend:
             with open(file_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
                 self.papers.extend(data.get("items", []))
+
+    # Fetching works from Crossref API ----------------------------
        
     def _fetch_crossref_journal_year(self, journal_issn, year):
         """
@@ -101,6 +107,9 @@ class Backend:
                 else: 
                     to_fetch.append((journal, year, output_path))
 
+        self.progress_bar.visible = True
+        self.progress_bar.value = 0
+
         for journal, year, output_path in to_fetch:
             issn = journal["issn"]
             name = journal["name"]
@@ -118,7 +127,16 @@ class Backend:
             with open(output_path, "w", encoding="utf-8") as f:
                 json.dump(data, f, ensure_ascii=False, indent=2)
 
-            print(f"Fetched {len(items)} items for Journal {name} in year {year}")
+            self.progress_bar.value += 1 / len(to_fetch)
+            self.progress_bar.update()
+            mes = f"Fetched {len(items)} items for Journal {name} in year {year}"
+            print(mes)
+            self.message.value = mes
+            self.message.update()
+
+        self.progress_bar.visible = False
+        self.progress_bar.update()
+
 
     def update_journals(self, e = None):
         """Update journals by fetching data from Crossref API."""
@@ -154,7 +172,7 @@ class Backend:
         valid = False
         while not valid:
             doi = random.choice(self.papers).get("DOI")
-            url = f"https://api.openalex.org/works/https://doi.org/{doi}?mailto=tsaidondon@gmail.com" # example: https://api.openalex.org/works/W2741809807
+            url = f"https://api.openalex.org/works/https://doi.org/{doi}" # example: https://api.openalex.org/works/W2741809807
             resp = requests.get(url, timeout=10)
             if resp.status_code != 200:
                 print(f"Error fetching data for DOI {doi}: {resp.status_code}")

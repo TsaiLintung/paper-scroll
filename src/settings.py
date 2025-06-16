@@ -56,7 +56,8 @@ class Settings(ft.Column):
                             self.journals_row,
                             add_journal,
                             ft.Divider(),
-                            update,
+                            self.backend.message,
+                            self.backend.progress_bar
                         ]
                     ),
                     padding=15,
