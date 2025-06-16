@@ -10,20 +10,19 @@ class Backend:
     """Backend class to handle fetching and processing of journal data from Crossref API."""
     def __init__(self, data_dir, config):
         self.data_dir = data_dir
+        self.starred_dir = os.path.join(self.data_dir, "starred")
         self.config = config
         self._update_papers()
-        self.star_papers = [] # history of starred papers
 
     def _update_papers(self):
         """Update the list of papers from the data directory."""
         self.papers = []
         data_dir = os.path.join(self.data_dir, "journals")
         for filename in os.listdir(data_dir):
-            if filename.endswith(".json"):
-                file_path = os.path.join(data_dir, filename)
-                with open(file_path, "r", encoding="utf-8") as f:
-                    data = json.load(f)
-                    self.papers.extend(data.get("items", []))
+            file_path = os.path.join(data_dir, filename)
+            with open(file_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                self.papers.extend(data.get("items", []))
 
         
     def _fetch_crossref_journal_year(self, journal_issn, year):
@@ -127,13 +126,33 @@ class Backend:
     def star_paper(self, paper):
         """Star a paper by adding it to the history."""
         doi = paper.get("doi")
-        doi_list = [p.get("doi") for p in self.star_papers]
-        if paper.get("doi") not in doi_list:
-            self.star_papers.append(paper)
+
+        if doi not in self.get_starred_dois():
+            # Write paper data to DOI.json in starred directory
+            doi_filename = f"{doi.replace('/', '_')}.json"
+            output_path = os.path.join(self.starred_dir, doi_filename)
+            with open(output_path, "w", encoding="utf-8") as f:
+                json.dump(paper.data, f, ensure_ascii=False, indent=2)
             print(f"Starred paper with DOI: {doi}")
         else:
             print(f"Paper with DOI: {doi} is already starred.")
-        print(f"Starred papers: {[p.get("doi") for p in self.star_papers]}")
+
+    def get_starred_dois(self):
+        result = []
+        for filename in os.listdir(self.starred_dir):
+            doi = filename.replace('.json', '').replace('_', '/')
+            result.append(doi)
+        return result
+    
+    def get_starred_papers(self):
+        starred_papers = []
+        for doi in self.get_starred_dois():
+            doi_filename = f"{doi.replace('/', '_')}.json"
+            output_path = os.path.join(self.starred_dir, doi_filename)
+            with open(output_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                starred_papers.append(Paper(doi, data))
+        return starred_papers
     
 class Paper:
     def __init__(self, doi, data):

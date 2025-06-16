@@ -23,6 +23,13 @@ def main(page: ft.Page):
 
     # the single backend instance
     app_dir = os.getenv("FLET_APP_STORAGE_DATA")
+
+    # create folders if not exists: ~/data/journals, ~/data/starred
+    for folder in ["journals", "starred"]:
+        path = os.path.join(app_dir, folder)
+        if not os.path.exists(path):
+            os.makedirs(path)
+
     bk = Backend(app_dir, CONFIG)
 
     def on_keyboard(e: ft.KeyboardEvent):
@@ -43,10 +50,7 @@ def main(page: ft.Page):
 
     # Function to update the history view when a new paper is starred
     history_papers_column = ft.Column(
-        [
-            ft.Text("Starred Papers", size=20),
-            main_paper_display
-        ],
+        [],
         alignment=ft.MainAxisAlignment.CENTER,
         horizontal_alignment=ft.CrossAxisAlignment.CENTER,
         scroll=ft.ScrollMode.AUTO,
@@ -59,14 +63,12 @@ def main(page: ft.Page):
     
     def update_history_view():
         history_papers_column.controls = []
-        for paper in bk.star_papers:
+        for paper in bk.get_starred_dois():
             history_papers_column.controls.append(PaperDisplay(bk))
         page.update()
-        for i, paper in enumerate(bk.star_papers):
+        for i, paper in enumerate(bk.get_starred_papers()):
             history_papers_column.controls[i].update_paper(paper)
         page.update()
-       
-
 
     # settings view
     update = ft.FloatingActionButton(icon=ft.Icons.UPDATE, on_click=bk.update_journals)
