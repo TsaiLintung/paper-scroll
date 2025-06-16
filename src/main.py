@@ -102,10 +102,11 @@ def main(page: ft.Page):
 
     def update_starred_view():
         starred_papers_column.controls = []
-        for paper in bk.get_starred_dois():
+        starred_papers = bk.get_starred_papers()
+        for paper in starred_papers:
             starred_papers_column.controls.append(PaperDisplay(bk))
         page.update()
-        for i, paper in enumerate(bk.get_starred_papers()):
+        for i, paper in enumerate(starred_papers):
             starred_papers_column.controls[i].update_paper(paper)
             starred_papers_column.controls[i].toggle_condense()
         page.update()
