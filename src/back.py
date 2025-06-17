@@ -7,22 +7,47 @@ import random
 import requests
 import flet as ft
 
-
 from paper import Paper
+
+DEFAULT_CONFIG = {
+    "start_year": 2021,
+    "end_year": 2021,
+    "journals": [
+        {"name": "aer", "issn": "0002-8282"}
+    ]
+}
+DEFAULT_PAPER = {"DOI": "10.1038/s41586-020-2649-2"}
 
 class Backend:
     """Backend class to handle fetching and processing of journal data from Crossref API."""
     def __init__(self, data_dir):
         self.data_dir = data_dir
         self.starred_dir = os.path.join(self.data_dir, "starred")
+        self.journal_dir = os.path.join(self.data_dir, "journals")
+        self.config_path = os.path.join(self.data_dir, "config.json")
+        self._handle_directories()
 
-        with open(os.path.join(data_dir, "config.json"), "r", encoding="utf-8") as f:
+        # load configuration
+        with open(self.config_path, "r", encoding="utf-8") as f:
             config = json.load(f)
         self.config = config
-        self._update_papers()
 
+        # load papers 
+        self._load_papers()
+
+        # UI components depending on backend state
         self.progress_bar = ft.ProgressBar(value=0, width=400, visible=False)
-        self.message = ft.Text("System Message ...")
+        self.message = ft.Text("")
+
+    def _handle_directories(self):
+        for path in [self.data_dir, self.starred_dir, self.journal_dir]:
+            if not os.path.exists(path):
+                os.makedirs(path)
+
+        if not os.path.exists(self.config_path):
+            with open(self.config_path, "w", encoding="utf-8") as f:
+                json.dump(DEFAULT_CONFIG, f, ensure_ascii=False, indent=2)
+            print(f"Created default config at {self.config_path}")
 
     def update_config(self, field, value):
         """Update a specific field in the configuration."""
@@ -30,9 +55,8 @@ class Backend:
             print(f"Field '{field}' not found in configuration.")
             return
         self.config[field] = value
-        with open(os.path.join(self.data_dir, "config.json"), "w", encoding="utf-8") as f:
+        with open(self.config_path, "w", encoding="utf-8") as f:
             json.dump(self.config, f, ensure_ascii=False, indent=2)
-        self.update_journals()
         print("Configuration saved.")
 
     def add_journal(self, name, issn):
@@ -54,15 +78,17 @@ class Backend:
                 break
         self.update_config("journals", journals)
 
-    def _update_papers(self):
+    def _load_papers(self):
         """Update the list of papers from the data directory."""
         self.papers = []
-        data_dir = os.path.join(self.data_dir, "journals")
-        for filename in os.listdir(data_dir):
-            file_path = os.path.join(data_dir, filename)
+        for filename in os.listdir(self.journal_dir):
+            file_path = os.path.join(self.journal_dir, filename)
             with open(file_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
                 self.papers.extend(data.get("items", []))
+
+        if self.papers == []:
+            self.papers.append(DEFAULT_PAPER)
 
     # Fetching works from Crossref API ----------------------------
        
@@ -96,12 +122,15 @@ class Backend:
 
     def _fetch_crossref(self, journals, start_year, end_year):
         """Fetch works from Crossref API for a list of journals and a date range."""
+        self.message.value = "Fetching journals from Crossref API..."
+        self.message.update()
+
         to_fetch = []
         for journal in journals:
             for year in range(start_year, end_year + 1):
                 issn = journal["issn"]
                 name = journal["name"]
-                output_path = f"{self.data_dir}/journals/{name}-{year}.json"
+                output_path = f"{self.journal_dir}/{name}-{year}.json"
                 if os.path.exists(output_path):
                     continue
                 else: 
@@ -129,14 +158,15 @@ class Backend:
 
             self.progress_bar.value += 1 / len(to_fetch)
             self.progress_bar.update()
-            mes = f"Fetched {len(items)} items for Journal {name} in year {year}"
+            mes = f"Fetched {len(items)} papers for journal '{name}' ({issn}) in {year}."
             print(mes)
             self.message.value = mes
             self.message.update()
 
         self.progress_bar.visible = False
         self.progress_bar.update()
-
+        self.message.value = "All journals updated."
+        self.message.update()
 
     def update_journals(self, e = None):
         """Update journals by fetching data from Crossref API."""
@@ -148,12 +178,11 @@ class Backend:
         journals = self.config["journals"]
 
         # get the current indexed journal-years, remove onces not in config
-        data_dir = os.path.join(self.data_dir, "journals")
-        for filename in os.listdir(data_dir):
+        for filename in os.listdir(self.journal_dir):
             parts = filename.split("-")
             journal_name = "-".join(parts[:-1])
             year = parts[-1].replace(".json", "")
-            file_path = os.path.join(data_dir, filename)
+            file_path = os.path.join(self.journal_dir, filename)
             to_remove = journal_name not in [j["name"] for j in journals] or not year.isdigit() or not (start_year <= int(year) <= end_year)
             if to_remove :
                 os.remove(file_path)
@@ -161,7 +190,7 @@ class Backend:
 
         # add papers from the current config
         self._fetch_crossref(journals, start_year, end_year)
-        self._update_papers()
+        self._load_papers()
         print("Journals updated.")
 
     # load papers ----------------------------

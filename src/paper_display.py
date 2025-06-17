@@ -161,12 +161,12 @@ class PaperDisplay(ft.Card):
         self.update()
 
 
-    def update_paper(self, paper=None):
+    def before_update(self):
         """
         Update the display with new paper information.
         """
-        if paper is not None:
-            self.paper = paper
+
+        paper = self.paper
         self.title.value = paper.get("display_name")
         self.link.url = self.paper.get("doi")
         self.alex_link.url = paper.get("id")

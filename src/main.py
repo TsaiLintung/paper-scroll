@@ -14,14 +14,13 @@ class StaredPapers(ft.Column):
         self.horizontal_alignment = ft.CrossAxisAlignment.CENTER
         self.scroll = ft.ScrollMode.AUTO
 
+    # this is called when the page is loaded
     def before_update(self):
 
         self.controls = []
         starred_papers = self.backend.get_starred_papers()
         for paper in starred_papers:
-            self.controls.append(PaperDisplay(self.backend, condensed=True))
-        for i, paper in enumerate(starred_papers):
-            self.controls[i].update_paper(paper)
+            self.controls.append(PaperDisplay(paper, condensed=True))
 
 class MyNavBar(ft.NavigationBar):
 
@@ -73,33 +72,20 @@ def main(page: ft.Page):
 
     # the single backend instance
     data_dir = os.getenv("FLET_APP_STORAGE_DATA")
-
-    # create folders if not exists: ~/data/journals, ~/data/starred
-    for folder in ["journals", "starred"]:
-        path = os.path.join(data_dir, folder)
-        if not os.path.exists(path):
-            os.makedirs(path)
-
     bk = Backend(data_dir)
 
     # Explore view ---------
 
-    def update_random_paper():
-        paper = bk.get_random_paper()
-        main_paper_display.update_paper(paper)
-        page.update()
-
     def on_keyboard(e: ft.KeyboardEvent):
         if e.key == "Enter":
             if nav.selected_index == 0:
-                update_random_paper()
+                explore_view.controls = [PaperDisplay(bk.get_random_paper())]
         page.update()
 
     page.on_keyboard_event = on_keyboard
 
-    main_paper_display = PaperDisplay(bk)
     explore_view = ft.Column(
-        [main_paper_display],
+        [PaperDisplay(bk.get_random_paper())],
         alignment=ft.MainAxisAlignment.CENTER,
         horizontal_alignment=ft.CrossAxisAlignment.CENTER,
     )
@@ -144,7 +130,5 @@ def main(page: ft.Page):
     page.add(main_content)
     page.add(nav)
     page.go("/")
-
-    update_random_paper()
 
 ft.app(main)
