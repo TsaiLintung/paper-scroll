@@ -3,59 +3,67 @@ from paper import Paper
 
 
 class PaperDisplay(ft.Card):
-    """
-    A container for displaying paper information including title, DOI, and abstract.
-    """
-
     def __init__(self, paper: Paper, is_main: bool):
-        super().__init__()
+        super().__init__(
+            elevation=4,
+            color=ft.Colors.SURFACE,
+            surface_tint_color=ft.Colors.SURFACE_TINT,
+            margin=ft.margin.symmetric(horizontal=10, vertical=6),
+            shape=ft.RoundedRectangleBorder(radius=12),
+        )
 
         self.paper = paper
         self.is_main = is_main
 
-        self.title = ft.Text(value="", selectable=True, weight=ft.FontWeight.BOLD)
+        self.title = ft.Text(
+            value="",
+            selectable=True,
+            weight=ft.FontWeight.BOLD
+        )
+
         self.subtitle = ft.Text(
-            value="", selectable=True, font_family="Noto Serif", max_lines=2
+            value="",
+            selectable=True,
+            font_family="Noto Serif",
+            size=14,
+            color=ft.Colors.with_opacity(0.75, ft.Colors.ON_SURFACE),
+            max_lines=2, 
+            overflow=ft.TextOverflow.ELLIPSIS
         )
 
         self.abstract = ft.Text(
             value="",
             selectable=True,
             font_family="Noto Serif",
+            size=14,
             max_lines=8
+        )
+
+        icon_style = ft.ButtonStyle(
+            padding=ft.padding.symmetric(horizontal=6),
+            shape=ft.RoundedRectangleBorder(radius=8),
+            overlay_color=ft.Colors.with_opacity(0.1, ft.Colors.ON_SURFACE),
         )
 
         self.link = ft.IconButton(
             icon=ft.Icons.LINK,
             tooltip="Open DOI",
             url="",
-            style=ft.ButtonStyle(
-                bgcolor=None,
-                alignment=ft.Alignment(-1, 0),  # Left align
-            ),
-            expand=False,
+            style=icon_style,
         )
 
         self.pdf = ft.IconButton(
-            icon=ft.Icons.CLOSE,  # Default to a cross icon
+            icon=ft.Icons.CLOUD_DOWNLOAD,
             tooltip="Download PDF",
             url="",
-            style=ft.ButtonStyle(
-                bgcolor=None,
-                alignment=ft.Alignment(-1, 0),  # Left align
-            ),
-            expand=False,
+            style=icon_style,
         )
 
         self.alex_link = ft.IconButton(
             icon=ft.Icons.WEB_STORIES,
             tooltip="Open OpenAlex",
             url="",
-            style=ft.ButtonStyle(
-                bgcolor=None,
-                alignment=ft.Alignment(-1, 0),  # Left align
-            ),
-            expand=False,
+            style=icon_style,
         )
 
         self.star = ft.IconButton(
@@ -63,53 +71,46 @@ class PaperDisplay(ft.Card):
             selected_icon=ft.Icons.STAR,
             selected=False,
             tooltip="Star this paper",
-            style=ft.ButtonStyle(
-                bgcolor=None,
-                alignment=ft.Alignment(-1, 0),  # Left align
-            ),
-            expand=False,
-            on_click=self._star,
+            style=icon_style,
+            on_click=self._star
         )
 
-        # Condense button
         self.condensed = not is_main
-
-        self.divider1 = ft.Divider()
-        self.divider2 = ft.Divider()
-
         self.basic_buttons = [self.star]
         self.extended_buttons = [self.link, self.pdf, self.alex_link]
 
         self.bottom_row = ft.Row(
-            self.extended_buttons, alignment=ft.MainAxisAlignment.START, wrap=True
+            controls= self.extended_buttons + self.basic_buttons,
+            alignment=ft.MainAxisAlignment.END,
+            #wrap=True,
+            spacing=10
         )
+
         self.side_row = ft.Row([])
+        self.divider1 = ft.Divider(height=10, color=ft.Colors.TRANSPARENT)
+        self.divider2 = ft.Divider(height=10, color=ft.Colors.TRANSPARENT)
 
         self.content = ft.Container(
             content=ft.Column(
                 [
                     ft.Row(
                         [
-                            ft.Column(
-                                [
-                                    self.title,
-                                    self.subtitle,
-                                ],
-                                expand=True,
-                            ),
+                            ft.Column([self.title, self.subtitle], expand=True),
                             self.side_row,
                         ],
-                        alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
-                    ),  # Align row content to the right
+                        alignment=ft.MainAxisAlignment.SPACE_BETWEEN
+                    ),
                     self.divider1,
                     self.abstract,
                     self.divider2,
                     self.bottom_row,
-                ]
+                ],
+                spacing=10
             ),
             padding=15,
-            on_click=self.toggle_condense
+            on_click=self.toggle_condense,
         )
+
 
         if self.condensed:
             self._to_condensed()
@@ -141,7 +142,7 @@ class PaperDisplay(ft.Card):
         self.pdf.visible = True
         self.alex_link.visible = True
 
-        self.bottom_row.controls = self.extended_buttons + self.basic_buttons
+        self.bottom_row.controls = self.extended_buttons + self.basic_buttons 
         self.side_row.controls = []
 
     def toggle_condense(self, e=None):

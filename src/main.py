@@ -31,15 +31,16 @@ class ExploreView(ft.Column):
         refresh = ft.FloatingActionButton(
             icon=ft.Icons.REFRESH,
             tooltip="Get another random paper",
-            on_click=self.get_new_paper
+            on_click=self.get_new_paper,
+            bgcolor=ft.Colors.SURFACE
         )
 
         self.last = ft.FloatingActionButton(
             icon=ft.Icons.CLOSE,
             tooltip="Back to last paper",
-            on_click=self.back_to_last_paper
+            on_click=self.back_to_last_paper,
+            bgcolor=ft.Colors.SURFACE
         )
-
         self.controls = [
             PaperDisplay(self.backend.get_random_paper(), is_main=True),
             ft.Row([self.last, refresh], alignment=ft.MainAxisAlignment.CENTER, spacing=10),
