@@ -13,6 +13,7 @@ DEFAULT_CONFIG = {
     "start_year": 2021,
     "end_year": 2021,
     "text_size": 16,
+    "email": "test@example.com",
     "journals": [
         {"name": "aer", "issn": "0002-8282"}
     ]
@@ -21,7 +22,7 @@ DEFAULT_PAPER = {"DOI": "10.1038/s41586-020-2649-2"}
 
 class Backend:
     """Backend class to handle fetching and processing of journal data from Crossref API."""
-    def __init__(self, data_dir):
+    def __init__(self, data_dir: str):
         self.data_dir = data_dir
         self.starred_dir = os.path.join(self.data_dir, "starred")
         self.journal_dir = os.path.join(self.data_dir, "journals")
@@ -50,7 +51,7 @@ class Backend:
                 json.dump(DEFAULT_CONFIG, f, ensure_ascii=False, indent=2)
             print(f"Created default config at {self.config_path}")
 
-    def update_config(self, field, value):
+    def update_config(self, field: str, value):
         """Update a specific field in the configuration."""
         if field not in self.config:
             print(f"Field '{field}' not found in configuration.")
@@ -60,7 +61,7 @@ class Backend:
             json.dump(self.config, f, ensure_ascii=False, indent=2)
         print("Configuration saved.")
 
-    def add_journal(self, name, issn):
+    def add_journal(self, name: str, issn: str):
         """Add a new journal to the configuration."""
   
         new_journal = {"name": name, "issn": issn}
@@ -68,7 +69,7 @@ class Backend:
         self.update_config("journals", self.config["journals"])
         print(f"Added journal: {name} with ISSN: {issn}")
 
-    def remove_journal(self, issn):
+    def remove_journal(self, issn: str):
         """Remove a journal from the configuration by its ISSN."""
         journals = self.config["journals"]
         for journal in journals:
@@ -126,6 +127,10 @@ class Backend:
         self.message.value = "Fetching journals from Crossref API..."
         self.message.update()
 
+        self.progress_bar.visible = True
+        self.progress_bar.value = 0
+        self.progress_bar.update()
+
         to_fetch = []
         for journal in journals:
             for year in range(start_year, end_year + 1):
@@ -137,8 +142,7 @@ class Backend:
                 else: 
                     to_fetch.append((journal, year, output_path))
 
-        self.progress_bar.visible = True
-        self.progress_bar.value = 0
+        
 
         for journal, year, output_path in to_fetch:
             issn = journal["issn"]
@@ -199,16 +203,21 @@ class Backend:
     def get_random_paper(self): 
         """Get a random paper with valid metadata."""
 
+        start_time = time.time()
+
         valid = False
         while not valid:
             doi = random.choice(self.papers).get("DOI")
-            url = f"https://api.openalex.org/works/https://doi.org/{doi}" # example: https://api.openalex.org/works/W2741809807
+            url = f"https://api.openalex.org/works/https://doi.org/{doi}?mailto:{self.config.get("email")}" # example: https://api.openalex.org/works/W2741809807
             resp = requests.get(url, timeout=10)
             if resp.status_code != 200:
                 print(f"Error fetching data for DOI {doi}: {resp.status_code}")
                 continue
             paper = Paper(resp.json(), self.starred_dir)
             valid = paper.valid
+            print(f"Fetched paper with DOI: {doi}")
+
+        print(f"Time to get random paper: {time.time() - start_time:.2f} seconds")
 
         return paper
     

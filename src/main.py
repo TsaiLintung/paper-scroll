@@ -1,5 +1,9 @@
-import flet as ft
+
 import os
+import time
+
+import flet as ft
+
 from paper_display import PaperDisplay
 from back import Backend
 from settings import Settings
@@ -57,7 +61,6 @@ class ExploreView(ft.Column):
         self.update()
         self.next_paper = self.backend.get_random_paper()
         
-
     def back_to_last_paper(self, e=None):
         if self.last_papers:
             self.controls[0] = PaperDisplay(self.last_papers.pop(), is_main=True)
@@ -120,7 +123,6 @@ def main(page: ft.Page):
             body_medium=ft.TextStyle(size=bk.config.get("text_size"), color =ft.Colors.BLACK),
         )
     )
-
     # Explore view ---------
 
     def on_keyboard(e: ft.KeyboardEvent):
@@ -131,7 +133,6 @@ def main(page: ft.Page):
 
     page.on_keyboard_event = on_keyboard
     explore_view = ExploreView(bk)
-
     # Starred view ---------
 
     starred_papers_column = StaredPapers(bk)
@@ -150,7 +151,6 @@ def main(page: ft.Page):
     )
    
     # Navigation ---------
-
     main_content = ft.Container(content=None, expand=True)
     nav = MyNavBar(page)
 
@@ -172,5 +172,9 @@ def main(page: ft.Page):
     page.add(main_content)
     page.add(nav)
     page.go("/")
+
+    print(f"Time to set up the page: {time.time() - start_time:.2f} seconds")
+
+start_time = time.time()
 
 ft.app(main) #, 
