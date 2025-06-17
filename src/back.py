@@ -5,9 +5,11 @@ import json
 import os
 import random
 import requests
+import threading
 import flet as ft
 
 from paper import Paper
+
 
 DEFAULT_CONFIG = {
     "start_year": 2021,
@@ -35,7 +37,9 @@ class Backend:
         self.config = config
 
         # load papers 
-        self._load_papers()
+        self._load_indexed_papers()
+        self._buffer_thread = None
+        self._paper_buffer = []
 
         # UI components depending on backend state
         self.progress_bar = ft.ProgressBar(value=0, width=400, visible=False)
@@ -191,7 +195,7 @@ class Backend:
 
     # load papers ----------------------------
 
-    def _load_papers(self):
+    def _load_indexed_papers(self):
         """Update the list of papers from the data directory."""
         self.papers = []
         for filename in os.listdir(self.journal_dir):
@@ -210,27 +214,47 @@ class Backend:
         paper = self.last_papers.pop()
         return paper
     
-    def get_random_paper(self): 
-        """Get a random paper with valid metadata."""
-
-        start_time = time.time()
-
-        valid = False
-        while not valid:
+    def _load_random_paper(self):
+        """Fetch a random paper with valid metadata from OpenAlex."""
+        while True:
             doi = random.choice(self.papers).get("DOI")
-            url = f"https://api.openalex.org/works/https://doi.org/{doi}?mailto:{self.config.get("email")}" # example: https://api.openalex.org/works/W2741809807
-            resp = requests.get(url, timeout=10)
-            if resp.status_code != 200:
-                print(f"Error fetching data for DOI {doi}: {resp.status_code}")
+            url = f"https://api.openalex.org/works/https://doi.org/{doi}?mailto:{self.config.get('email')}"
+            try:
+                resp = requests.get(url, timeout=10)
+                if resp.status_code != 200:
+                    print(f"Error fetching data for DOI {doi}: {resp.status_code}")
+                    continue
+                paper = Paper(resp.json(), self.starred_dir)
+                if paper.valid:
+                    print(f"Fetched paper with DOI: {doi}")
+                    return paper
+            except Exception as e:
+                print(f"Exception fetching paper: {e}")
                 continue
-            paper = Paper(resp.json(), self.starred_dir)
-            valid = paper.valid
-            print(f"Fetched paper with DOI: {doi}")
 
-        print(f"Time to get random paper: {time.time() - start_time:.2f} seconds")
+    def _ensure_buffer(self):
+        """Ensure the buffer has at least 5 papers asynchronously."""
+
+        BUFFER_SIZE = 10
+        def buffer_worker():
+            while len(self._paper_buffer) < BUFFER_SIZE:
+                paper = self._load_random_paper()
+                self._paper_buffer.append(paper)
+        if not self._buffer_thread or not self._buffer_thread.is_alive():
+            self._buffer_thread = threading.Thread(target=buffer_worker, daemon=True)
+            self._buffer_thread.start()
+
+    def get_random_paper(self):
+        """Get a random paper from buffer, then refill buffer asynchronously."""
+
+        if not self._paper_buffer:
+            paper = self._load_random_paper()
+            self._paper_buffer.append(paper)    
+        paper = self._paper_buffer.pop(0)
         self.last_papers.append(self.current_paper)
         self.current_paper = paper
-
+        # Start async refill
+        self._ensure_buffer()
         return paper
     
     # handle stars ----------------
