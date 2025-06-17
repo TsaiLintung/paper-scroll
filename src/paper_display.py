@@ -1,4 +1,5 @@
 import flet as ft
+from paper import Paper
 
 
 class PaperDisplay(ft.Card):
@@ -6,11 +7,11 @@ class PaperDisplay(ft.Card):
     A container for displaying paper information including title, DOI, and abstract.
     """
 
-    def __init__(self, paper, condensed=False):
+    def __init__(self, paper: Paper, is_main: bool):
         super().__init__()
 
         self.paper = paper
-        self.persistent = False
+        self.is_main = is_main
 
         self.title = ft.Text(value="", selectable=True, weight=ft.FontWeight.BOLD)
         self.subtitle = ft.Text(
@@ -21,8 +22,7 @@ class PaperDisplay(ft.Card):
             value="",
             selectable=True,
             font_family="Noto Serif",
-            max_lines=8,
-            overflow=ft.TextOverflow.VISIBLE,
+            max_lines=8
         )
 
         self.link = ft.IconButton(
@@ -72,22 +72,12 @@ class PaperDisplay(ft.Card):
         )
 
         # Condense button
-        self.condensed = condensed
-        self.condense_btn = ft.IconButton(
-            icon=None,
-            tooltip=None,
-            on_click=self.toggle_condense,
-            style=ft.ButtonStyle(
-                bgcolor=None,
-                alignment=ft.Alignment(-1, 0),
-            ),
-            expand=False,
-        )
+        self.condensed = not is_main
 
         self.divider1 = ft.Divider()
         self.divider2 = ft.Divider()
 
-        self.basic_buttons = [self.star, self.condense_btn]
+        self.basic_buttons = [self.star]
         self.extended_buttons = [self.link, self.pdf, self.alex_link]
 
         self.bottom_row = ft.Row(
@@ -118,6 +108,7 @@ class PaperDisplay(ft.Card):
                 ]
             ),
             padding=15,
+            on_click=self.toggle_condense
         )
 
         if self.condensed:
@@ -135,8 +126,6 @@ class PaperDisplay(ft.Card):
         self.link.visible = False
         self.pdf.visible = False
         self.alex_link.visible = False
-        self.condense_btn.icon = ft.Icons.UNFOLD_MORE
-        self.condense_btn.tooltip = "Expand"
 
         self.bottom_row.controls = []
         self.side_row.controls = self.basic_buttons
@@ -151,13 +140,13 @@ class PaperDisplay(ft.Card):
         self.link.visible = True
         self.pdf.visible = True
         self.alex_link.visible = True
-        self.condense_btn.icon = ft.Icons.UNFOLD_LESS
-        self.condense_btn.tooltip = "Condense"
 
         self.bottom_row.controls = self.extended_buttons + self.basic_buttons
         self.side_row.controls = []
 
     def toggle_condense(self, e=None):
+        if self.is_main:
+            return
         self.condensed = not self.condensed
         if self.condensed:
             self._to_condensed()
@@ -169,12 +158,11 @@ class PaperDisplay(ft.Card):
         if self.paper.is_starred():
             self.star.selected = False
             self.paper.unstar()
-            if not self.persistent:
+            if not self.is_main:
                 self.visible = False
         else:
             self.star.selected = True
             self.paper.star()
-            self.persistent = True
         self.update()
 
     def before_update(self):

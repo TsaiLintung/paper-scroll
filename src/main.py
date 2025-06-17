@@ -20,7 +20,7 @@ class StaredPapers(ft.Column):
         self.controls = []
         starred_papers = self.backend.get_starred_papers()
         for paper in starred_papers:
-            self.controls.append(PaperDisplay(paper, condensed=True))
+            self.controls.append(PaperDisplay(paper, is_main=False))
 
 class ExploreView(ft.Column):
 
@@ -41,22 +41,25 @@ class ExploreView(ft.Column):
         )
 
         self.controls = [
-            PaperDisplay(self.backend.get_random_paper()),
+            PaperDisplay(self.backend.get_random_paper(), is_main=True),
             ft.Row([self.last, refresh], alignment=ft.MainAxisAlignment.CENTER, spacing=10),
         ]
         self.alignment = ft.MainAxisAlignment.CENTER
         self.horizontal_alignment = ft.CrossAxisAlignment.CENTER
         self.last_papers = []
+        self.next_paper = self.backend.get_random_paper()
 
     def get_new_paper(self, e=None):
         self.last_papers.append(self.controls[0].paper)
         self.last.icon = ft.Icons.ARROW_BACK
-        self.controls[0] = PaperDisplay(self.backend.get_random_paper())
+        self.controls[0] = PaperDisplay(self.next_paper, is_main=True)
         self.update()
+        self.next_paper = self.backend.get_random_paper()
+        
 
     def back_to_last_paper(self, e=None):
         if self.last_papers:
-            self.controls[0] = PaperDisplay(self.last_papers.pop())
+            self.controls[0] = PaperDisplay(self.last_papers.pop(), is_main=True)
             if not self.last_papers:
                 self.last.icon = ft.Icons.CLOSE
         self.update()
@@ -117,10 +120,6 @@ def main(page: ft.Page):
         )
     )
 
-    # the single backend instance
-    
-    
-
     # Explore view ---------
 
     def on_keyboard(e: ft.KeyboardEvent):
@@ -130,7 +129,6 @@ def main(page: ft.Page):
         page.update()
 
     page.on_keyboard_event = on_keyboard
-
     explore_view = ExploreView(bk)
 
     # Starred view ---------
