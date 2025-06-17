@@ -41,6 +41,9 @@ class Backend:
         self.progress_bar = ft.ProgressBar(value=0, width=400, visible=False)
         self.message = ft.Text("")
 
+        self.current_paper = None
+        self.last_papers = []
+
     def _handle_directories(self):
         for path in [self.data_dir, self.starred_dir, self.journal_dir]:
             if not os.path.exists(path):
@@ -50,6 +53,8 @@ class Backend:
             with open(self.config_path, "w", encoding="utf-8") as f:
                 json.dump(DEFAULT_CONFIG, f, ensure_ascii=False, indent=2)
             print(f"Created default config at {self.config_path}")
+
+    # settings management ----------------------------
 
     def update_config(self, field: str, value):
         """Update a specific field in the configuration."""
@@ -79,18 +84,6 @@ class Backend:
                 print(f"Removed journal with ISSN: {issn}")
                 break
         self.update_config("journals", journals)
-
-    def _load_papers(self):
-        """Update the list of papers from the data directory."""
-        self.papers = []
-        for filename in os.listdir(self.journal_dir):
-            file_path = os.path.join(self.journal_dir, filename)
-            with open(file_path, "r", encoding="utf-8") as f:
-                data = json.load(f)
-                self.papers.extend(data.get("items", []))
-
-        if self.papers == []:
-            self.papers.append(DEFAULT_PAPER)
 
     # Fetching works from Crossref API ----------------------------
        
@@ -141,8 +134,6 @@ class Backend:
                     continue
                 else: 
                     to_fetch.append((journal, year, output_path))
-
-        
 
         for journal, year, output_path in to_fetch:
             issn = journal["issn"]
@@ -199,6 +190,25 @@ class Backend:
         print("Journals updated.")
 
     # load papers ----------------------------
+
+    def _load_papers(self):
+        """Update the list of papers from the data directory."""
+        self.papers = []
+        for filename in os.listdir(self.journal_dir):
+            file_path = os.path.join(self.journal_dir, filename)
+            with open(file_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                self.papers.extend(data.get("items", []))
+
+        if self.papers == []:
+            self.papers.append(DEFAULT_PAPER)
+
+    def get_last_paper(self):
+        """Get and pop the last paper from the last_papers list."""
+        if not self.last_papers:
+            return None
+        paper = self.last_papers.pop()
+        return paper
     
     def get_random_paper(self): 
         """Get a random paper with valid metadata."""
@@ -218,8 +228,12 @@ class Backend:
             print(f"Fetched paper with DOI: {doi}")
 
         print(f"Time to get random paper: {time.time() - start_time:.2f} seconds")
+        self.last_papers.append(self.current_paper)
+        self.current_paper = paper
 
         return paper
+    
+    # handle stars ----------------
     
     def get_starred_papers(self):
 

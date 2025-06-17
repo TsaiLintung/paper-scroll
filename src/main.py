@@ -43,7 +43,8 @@ class ExploreView(ft.Column):
             icon=ft.Icons.CLOSE,
             tooltip="Back to last paper",
             on_click=self.back_to_last_paper,
-            bgcolor=ft.Colors.SURFACE
+            bgcolor=ft.Colors.SURFACE, 
+            disabled=True
         )
         self.controls = [
             PaperDisplay(self.backend.get_random_paper(), is_main=True),
@@ -51,21 +52,20 @@ class ExploreView(ft.Column):
         ]
         self.alignment = ft.MainAxisAlignment.CENTER
         self.horizontal_alignment = ft.CrossAxisAlignment.CENTER
-        self.last_papers = []
-        self.next_paper = self.backend.get_random_paper()
 
     def get_new_paper(self, e=None):
-        self.last_papers.append(self.controls[0].paper)
+        self.controls[0] = PaperDisplay(self.backend.get_random_paper(), is_main=True)
         self.last.icon = ft.Icons.ARROW_BACK
-        self.controls[0] = PaperDisplay(self.next_paper, is_main=True)
+        self.last.disabled = False
         self.update()
-        self.next_paper = self.backend.get_random_paper()
         
     def back_to_last_paper(self, e=None):
-        if self.last_papers:
-            self.controls[0] = PaperDisplay(self.last_papers.pop(), is_main=True)
-            if not self.last_papers:
-                self.last.icon = ft.Icons.CLOSE
+        last_paper = self.backend.get_last_paper()
+        if last_paper:
+            self.controls[0] = PaperDisplay(last_paper, is_main=True)
+        else: 
+            self.last.icon = ft.Icons.CLOSE
+            self.last.disabled = True
         self.update()
 
 
