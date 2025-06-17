@@ -69,8 +69,6 @@ class ExploreView(ft.Column):
             self.last.disabled = True
         self.update()
 
-
-
 class MyNavBar(ft.NavigationBar):
 
     def __init__(self, page):
@@ -140,15 +138,15 @@ def main(page: ft.Page):
         bk.export_starred_to_zetero()
 
     zotero_button = ft.FloatingActionButton(
-        icon=ft.Icons.BOOKMARK,
-        tooltip="Zotero",
+        icon=ft.Icons.ARCHIVE,
+        tooltip="Export to Zotero",
         bgcolor=ft.Colors.SURFACE, 
         on_click=zotero_event
     )
 
     starred_papers_column = StaredPapers(bk)
     starred_view = ft.Container(
-        content=ft.Column([zotero_button, starred_papers_column]),
+        content=ft.Column([ft.Row([zotero_button], alignment = ft.MainAxisAlignment.CENTER), starred_papers_column]),
         alignment=ft.alignment.center,
         expand=True
     )
