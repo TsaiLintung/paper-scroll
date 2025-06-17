@@ -1,9 +1,9 @@
 import flet as ft
 from paper import Paper
-
+from back import Backend 
 
 class PaperDisplay(ft.Card):
-    def __init__(self, paper: Paper, is_main: bool):
+    def __init__(self, backend: Backend, paper: Paper, is_main: bool):
         super().__init__(
             elevation=4,
             color=ft.Colors.SURFACE,
@@ -12,6 +12,7 @@ class PaperDisplay(ft.Card):
             shape=ft.RoundedRectangleBorder(radius=12),
         )
 
+        self.backend = backend
         self.paper = paper
         self.is_main = is_main
 
@@ -156,14 +157,14 @@ class PaperDisplay(ft.Card):
         self.update()
 
     def _star(self, e=None):
-        if self.paper.is_starred():
+        if self.backend.is_starred(self.paper):
             self.star.selected = False
-            self.paper.unstar()
+            self.backend.unstar(self.paper)
             if not self.is_main:
                 self.visible = False
         else:
             self.star.selected = True
-            self.paper.star()
+            self.backend.star(self.paper)
         self.update()
 
     def before_update(self):
@@ -178,7 +179,7 @@ class PaperDisplay(ft.Card):
         self.abstract.value = paper.get("abstract")
         self.subtitle.value = paper.get("subtitle")
 
-        self.star.selected = self.paper.is_starred()
+        self.star.selected = self.backend.is_starred(self.paper)
 
         if paper.get("open_access").get("is_oa", False):
             self.pdf.icon = ft.Icons.DOWNLOAD

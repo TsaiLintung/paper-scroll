@@ -4,8 +4,9 @@ import time
 import json
 import os
 import random
-import requests
 import threading
+
+import requests
 import flet as ft
 
 from paper import Paper
@@ -190,7 +191,7 @@ class Backend:
 
         # add papers from the current config
         self._fetch_crossref(journals, start_year, end_year)
-        self._load_papers()
+        self._load_indexed_papers()
         print("Journals updated.")
 
     # load papers ----------------------------
@@ -218,20 +219,21 @@ class Backend:
         """Fetch a random paper with valid metadata from OpenAlex."""
         while True:
             doi = random.choice(self.papers).get("DOI")
-            url = f"https://api.openalex.org/works/https://doi.org/{doi}?mailto:{self.config.get('email')}"
+            url = f"https://api.openalex.org/works/https://doi.org/{doi}?mailto={self.config.get('email')}" #https://api.openalex.org/works/W2741809807
             try:
-                resp = requests.get(url, timeout=10)
+                resp = requests.get(url, timeout=100)
+                time.sleep(1)  # be polite to the API
                 if resp.status_code != 200:
                     print(f"Error fetching data for DOI {doi}: {resp.status_code}")
                     continue
-                paper = Paper(resp.json(), self.starred_dir)
+                paper = Paper(resp.json())
                 if paper.valid:
                     print(f"Fetched paper with DOI: {doi}")
                     return paper
             except Exception as e:
                 print(f"Exception fetching paper: {e}")
                 continue
-
+            
     def _ensure_buffer(self):
         """Ensure the buffer has at least 5 papers asynchronously."""
 
@@ -258,6 +260,11 @@ class Backend:
         return paper
     
     # handle stars ----------------
+
+    def get_paper_star_dir(self, paper: Paper):
+        """Get the directory path for a starred paper."""
+        doi = paper.get("doi").replace("/", "_")
+        return os.path.join(self.starred_dir, f"{doi}.json")
     
     def get_starred_papers(self):
 
@@ -272,5 +279,28 @@ class Backend:
             output_path = os.path.join(self.starred_dir, doi_filename)
             with open(output_path, "r", encoding="utf-8") as f:
                 data = json.load(f)
-                starred_papers.append(Paper(data, self.starred_dir))
+                starred_papers.append(Paper(data))
         return starred_papers
+    
+    def is_starred(self, paper: Paper):
+        """Check if a paper is starred by checking if its file exists."""
+        return os.path.exists(self.get_paper_star_dir(paper))
+      
+    def star(self, paper: Paper):
+        """Star a paper by adding it to the history."""
+        paper_dir = self.get_paper_star_dir(paper)
+        if not self.is_starred(paper):
+            with open(paper_dir, "w", encoding="utf-8") as f:
+                json.dump(paper.data, f, ensure_ascii=False, indent=2)
+            print(f"Starred paper with dir: {paper_dir}")
+        else:
+            print(f"Paper with dir: {paper_dir} is already starred.")
+
+    def unstar(self, paper: Paper):
+        """Unstar a paper by removing it from the history."""
+        dir = self.get_paper_star_dir(paper)
+        if self.is_starred(paper):
+            os.remove(dir)
+            print(f"Unstarred paper with dir: {dir}")
+        else:
+            print(f"Paper with DOI: {dir} is not starred.")

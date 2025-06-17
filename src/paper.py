@@ -2,39 +2,15 @@ import os
 import json
 
 class Paper:
-    def __init__(self, data, parent_dir):
+    def __init__(self, data):
         self.data = data
         self.doi = data.get("doi", "")
         self.data["abstract"] = self._get_abstract()
         self.data["subtitle"] = self._get_subtitle()
         self.valid = bool(self.data.get("abstract")) and bool(self.data.get("authorships"))
 
-        doi_filename = f"{self.doi.replace('/', '_')}.json"
-        self.dir = os.path.join(parent_dir, doi_filename)
-
     def get(self, key):
         return self.data.get(key, "Not Available")
-    
-    def is_starred(self):
-        return os.path.exists(self.dir)
-    
-    def star(self):
-        """Star a paper by adding it to the history."""
-        doi = self.get("doi")
-        if not self.is_starred():
-            with open(self.dir, "w", encoding="utf-8") as f:
-                json.dump(self.data, f, ensure_ascii=False, indent=2)
-            print(f"Starred paper with DOI: {doi}")
-        else:
-            print(f"Paper with DOI: {doi} is already starred.")
-
-    def unstar(self):
-        """Unstar a paper by removing it from the history."""
-        if self.is_starred():
-            os.remove(self.dir)
-            print(f"Unstarred paper with DOI: {self.doi}")
-        else:
-            print(f"Paper with DOI: {self.doi} is not starred.")
    
     def _get_subtitle(self):
         year = self.get("publication_year")

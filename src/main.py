@@ -10,7 +10,7 @@ from settings import Settings
 
 class StaredPapers(ft.Column):
 
-    def __init__(self, backend):
+    def __init__(self, backend: Backend):
         super().__init__()
         self.backend = backend
         self.controls = []
@@ -24,11 +24,11 @@ class StaredPapers(ft.Column):
         self.controls = []
         starred_papers = self.backend.get_starred_papers()
         for paper in starred_papers:
-            self.controls.append(PaperDisplay(paper, is_main=False))
+            self.controls.append(PaperDisplay(self.backend, paper, is_main=False))
 
 class ExploreView(ft.Column):
 
-    def __init__(self, backend):
+    def __init__(self, backend: Backend):
         super().__init__()
         self.backend = backend
 
@@ -47,14 +47,14 @@ class ExploreView(ft.Column):
             disabled=True
         )
         self.controls = [
-            PaperDisplay(self.backend.get_random_paper(), is_main=True),
+            PaperDisplay(self.backend, self.backend.get_random_paper(), is_main=True),
             ft.Row([self.last, refresh], alignment=ft.MainAxisAlignment.CENTER, spacing=10),
         ]
         self.alignment = ft.MainAxisAlignment.CENTER
         self.horizontal_alignment = ft.CrossAxisAlignment.CENTER
 
     def get_new_paper(self, e=None):
-        self.controls[0] = PaperDisplay(self.backend.get_random_paper(), is_main=True)
+        self.controls[0] = PaperDisplay(self.backend, self.backend.get_random_paper(), is_main=True)
         self.last.icon = ft.Icons.ARROW_BACK
         self.last.disabled = False
         self.update()
@@ -62,7 +62,7 @@ class ExploreView(ft.Column):
     def back_to_last_paper(self, e=None):
         last_paper = self.backend.get_last_paper()
         if last_paper:
-            self.controls[0] = PaperDisplay(last_paper, is_main=True)
+            self.controls[0] = PaperDisplay(self.backend, last_paper, is_main=True)
         else: 
             self.last.icon = ft.Icons.CLOSE
             self.last.disabled = True
@@ -96,7 +96,7 @@ class MyNavBar(ft.NavigationBar):
         self.on_change = self._nav_change
         self.selected_index = 0
 
-    def _nav_change(self, e):
+    def _nav_change(self, e: ft.ControlEvent):
         if e.control.selected_index == 0:
             self.page.go("/")
         elif e.control.selected_index == 1:
