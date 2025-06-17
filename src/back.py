@@ -8,6 +8,7 @@ import threading
 
 import requests
 import flet as ft
+from pyzotero import zotero
 
 from paper import Paper
 
@@ -17,6 +18,8 @@ DEFAULT_CONFIG = {
     "end_year": 2021,
     "text_size": 16,
     "email": "test@example.com",
+    "zotero_key": "",
+    "zotero_id": "",
     "journals": [
         {"name": "aer", "issn": "0002-8282"}
     ]
@@ -48,6 +51,12 @@ class Backend:
 
         self.current_paper = None
         self.last_papers = []
+
+        # setup Zotero Client
+        library_id = self.config.get("zotero_id")
+        api_key = self.config.get("zotero_key")
+        self.zot = zotero.Zotero(library_id, "user", api_key) # local=True for read access to local Zotero
+
 
     def _handle_directories(self):
         for path in [self.data_dir, self.starred_dir, self.journal_dir]:
@@ -249,7 +258,7 @@ class Backend:
     def get_random_paper(self):
         """Get a random paper from buffer, then refill buffer asynchronously."""
 
-        if not self._paper_buffer:
+        """if not self._paper_buffer:
             paper = self._load_random_paper()
             self._paper_buffer.append(paper)    
         paper = self._paper_buffer.pop(0)
@@ -257,7 +266,8 @@ class Backend:
         self.current_paper = paper
         # Start async refill
         self._ensure_buffer()
-        return paper
+        return paper"""
+        return self.get_starred_papers()[0]
     
     # handle stars ----------------
 
@@ -304,3 +314,47 @@ class Backend:
             print(f"Unstarred paper with dir: {dir}")
         else:
             print(f"Paper with DOI: {dir} is not starred.")
+
+    def export_starred_to_zetero(self):
+        for paper in self.get_starred_papers():
+            template = self.zot.item_template('journalArticle')
+            # Populate Zotero template fields from paper data
+            template['title'] = paper.get("title", "")
+            template['abstractNote'] = paper.get("abstract", "")
+            template['publicationTitle'] = (
+                paper.get("primary_location", {}).get("source", {}).get("display_name", "")
+            )
+            template['volume'] = paper.get("biblio", {}).get("volume", "")
+            template['issue'] = paper.get("biblio", {}).get("issue", "")
+            first_page = paper.get("biblio", {}).get("first_page", "")
+            last_page = paper.get("biblio", {}).get("last_page", "")
+            template['pages'] = f"{first_page}-{last_page}" if first_page and last_page else first_page or ""
+            template['date'] = paper.get("publication_date", "")
+            template['journalAbbreviation'] = (
+                paper.get("primary_location", {}).get("source", {}).get("display_name", "")
+            )
+            template['language'] = paper.get("language", "")
+            template['DOI'] = paper.get("doi", "").replace("https://doi.org/", "")
+            issns = paper.get("primary_location", {}).get("source", {}).get("issn", [])
+            template['ISSN'] = issns[0] if issns else ""
+            template['url'] = paper.get("primary_location", {}).get("landing_page_url", "")
+            # Creators (authors)
+            template['creators'] = []
+            for author in paper.get("authorships", []):
+                name = author.get("author", {}).get("display_name", "")
+                if name:
+                    parts = name.split(" ", 1)
+                    first = parts[0]
+                    last = parts[1] if len(parts) > 1 else ""
+                    template['creators'].append({
+                        "creatorType": "author",
+                        "firstName": first,
+                        "lastName": last
+                    })
+            # Save to Zotero
+            try:
+                resp = self.zot.create_items([template])
+                print(f"Exported paper '{paper.get('title', '')}' to Zotero")
+            except Exception as e:
+                print(f"Error exporting paper '{paper.get('title', '')}' to Zotero: {e}")
+            

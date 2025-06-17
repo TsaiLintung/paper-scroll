@@ -71,6 +71,40 @@ class Settings(ft.Column):
             shape=ft.RoundedRectangleBorder(radius=12),
         )
 
+        # text fields for font size and email
+
+
+
+        class ConfigField(ft.TextField):
+            def __init__(self, backend: Backend, field: str):
+                super().__init__(
+                    label=field.replace("_", " ").title(),
+                    value=backend.config.get(field),
+                    width=200,
+                    on_submit=self.submit_field,
+                )
+                self.error_text = None
+                self.field = field
+                self.backend = backend
+            
+            def submit_field(self, e: ft.ControlEvent):
+                self.backend.update_config(self.field, e.control.value)
+
+        text_fields = ["text_size", "email", "zotero_id", "zotero_key"]
+        text_fields_row = []
+        for field in text_fields:
+            text_fields_row.append(
+                ConfigField(
+                    backend=self.backend,
+                    field=field
+                )
+            )
+
+        self.other_fields = ft.Row(
+            text_fields_row,
+            wrap=True
+        )
+
         self.controls = [
             ft.Card(
                 **card_style,
@@ -104,27 +138,12 @@ class Settings(ft.Column):
                 content=ft.Container(
                     padding=20,
                     content=ft.Column(
-                        controls=[
-                            ft.Text("Other", weight=ft.FontWeight.BOLD, size=16),
-                            ft.TextField(
-                                label="Font size",
-                                value=self.backend.config.get("text_size"),
-                                max_length=2,
-                                width=150,
-                                on_submit=lambda e: self.backend.update_config(
-                                    "text_size", e.control.value
-                                ),
-                            ),
-                            ft.TextField(
-                                label="Email",
-                                value=self.backend.config.get("email"),
-                                on_submit=lambda e: self.backend.update_config(
-                                    "email", e.control.value
-                                ),
-                            ),
-                        ],
-                        spacing=16,
-                    ),
+                        [
+                            ft.Row([ft.Text("Other", weight=ft.FontWeight.BOLD, size=16)], alignment=ft.MainAxisAlignment.START), 
+                            self.other_fields
+                        ], 
+                        spacing=16
+                    )
                 ),
             ),
         ]

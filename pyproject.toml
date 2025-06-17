@@ -9,7 +9,8 @@ authors = [
 ]
 dependencies = [
   "flet==0.28.3",
-  "requests (>=2.32.4,<3.0.0)"
+  "requests (>=2.32.4,<3.0.0)",
+  "pyzotero (>=1.6.11,<2.0.0)"
 ]
 
 [tool.flet]

@@ -9,8 +9,9 @@ class Paper:
         self.data["subtitle"] = self._get_subtitle()
         self.valid = bool(self.data.get("abstract")) and bool(self.data.get("authorships"))
 
-    def get(self, key):
-        return self.data.get(key, "Not Available")
+    def get(self, key, default=None):
+        """Get a value from the paper data, returning default if not found."""
+        return self.data.get(key, default)
    
     def _get_subtitle(self):
         year = self.get("publication_year")

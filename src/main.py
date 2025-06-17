@@ -4,6 +4,7 @@ import time
 
 import flet as ft
 
+
 from paper_display import PaperDisplay
 from back import Backend
 from settings import Settings
@@ -135,11 +136,21 @@ def main(page: ft.Page):
     explore_view = ExploreView(bk)
     # Starred view ---------
 
+    def zotero_event(e: ft.ControlEvent):
+        bk.export_starred_to_zetero()
+
+    zotero_button = ft.FloatingActionButton(
+        icon=ft.Icons.BOOKMARK,
+        tooltip="Zotero",
+        bgcolor=ft.Colors.SURFACE, 
+        on_click=zotero_event
+    )
+
     starred_papers_column = StaredPapers(bk)
     starred_view = ft.Container(
-        content=starred_papers_column,
+        content=ft.Column([zotero_button, starred_papers_column]),
         alignment=ft.alignment.center,
-        expand=True,
+        expand=True
     )
 
     # settings view
