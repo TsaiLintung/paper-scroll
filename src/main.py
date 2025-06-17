@@ -22,6 +22,47 @@ class StaredPapers(ft.Column):
         for paper in starred_papers:
             self.controls.append(PaperDisplay(paper, condensed=True))
 
+class ExploreView(ft.Column):
+
+    def __init__(self, backend):
+        super().__init__()
+        self.backend = backend
+
+        refresh = ft.FloatingActionButton(
+            icon=ft.Icons.REFRESH,
+            tooltip="Get another random paper",
+            on_click=self.get_new_paper
+        )
+
+        self.last = ft.FloatingActionButton(
+            icon=ft.Icons.CLOSE,
+            tooltip="Back to last paper",
+            on_click=self.back_to_last_paper
+        )
+
+        self.controls = [
+            PaperDisplay(self.backend.get_random_paper()),
+            ft.Row([self.last, refresh], alignment=ft.MainAxisAlignment.CENTER, spacing=10),
+        ]
+        self.alignment = ft.MainAxisAlignment.CENTER
+        self.horizontal_alignment = ft.CrossAxisAlignment.CENTER
+        self.last_papers = []
+
+    def get_new_paper(self, e=None):
+        self.last_papers.append(self.controls[0].paper)
+        self.last.icon = ft.Icons.ARROW_BACK
+        self.controls[0] = PaperDisplay(self.backend.get_random_paper())
+        self.update()
+
+    def back_to_last_paper(self, e=None):
+        if self.last_papers:
+            self.controls[0] = PaperDisplay(self.last_papers.pop())
+            if not self.last_papers:
+                self.last.icon = ft.Icons.CLOSE
+        self.update()
+
+
+
 class MyNavBar(ft.NavigationBar):
 
     def __init__(self, page):
@@ -59,6 +100,9 @@ class MyNavBar(ft.NavigationBar):
 
 def main(page: ft.Page):
 
+    data_dir = os.getenv("FLET_APP_STORAGE_DATA")
+    bk = Backend(data_dir)
+
     # Set up the page
     page.title = "paperscroll"
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
@@ -68,27 +112,26 @@ def main(page: ft.Page):
         font_family="Noto Sans",
         color_scheme_seed=ft.Colors.RED,
         use_material3=True,
+        text_theme = ft.TextTheme(
+            body_medium=ft.TextStyle(size=bk.config.get("text_size"), color =ft.Colors.BLACK),
+        )
     )
 
     # the single backend instance
-    data_dir = os.getenv("FLET_APP_STORAGE_DATA")
-    bk = Backend(data_dir)
+    
+    
 
     # Explore view ---------
 
     def on_keyboard(e: ft.KeyboardEvent):
         if e.key == "Enter":
             if nav.selected_index == 0:
-                explore_view.controls = [PaperDisplay(bk.get_random_paper())]
+                explore_view.get_new_paper()
         page.update()
 
     page.on_keyboard_event = on_keyboard
 
-    explore_view = ft.Column(
-        [PaperDisplay(bk.get_random_paper())],
-        alignment=ft.MainAxisAlignment.CENTER,
-        horizontal_alignment=ft.CrossAxisAlignment.CENTER,
-    )
+    explore_view = ExploreView(bk)
 
     # Starred view ---------
 
@@ -131,4 +174,4 @@ def main(page: ft.Page):
     page.add(nav)
     page.go("/")
 
-ft.app(main)
+ft.app(main) #, 

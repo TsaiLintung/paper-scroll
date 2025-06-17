@@ -56,12 +56,39 @@ class Settings(ft.Column):
                             self.journals_row,
                             add_journal,
                             ft.Divider(),
-                            ft.Row([update, ft.Column([self.backend.message,self.backend.progress_bar])])
+                            ft.Row(
+                                [
+                                    update,
+                                    ft.Column(
+                                        [
+                                            self.backend.message,
+                                            self.backend.progress_bar,
+                                        ]
+                                    ),
+                                ]
+                            ),
                         ]
                     ),
                     padding=15,
                 )
-            )
+            ),
+            ft.Card(
+                ft.Container(
+                    ft.Column(
+                        [
+                            ft.Text("Appearance", weight=ft.FontWeight.BOLD),
+                            ft.TextField(
+                                label="Font size",
+                                value=self.backend.config.get("text_size"),
+                                max_length=2,
+                                width=150,
+                                on_submit=lambda e: self.backend.update_config("text_size", e.control.value),
+                            )
+                        ]
+                    ), 
+                    padding=15
+                )
+            ),
         ]
 
         self.alignment = ft.MainAxisAlignment.START
@@ -98,10 +125,7 @@ class Settings(ft.Column):
         journal_name = e.control.parent.controls[0].value.strip()
         issn = e.control.parent.controls[1].value.strip()
 
-        if (not issn
-            or not issn.replace("-", "").isdigit()
-            or len(issn) not in [8, 9]
-        ):
+        if not issn or not issn.replace("-", "").isdigit() or len(issn) not in [8, 9]:
             e.control.parent.controls[1].error_text = "Invalid"
             self.update()
             return
@@ -109,7 +133,7 @@ class Settings(ft.Column):
             e.control.parent.controls[0].error_text = "Can't be empty"
             self.update()
             return
-        
+
         # Check if the journal already exists
         if issn in [j["issn"] for j in self.backend.config["journals"]]:
             e.control.parent.controls[1].error_text = "Duplicated"
@@ -120,7 +144,7 @@ class Settings(ft.Column):
             e.control.parent.controls[0].error_text = "Duplicated"
             self.update()
             return
-        
+
         e.control.error_text = None
         self.backend.add_journal(journal_name, issn)
         self.journals_row.controls = self.get_journal_chip_row()

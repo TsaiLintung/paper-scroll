@@ -12,6 +12,7 @@ from paper import Paper
 DEFAULT_CONFIG = {
     "start_year": 2021,
     "end_year": 2021,
+    "text_size": 16,
     "journals": [
         {"name": "aer", "issn": "0002-8282"}
     ]

@@ -14,8 +14,9 @@ class PaperDisplay(ft.Card):
 
         self.title = ft.Text(value="", selectable=True, weight=ft.FontWeight.BOLD)
         self.subtitle = ft.Text(
-            value="", selectable=True, font_family="Noto Serif", 
-            max_lines=2)
+            value="", selectable=True, font_family="Noto Serif", max_lines=2
+        )
+
         self.abstract = ft.Text(
             value="",
             selectable=True,
@@ -77,26 +78,36 @@ class PaperDisplay(ft.Card):
             tooltip=None,
             on_click=self.toggle_condense,
             style=ft.ButtonStyle(
-            bgcolor=None,
-            alignment=ft.Alignment(-1, 0),
+                bgcolor=None,
+                alignment=ft.Alignment(-1, 0),
             ),
-            expand=False
+            expand=False,
         )
-        
+
         self.divider1 = ft.Divider()
         self.divider2 = ft.Divider()
+
+        self.basic_buttons = [self.star, self.condense_btn]
+        self.extended_buttons = [self.link, self.pdf, self.alex_link]
+
         self.bottom_row = ft.Row(
-            [self.link, self.pdf, self.alex_link],
-            alignment=ft.MainAxisAlignment.START,
+            self.extended_buttons, alignment=ft.MainAxisAlignment.START, wrap=True
         )
+        self.side_row = ft.Row([])
 
         self.content = ft.Container(
             content=ft.Column(
                 [
                     ft.Row(
                         [
-                            ft.Column([self.title, self.subtitle], expand=True),
-                            ft.Row([self.star,self.condense_btn]),
+                            ft.Column(
+                                [
+                                    self.title,
+                                    self.subtitle,
+                                ],
+                                expand=True,
+                            ),
+                            self.side_row,
                         ],
                         alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
                     ),  # Align row content to the right
@@ -127,6 +138,9 @@ class PaperDisplay(ft.Card):
         self.condense_btn.icon = ft.Icons.UNFOLD_MORE
         self.condense_btn.tooltip = "Expand"
 
+        self.bottom_row.controls = []
+        self.side_row.controls = self.basic_buttons
+
     def _to_expanded(self):
         """
         Convert the display to an expanded view.
@@ -139,6 +153,9 @@ class PaperDisplay(ft.Card):
         self.alex_link.visible = True
         self.condense_btn.icon = ft.Icons.UNFOLD_LESS
         self.condense_btn.tooltip = "Condense"
+
+        self.bottom_row.controls = self.extended_buttons + self.basic_buttons
+        self.side_row.controls = []
 
     def toggle_condense(self, e=None):
         self.condensed = not self.condensed
@@ -157,9 +174,8 @@ class PaperDisplay(ft.Card):
         else:
             self.star.selected = True
             self.paper.star()
-            self.persistent = True  
+            self.persistent = True
         self.update()
-
 
     def before_update(self):
         """
@@ -181,4 +197,3 @@ class PaperDisplay(ft.Card):
         else:
             self.pdf.icon = ft.Icons.CLOSE
             self.pdf.url = ""
-
