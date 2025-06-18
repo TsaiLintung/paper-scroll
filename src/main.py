@@ -52,10 +52,9 @@ class ExploreView(ft.Stack):
             ft.Column([PaperDisplay(self.backend, self.backend.get_random_paper(), is_main=True)], alignment = ft.MainAxisAlignment.CENTER),
             self.navs
         ]
-        
 
     def get_new_paper(self, e=None):
-        self.controls[0][0] = PaperDisplay(self.backend, self.backend.get_random_paper(), is_main=True)
+        self.controls[0].controls[0] = PaperDisplay(self.backend, self.backend.get_random_paper(), is_main=True)
         self.last.icon = ft.Icons.ARROW_BACK
         self.last.disabled = False
         self.update()
@@ -63,7 +62,7 @@ class ExploreView(ft.Stack):
     def back_to_last_paper(self, e=None):
         last_paper = self.backend.get_last_paper()
         if last_paper:
-            self.controls[0] = PaperDisplay(self.backend, last_paper, is_main=True)
+            self.controls[0].controls[0] = PaperDisplay(self.backend, last_paper, is_main=True)
         else: 
             self.last.icon = ft.Icons.CLOSE
             self.last.disabled = True
