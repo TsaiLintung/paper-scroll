@@ -2,20 +2,18 @@ import flet as ft
 from src.back import Backend
 
 
-class AddJournal(ft.Row): 
+class AddJournal(ft.Row):
     def __init__(self, backend: Backend, call_submit_journal):
-        super().__init__(wrap = True, spacing=12)
+        super().__init__(wrap=True, spacing=12)
 
         self.backend = backend
         self.call_submit_journal = call_submit_journal
 
         self.journal_name_field = ft.TextField(
-            label="Journal Name", value="", max_length=10, width = 150
+            label="Journal Name", value="", max_length=10, width=150
         )
 
-        self.issn_field = ft.TextField(
-            label="ISSN", value="", max_length=9, width = 150
-        )
+        self.issn_field = ft.TextField(label="ISSN", value="", max_length=9, width=150)
 
         self.controls = [
             self.journal_name_field,
@@ -57,8 +55,8 @@ class AddJournal(ft.Row):
 
         e.control.error_text = None
         self.call_submit_journal(journal_name, issn)
-   
-        
+
+
 class ConfigField(ft.TextField):
     def __init__(self, backend: Backend, field: str):
         super().__init__(
@@ -70,9 +68,10 @@ class ConfigField(ft.TextField):
         self.error_text = None
         self.field = field
         self.backend = backend
-    
+
     def submit_field(self, e: ft.ControlEvent):
         self.backend.update_config(self.field, e.control.value)
+
 
 class Settings(ft.Column):
     def __init__(self, backend: Backend):
@@ -105,85 +104,49 @@ class Settings(ft.Column):
             on_submit=lambda e: self.submit_year(e, "end_year"),
             **textfield_style,
         )
-        year_range = ft.Row(
-            [start_year, end_year], wrap=True, spacing=12
-        )
+        year_range = ft.Row([start_year, end_year], wrap=True, spacing=12)
 
         # Add journal fields
-        
+
         add_journal = AddJournal(backend, self.submit_journal)
 
         self.journals_row = ft.Row(self.get_journal_chip_row(), wrap=True, spacing=8)
 
-        card_style = dict(
-            elevation=2,
-            color=ft.Colors.SURFACE,
-            surface_tint_color=ft.Colors.SURFACE_TINT,
-            shape=ft.RoundedRectangleBorder(radius=12),
-        )
-
         text_fields = ["text_size", "email", "zotero_id", "zotero_key"]
         text_fields_row = []
         for field in text_fields:
-            text_fields_row.append(
-                ConfigField(
-                    backend=self.backend,
-                    field=field
-                )
-            )
+            text_fields_row.append(ConfigField(backend=self.backend, field=field))
 
-        self.other_fields = ft.Row(
-            text_fields_row,
-            wrap=True
-        )
+        self.other_fields = ft.Row(text_fields_row, wrap=True)
 
         self.controls = [
-            ft.Card(
-                **card_style,
-                content=ft.Container(
-                    padding=20,
-                    content=ft.Column(
-                        controls=[
-                            ft.Text("Papers", theme_style=ft.TextThemeStyle.TITLE_MEDIUM),
-                            year_range,
-                            add_journal,
-                            self.journals_row,
-                            ft.Row(
-                                [
-                                    update,
-                                    ft.Column(
-                                        [
-                                            self.backend.message,
-                                            self.backend.progress_bar,
-                                        ]
-                                    ),
-                                ],
-                                alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
-                            ),
-                        ],
-                        spacing=16,
-                    ),
-                ),
-            ),
-            ft.Card(
-                **card_style,
-                content=ft.Container(
-                    padding=20,
-                    content=ft.Column(
+            ft.Text("Papers", theme_style=ft.TextThemeStyle.TITLE_MEDIUM),
+            year_range,
+            add_journal,
+            self.journals_row,
+            ft.Row(
+                [
+                    update,
+                    ft.Column(
                         [
-                            ft.Row([ft.Text("Other", theme_style=ft.TextThemeStyle.TITLE_MEDIUM)], alignment=ft.MainAxisAlignment.START), 
-                            self.other_fields
-                        ], 
-                        spacing=16
-                    )
-                ),
+                            self.backend.message,
+                            self.backend.progress_bar,
+                        ]
+                    ),
+                ],
+                alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
             ),
+            ft.Divider(
+                height=1, color=ft.Colors.with_opacity(0.1, ft.Colors.ON_SURFACE)
+            ),
+            ft.Text("Other", theme_style=ft.TextThemeStyle.TITLE_MEDIUM),
+            self.other_fields,
         ]
 
         self.alignment = ft.MainAxisAlignment.START
         self.horizontal_alignment = ft.CrossAxisAlignment.START
         self.scroll = ft.ScrollMode.AUTO
-        self.spacing = 20
+        self.spacing = 10
 
     def submit_journal(self, journal_name: str, issn: str):
         self.backend.add_journal(journal_name, issn)
@@ -213,8 +176,6 @@ class Settings(ft.Column):
         self.update()
         e.control.value = int(e.control.value)  # ensure integer format
         self.backend.update_config(field, e.control.value)
-
-    
 
     def remove_journal(self, issn: str):
         self.backend.remove_journal(issn)

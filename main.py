@@ -7,7 +7,7 @@ import time
 
 import flet as ft
 
-PAGE_PADDING = ft.padding.only(left=10, right=10, top=10, bottom=10)
+PAGE_PADDING = ft.padding.only(left=10, right=10, top=0, bottom=0)
 
 class StaredPapers(ft.Column):
 
@@ -28,11 +28,13 @@ class StaredPapers(ft.Column):
             paper_display = PaperDisplay(paper, True, self.backend.on_star_change)
             paper_display.to_condensed()
             self.controls.append(paper_display)
+            self.controls.append(ft.Divider(height=1, color=ft.Colors.with_opacity(0.1, ft.Colors.ON_SURFACE)))
 
 class ExploreView(ft.Container):
 
     def __init__(self, backend: Backend):
         super().__init__()
+        self.bgcolor = ft.Colors.TRANSPARENT
         self.backend = backend
 
         self.current_index = 0
@@ -56,6 +58,7 @@ class ExploreView(ft.Container):
         for _ in range(3):
             paper = self.backend.get_random_paper()
             self.paper_scroll.controls.append(PaperDisplay(paper, False, self.backend.on_star_change))
+            self.paper_scroll.controls.append(ft.Divider(height=1, color=ft.Colors.with_opacity(0.1, ft.Colors.ON_SURFACE)))
             self.current_index += 1 
         
     def on_paper_scroll(self, e: ft.ScrollEvent):
@@ -86,6 +89,7 @@ class MyNavBar(ft.NavigationBar):
                 icon=ft.Icons.STAR_BORDER,
                 selected_icon=ft.Icons.STAR,
                 label="Starred",
+                
             ),
             ft.NavigationBarDestination(
                 icon=ft.Icons.SETTINGS_OUTLINED,
@@ -93,9 +97,11 @@ class MyNavBar(ft.NavigationBar):
                 label="Settings",
             ),
         ]
+        self.label_behavior = ft.NavigationBarLabelBehavior.ALWAYS_HIDE
 
         self.on_change = self._nav_change
         self.selected_index = 0
+        self.elevation = 2
 
     def _nav_change(self, e: ft.ControlEvent):
         if e.control.selected_index == 0:
@@ -115,12 +121,13 @@ def main(page: ft.Page):
     page.title = "paperscroll"
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
-    page.bgcolor = "#924046"
+    page.bgcolor = ft.Colors.SURFACE
     page.theme = ft.Theme(
         font_family="Noto Sans",
         color_scheme_seed=ft.Colors.RED,
         use_material3=True,
         text_theme = ft.TextTheme(
+            title_large=ft.TextStyle(size=int(bk.config.get("text_size"))+4, color=ft.Colors.ON_SURFACE, weight = ft.FontWeight.BOLD, font_family="Noto Serif", letter_spacing=1.5),
             title_medium=ft.TextStyle(size=int(bk.config.get("text_size"))+2, color=ft.Colors.ON_SURFACE, weight=ft.FontWeight.BOLD, font_family="Noto Sans"),
             body_medium=ft.TextStyle(size=bk.config.get("text_size"), color=ft.Colors.ON_SURFACE, font_family="Noto Serif"), 
             body_small=ft.TextStyle(size=bk.config.get("text_size"), color=ft.Colors.with_opacity(0.75, ft.Colors.ON_SURFACE), font_family="Noto Serif"),
@@ -151,9 +158,20 @@ def main(page: ft.Page):
         content=settings,
         alignment=ft.alignment.center,
         expand=True,
+        padding = PAGE_PADDING
     )
    
+    # App Bar ------------
+
+    page.appbar = ft.AppBar(
+        title=ft.Text("PAPERSCROLL", theme_style=ft.TextThemeStyle.TITLE_LARGE),
+        center_title=True,
+        bgcolor=ft.Colors.SURFACE_CONTAINER_HIGHEST, 
+        elevation = 2
+    )
+
     # Navigation ---------
+
     main_content = ft.Container(content=None, expand=True, padding=-5)
     nav = MyNavBar(page)
 

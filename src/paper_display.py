@@ -1,14 +1,10 @@
 import flet as ft
 from src.paper import Paper
 
-class PaperDisplay(ft.Card):
+class PaperDisplay(ft.Container):
     def __init__(self, paper: Paper, starred: bool, on_star_change=None):
         super().__init__(
-            elevation=4,
-            color=ft.Colors.SURFACE,
-            surface_tint_color=ft.Colors.SURFACE_TINT,
-            margin=ft.margin.symmetric(horizontal=10, vertical=6),
-            shape=ft.RoundedRectangleBorder(radius=12),
+            bgcolor=ft.Colors.SURFACE
         )
 
         self.on_star_change = on_star_change
@@ -97,22 +93,19 @@ class PaperDisplay(ft.Card):
 
         
         self.title_row = ft.Row(
-            [self.title_star, self.title_column], alignment=ft.MainAxisAlignment.START, vertical_alignment=ft.CrossAxisAlignment.CENTER
+            [self.title_star, self.title_column], alignment=ft.MainAxisAlignment.START, vertical_alignment=ft.CrossAxisAlignment.START
         )
 
-        self.main_column = ft.Column(
-                [
-                    self.title_row,
-                    self.abstract,
-                    self.bottom_row,
-                ],
-                spacing=10,
-            )
-        self.content = ft.Container(
-            content=self.main_column,
-            padding=15,
-            on_click=self.toggle_condense,
+        self.content = ft.Column(
+            [
+                self.title_row,
+                self.abstract,
+                self.bottom_row,
+            ],
+            spacing=10,
         )
+        self.padding = 15
+        self.on_click = self.toggle_condense
 
         if self.condensed:
             self.to_condensed()
