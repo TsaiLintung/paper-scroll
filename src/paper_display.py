@@ -1,7 +1,5 @@
 import flet as ft
-from paper import Paper
-from back import Backend
-
+from src.paper import Paper
 
 class PaperDisplay(ft.Card):
     def __init__(self, paper: Paper, starred: bool, on_star_change=None):
@@ -14,33 +12,26 @@ class PaperDisplay(ft.Card):
         )
 
         self.on_star_change = on_star_change
-        
-
         self.paper = paper
 
-        self.title = ft.Text(value="", selectable=True, weight=ft.FontWeight.BOLD)
+        self.title = ft.Text(value="", selectable=True, theme_style=ft.TextThemeStyle.TITLE_MEDIUM)
 
         self.year_journal = ft.Text(
             value="",
             selectable=True,
-            font_family="Noto Serif",
-            size=14,
-            color=ft.Colors.with_opacity(0.75, ft.Colors.ON_SURFACE),
+            theme_style=ft.TextThemeStyle.BODY_SMALL,
             max_lines=1,
             overflow=ft.TextOverflow.ELLIPSIS,
         )
         self.authors = ft.Text(
             value="",
             selectable=True,
-            font_family="Noto Serif",
-            size=14,
-            color=ft.Colors.with_opacity(0.75, ft.Colors.ON_SURFACE),
-            max_lines=1,
+            theme_style=ft.TextThemeStyle.BODY_SMALL,
             overflow=ft.TextOverflow.ELLIPSIS,
         )
 
         self.abstract = ft.Text(
-            value="", selectable=True, font_family="Noto Serif", size=14
+            value="", selectable=True, theme_style=ft.TextThemeStyle.BODY_MEDIUM
         )
 
         icon_style = ft.ButtonStyle(

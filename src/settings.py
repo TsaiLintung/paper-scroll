@@ -1,5 +1,5 @@
 import flet as ft
-from back import Backend
+from src.back import Backend
 
 
 class Settings(ft.Column):
@@ -112,7 +112,7 @@ class Settings(ft.Column):
                     padding=20,
                     content=ft.Column(
                         controls=[
-                            ft.Text("Papers", weight=ft.FontWeight.BOLD, size=16),
+                            ft.Text("Papers", theme_style=ft.TextThemeStyle.TITLE_MEDIUM),
                             year_range,
                             add_journal,
                             self.journals_row,
@@ -139,7 +139,7 @@ class Settings(ft.Column):
                     padding=20,
                     content=ft.Column(
                         [
-                            ft.Row([ft.Text("Other", weight=ft.FontWeight.BOLD, size=16)], alignment=ft.MainAxisAlignment.START), 
+                            ft.Row([ft.Text("Other", theme_style=ft.TextThemeStyle.TITLE_MEDIUM)], alignment=ft.MainAxisAlignment.START), 
                             self.other_fields
                         ], 
                         spacing=16
@@ -159,8 +159,7 @@ class Settings(ft.Column):
         for journal in self.backend.config["journals"]:
             journal_chips.append(
                 ft.Chip(
-                    label=ft.Text(journal.get("issn")),
-                    leading=ft.Text(journal.get("name")),
+                    label=ft.Text(journal.get("name") + ": " + journal.get("issn")),
                     on_delete=lambda e: self.remove_journal(
                         journal.get("issn")
                     ),  # remove journal

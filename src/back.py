@@ -9,14 +9,14 @@ import threading
 import requests
 import flet as ft
 
-from paper import Paper
+from src.paper import Paper
 
 
 DEFAULT_CONFIG = {
     "start_year": 2021,
     "end_year": 2021,
     "text_size": 16,
-    "email": "test@example.com",
+    "email": "",
     "zotero_key": "",
     "zotero_id": "",
     "journals": [
@@ -222,7 +222,9 @@ class Backend:
         """Fetch a random paper with valid metadata from OpenAlex."""
         while True:
             doi = random.choice(self.papers).get("DOI")
-            url = f"https://api.openalex.org/works/https://doi.org/{doi}?mailto={self.config.get('email')}" #https://api.openalex.org/works/W2741809807
+            url = f"https://api.openalex.org/works/https://doi.org/{doi}" #https://api.openalex.org/works/W2741809807
+            if self.config.get("email"):
+                url += f"?mailto={self.config['email']}"
             try:
                 resp = requests.get(url, timeout=100)
                 time.sleep(1)  # be polite to the API

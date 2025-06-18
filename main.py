@@ -1,12 +1,13 @@
+from src.paper_display import PaperDisplay
+from src.back import Backend
+from src.settings import Settings
 
 import os
 import time
 
 import flet as ft
 
-from paper_display import PaperDisplay
-from back import Backend
-from settings import Settings
+PAGE_PADDING = ft.padding.only(left=10, right=10, top=10, bottom=10)
 
 class StaredPapers(ft.Column):
 
@@ -28,7 +29,7 @@ class StaredPapers(ft.Column):
             paper_display.to_condensed()
             self.controls.append(paper_display)
 
-class ExploreView(ft.Stack):
+class ExploreView(ft.Container):
 
     def __init__(self, backend: Backend):
         super().__init__()
@@ -42,12 +43,11 @@ class ExploreView(ft.Stack):
             on_scroll_interval = 100       
         )
 
-        self.controls = [
-            self.paper_scroll
-        ]
+        self.content = self.paper_scroll
 
         self.is_loading = False
         self.load_more_papers()
+        self.padding = PAGE_PADDING
 
     def load_more_papers(self):
         """
@@ -121,7 +121,9 @@ def main(page: ft.Page):
         color_scheme_seed=ft.Colors.RED,
         use_material3=True,
         text_theme = ft.TextTheme(
-            body_medium=ft.TextStyle(size=bk.config.get("text_size"), color=ft.Colors.ON_SURFACE)
+            title_medium=ft.TextStyle(size=int(bk.config.get("text_size"))+2, color=ft.Colors.ON_SURFACE, weight=ft.FontWeight.BOLD, font_family="Noto Sans"),
+            body_medium=ft.TextStyle(size=bk.config.get("text_size"), color=ft.Colors.ON_SURFACE, font_family="Noto Serif"), 
+            body_small=ft.TextStyle(size=bk.config.get("text_size"), color=ft.Colors.with_opacity(0.75, ft.Colors.ON_SURFACE), font_family="Noto Serif"),
         )
     )
     # Explore view ---------
@@ -139,7 +141,8 @@ def main(page: ft.Page):
     starred_papers_column = StaredPapers(bk)
     starred_view = ft.Container(
         content=ft.Stack([starred_papers_column, ft.Row([ft.Column([zotero_button], alignment=ft.MainAxisAlignment.END)], alignment=ft.MainAxisAlignment.END)]),
-        alignment=ft.alignment.center
+        alignment=ft.alignment.center, 
+        padding=PAGE_PADDING,
     )
 
     # settings view
@@ -151,7 +154,7 @@ def main(page: ft.Page):
     )
    
     # Navigation ---------
-    main_content = ft.Container(content=None, expand=True)
+    main_content = ft.Container(content=None, expand=True, padding=-5)
     nav = MyNavBar(page)
 
     def route_change(e):
