@@ -15,9 +15,9 @@ class StaredPapers(ft.Column):
         super().__init__()
         self.backend = backend
         self.controls = []
-        self.alignment = ft.MainAxisAlignment.CENTER
         self.horizontal_alignment = ft.CrossAxisAlignment.CENTER
-        self.scroll = ft.ScrollMode.AUTO
+        self.expand = True
+        self.scroll=ft.ScrollMode.ALWAYS
 
     # this is called when the page is loaded
     def before_update(self):
@@ -27,7 +27,7 @@ class StaredPapers(ft.Column):
         for paper in starred_papers:
             self.controls.append(PaperDisplay(self.backend, paper, is_main=False))
 
-class ExploreView(ft.Column):
+class ExploreView(ft.Stack):
 
     def __init__(self, backend: Backend):
         super().__init__()
@@ -47,15 +47,15 @@ class ExploreView(ft.Column):
             bgcolor=ft.Colors.SURFACE, 
             disabled=True
         )
+        self.navs = ft.Column([ft.Row([self.last, refresh], alignment=ft.MainAxisAlignment.END, spacing=10)], alignment=ft.MainAxisAlignment.END)
         self.controls = [
-            PaperDisplay(self.backend, self.backend.get_random_paper(), is_main=True),
-            ft.Row([self.last, refresh], alignment=ft.MainAxisAlignment.CENTER, spacing=10),
+            ft.Column([PaperDisplay(self.backend, self.backend.get_random_paper(), is_main=True)], alignment = ft.MainAxisAlignment.CENTER),
+            self.navs
         ]
-        self.alignment = ft.MainAxisAlignment.CENTER
-        self.horizontal_alignment = ft.CrossAxisAlignment.CENTER
+        
 
     def get_new_paper(self, e=None):
-        self.controls[0] = PaperDisplay(self.backend, self.backend.get_random_paper(), is_main=True)
+        self.controls[0][0] = PaperDisplay(self.backend, self.backend.get_random_paper(), is_main=True)
         self.last.icon = ft.Icons.ARROW_BACK
         self.last.disabled = False
         self.update()
@@ -119,7 +119,7 @@ def main(page: ft.Page):
         color_scheme_seed=ft.Colors.RED,
         use_material3=True,
         text_theme = ft.TextTheme(
-            body_medium=ft.TextStyle(size=bk.config.get("text_size"), color =ft.Colors.BLACK),
+            body_medium=ft.TextStyle(size=bk.config.get("text_size"), color=ft.Colors.ON_SURFACE)
         )
     )
     # Explore view ---------
@@ -143,9 +143,8 @@ def main(page: ft.Page):
 
     starred_papers_column = StaredPapers(bk)
     starred_view = ft.Container(
-        content=ft.Column([ft.Row([zotero_button], alignment = ft.MainAxisAlignment.CENTER), starred_papers_column]),
-        alignment=ft.alignment.center,
-        expand=True
+        content=ft.Stack([starred_papers_column, ft.Row([ft.Column([zotero_button], alignment=ft.MainAxisAlignment.END)], alignment=ft.MainAxisAlignment.END)]),
+        alignment=ft.alignment.center
     )
 
     # settings view

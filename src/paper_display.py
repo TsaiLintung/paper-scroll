@@ -78,6 +78,15 @@ class PaperDisplay(ft.Card):
             on_click=self._star,
         )
 
+        self.title_star = ft.IconButton(
+            icon=ft.Icons.STAR_BORDER,
+            selected_icon=ft.Icons.STAR,
+            selected=False,
+            tooltip="Star this paper",
+            style=icon_style,
+            on_click=self._star,
+        )
+
         self.condensed = not is_main
         self.basic_buttons = [self.star]
         self.extended_buttons = [self.link, self.alex_link, self.pdf]
@@ -89,27 +98,27 @@ class PaperDisplay(ft.Card):
             spacing=10,
         )
 
-        self.divider1 = ft.Divider(height=10, color=ft.Colors.TRANSPARENT)
-        self.divider2 = ft.Divider(height=10, color=ft.Colors.TRANSPARENT)
-
         self.title_column = ft.Column(
             [self.title, ft.Column([self.year_journal, self.authors], spacing=0)],
             spacing=5,
             expand=True,
         )
+
+        
         self.title_row = ft.Row(
-            [self.title_column], alignment=ft.MainAxisAlignment.SPACE_BETWEEN
+            [self.title_star, self.title_column], alignment=ft.MainAxisAlignment.START, vertical_alignment=ft.CrossAxisAlignment.CENTER
         )
 
-        self.content = ft.Container(
-            content=ft.Column(
+        self.main_column = ft.Column(
                 [
                     self.title_row,
                     self.abstract,
                     self.bottom_row,
                 ],
                 spacing=10,
-            ),
+            )
+        self.content = ft.Container(
+            content=self.main_column,
             padding=15,
             on_click=self.toggle_condense,
         )
@@ -123,28 +132,23 @@ class PaperDisplay(ft.Card):
         """
         Convert the display to a condensed view.
         """
+        self.title_star.visible = True
+        self.bottom_row.visible = False
         self.abstract.visible = False
-        self.link.visible = False
-        self.pdf.visible = False
-        self.alex_link.visible = False
-
-        self.bottom_row.controls = []
-        self.title_row.controls = [self.star, self.title_column]
+        
 
     def _to_expanded(self):
         """
         Convert the display to an expanded view.
         """
+        self.title_star.visible = False
+        self.bottom_row.visible = True
         self.abstract.visible = True
-        self.link.visible = True
-        self.pdf.visible = True
-        self.alex_link.visible = True
-
-        self.bottom_row.controls = self.basic_buttons + self.extended_buttons
-        self.title_row.controls = [self.title_column]
 
     def toggle_condense(self, e=None):
+        
         if self.is_main:
+            
             return
         self.condensed = not self.condensed
         if self.condensed:
@@ -156,11 +160,13 @@ class PaperDisplay(ft.Card):
     def _star(self, e=None):
         if self.backend.is_starred(self.paper):
             self.star.selected = False
+            self.title_star.selected = False
             self.backend.unstar(self.paper)
             if not self.is_main:
                 self.visible = False
         else:
             self.star.selected = True
+            self.title_star.selected = True
             self.backend.star(self.paper)
         self.update()
 
@@ -178,6 +184,7 @@ class PaperDisplay(ft.Card):
         self.authors.value = paper.get("authors_joined")
 
         self.star.selected = self.backend.is_starred(self.paper)
+        self.title_star.selected = self.backend.is_starred(self.paper)
 
         if paper.get("open_access").get("is_oa", False):
             self.pdf.icon = ft.Icons.DOWNLOAD
