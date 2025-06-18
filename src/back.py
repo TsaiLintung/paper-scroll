@@ -8,7 +8,6 @@ import threading
 
 import requests
 import flet as ft
-from pyzotero import zotero
 
 from paper import Paper
 
@@ -51,11 +50,6 @@ class Backend:
 
         self.current_paper = None
         self.last_papers = []
-
-        # setup Zotero Client
-        library_id = self.config.get("zotero_id")
-        api_key = self.config.get("zotero_key")
-        self.zot = zotero.Zotero(library_id, "user", api_key) # local=True for read access to local Zotero
 
 
     def _handle_directories(self):
@@ -315,6 +309,18 @@ class Backend:
             print(f"Paper with DOI: {dir} is not starred.")
 
     def export_starred_to_zetero(self, e: ft.ControlEvent):
+
+        try:
+            from pyzotero import zotero
+        except ImportError:
+            print("pyzotero not available, skipping export to Zotero.")
+            return
+
+        # setup Zotero Client
+        library_id = self.config.get("zotero_id")
+        api_key = self.config.get("zotero_key")
+        self.zot = zotero.Zotero(library_id, "user", api_key) # local=True for read access to local Zotero
+
         for paper in self.get_starred_papers():
             template = self.zot.item_template('journalArticle')
             # Populate Zotero template fields from paper data
