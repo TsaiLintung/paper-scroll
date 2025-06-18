@@ -258,7 +258,7 @@ class Backend:
     def get_random_paper(self):
         """Get a random paper from buffer, then refill buffer asynchronously."""
 
-        """if not self._paper_buffer:
+        if not self._paper_buffer:
             paper = self._load_random_paper()
             self._paper_buffer.append(paper)    
         paper = self._paper_buffer.pop(0)
@@ -266,14 +266,13 @@ class Backend:
         self.current_paper = paper
         # Start async refill
         self._ensure_buffer()
-        return paper"""
-        return self.get_starred_papers()[0]
+        return paper
     
     # handle stars ----------------
 
     def get_paper_star_dir(self, paper: Paper):
         """Get the directory path for a starred paper."""
-        doi = paper.get("doi").replace("/", "_")
+        doi = paper.get("doi").replace("https://doi.org/", "").replace("/", "_")
         return os.path.join(self.starred_dir, f"{doi}.json")
     
     def get_starred_papers(self):
@@ -315,7 +314,7 @@ class Backend:
         else:
             print(f"Paper with DOI: {dir} is not starred.")
 
-    def export_starred_to_zetero(self):
+    def export_starred_to_zetero(self, e: ft.ControlEvent):
         for paper in self.get_starred_papers():
             template = self.zot.item_template('journalArticle')
             # Populate Zotero template fields from paper data

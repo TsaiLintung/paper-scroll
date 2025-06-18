@@ -133,15 +133,12 @@ def main(page: ft.Page):
     page.on_keyboard_event = on_keyboard
     explore_view = ExploreView(bk)
     # Starred view ---------
-
-    def zotero_event(e: ft.ControlEvent):
-        bk.export_starred_to_zetero()
-
+    
     zotero_button = ft.FloatingActionButton(
         icon=ft.Icons.ARCHIVE,
         tooltip="Export to Zotero",
         bgcolor=ft.Colors.SURFACE, 
-        on_click=zotero_event
+        on_click=bk.export_starred_to_zetero
     )
 
     starred_papers_column = StaredPapers(bk)
