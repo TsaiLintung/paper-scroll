@@ -1,81 +1,32 @@
-# PaperScroll app
+# Paper Scroll
 
-## Run the app
+Paper Scroll is a cross-platform app for browsing, starring, and managing academic papers. It is built with Python and Flutter (via Flet), providing a modern interface for researchers to organize and keep track of academic literature.
 
-### uv
+## Features
 
-Run as a desktop app:
+- Follow your favorite journals from Crossref
+- Browse papers with metadata from OpenAlex
+- Star papers for easy access later
+- Export papers directly to Zotero
 
-```
-uv run flet run
-```
+## Installation
 
-Run as a web app:
+1. Clone this repository:
+   ```sh
+   git clone https://github.com/TsaiLintung/paper-scroll.git
+   ```
+2. Install dependencies (Python 3.13+ required):
+   ```sh
+   poetry install
+   ```
 
-```
-uv run flet run --web
-```
+## Usage
 
-### Poetry
-
-Install dependencies from `pyproject.toml`:
-
-```
-poetry install
-```
-
-Run as a desktop app:
-
-```
-poetry run flet run
+Run the app with:
+```sh
+flet run
 ```
 
-Run as a web app:
-
-```
-poetry run flet run --web
-```
-
-For more details on running the app, refer to the [Getting Started Guide](https://flet.dev/docs/getting-started/).
-
-## Build the app
-
-### Android
-
-```
-flet build apk -v
-```
-
-For more details on building and signing `.apk` or `.aab`, refer to the [Android Packaging Guide](https://flet.dev/docs/publish/android/).
-
-### iOS
-
-```
-flet build ipa -v
-```
-
-For more details on building and signing `.ipa`, refer to the [iOS Packaging Guide](https://flet.dev/docs/publish/ios/).
-
-### macOS
-
-```
-flet build macos -v
-```
-
-For more details on building macOS package, refer to the [macOS Packaging Guide](https://flet.dev/docs/publish/macos/).
-
-### Linux
-
-```
-flet build linux -v
-```
-
-For more details on building Linux package, refer to the [Linux Packaging Guide](https://flet.dev/docs/publish/linux/).
-
-### Windows
-
-```
-flet build windows -v
-```
-
-For more details on building Windows package, refer to the [Windows Packaging Guide](https://flet.dev/docs/publish/windows/).
+## Project Structure
+- `main.py` — App entry point
+- `src/` — Core logic (backend, display, settings, paper model)
