@@ -25,7 +25,7 @@ class StaredPapers(ft.Column):
         self.controls = []
         starred_papers = self.backend.get_starred_papers()
         for paper in starred_papers:
-            paper_display = PaperDisplay(paper, True, self.backend.on_star_change)
+            paper_display = PaperDisplay(paper, True, self.backend.on_star_change, self.backend.export_paper_to_zotero)
             paper_display.to_condensed()
             self.controls.append(paper_display)
             self.controls.append(ft.Divider(height=1, color=ft.Colors.with_opacity(0.1, ft.Colors.ON_SURFACE)))
@@ -57,7 +57,7 @@ class ExploreView(ft.Container):
         """
         for _ in range(3):
             paper = self.backend.get_random_paper()
-            self.paper_scroll.controls.append(PaperDisplay(paper, False, self.backend.on_star_change))
+            self.paper_scroll.controls.append(PaperDisplay(paper, False, self.backend.on_star_change, self.backend.export_paper_to_zotero))
             self.paper_scroll.controls.append(ft.Divider(height=1, color=ft.Colors.with_opacity(0.1, ft.Colors.ON_SURFACE)))
             self.current_index += 1 
         
@@ -137,24 +137,17 @@ def main(page: ft.Page):
 
     explore_view = ExploreView(bk)
     # Starred view ---------
-    
-    zotero_button = ft.FloatingActionButton(
-        icon=ft.Icons.ARCHIVE,
-        tooltip="Export to Zotero",
-        bgcolor=ft.Colors.SURFACE, 
-        on_click=bk.export_starred_to_zetero
-    )
 
     starred_papers_column = StaredPapers(bk)
     starred_view = ft.Container(
-        content=ft.Stack([starred_papers_column, ft.Row([ft.Column([zotero_button], alignment=ft.MainAxisAlignment.END)], alignment=ft.MainAxisAlignment.END)]),
+        content=starred_papers_column,
         alignment=ft.alignment.center, 
         padding=PAGE_PADDING,
     )
 
     # settings view
     settings = Settings(bk)
-    settings_view =  ft.Container(
+    settings_view = ft.Container(
         content=settings,
         alignment=ft.alignment.center,
         expand=True,

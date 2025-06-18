@@ -315,58 +315,77 @@ class Backend:
         else:
             print(f"Paper with DOI: {dir} is not starred.")
 
-    def export_starred_to_zetero(self, e: ft.ControlEvent):
+    # export to Zotero ----------------
 
-        try:
-            from pyzotero import zotero
-        except ImportError:
-            print("pyzotero not available, skipping export to Zotero.")
-            return
+    def export_paper_to_zotero(self, paper: Paper):
 
-        # setup Zotero Client
         library_id = self.config.get("zotero_id")
         api_key = self.config.get("zotero_key")
-        self.zot = zotero.Zotero(library_id, "user", api_key) # local=True for read access to local Zotero
 
+        if not library_id or not api_key:
+            print("Zotero credentials missing.")
+            return
+
+        base_url = f"https://api.zotero.org/users/{library_id}/items"
+        headers = {
+            "Zotero-API-Key": api_key,
+            "Content-Type": "application/json"
+        }
+
+        item = {
+                "itemType": "journalArticle",
+                "title": paper.get("title", ""),
+                "abstractNote": paper.get("abstract", ""),
+                "publicationTitle": paper.get("primary_location", {}).get("source", {}).get("display_name", ""),
+                "volume": paper.get("biblio", {}).get("volume", ""),
+                "issue": paper.get("biblio", {}).get("issue", ""),
+                "pages": self._format_pages(paper),
+                "date": paper.get("publication_date", ""),
+                "journalAbbreviation": paper.get("primary_location", {}).get("source", {}).get("display_name", ""),
+                "language": paper.get("language", ""),
+                "DOI": paper.get("doi", "").replace("https://doi.org/", ""),
+                "ISSN": self._get_issn(paper),
+                "url": paper.get("primary_location", {}).get("landing_page_url", ""),
+                "creators": self._extract_creators(paper),
+                "tags": [],
+                "collections": [],
+                "relations": {}
+            }
+
+        try:
+            response = requests.post(base_url, headers=headers, data=json.dumps([item]))
+            if response.status_code == 200:
+                key = response.json()["success"]["0"]
+                print(f"Exported paper '{paper.get('title', '')}' to Zotero (key: {key})")
+            else:
+                print(f"Failed to export '{paper.get('title', '')}': {response.status_code} {response.text}")
+        except Exception as ex:
+            print(f"Error exporting '{paper.get('title', '')}': {ex}")
+
+    def export_starred_to_zetero(self, e: ft.ControlEvent):
         for paper in self.get_starred_papers():
-            template = self.zot.item_template('journalArticle')
-            # Populate Zotero template fields from paper data
-            template['title'] = paper.get("title", "")
-            template['abstractNote'] = paper.get("abstract", "")
-            template['publicationTitle'] = (
-                paper.get("primary_location", {}).get("source", {}).get("display_name", "")
-            )
-            template['volume'] = paper.get("biblio", {}).get("volume", "")
-            template['issue'] = paper.get("biblio", {}).get("issue", "")
-            first_page = paper.get("biblio", {}).get("first_page", "")
-            last_page = paper.get("biblio", {}).get("last_page", "")
-            template['pages'] = f"{first_page}-{last_page}" if first_page and last_page else first_page or ""
-            template['date'] = paper.get("publication_date", "")
-            template['journalAbbreviation'] = (
-                paper.get("primary_location", {}).get("source", {}).get("display_name", "")
-            )
-            template['language'] = paper.get("language", "")
-            template['DOI'] = paper.get("doi", "").replace("https://doi.org/", "")
-            issns = paper.get("primary_location", {}).get("source", {}).get("issn", [])
-            template['ISSN'] = issns[0] if issns else ""
-            template['url'] = paper.get("primary_location", {}).get("landing_page_url", "")
-            # Creators (authors)
-            template['creators'] = []
-            for author in paper.get("authorships", []):
-                name = author.get("author", {}).get("display_name", "")
-                if name:
-                    parts = name.split(" ", 1)
-                    first = parts[0]
-                    last = parts[1] if len(parts) > 1 else ""
-                    template['creators'].append({
-                        "creatorType": "author",
-                        "firstName": first,
-                        "lastName": last
-                    })
-            # Save to Zotero
-            try:
-                resp = self.zot.create_items([template])
-                print(f"Exported paper '{paper.get('title', '')}' to Zotero")
-            except Exception as e:
-                print(f"Error exporting paper '{paper.get('title', '')}' to Zotero: {e}")
-            
+            self.export_paper_to_zotero(paper)
+
+    def _format_pages(self, paper):
+        first = paper.get("biblio", {}).get("first_page", "")
+        last = paper.get("biblio", {}).get("last_page", "")
+        if first and last:
+            return f"{first}-{last}"
+        return first or ""
+
+    def _get_issn(self, paper):
+        issns = paper.get("primary_location", {}).get("source", {}).get("issn", [])
+        return issns[0] if issns else ""
+
+    def _extract_creators(self, paper):
+        creators = []
+        for author in paper.get("authorships", []):
+            name = author.get("author", {}).get("display_name", "")
+            if name:
+                parts = name.split(" ", 1)
+                creators.append({
+                    "creatorType": "author",
+                    "firstName": parts[0],
+                    "lastName": parts[1] if len(parts) > 1 else ""
+                })
+        return creators

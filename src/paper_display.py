@@ -2,13 +2,17 @@ import flet as ft
 from src.paper import Paper
 
 class PaperDisplay(ft.Container):
-    def __init__(self, paper: Paper, starred: bool, on_star_change=None):
+    def __init__(self, paper: Paper, starred: bool, on_star_change=None, on_zotero_submit=None):
         super().__init__(
             bgcolor=ft.Colors.SURFACE
         )
 
-        self.on_star_change = on_star_change
+        
         self.paper = paper
+
+        # callbacks
+        self.on_star_change = on_star_change
+        self.on_zotero_submit = on_zotero_submit
 
         self.title = ft.Text(value="", selectable=True, theme_style=ft.TextThemeStyle.TITLE_MEDIUM)
 
@@ -50,11 +54,12 @@ class PaperDisplay(ft.Container):
             style=icon_style,
         )
 
-        self.alex_link = ft.IconButton(
-            icon=ft.Icons.WEB_STORIES,
-            tooltip="Open OpenAlex",
+        self.zotero = ft.IconButton(
+            icon=ft.Icons.ARCHIVE,
+            tooltip="Export to Zotero",
             url="",
             style=icon_style,
+            on_click=lambda e: self.on_zotero_submit(self.paper)
         )
 
         self.star = ft.IconButton(
@@ -77,7 +82,7 @@ class PaperDisplay(ft.Container):
 
         self.condensed = False
         self.basic_buttons = [self.star]
-        self.extended_buttons = [self.link, self.alex_link, self.pdf]
+        self.extended_buttons = [self.link, self.pdf, self.zotero]
 
         self.bottom_row = ft.Row(
             controls=self.basic_buttons + self.extended_buttons,
@@ -156,7 +161,6 @@ class PaperDisplay(ft.Container):
         paper = self.paper
         self.title.value = paper.get("display_name")
         self.link.url = self.paper.get("doi")
-        self.alex_link.url = paper.get("id")
         self.abstract.value = paper.get("abstract")
         self.year_journal.value = paper.get("year_journal")
         self.authors.value = paper.get("authors_joined")
