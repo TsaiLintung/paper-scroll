@@ -120,7 +120,7 @@ class Backend:
             if not next_cursor or not batch:
                 break
             cursor = next_cursor
-            time.sleep(1)  # be polite to the API
+            time.sleep(0.5)  # be polite to the API
         return items
 
     def _fetch_crossref(self, journals, start_year, end_year):
@@ -258,8 +258,7 @@ class Backend:
         paper = self._paper_buffer.pop(0)
         self.last_papers.append(self.current_paper)
         self.current_paper = paper
-        # Start async refill
-        self._ensure_buffer()
+        self._ensure_buffer() # Start async refill
         return paper
     
     # handle stars ----------------

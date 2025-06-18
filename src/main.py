@@ -4,7 +4,6 @@ import time
 
 import flet as ft
 
-
 from paper_display import PaperDisplay
 from back import Backend
 from settings import Settings
@@ -25,7 +24,9 @@ class StaredPapers(ft.Column):
         self.controls = []
         starred_papers = self.backend.get_starred_papers()
         for paper in starred_papers:
-            self.controls.append(PaperDisplay(self.backend, paper, is_main=False))
+            paper_display = PaperDisplay(self.backend, paper)
+            paper_display.to_condensed()
+            self.controls.append(paper_display)
 
 class ExploreView(ft.Stack):
 
@@ -33,40 +34,42 @@ class ExploreView(ft.Stack):
         super().__init__()
         self.backend = backend
 
-        refresh = ft.FloatingActionButton(
-            icon=ft.Icons.REFRESH,
-            tooltip="Get another random paper",
-            on_click=self.get_new_paper,
-            bgcolor=ft.Colors.SURFACE
+        self.current_index = 0
+        self.paper_scroll = ft.Column(
+            controls=[],
+            scroll=ft.ScrollMode.HIDDEN, 
+            on_scroll=self.on_paper_scroll, 
+            on_scroll_interval = 100       
         )
 
-        self.last = ft.FloatingActionButton(
-            icon=ft.Icons.CLOSE,
-            tooltip="Back to last paper",
-            on_click=self.back_to_last_paper,
-            bgcolor=ft.Colors.SURFACE, 
-            disabled=True
-        )
-        self.navs = ft.Column([ft.Row([self.last, refresh], alignment=ft.MainAxisAlignment.END, spacing=10)], alignment=ft.MainAxisAlignment.END)
         self.controls = [
-            ft.Column([PaperDisplay(self.backend, self.backend.get_random_paper(), is_main=True)], alignment = ft.MainAxisAlignment.CENTER),
-            self.navs
+            self.paper_scroll
         ]
 
-    def get_new_paper(self, e=None):
-        self.controls[0].controls[0] = PaperDisplay(self.backend, self.backend.get_random_paper(), is_main=True)
-        self.last.icon = ft.Icons.ARROW_BACK
-        self.last.disabled = False
-        self.update()
+        self.is_loading = False
+        self.load_more_papers()
+
+    def load_more_papers(self):
+        """
+        Load more papers when the user scrolls to the bottom.
+        """
+        for _ in range(3):
+            paper = self.backend.get_random_paper()
+            self.paper_scroll.controls.append(PaperDisplay(self.backend, paper))
+            self.current_index += 1 
         
-    def back_to_last_paper(self, e=None):
-        last_paper = self.backend.get_last_paper()
-        if last_paper:
-            self.controls[0].controls[0] = PaperDisplay(self.backend, last_paper, is_main=True)
-        else: 
-            self.last.icon = ft.Icons.CLOSE
-            self.last.disabled = True
-        self.update()
+    def on_paper_scroll(self, e: ft.ScrollEvent):
+        """
+        Handle the scroll event to load more papers when the user scrolls to the bottom.
+        """
+        if e.pixels < e.max_scroll_extent - 100:
+            return
+        if self.is_loading:
+            return
+        self.is_loading = True
+        self.load_more_papers()
+        self.page.update() # don't let page spam updates
+        self.is_loading = False
 
 class MyNavBar(ft.NavigationBar):
 
@@ -123,13 +126,6 @@ def main(page: ft.Page):
     )
     # Explore view ---------
 
-    def on_keyboard(e: ft.KeyboardEvent):
-        if e.key == "Enter":
-            if nav.selected_index == 0:
-                explore_view.get_new_paper()
-        page.update()
-
-    page.on_keyboard_event = on_keyboard
     explore_view = ExploreView(bk)
     # Starred view ---------
     

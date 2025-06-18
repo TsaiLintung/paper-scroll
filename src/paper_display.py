@@ -4,7 +4,7 @@ from back import Backend
 
 
 class PaperDisplay(ft.Card):
-    def __init__(self, backend: Backend, paper: Paper, is_main: bool):
+    def __init__(self, backend: Backend, paper: Paper):
         super().__init__(
             elevation=4,
             color=ft.Colors.SURFACE,
@@ -15,7 +15,6 @@ class PaperDisplay(ft.Card):
 
         self.backend = backend
         self.paper = paper
-        self.is_main = is_main
 
         self.title = ft.Text(value="", selectable=True, weight=ft.FontWeight.BOLD)
 
@@ -39,7 +38,7 @@ class PaperDisplay(ft.Card):
         )
 
         self.abstract = ft.Text(
-            value="", selectable=True, font_family="Noto Serif", size=14, max_lines=8
+            value="", selectable=True, font_family="Noto Serif", size=14
         )
 
         icon_style = ft.ButtonStyle(
@@ -87,14 +86,13 @@ class PaperDisplay(ft.Card):
             on_click=self._star,
         )
 
-        self.condensed = not is_main
+        self.condensed = False
         self.basic_buttons = [self.star]
         self.extended_buttons = [self.link, self.alex_link, self.pdf]
 
         self.bottom_row = ft.Row(
             controls=self.basic_buttons + self.extended_buttons,
             alignment=ft.MainAxisAlignment.START,
-            # wrap=True,
             spacing=10,
         )
 
@@ -124,11 +122,11 @@ class PaperDisplay(ft.Card):
         )
 
         if self.condensed:
-            self._to_condensed()
+            self.to_condensed()
         else:
-            self._to_expanded()
+            self.to_expanded()
 
-    def _to_condensed(self):
+    def to_condensed(self):
         """
         Convert the display to a condensed view.
         """
@@ -137,7 +135,7 @@ class PaperDisplay(ft.Card):
         self.abstract.visible = False
         
 
-    def _to_expanded(self):
+    def to_expanded(self):
         """
         Convert the display to an expanded view.
         """
@@ -147,14 +145,11 @@ class PaperDisplay(ft.Card):
 
     def toggle_condense(self, e=None):
         
-        if self.is_main:
-            
-            return
         self.condensed = not self.condensed
         if self.condensed:
-            self._to_condensed()
+            self.to_condensed()
         else:
-            self._to_expanded()
+            self.to_expanded()
         self.update()
 
     def _star(self, e=None):
@@ -162,8 +157,6 @@ class PaperDisplay(ft.Card):
             self.star.selected = False
             self.title_star.selected = False
             self.backend.unstar(self.paper)
-            if not self.is_main:
-                self.visible = False
         else:
             self.star.selected = True
             self.title_star.selected = True
