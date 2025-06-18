@@ -1,6 +1,6 @@
 # Paper Scroll
 
-Paper Scroll is a cross-platform app for browsing, starring, and managing academic papers. It is built with Python and Flutter (via Flet), providing a modern interface for researchers to organize and keep track of academic literature.
+Doomscroll papers.
 
 ## Features
 
