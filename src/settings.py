@@ -2,6 +2,78 @@ import flet as ft
 from src.back import Backend
 
 
+class AddJournal(ft.Row): 
+    def __init__(self, backend: Backend, call_submit_journal):
+        super().__init__(wrap = True, spacing=12)
+
+        self.backend = backend
+        self.call_submit_journal = call_submit_journal
+
+        self.journal_name_field = ft.TextField(
+            label="Journal Name", value="", max_length=10, width = 150
+        )
+
+        self.issn_field = ft.TextField(
+            label="ISSN", value="", max_length=9, width = 150
+        )
+
+        self.controls = [
+            self.journal_name_field,
+            self.issn_field,
+            ft.TextButton(
+                text="Add",
+                tooltip="Add journal",
+                on_click=self.self_submit_journal,
+                style=ft.ButtonStyle(
+                    shape=ft.RoundedRectangleBorder(radius=8),
+                    overlay_color=ft.Colors.with_opacity(0.1, ft.Colors.ON_SURFACE),
+                ),
+            ),
+        ]
+
+    def self_submit_journal(self, e: ft.ControlEvent):
+        journal_name = self.journal_name_field.value.strip()
+        issn = self.issn_field.value.strip()
+
+        if not issn or not issn.replace("-", "").isdigit() or len(issn) not in [8, 9]:
+            self.issn_field.error_text = "Invalid"
+            self.update()
+            return
+        if not journal_name:
+            self.journal_name_field.error_text = "Can't be empty"
+            self.update()
+            return
+
+        # Check if the journal already exists
+        if issn in [j["issn"] for j in self.backend.config["journals"]]:
+            self.issn_field.error_text = "Duplicated"
+            self.update()
+            return
+
+        if journal_name in [j["name"] for j in self.backend.config["journals"]]:
+            self.journal_name_field.error_text = "Duplicated"
+            self.update()
+            return
+
+        e.control.error_text = None
+        self.call_submit_journal(journal_name, issn)
+   
+        
+class ConfigField(ft.TextField):
+    def __init__(self, backend: Backend, field: str):
+        super().__init__(
+            label=field.replace("_", " ").title(),
+            value=backend.config.get(field),
+            width=200,
+            on_submit=self.submit_field,
+        )
+        self.error_text = None
+        self.field = field
+        self.backend = backend
+    
+    def submit_field(self, e: ft.ControlEvent):
+        self.backend.update_config(self.field, e.control.value)
+
 class Settings(ft.Column):
     def __init__(self, backend: Backend):
         super().__init__()
@@ -38,29 +110,8 @@ class Settings(ft.Column):
         )
 
         # Add journal fields
-        journal_name_field = ft.TextField(
-            label="Journal Name", value="", max_length=10, **textfield_style
-        )
-        issn_field = ft.TextField(
-            label="ISSN", value="", max_length=9, **textfield_style
-        )
-        add_journal = ft.Row(
-            [
-                journal_name_field,
-                issn_field,
-                ft.TextButton(
-                    text="Add",
-                    tooltip="Add journal",
-                    on_click=self.submit_journal,
-                    style=ft.ButtonStyle(
-                        shape=ft.RoundedRectangleBorder(radius=8),
-                        overlay_color=ft.Colors.with_opacity(0.1, ft.Colors.ON_SURFACE),
-                    ),
-                ),
-            ],
-            wrap=True,
-            spacing=12,
-        )
+        
+        add_journal = AddJournal(backend, self.submit_journal)
 
         self.journals_row = ft.Row(self.get_journal_chip_row(), wrap=True, spacing=8)
 
@@ -70,25 +121,6 @@ class Settings(ft.Column):
             surface_tint_color=ft.Colors.SURFACE_TINT,
             shape=ft.RoundedRectangleBorder(radius=12),
         )
-
-        # text fields for font size and email
-
-
-
-        class ConfigField(ft.TextField):
-            def __init__(self, backend: Backend, field: str):
-                super().__init__(
-                    label=field.replace("_", " ").title(),
-                    value=backend.config.get(field),
-                    width=200,
-                    on_submit=self.submit_field,
-                )
-                self.error_text = None
-                self.field = field
-                self.backend = backend
-            
-            def submit_field(self, e: ft.ControlEvent):
-                self.backend.update_config(self.field, e.control.value)
 
         text_fields = ["text_size", "email", "zotero_id", "zotero_key"]
         text_fields_row = []
@@ -153,6 +185,11 @@ class Settings(ft.Column):
         self.scroll = ft.ScrollMode.AUTO
         self.spacing = 20
 
+    def submit_journal(self, journal_name: str, issn: str):
+        self.backend.add_journal(journal_name, issn)
+        self.journals_row.controls = self.get_journal_chip_row()
+        self.update()
+
     def get_journal_chip_row(self):
 
         journal_chips = []
@@ -177,34 +214,7 @@ class Settings(ft.Column):
         e.control.value = int(e.control.value)  # ensure integer format
         self.backend.update_config(field, e.control.value)
 
-    def submit_journal(self, e: ft.ControlEvent):
-        journal_name = e.control.parent.controls[1].value.strip()
-        issn = e.control.parent.controls[2].value.strip()
-
-        if not issn or not issn.replace("-", "").isdigit() or len(issn) not in [8, 9]:
-            e.control.parent.controls[2].error_text = "Invalid"
-            self.update()
-            return
-        if not journal_name:
-            e.control.parent.controls[1].error_text = "Can't be empty"
-            self.update()
-            return
-
-        # Check if the journal already exists
-        if issn in [j["issn"] for j in self.backend.config["journals"]]:
-            e.control.parent.controls[2].error_text = "Duplicated"
-            self.update()
-            return
-
-        if journal_name in [j["name"] for j in self.backend.config["journals"]]:
-            e.control.parent.controls[1].error_text = "Duplicated"
-            self.update()
-            return
-
-        e.control.error_text = None
-        self.backend.add_journal(journal_name, issn)
-        self.journals_row.controls = self.get_journal_chip_row()
-        self.update()
+    
 
     def remove_journal(self, issn: str):
         self.backend.remove_journal(issn)
