@@ -24,7 +24,7 @@ class StaredPapers(ft.Column):
         self.controls = []
         starred_papers = self.backend.get_starred_papers()
         for paper in starred_papers:
-            paper_display = PaperDisplay(self.backend, paper)
+            paper_display = PaperDisplay(paper, True, self.backend.on_star_change)
             paper_display.to_condensed()
             self.controls.append(paper_display)
 
@@ -55,7 +55,7 @@ class ExploreView(ft.Stack):
         """
         for _ in range(3):
             paper = self.backend.get_random_paper()
-            self.paper_scroll.controls.append(PaperDisplay(self.backend, paper))
+            self.paper_scroll.controls.append(PaperDisplay(paper, False, self.backend.on_star_change))
             self.current_index += 1 
         
     def on_paper_scroll(self, e: ft.ScrollEvent):

@@ -4,7 +4,7 @@ from back import Backend
 
 
 class PaperDisplay(ft.Card):
-    def __init__(self, backend: Backend, paper: Paper):
+    def __init__(self, paper: Paper, starred: bool, on_star_change=None):
         super().__init__(
             elevation=4,
             color=ft.Colors.SURFACE,
@@ -13,7 +13,9 @@ class PaperDisplay(ft.Card):
             shape=ft.RoundedRectangleBorder(radius=12),
         )
 
-        self.backend = backend
+        self.on_star_change = on_star_change
+        
+
         self.paper = paper
 
         self.title = ft.Text(value="", selectable=True, weight=ft.FontWeight.BOLD)
@@ -71,7 +73,7 @@ class PaperDisplay(ft.Card):
         self.star = ft.IconButton(
             icon=ft.Icons.STAR_BORDER,
             selected_icon=ft.Icons.STAR,
-            selected=False,
+            selected=starred,
             tooltip="Star this paper",
             style=icon_style,
             on_click=self._star,
@@ -80,7 +82,7 @@ class PaperDisplay(ft.Card):
         self.title_star = ft.IconButton(
             icon=ft.Icons.STAR_BORDER,
             selected_icon=ft.Icons.STAR,
-            selected=False,
+            selected=starred,
             tooltip="Star this paper",
             style=icon_style,
             on_click=self._star,
@@ -153,14 +155,13 @@ class PaperDisplay(ft.Card):
         self.update()
 
     def _star(self, e=None):
-        if self.backend.is_starred(self.paper):
-            self.star.selected = False
-            self.title_star.selected = False
-            self.backend.unstar(self.paper)
-        else:
-            self.star.selected = True
-            self.title_star.selected = True
-            self.backend.star(self.paper)
+        new_status = not self.star.selected  # Toggle
+        self.star.selected = new_status
+        self.title_star.selected = new_status
+
+        if self.on_star_change:
+            self.on_star_change(self.paper, new_status)
+
         self.update()
 
     def before_update(self):
@@ -175,9 +176,6 @@ class PaperDisplay(ft.Card):
         self.abstract.value = paper.get("abstract")
         self.year_journal.value = paper.get("year_journal")
         self.authors.value = paper.get("authors_joined")
-
-        self.star.selected = self.backend.is_starred(self.paper)
-        self.title_star.selected = self.backend.is_starred(self.paper)
 
         if paper.get("open_access").get("is_oa", False):
             self.pdf.icon = ft.Icons.DOWNLOAD

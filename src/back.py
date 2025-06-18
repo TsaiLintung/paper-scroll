@@ -287,6 +287,12 @@ class Backend:
     def is_starred(self, paper: Paper):
         """Check if a paper is starred by checking if its file exists."""
         return os.path.exists(self.get_paper_star_dir(paper))
+    
+    def on_star_change(self, paper, new_status: bool):
+        if new_status:
+            self.star(paper)
+        else:
+            self.unstar(paper)
       
     def star(self, paper: Paper):
         """Star a paper by adding it to the history."""
