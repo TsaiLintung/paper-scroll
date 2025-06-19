@@ -79,7 +79,9 @@ class ExploreView(ft.Container):
         self.is_loading = True
         self.paper_scroll.controls.clear()
         self.current_index = 0
+        
         self.load_more_papers()
+        self.paper_scroll.scroll_to(0, 0)  # Scroll to the top 
         self.page.update()
         self.is_loading = False
 
