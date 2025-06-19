@@ -153,7 +153,7 @@ def main(page: ft.Page):
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     page.fonts = FONTS
-    page.theme = MyTheme(bk.config.get("text_size"))
+    page.theme = MyTheme(int(bk.config.get("text_size")))
     page.window.title_bar_hidden = True
     # Explore view ---------
 
