@@ -48,7 +48,6 @@ class ExploreView(ft.Container):
             icon=ft.Icons.REFRESH,
             tooltip="Refresh papers",
             bgcolor=ft.Colors.SURFACE_CONTAINER_HIGHEST,
-            elevation=2,
             on_click=lambda _: self.refresh_papers()
         )
 
@@ -103,8 +102,7 @@ class MyNavBar(ft.NavigationBar):
 
     def __init__(self, page):
         super().__init__(
-            bgcolor = ft.Colors.SURFACE_CONTAINER_HIGHEST, 
-            elevation = 2
+            bgcolor = ft.Colors.SURFACE_CONTAINER_HIGHEST
         )
         self.page = page
         self.destinations = [
@@ -156,6 +154,7 @@ def main(page: ft.Page):
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     page.fonts = FONTS
     page.theme = MyTheme(bk.config.get("text_size"))
+    page.window.title_bar_hidden = True
     # Explore view ---------
 
     explore_view = ExploreView(bk)
@@ -182,8 +181,7 @@ def main(page: ft.Page):
     page.appbar = ft.AppBar(
         title=ft.Text("PAPERSCROLL", theme_style=ft.TextThemeStyle.TITLE_LARGE),
         center_title=True,
-        bgcolor=ft.Colors.SURFACE_CONTAINER_HIGHEST, 
-        elevation = 2
+        bgcolor=ft.Colors.SURFACE_CONTAINER_HIGHEST
     )
 
     # Navigation ---------
