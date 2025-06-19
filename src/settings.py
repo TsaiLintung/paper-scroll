@@ -76,7 +76,13 @@ class ConfigField(ft.TextField):
 
 class Settings(ft.Column):
     def __init__(self, backend: Backend):
-        super().__init__()
+        super().__init__(
+            alignment=ft.MainAxisAlignment.START,
+            horizontal_alignment=ft.CrossAxisAlignment.START,
+            spacing=15,
+            scroll=ft.ScrollMode.AUTO
+        )
+
         self.backend = backend
 
         update = ft.TextButton(
@@ -124,7 +130,7 @@ class Settings(ft.Column):
 
         self.backend_status = ft.Column(
             [
-                ft.Text(""),
+                ft.Text("Pending."),
                 ft.ProgressBar(value=0)
             ], 
             visible=True, 
@@ -149,11 +155,6 @@ class Settings(ft.Column):
             ft.Text("Other", theme_style=ft.TextThemeStyle.TITLE_MEDIUM),
             self.other_fields,
         ]
-
-        self.alignment = ft.MainAxisAlignment.START
-        self.horizontal_alignment = ft.CrossAxisAlignment.START
-        self.scroll = ft.ScrollMode.AUTO
-        self.spacing = 10
 
     def submit_journal(self, journal_name: str, issn: str):
         self.backend.add_journal(journal_name, issn)

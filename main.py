@@ -40,14 +40,25 @@ class ExploreView(ft.Container):
         self.current_index = 0
         self.paper_scroll = ft.Column(
             controls=[],
-            scroll=ft.ScrollMode.HIDDEN, 
             on_scroll=self.on_paper_scroll, 
-            on_scroll_interval = 100       
+            scroll=ft.ScrollMode.HIDDEN,
+            on_scroll_interval=100       
+        )
+        self.refresh_papers_button = ft.FloatingActionButton(
+            icon=ft.Icons.REFRESH,
+            tooltip="Refresh papers",
+            bgcolor=ft.Colors.SURFACE_CONTAINER_HIGHEST,
+            elevation=2,
+            on_click=lambda _: self.refresh_papers()
         )
 
-        self.content = self.paper_scroll
-
+        self.content = ft.Stack(
+            controls=[
+                self.paper_scroll, 
+                ft.Container(self.refresh_papers_button, alignment = ft.alignment.bottom_right, padding = 20, right = 0, bottom = 0, expand = True)],
+        )
         self.is_loading = False
+
         self.load_more_papers()
         self.padding = PAGE_PADDING
 
@@ -60,24 +71,39 @@ class ExploreView(ft.Container):
             self.paper_scroll.controls.append(PaperDisplay(paper, False, self.backend.on_star_change, self.backend.export_paper_to_zotero))
             self.paper_scroll.controls.append(MyDivider())
             self.current_index += 1 
-        
-    def on_paper_scroll(self, e: ft.ScrollEvent):
+
+    def refresh_papers(self):
         """
-        Handle the scroll event to load more papers when the user scrolls to the bottom.
+        Refresh the paper list when user scrolls up hard.
         """
-        if e.pixels < e.max_scroll_extent - 100:
-            return
-        if self.is_loading:
-            return
         self.is_loading = True
+        self.paper_scroll.controls.clear()
+        self.current_index = 0
         self.load_more_papers()
-        self.page.update() # don't let page spam updates
+        self.page.update()
         self.is_loading = False
 
+    def on_paper_scroll(self, e: ft.ScrollEvent):
+        """
+        Handle the scroll event to load more papers when the user scrolls to the bottom,
+        and refresh when user scrolls up hard.
+        """
+
+        if e.pixels >= e.max_scroll_extent - 100:
+            if not self.is_loading:
+                self.is_loading = True
+                self.load_more_papers()
+                self.page.update()
+                self.is_loading = False
+
+ 
 class MyNavBar(ft.NavigationBar):
 
     def __init__(self, page):
-        super().__init__()
+        super().__init__(
+            bgcolor = ft.Colors.SURFACE_CONTAINER_HIGHEST, 
+            elevation = 2
+        )
         self.page = page
         self.destinations = [
             ft.NavigationBarDestination(
@@ -97,11 +123,9 @@ class MyNavBar(ft.NavigationBar):
                 label="Settings",
             ),
         ]
-        self.label_behavior = ft.NavigationBarLabelBehavior.ALWAYS_HIDE
 
         self.on_change = self._nav_change
         self.selected_index = 0
-        self.elevation = 2
 
     def _nav_change(self, e: ft.ControlEvent):
         if e.control.selected_index == 0:
@@ -146,9 +170,9 @@ def main(page: ft.Page):
     settings = Settings(bk)
     settings_view = ft.Container(
         content=settings,
-        alignment=ft.alignment.center,
+        alignment=ft.alignment.top_left,
         expand=True,
-        padding = PAGE_PADDING
+        padding = ft.padding.only(left=10, right=10, top=10, bottom=-5)
     )
    
     # App Bar ------------
