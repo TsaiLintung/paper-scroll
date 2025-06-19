@@ -14,9 +14,9 @@ class MyDivider(ft.Divider):
 PAGE_PADDING = ft.padding.only(left=10, right=10, top=-5, bottom=-5)
 
 FONTS = {
-    "app title": "font/Noto_Serif/static/NotoSerif-Bold.ttf", 
-    "title": "font/Noto_Sans/static/NotoSans-Bold.ttf", 
-    "content": "font/Noto_Serif/static/NotoSerif-Regular.ttf"
+    "app title": "font/NotoSerif-Bold.ttf", 
+    "title": "font/NotoSans-Bold.ttf", 
+    "content": "font/NotoSerif-Regular.ttf"
 }
 
 class MyTheme(ft.Theme):
