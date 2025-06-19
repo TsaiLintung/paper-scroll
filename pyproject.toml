@@ -1,9 +1,9 @@
 [project]
 name = "paper-scroll"
 version = "0.1.0"
-description = ""
+description = "Doomscroll Papers"
 authors = [
-    {name = "Lin-tung Tsai",email = "101155567+TsaiLintung@users.noreply.github.com"}
+    {name = "Lin-tung Tsai",email = "tsaidondon@gmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.13"
@@ -11,7 +11,6 @@ dependencies = [
     "requests (>=2.32.4,<3.0.0)",
     "flet (>=0.28.3,<0.29.0)"
 ]
-
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
