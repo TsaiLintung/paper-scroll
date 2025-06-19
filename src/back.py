@@ -1,5 +1,7 @@
 """Module for fetching works from Crossref API for a given ISSN and date range."""
 
+from .paper import Paper
+
 import time
 import json
 import os
@@ -7,10 +9,6 @@ import random
 import threading
 
 import requests
-import flet as ft
-
-from src.paper import Paper
-
 
 DEFAULT_CONFIG = {
     "start_year": 2021,
@@ -27,12 +25,15 @@ DEFAULT_PAPER = {"DOI": "10.1038/s41586-020-2649-2"}
 
 class Backend:
     """Backend class to handle fetching and processing of journal data from Crossref API."""
-    def __init__(self, data_dir: str):
+    def __init__(self, data_dir: str, set_status):
         self.data_dir = data_dir
         self.starred_dir = os.path.join(self.data_dir, "starred")
         self.journal_dir = os.path.join(self.data_dir, "journals")
         self.config_path = os.path.join(self.data_dir, "config.json")
         self._handle_directories()
+
+        # progress bar and message
+        self.set_status = set_status # function takes a tuble of (visibility, progress percent, message)
 
         # load configuration
         with open(self.config_path, "r", encoding="utf-8") as f:
@@ -43,10 +44,6 @@ class Backend:
         self._load_indexed_papers()
         self._buffer_thread = None
         self._paper_buffer = []
-
-        # UI components depending on backend state
-        self.progress_bar = ft.ProgressBar(value=0, width=400, visible=False)
-        self.message = ft.Text("")
 
         self.current_paper = None
         self.last_papers = []
@@ -125,12 +122,8 @@ class Backend:
 
     def _fetch_crossref(self, journals, start_year, end_year):
         """Fetch works from Crossref API for a list of journals and a date range."""
-        self.message.value = "Fetching journals from Crossref API..."
-        self.message.update()
 
-        self.progress_bar.visible = True
-        self.progress_bar.value = 0
-        self.progress_bar.update()
+        self.set_status(("Fetching journals from Crossref API...", 0))
 
         to_fetch = []
         for journal in journals:
@@ -160,17 +153,12 @@ class Backend:
             with open(output_path, "w", encoding="utf-8") as f:
                 json.dump(data, f, ensure_ascii=False, indent=2)
 
-            self.progress_bar.value += 1 / len(to_fetch)
-            self.progress_bar.update()
+            progress = (to_fetch.index((journal, year, output_path)) + 1) / len(to_fetch)
             mes = f"Fetched {len(items)} papers for journal '{name}' ({issn}) in {year}."
             print(mes)
-            self.message.value = mes
-            self.message.update()
+            self.set_status((mes, progress))
 
-        self.progress_bar.visible = False
-        self.progress_bar.update()
-        self.message.value = "All journals updated."
-        self.message.update()
+        self.set_status(("All journals updated.", 1))
 
     def update_journals(self, e = None):
         """Update journals by fetching data from Crossref API."""
@@ -362,7 +350,7 @@ class Backend:
         except Exception as ex:
             print(f"Error exporting '{paper.get('title', '')}': {ex}")
 
-    def export_starred_to_zetero(self, e: ft.ControlEvent):
+    def export_starred_to_zetero(self, e = None):
         for paper in self.get_starred_papers():
             self.export_paper_to_zotero(paper)
 

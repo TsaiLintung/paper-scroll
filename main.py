@@ -2,12 +2,12 @@ from src.paper_display import PaperDisplay
 from src.back import Backend
 from src.settings import Settings
 
+from src.ui import MyDivider, PAGE_PADDING, MyTheme, FONTS
+
 import os
 import time
 
 import flet as ft
-
-PAGE_PADDING = ft.padding.only(left=10, right=10, top=0, bottom=0)
 
 class StaredPapers(ft.Column):
 
@@ -28,7 +28,7 @@ class StaredPapers(ft.Column):
             paper_display = PaperDisplay(paper, True, self.backend.on_star_change, self.backend.export_paper_to_zotero)
             paper_display.to_condensed()
             self.controls.append(paper_display)
-            self.controls.append(ft.Divider(height=1, color=ft.Colors.with_opacity(0.1, ft.Colors.ON_SURFACE)))
+            self.controls.append(MyDivider())
 
 class ExploreView(ft.Container):
 
@@ -58,7 +58,7 @@ class ExploreView(ft.Container):
         for _ in range(3):
             paper = self.backend.get_random_paper()
             self.paper_scroll.controls.append(PaperDisplay(paper, False, self.backend.on_star_change, self.backend.export_paper_to_zotero))
-            self.paper_scroll.controls.append(ft.Divider(height=1, color=ft.Colors.with_opacity(0.1, ft.Colors.ON_SURFACE)))
+            self.paper_scroll.controls.append(MyDivider())
             self.current_index += 1 
         
     def on_paper_scroll(self, e: ft.ScrollEvent):
@@ -111,28 +111,25 @@ class MyNavBar(ft.NavigationBar):
         elif e.control.selected_index == 2:
             self.page.go("/settings")
 
-
 def main(page: ft.Page):
 
     data_dir = os.getenv("FLET_APP_STORAGE_DATA")
-    bk = Backend(data_dir)
+
+    def set_bk_status(status):
+        """
+        Set the backend status message.
+        """
+        settings.set_bk_status(status)
+        page.update()
+
+    bk = Backend(data_dir, set_bk_status)
 
     # Set up the page
     page.title = "paperscroll"
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
-    page.bgcolor = ft.Colors.SURFACE
-    page.theme = ft.Theme(
-        font_family="Noto Sans",
-        color_scheme_seed=ft.Colors.RED,
-        use_material3=True,
-        text_theme = ft.TextTheme(
-            title_large=ft.TextStyle(size=int(bk.config.get("text_size"))+4, color=ft.Colors.ON_SURFACE, weight = ft.FontWeight.BOLD, font_family="Noto Serif", letter_spacing=1.5),
-            title_medium=ft.TextStyle(size=int(bk.config.get("text_size"))+2, color=ft.Colors.ON_SURFACE, weight=ft.FontWeight.BOLD, font_family="Noto Sans"),
-            body_medium=ft.TextStyle(size=bk.config.get("text_size"), color=ft.Colors.ON_SURFACE, font_family="Noto Serif"), 
-            body_small=ft.TextStyle(size=bk.config.get("text_size"), color=ft.Colors.with_opacity(0.75, ft.Colors.ON_SURFACE), font_family="Noto Serif"),
-        )
-    )
+    page.fonts = FONTS
+    page.theme = MyTheme(bk.config.get("text_size"))
     # Explore view ---------
 
     explore_view = ExploreView(bk)
@@ -191,4 +188,4 @@ def main(page: ft.Page):
 
 start_time = time.time()
 
-ft.app(main) #, 
+ft.app(main, assets_dir = "assets") #, 

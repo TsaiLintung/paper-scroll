@@ -1,6 +1,3 @@
-import os
-import json
-
 class Paper:
     def __init__(self, data):
         self.data = data

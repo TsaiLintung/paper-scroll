@@ -1,5 +1,6 @@
+from .paper import Paper
+
 import flet as ft
-from src.paper import Paper
 
 class PaperDisplay(ft.Container):
     def __init__(self, paper: Paper, starred: bool, on_star_change=None, on_zotero_submit=None):

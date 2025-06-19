@@ -1,6 +1,7 @@
-import flet as ft
-from src.back import Backend
+from .back import Backend
+from .ui import MyDivider
 
+import flet as ft
 
 class AddJournal(ft.Row):
     def __init__(self, backend: Backend, call_submit_journal):
@@ -119,6 +120,19 @@ class Settings(ft.Column):
 
         self.other_fields = ft.Row(text_fields_row, wrap=True)
 
+        # Message from backend 
+
+        self.backend_status = ft.Column(
+            [
+                ft.Text(""),
+                ft.ProgressBar(value=0)
+            ], 
+            visible=True, 
+            expand=True
+        )
+
+        # Assembling the settings controls
+
         self.controls = [
             ft.Text("Papers", theme_style=ft.TextThemeStyle.TITLE_MEDIUM),
             year_range,
@@ -127,18 +141,11 @@ class Settings(ft.Column):
             ft.Row(
                 [
                     update,
-                    ft.Column(
-                        [
-                            self.backend.message,
-                            self.backend.progress_bar,
-                        ]
-                    ),
+                    self.backend_status
                 ],
-                alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
+                alignment=ft.MainAxisAlignment.START,
             ),
-            ft.Divider(
-                height=1, color=ft.Colors.with_opacity(0.1, ft.Colors.ON_SURFACE)
-            ),
+            MyDivider(),
             ft.Text("Other", theme_style=ft.TextThemeStyle.TITLE_MEDIUM),
             self.other_fields,
         ]
@@ -180,4 +187,12 @@ class Settings(ft.Column):
     def remove_journal(self, issn: str):
         self.backend.remove_journal(issn)
         self.journals_row.controls = self.get_journal_chip_row()
+        self.update()
+
+    def set_bk_status(self, status): 
+        """
+        Change the UI corresponding to the backend status.
+        """
+        self.backend_status.controls[0].value = status[0]
+        self.backend_status.controls[1].value = status[1]
         self.update()
