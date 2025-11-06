@@ -1,17 +1,26 @@
 import flet as ft
 
 
+# Spacing scale shared across the app to keep visual rhythm consistent.
+SPACE_XS = 4
+SPACE_SM = 8
+SPACE_MD = 12
+SPACE_LG = 16
+SPACE_XL = 24
+
+
 class MyDivider(ft.Divider):
     """
     My custom divider class
     """
     def __init__(self):
         super().__init__(
-            height=1,
-            color=ft.Colors.with_opacity(0.1, ft.Colors.ON_SURFACE)
-    )
+            height=SPACE_LG,
+            thickness=1,
+            color=ft.Colors.with_opacity(0.1, ft.Colors.ON_SURFACE),
+        )
         
-PAGE_PADDING = ft.padding.only(left=10, right=10, top=-5, bottom=-5)
+PAGE_PADDING = ft.padding.symmetric(horizontal=SPACE_XL, vertical=SPACE_LG)
 
 FONTS = {
     "app title": "font/NotoSerif-Bold.ttf", 

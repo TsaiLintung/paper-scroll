@@ -1,11 +1,15 @@
 from .api_client import ApiClient, BackendUnavailableError
-from .ui import MyDivider
+from .ui import MyDivider, SPACE_SM, SPACE_MD, SPACE_LG
 
 import flet as ft
 
 class AddJournal(ft.Row):
     def __init__(self, backend: ApiClient, call_submit_journal):
-        super().__init__(wrap=True, spacing=12)
+        super().__init__(
+            wrap=True,
+            spacing=SPACE_MD,
+            run_spacing=SPACE_SM,
+        )
 
         self.backend = backend
         self.call_submit_journal = call_submit_journal
@@ -24,8 +28,12 @@ class AddJournal(ft.Row):
                 tooltip="Add journal",
                 on_click=self.self_submit_journal,
                 style=ft.ButtonStyle(
-                    shape=ft.RoundedRectangleBorder(radius=8),
+                    shape=ft.RoundedRectangleBorder(radius=SPACE_SM),
                     overlay_color=ft.Colors.with_opacity(0.1, ft.Colors.ON_SURFACE),
+                    padding=ft.padding.symmetric(
+                        horizontal=SPACE_MD,
+                        vertical=SPACE_SM,
+                    ),
                 ),
             ),
         ]
@@ -83,8 +91,8 @@ class Settings(ft.Column):
         super().__init__(
             alignment=ft.MainAxisAlignment.START,
             horizontal_alignment=ft.CrossAxisAlignment.START,
-            spacing=15,
-            scroll=ft.ScrollMode.AUTO
+            spacing=SPACE_LG,
+            scroll=ft.ScrollMode.AUTO,
         )
 
         self.backend = backend
@@ -93,8 +101,11 @@ class Settings(ft.Column):
             text="Update",
             on_click=self.backend.update_journals,
             style=ft.ButtonStyle(
-                padding=ft.padding.symmetric(horizontal=10, vertical=6),
-                shape=ft.RoundedRectangleBorder(radius=8),
+                padding=ft.padding.symmetric(
+                    horizontal=SPACE_MD,
+                    vertical=SPACE_SM,
+                ),
+                shape=ft.RoundedRectangleBorder(radius=SPACE_SM),
             ),
         )
 
@@ -115,20 +126,35 @@ class Settings(ft.Column):
             on_submit=lambda e: self.submit_year(e, "end_year"),
             **textfield_style,
         )
-        year_range = ft.Row([start_year, end_year], wrap=True, spacing=12)
+        year_range = ft.Row(
+            [start_year, end_year],
+            wrap=True,
+            spacing=SPACE_MD,
+        )
+        year_range.run_spacing = SPACE_SM
 
         # Add journal fields
 
         add_journal = AddJournal(backend, self.submit_journal)
 
-        self.journals_row = ft.Row(self.get_journal_chip_row(), wrap=True, spacing=8)
+        self.journals_row = ft.Row(
+            self.get_journal_chip_row(),
+            wrap=True,
+            spacing=SPACE_SM,
+            run_spacing=SPACE_SM,
+        )
 
         text_fields = ["text_size", "email"]
         text_fields_row = []
         for field in text_fields:
             text_fields_row.append(ConfigField(backend=self.backend, field=field))
 
-        self.other_fields = ft.Row(text_fields_row, wrap=True)
+        self.other_fields = ft.Row(
+            text_fields_row,
+            wrap=True,
+            spacing=SPACE_MD,
+            run_spacing=SPACE_SM,
+        )
 
         # Message from backend 
 
@@ -138,7 +164,8 @@ class Settings(ft.Column):
                 ft.ProgressBar(value=0)
             ], 
             visible=True, 
-            expand=True
+            expand=True,
+            spacing=SPACE_SM,
         )
 
         # Assembling the settings controls
@@ -154,6 +181,7 @@ class Settings(ft.Column):
                     self.backend_status
                 ],
                 alignment=ft.MainAxisAlignment.START,
+                spacing=SPACE_MD,
             ),
             MyDivider(),
             ft.Text("Other", theme_style=ft.TextThemeStyle.TITLE_MEDIUM),

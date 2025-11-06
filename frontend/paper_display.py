@@ -1,15 +1,16 @@
-from .paper import Paper
-
 import flet as ft
+
+from .paper import Paper
+from .ui import SPACE_XS, SPACE_SM, SPACE_MD, SPACE_LG
 
 
 class PaperDisplay(ft.Container):
     def __init__(self, paper: Paper):
         super().__init__(
             bgcolor=ft.Colors.with_opacity(0.98, ft.Colors.SURFACE),
-            padding=15,
-            margin=ft.margin.symmetric(vertical=6),
-            border_radius=ft.border_radius.all(12),
+            padding=ft.padding.symmetric(horizontal=SPACE_LG, vertical=SPACE_MD),
+            margin=ft.margin.symmetric(vertical=SPACE_MD),
+            border_radius=ft.border_radius.all(SPACE_LG),
             shadow=ft.BoxShadow(
                 spread_radius=0,
                 blur_radius=18,
@@ -57,16 +58,16 @@ class PaperDisplay(ft.Container):
         )
 
         self.meta_column = ft.Column(
-            [self.year_journal, self.authors], spacing=0, expand=True
+            [self.year_journal, self.authors], spacing=SPACE_XS, expand=True
         )
 
         self.title_column = ft.Column(
-            [self.title_link, self.meta_column], spacing=5, expand=True
+            [self.title_link, self.meta_column], spacing=SPACE_SM, expand=True
         )
 
         self.content = ft.Column(
             [self.title_column, self.abstract],
-            spacing=10,
+            spacing=SPACE_MD,
         )
 
     def before_update(self):

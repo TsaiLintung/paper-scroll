@@ -2,7 +2,16 @@ from frontend.paper_display import PaperDisplay
 from frontend.api_client import ApiClient, BackendUnavailableError
 from frontend.settings import Settings
 
-from frontend.ui import MyDivider, PAGE_PADDING, MyTheme, FONTS
+from frontend.ui import (
+    MyDivider,
+    PAGE_PADDING,
+    MyTheme,
+    FONTS,
+    SPACE_SM,
+    SPACE_MD,
+    SPACE_LG,
+    SPACE_XL,
+)
 
 import time
 
@@ -26,6 +35,7 @@ class ExploreView(ft.Container):
             on_scroll=self.on_paper_scroll,
             scroll=ft.ScrollMode.HIDDEN,
             on_scroll_interval=100,
+            spacing=0,
         )
         self.paper_scroll.expand = True
         settings_header = ft.Row(
@@ -52,13 +62,16 @@ class ExploreView(ft.Container):
                     MyDivider(),
                     settings_body,
                 ],
-                spacing=12,
+                spacing=SPACE_MD,
                 expand=True,
             ),
             width=460,
-            padding=ft.padding.all(20),
+            padding=ft.padding.symmetric(
+                horizontal=SPACE_XL,
+                vertical=SPACE_LG,
+            ),
             bgcolor=ft.Colors.WHITE,
-            border_radius=ft.border_radius.all(16),
+            border_radius=ft.border_radius.all(SPACE_LG),
         )
         self.settings_overlay = ft.Stack(
             controls=[
@@ -70,7 +83,10 @@ class ExploreView(ft.Container):
                     content=self.settings_container,
                     alignment=ft.alignment.center,
                     expand=True,
-                    padding=ft.padding.symmetric(horizontal=16, vertical=24),
+                    padding=ft.padding.symmetric(
+                        horizontal=SPACE_LG,
+                        vertical=SPACE_XL,
+                    ),
                 ),
             ],
             expand=True,
@@ -102,8 +118,9 @@ class ExploreView(ft.Container):
                     self._notify_backend_error(str(exc))
                     error_displayed = True
                 break
+            if self.paper_scroll.controls:
+                self.paper_scroll.controls.append(MyDivider())
             self.paper_scroll.controls.append(PaperDisplay(paper))
-            self.paper_scroll.controls.append(MyDivider())
             self.current_index += 1
         if error_displayed and not self.paper_scroll.controls:
             self.paper_scroll.controls.append(
@@ -187,9 +204,9 @@ def main(page: ft.Page):
                         ),
                     ],
                     alignment=ft.MainAxisAlignment.END,
-                    spacing=4,
+                    spacing=SPACE_SM,
                 ),
-                padding=ft.padding.only(right=12),
+                padding=ft.padding.only(right=SPACE_XL),
             )
         ],
     )
