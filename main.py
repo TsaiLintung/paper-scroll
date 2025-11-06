@@ -10,12 +10,14 @@ import flet as ft
 
 
 class ExploreView(ft.Container):
-    def __init__(self, backend: ApiClient):
+    def __init__(self, backend: ApiClient, settings: Settings):
         super().__init__()
         self.backend = backend
+        self.settings = settings
         self.bgcolor = ft.Colors.TRANSPARENT
         self.current_index = 0
         self.is_loading = False
+        self.expand = True
 
         self.paper_scroll = ft.Column(
             controls=[],
@@ -23,24 +25,83 @@ class ExploreView(ft.Container):
             scroll=ft.ScrollMode.HIDDEN,
             on_scroll_interval=100,
         )
+        self.paper_scroll.expand = True
         self.refresh_papers_button = ft.FloatingActionButton(
             icon=ft.Icons.REFRESH,
             tooltip="Refresh papers",
             bgcolor=ft.Colors.SURFACE_CONTAINER_HIGHEST,
             on_click=lambda _: self.refresh_papers(),
         )
+        self.settings_button = ft.FloatingActionButton(
+            icon=ft.Icons.SETTINGS,
+            tooltip="Settings",
+            bgcolor=ft.Colors.SURFACE_CONTAINER_HIGHEST,
+            on_click=self.toggle_settings,
+        )
+        settings_header = ft.Row(
+            controls=[
+                ft.Text("Settings", theme_style=ft.TextThemeStyle.TITLE_MEDIUM),
+                ft.IconButton(
+                    icon=ft.Icons.CLOSE,
+                    tooltip="Close settings",
+                    on_click=self.toggle_settings,
+                ),
+            ],
+            alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
+        )
+        self.settings_container = ft.Card(
+            content=ft.Container(
+                content=ft.Column(
+                    controls=[
+                        settings_header,
+                        MyDivider(),
+                        ft.Container(
+                            content=self.settings,
+                            width=420,
+                            height=520,
+                        ),
+                    ],
+                    spacing=10,
+                ),
+                width=460,
+                padding=ft.padding.all(20),
+                bgcolor=ft.Colors.WHITE,
+                border_radius=ft.border_radius.all(16),
+            ),
+            elevation=8,
+            color=ft.Colors.WHITE,
+            surface_tint_color=ft.Colors.WHITE,
+            shape=ft.RoundedRectangleBorder(radius=16),
+        )
+        self.settings_overlay = ft.Container(
+            content=ft.Container(
+                content=self.settings_container,
+                alignment=ft.alignment.center,
+            ),
+            alignment=ft.alignment.center,
+            expand=True,
+            visible=False,
+            bgcolor=ft.Colors.with_opacity(0.4, ft.Colors.BLACK),
+        )
+        action_buttons = ft.Column(
+            controls=[self.refresh_papers_button, self.settings_button],
+            spacing=12,
+            horizontal_alignment=ft.CrossAxisAlignment.END,
+        )
         self.content = ft.Stack(
             controls=[
                 self.paper_scroll,
                 ft.Container(
-                    self.refresh_papers_button,
+                    action_buttons,
                     alignment=ft.alignment.bottom_right,
                     padding=20,
                     right=0,
                     bottom=0,
                     expand=True,
                 ),
+                self.settings_overlay,
             ],
+            expand=True,
         )
         self.padding = PAGE_PADDING
 
@@ -93,25 +154,26 @@ class ExploreView(ft.Container):
         else:
             print(message)
 
+    def toggle_settings(self, _):
+        self.settings_overlay.visible = not self.settings_overlay.visible
+        if self.page:
+            self.page.update()
+        else:
+            self.update()
+
 
 def main(page: ft.Page):
     api_client = ApiClient()
 
     page.title = "paperscroll"
-    page.vertical_alignment = ft.MainAxisAlignment.CENTER
-    page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
+    page.vertical_alignment = ft.MainAxisAlignment.START
+    page.horizontal_alignment = ft.CrossAxisAlignment.STRETCH
     page.fonts = FONTS
     page.theme = MyTheme(int(api_client.config.get("text_size", 16)))
     page.window.title_bar_hidden = True
 
-    explore_view = ExploreView(api_client)
     settings = Settings(api_client)
-    settings_view = ft.Container(
-        content=settings,
-        alignment=ft.alignment.top_left,
-        expand=True,
-        padding=ft.padding.only(left=10, right=10, top=10, bottom=-5),
-    )
+    explore_view = ExploreView(api_client, settings)
 
     page.appbar = ft.AppBar(
         title=ft.Text("PAPERSCROLL", theme_style=ft.TextThemeStyle.TITLE_LARGE),
@@ -119,49 +181,11 @@ def main(page: ft.Page):
         bgcolor=ft.Colors.SURFACE_CONTAINER_HIGHEST,
     )
 
-    main_content = ft.Container(content=None, expand=True, padding=-5)
-    nav = ft.NavigationBar(
-        bgcolor=ft.Colors.SURFACE_CONTAINER_HIGHEST,
-        destinations=[
-            ft.NavigationBarDestination(
-                icon=ft.Icons.EXPLORE_OUTLINED,
-                selected_icon=ft.Icons.EXPLORE,
-                label="Explore",
-            ),
-            ft.NavigationBarDestination(
-                icon=ft.Icons.SETTINGS_OUTLINED,
-                selected_icon=ft.Icons.SETTINGS,
-                label="Settings",
-            ),
-        ],
-    )
-
-    def route_change(_):
-        route = page.route
-        if route == "/settings":
-            main_content.content = settings_view
-            nav.selected_index = 1
-        else:
-            main_content.content = explore_view
-            nav.selected_index = 0
-        page.update()
-
-    def nav_change(e: ft.ControlEvent):
-        if e.control.selected_index == 1:
-            page.go("/settings")
-        else:
-            page.go("/")
-
-    page.on_route_change = route_change
-    nav.on_change = nav_change
-
     api_client.set_status_callback(settings.set_bk_status)
     if not api_client.available:
         settings.set_bk_status(("Backend unavailable. Start the API server.", 0.0))
 
-    page.add(main_content)
-    page.add(nav)
-    page.go("/")
+    page.add(explore_view)
 
     print(f"Time to set up the page: {time.time() - start_time:.2f} seconds")
 
