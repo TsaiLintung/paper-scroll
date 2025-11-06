@@ -123,7 +123,7 @@ class Settings(ft.Column):
 
         self.journals_row = ft.Row(self.get_journal_chip_row(), wrap=True, spacing=8)
 
-        text_fields = ["text_size", "email", "zotero_id", "zotero_key"]
+        text_fields = ["text_size", "email"]
         text_fields_row = []
         for field in text_fields:
             text_fields_row.append(ConfigField(backend=self.backend, field=field))

@@ -6,14 +6,7 @@ from fastapi import BackgroundTasks, FastAPI, HTTPException, status
 from fastapi.middleware.cors import CORSMiddleware
 
 from .config import resolve_storage_root
-from .schemas import (
-    ConfigPayload,
-    ConfigUpdate,
-    PaperPayload,
-    PaperResponse,
-    StarredPaperResponse,
-    StatusResponse,
-)
+from .schemas import ConfigPayload, ConfigUpdate, PaperResponse, StatusResponse
 from .services import BackendService
 from .storage import FileStorage
 
@@ -76,36 +69,3 @@ def get_status() -> StatusResponse:
 def random_paper() -> PaperResponse:
     return PaperResponse(paper=service.get_random_paper())
 
-
-@app.get("/papers/starred", response_model=StarredPaperResponse)
-def starred_papers() -> StarredPaperResponse:
-    return StarredPaperResponse(papers=service.list_starred_papers())
-
-
-@app.post("/papers/star", status_code=status.HTTP_200_OK)
-def star_paper(payload: PaperPayload) -> Dict[str, str]:
-    paper = payload.paper
-    if "doi" not in paper:
-        raise HTTPException(status_code=400, detail="Paper DOI is required.")
-    service.star_paper(paper)
-    return {"status": "starred"}
-
-
-@app.delete("/papers/star/{doi}", status_code=status.HTTP_200_OK)
-def unstar_paper(doi: str) -> Dict[str, str]:
-    service.unstar_paper(doi)
-    return {"status": "unstarred"}
-
-
-@app.get("/papers/star/{doi}")
-def is_starred(doi: str) -> Dict[str, bool]:
-    return {"starred": service.is_starred(doi)}
-
-
-@app.post("/papers/export", response_model=StatusResponse)
-def export_to_zotero(payload: PaperPayload) -> StatusResponse:
-    success, message = service.export_to_zotero(payload.paper)
-    progress = 1.0 if success else 0.0
-    if not success:
-        raise HTTPException(status_code=400, detail=message)
-    return StatusResponse(message=message, progress=progress)

@@ -1,20 +1,15 @@
 from .paper import Paper
-from .api_client import BackendUnavailableError
 
 import flet as ft
 
 class PaperDisplay(ft.Container):
-    def __init__(self, paper: Paper, starred: bool, on_star_change=None, on_zotero_submit=None):
+    def __init__(self, paper: Paper):
         super().__init__(
             bgcolor=ft.Colors.SURFACE
         )
 
-        
-        self.paper = paper
 
-        # callbacks
-        self.on_star_change = on_star_change
-        self.on_zotero_submit = on_zotero_submit
+        self.paper = paper
 
         self.title = ft.Text(value="", selectable=True, theme_style=ft.TextThemeStyle.TITLE_MEDIUM)
 
@@ -56,38 +51,11 @@ class PaperDisplay(ft.Container):
             style=icon_style,
         )
 
-        self.zotero = ft.IconButton(
-            icon=ft.Icons.ARCHIVE,
-            tooltip="Export to Zotero",
-            url="",
-            style=icon_style,
-            on_click=self._export_to_zotero
-        )
-
-        self.star = ft.IconButton(
-            icon=ft.Icons.STAR_BORDER,
-            selected_icon=ft.Icons.STAR,
-            selected=starred,
-            tooltip="Star this paper",
-            style=icon_style,
-            on_click=self._star,
-        )
-
-        self.title_star = ft.IconButton(
-            icon=ft.Icons.STAR_BORDER,
-            selected_icon=ft.Icons.STAR,
-            selected=starred,
-            tooltip="Star this paper",
-            style=icon_style,
-            on_click=self._star,
-        )
-
         self.condensed = False
-        self.basic_buttons = [self.star]
-        self.extended_buttons = [self.link, self.pdf, self.zotero]
+        self.action_buttons = [self.link, self.pdf]
 
         self.bottom_row = ft.Row(
-            controls=self.basic_buttons + self.extended_buttons,
+            controls=self.action_buttons,
             alignment=ft.MainAxisAlignment.START,
             spacing=10,
         )
@@ -98,9 +66,8 @@ class PaperDisplay(ft.Container):
             expand=True,
         )
 
-        
         self.title_row = ft.Row(
-            [self.title_star, self.title_column], alignment=ft.MainAxisAlignment.START, vertical_alignment=ft.CrossAxisAlignment.START
+            [self.title_column], alignment=ft.MainAxisAlignment.START, vertical_alignment=ft.CrossAxisAlignment.START
         )
 
         self.content = ft.Column(
@@ -123,16 +90,14 @@ class PaperDisplay(ft.Container):
         """
         Convert the display to a condensed view.
         """
-        self.title_star.visible = True
         self.bottom_row.visible = False
         self.abstract.visible = False
-        
+
 
     def to_expanded(self):
         """
         Convert the display to an expanded view.
         """
-        self.title_star.visible = False
         self.bottom_row.visible = True
         self.abstract.visible = True
 
@@ -144,29 +109,6 @@ class PaperDisplay(ft.Container):
         else:
             self.to_expanded()
         self.update()
-
-    def _star(self, e=None):
-        new_status = not self.star.selected  # Toggle
-        previous_status = self.star.selected
-        self.star.selected = new_status
-        self.title_star.selected = new_status
-
-        if self.on_star_change:
-            try:
-                self.on_star_change(self.paper, new_status)
-            except BackendUnavailableError as exc:
-                self.star.selected = previous_status
-                self.title_star.selected = previous_status
-                self._notify_backend_error(str(exc))
-
-        self.update()
-
-    def _export_to_zotero(self, _):
-        if self.on_zotero_submit:
-            try:
-                self.on_zotero_submit(self.paper)
-            except BackendUnavailableError as exc:
-                self._notify_backend_error(str(exc))
 
     def before_update(self):
         """
@@ -186,12 +128,3 @@ class PaperDisplay(ft.Container):
         else:
             self.pdf.icon = ft.Icons.CLOSE
             self.pdf.url = ""
-
-    def _notify_backend_error(self, message: str):
-        if self.page:
-            snackbar = ft.SnackBar(ft.Text(message))
-            self.page.snack_bar = snackbar
-            snackbar.open = True
-            self.page.update()
-        else:
-            print(message)

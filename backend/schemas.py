@@ -15,8 +15,6 @@ class ConfigPayload(BaseModel):
     end_year: int
     text_size: int
     email: str = ""
-    zotero_key: str = ""
-    zotero_id: str = ""
     journals: List[Journal] = Field(default_factory=list)
 
 
@@ -25,22 +23,12 @@ class ConfigUpdate(BaseModel):
     end_year: Optional[int] = None
     text_size: Optional[int] = None
     email: Optional[str] = None
-    zotero_key: Optional[str] = None
-    zotero_id: Optional[str] = None
     journals: Optional[List[Journal]] = None
-
-
-class PaperPayload(BaseModel):
-    paper: Dict[str, Any]
 
 
 class StatusResponse(BaseModel):
     message: str
     progress: float
-
-
-class StarredPaperResponse(BaseModel):
-    papers: List[Dict[str, Any]]
 
 
 class PaperResponse(BaseModel):

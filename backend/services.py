@@ -3,7 +3,7 @@ from __future__ import annotations
 import random
 import threading
 import time
-from typing import Dict, Iterable, List, Optional, Tuple
+from typing import Dict, List, Optional, Tuple
 
 import requests
 
@@ -129,61 +129,6 @@ class BackendService:
         self._ensure_buffer()
         return paper
 
-    def list_starred_papers(self) -> List[Dict]:
-        return self.storage.starred_papers()
-
-    def star_paper(self, paper: Dict) -> None:
-        self.storage.star_paper(paper)
-
-    def unstar_paper(self, doi: str) -> None:
-        self.storage.unstar_paper(doi)
-
-    def is_starred(self, doi: str) -> bool:
-        return self.storage.is_starred(doi)
-
-    def export_to_zotero(self, paper: Dict) -> Tuple[bool, str]:
-        library_id = self.config.get("zotero_id")
-        api_key = self.config.get("zotero_key")
-        if not library_id or not api_key:
-            return False, "Missing Zotero credentials."
-
-        base_url = f"https://api.zotero.org/users/{library_id}/items"
-        headers = {
-            "Zotero-API-Key": api_key,
-            "Content-Type": "application/json",
-        }
-        item = {
-            "itemType": "journalArticle",
-            "title": paper.get("title", ""),
-            "abstractNote": paper.get("abstract", ""),
-            "publicationTitle": paper.get("primary_location", {})
-            .get("source", {})
-            .get("display_name", ""),
-            "volume": paper.get("biblio", {}).get("volume", ""),
-            "issue": paper.get("biblio", {}).get("issue", ""),
-            "pages": self._format_pages(paper),
-            "date": paper.get("publication_date", ""),
-            "journalAbbreviation": paper.get("primary_location", {})
-            .get("source", {})
-            .get("display_name", ""),
-            "language": paper.get("language", ""),
-            "DOI": paper.get("doi", "").replace("https://doi.org/", ""),
-            "ISSN": self._get_issn(paper),
-            "url": paper.get("primary_location", {}).get("landing_page_url", ""),
-            "creators": self._extract_creators(paper),
-            "tags": [],
-            "collections": [],
-            "relations": {},
-        }
-
-        try:
-            response = requests.post(base_url, headers=headers, json=[item], timeout=60)
-            if response.status_code == 200:
-                key = response.json().get("success", {}).get("0", "")
-                return True, f"Exported to Zotero (key: {key})"
-            return False, f"Failed to export: {response.status_code} {response.text}"
-        except Exception as exc:
-            return False, f"Error exporting: {exc}"
 
     # ------------------------------------------------------------------
     # Private helpers
@@ -254,36 +199,3 @@ class BackendService:
         if not self._buffer_thread or not self._buffer_thread.is_alive():
             self._buffer_thread = threading.Thread(target=buffer_worker, daemon=True)
             self._buffer_thread.start()
-
-    def _format_pages(self, paper: Dict) -> str:
-        biblio = paper.get("biblio", {})
-        first = biblio.get("first_page", "")
-        last = biblio.get("last_page", "")
-        if first and last:
-            return f"{first}-{last}"
-        return first or ""
-
-    @staticmethod
-    def _get_issn(paper: Dict) -> str:
-        issns = (
-            paper.get("primary_location", {})
-            .get("source", {})
-            .get("issn", [])
-        )
-        return issns[0] if issns else ""
-
-    @staticmethod
-    def _extract_creators(paper: Dict) -> List[Dict]:
-        creators = []
-        for author in paper.get("authorships", []):
-            name = author.get("author", {}).get("display_name", "")
-            if name:
-                parts = name.split(" ", 1)
-                creators.append(
-                    {
-                        "creatorType": "author",
-                        "firstName": parts[0],
-                        "lastName": parts[1] if len(parts) > 1 else "",
-                    }
-                )
-        return creators

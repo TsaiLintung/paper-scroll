@@ -3,7 +3,7 @@ from __future__ import annotations
 import os
 import threading
 import time
-from typing import Callable, List, Optional, Tuple
+from typing import Callable, Optional, Tuple
 
 import requests
 
@@ -15,8 +15,6 @@ DEFAULT_CONFIG = {
     "end_year": 2021,
     "text_size": 16,
     "email": "",
-    "zotero_key": "",
-    "zotero_id": "",
     "journals": [
         {"name": "aer", "issn": "0002-8282"}
     ],
@@ -137,34 +135,3 @@ class ApiClient:
         response = self._request("GET", "/papers/random", timeout=30)
         payload = response.json()
         return Paper(payload["paper"])
-
-    def get_starred_papers(self) -> List[Paper]:
-        response = self._request("GET", "/papers/starred", timeout=30)
-        payload = response.json()
-        return [Paper(item) for item in payload.get("papers", [])]
-
-    def star(self, paper: Paper) -> None:
-        self._request(
-            "POST",
-            "/papers/star",
-            json={"paper": paper.data},
-            timeout=30,
-        )
-
-    def unstar(self, paper: Paper) -> None:
-        doi = paper.get("doi", "")
-        self._request("DELETE", f"/papers/star/{doi}", timeout=30)
-
-    def on_star_change(self, paper: Paper, new_status: bool) -> None:
-        if new_status:
-            self.star(paper)
-        else:
-            self.unstar(paper)
-
-    def export_paper_to_zotero(self, paper: Paper) -> None:
-        self._request(
-            "POST",
-            "/papers/export",
-            json={"paper": paper.data},
-            timeout=60,
-        )

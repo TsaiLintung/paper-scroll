@@ -6,8 +6,7 @@ Doomscroll papers.
 
 - Follow your favorite journals from Crossref
 - Browse papers with metadata from OpenAlex
-- Star papers for easy access later
-- Export papers directly to Zotero
+- Launch full abstracts and open-access links directly from the app
 
 ## Installation
 
@@ -36,3 +35,7 @@ Doomscroll papers.
 - `backend/` — FastAPI service exposing paper, journal, and config endpoints
 - `frontend/` — Flet UI components and API client
 - `main.py` — Flet entry point that wires the frontend to the backend
+
+## Upgrading from Earlier Versions
+
+Older builds supported starring papers and exporting to Zotero. Those capabilities have been removed; you can safely delete any legacy files left under `storage/data/starred/` and drop `zotero_*` keys from `storage/data/config.json` if they remain.

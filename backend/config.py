@@ -8,15 +8,12 @@ DEFAULT_CONFIG: Final = {
     "end_year": 2021,
     "text_size": 16,
     "email": "",
-    "zotero_key": "",
-    "zotero_id": "",
     "journals": [
         {"name": "aer", "issn": "0002-8282"}
     ],
 }
 
 CONFIG_FILENAME: Final = "config.json"
-STARRED_DIRNAME: Final = "starred"
 JOURNALS_DIRNAME: Final = "journals"
 
 
