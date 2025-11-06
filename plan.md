@@ -31,3 +31,34 @@
 - Manually test: journal sync path, exploring papers (including empty states), settings edits, and backend offline behaviour.
 - Tag backlog items for future enhancements (e.g., replace starring with external bookmarking, add share/export options).
 - Communicate the removal in release notes, highlighting that existing starred data and Zotero integration are deprecated.
+
+# Action Buttons Removal Plan
+
+## Objectives
+- Eliminate all action buttons from paper listings, including download/open-access shortcuts.
+- Make the paper title itself the sole interactive element that opens the DOI URL in the user’s browser.
+- Ensure UI layout, styling, and accessibility remain intact after removing button controls.
+
+## Phase 1 – Assessment
+- Inventory button usage in `frontend/paper_display.py`, `main.py`, and any shared UI helpers to confirm no other components rely on those controls.
+- Review backend payloads to ensure we still provide DOI URLs; identify any code paths using `open_access` metadata solely for the download button.
+- Capture current screenshots or measurements for the paper card layout to benchmark post-change spacing.
+
+## Phase 2 – Frontend Refactor
+- Update `PaperDisplay` to remove the button row, reposition spacing, and convert the title `ft.Text` to a `ft.TextButton` or `ft.Link` component pointing at the DOI.
+- Simplify condensed/expanded toggling now that only textual content remains; confirm `toggle_condense` still feels usable.
+- Remove any calls in `main.py` or elsewhere that supply now-obsolete callbacks (e.g., Zotero export handler already gone).
+
+## Phase 3 – Backend/Data Adjustments
+- Confirm backend responses always include a canonical DOI URL; if not, normalize it in `backend/services.py` before sending to the client.
+- Drop unused fields from the API schema or documentation if download-specific data (e.g., `open_access`) becomes redundant, or mark it for future cleanup.
+
+## Phase 4 – QA & Styling
+- Adjust padding/margins in `frontend/ui.py` or `PaperDisplay` to preserve visual balance after button removal.
+- Validate that clicking titles opens the DOI in both desktop app and web host modes; ensure keyboard accessibility (Enter/Space) still works.
+- Manually test condensed/expanded states, scroll performance, and backend-unavailable messaging to confirm no regressions.
+
+## Phase 5 – Documentation & Follow-up
+- Update README/AGENTS if they reference download buttons or additional controls.
+- Note in release notes that direct download/export options were removed, and titles now link out to the DOI.
+- File follow-up tasks for any remaining redundant fields or assets (e.g., unused icons) uncovered during the refactor.

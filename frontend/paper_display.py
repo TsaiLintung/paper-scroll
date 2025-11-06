@@ -2,16 +2,29 @@ from .paper import Paper
 
 import flet as ft
 
+
 class PaperDisplay(ft.Container):
     def __init__(self, paper: Paper):
-        super().__init__(
-            bgcolor=ft.Colors.SURFACE
-        )
-
+        super().__init__(bgcolor=ft.Colors.SURFACE)
 
         self.paper = paper
+        self.condensed = False
 
-        self.title = ft.Text(value="", selectable=True, theme_style=ft.TextThemeStyle.TITLE_MEDIUM)
+        self.title_link = ft.TextButton(
+            text="",
+            style=ft.ButtonStyle(
+                padding=0,
+                overlay_color=ft.Colors.with_opacity(0.05, ft.Colors.ON_SURFACE),
+            ),
+            url="",
+        )
+        self.title_link.content = ft.Text(
+            value="",
+            selectable=False,
+            theme_style=ft.TextThemeStyle.TITLE_MEDIUM,
+            max_lines=2,
+            overflow=ft.TextOverflow.ELLIPSIS,
+        )
 
         self.year_journal = ft.Text(
             value="",
@@ -28,81 +41,35 @@ class PaperDisplay(ft.Container):
         )
 
         self.abstract = ft.Text(
-            value="", selectable=True, theme_style=ft.TextThemeStyle.BODY_MEDIUM
+            value="",
+            selectable=True,
+            theme_style=ft.TextThemeStyle.BODY_MEDIUM,
         )
 
-        icon_style = ft.ButtonStyle(
-            padding=ft.padding.symmetric(horizontal=6),
-            shape=ft.RoundedRectangleBorder(radius=8),
-            overlay_color=ft.Colors.with_opacity(0.1, ft.Colors.ON_SURFACE),
-        )
-
-        self.link = ft.IconButton(
-            icon=ft.Icons.LINK,
-            tooltip="Open DOI",
-            url="",
-            style=icon_style,
-        )
-
-        self.pdf = ft.IconButton(
-            icon=ft.Icons.CLOUD_DOWNLOAD,
-            tooltip="Download PDF",
-            url="",
-            style=icon_style,
-        )
-
-        self.condensed = False
-        self.action_buttons = [self.link, self.pdf]
-
-        self.bottom_row = ft.Row(
-            controls=self.action_buttons,
-            alignment=ft.MainAxisAlignment.START,
-            spacing=10,
+        self.meta_column = ft.Column(
+            [self.year_journal, self.authors], spacing=0, expand=True
         )
 
         self.title_column = ft.Column(
-            [self.title, ft.Column([self.year_journal, self.authors], spacing=0)],
-            spacing=5,
-            expand=True,
-        )
-
-        self.title_row = ft.Row(
-            [self.title_column], alignment=ft.MainAxisAlignment.START, vertical_alignment=ft.CrossAxisAlignment.START
+            [self.title_link, self.meta_column], spacing=5, expand=True
         )
 
         self.content = ft.Column(
-            [
-                self.title_row,
-                self.abstract,
-                self.bottom_row,
-            ],
+            [self.title_column, self.abstract],
             spacing=10,
         )
         self.padding = 15
         self.on_click = self.toggle_condense
 
-        if self.condensed:
-            self.to_condensed()
-        else:
-            self.to_expanded()
+        self.to_expanded()
 
     def to_condensed(self):
-        """
-        Convert the display to a condensed view.
-        """
-        self.bottom_row.visible = False
         self.abstract.visible = False
 
-
     def to_expanded(self):
-        """
-        Convert the display to an expanded view.
-        """
-        self.bottom_row.visible = True
         self.abstract.visible = True
 
     def toggle_condense(self, e=None):
-        
         self.condensed = not self.condensed
         if self.condensed:
             self.to_condensed()
@@ -111,20 +78,11 @@ class PaperDisplay(ft.Container):
         self.update()
 
     def before_update(self):
-        """
-        Update the display with new paper information.
-        """
-
         paper = self.paper
-        self.title.value = paper.get("display_name")
-        self.link.url = self.paper.get("doi")
+        title = paper.get("display_name") or paper.get("title", "")
+        doi = paper.get("doi") or ""
+        self.title_link.content.value = title
+        self.title_link.url = doi
         self.abstract.value = paper.get("abstract")
         self.year_journal.value = paper.get("year_journal")
         self.authors.value = paper.get("authors_joined")
-
-        if paper.get("open_access").get("is_oa", False):
-            self.pdf.icon = ft.Icons.DOWNLOAD
-            self.pdf.url = paper.get("open_access").get("oa_url", "")
-        else:
-            self.pdf.icon = ft.Icons.CLOSE
-            self.pdf.url = ""

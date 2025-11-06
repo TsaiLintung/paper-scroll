@@ -181,7 +181,9 @@ class BackendService:
                     continue
                 paper = resp.json()
                 if paper:
-                    return paper
+                    paper = self._normalize_paper(paper)
+                    if paper.get("doi"):
+                        return paper
             except Exception:
                 continue
 
@@ -199,3 +201,10 @@ class BackendService:
         if not self._buffer_thread or not self._buffer_thread.is_alive():
             self._buffer_thread = threading.Thread(target=buffer_worker, daemon=True)
             self._buffer_thread.start()
+
+    @staticmethod
+    def _normalize_paper(paper: Dict) -> Dict:
+        doi = paper.get("doi")
+        if doi and not doi.startswith("http"):
+            paper["doi"] = f"https://doi.org/{doi}"
+        return paper
