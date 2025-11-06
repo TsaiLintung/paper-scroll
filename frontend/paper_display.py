@@ -8,7 +8,6 @@ class PaperDisplay(ft.Container):
         super().__init__(bgcolor=ft.Colors.SURFACE)
 
         self.paper = paper
-        self.condensed = False
 
         self.title_link = ft.TextButton(
             text="",
@@ -59,23 +58,6 @@ class PaperDisplay(ft.Container):
             spacing=10,
         )
         self.padding = 15
-        self.on_click = self.toggle_condense
-
-        self.to_expanded()
-
-    def to_condensed(self):
-        self.abstract.visible = False
-
-    def to_expanded(self):
-        self.abstract.visible = True
-
-    def toggle_condense(self, e=None):
-        self.condensed = not self.condensed
-        if self.condensed:
-            self.to_condensed()
-        else:
-            self.to_expanded()
-        self.update()
 
     def before_update(self):
         paper = self.paper
