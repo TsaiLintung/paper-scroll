@@ -26,18 +26,6 @@ class ExploreView(ft.Container):
             on_scroll_interval=100,
         )
         self.paper_scroll.expand = True
-        self.refresh_papers_button = ft.FloatingActionButton(
-            icon=ft.Icons.REFRESH,
-            tooltip="Refresh papers",
-            bgcolor=ft.Colors.SURFACE_CONTAINER_HIGHEST,
-            on_click=lambda _: self.refresh_papers(),
-        )
-        self.settings_button = ft.FloatingActionButton(
-            icon=ft.Icons.SETTINGS,
-            tooltip="Settings",
-            bgcolor=ft.Colors.SURFACE_CONTAINER_HIGHEST,
-            on_click=self.toggle_settings,
-        )
         settings_header = ft.Row(
             controls=[
                 ft.Text("Settings", theme_style=ft.TextThemeStyle.TITLE_MEDIUM),
@@ -49,29 +37,23 @@ class ExploreView(ft.Container):
             ],
             alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
         )
-        self.settings_container = ft.Card(
-            content=ft.Container(
-                content=ft.Column(
-                    controls=[
-                        settings_header,
-                        MyDivider(),
-                        ft.Container(
-                            content=self.settings,
-                            width=420,
-                            height=520,
-                        ),
-                    ],
-                    spacing=10,
-                ),
-                width=460,
-                padding=ft.padding.all(20),
-                bgcolor=ft.Colors.WHITE,
-                border_radius=ft.border_radius.all(16),
+        self.settings_container = ft.Container(
+            content=ft.Column(
+                controls=[
+                    settings_header,
+                    MyDivider(),
+                    ft.Container(
+                        content=self.settings,
+                        width=420,
+                        height=520,
+                    ),
+                ],
+                spacing=10,
             ),
-            elevation=8,
-            color=ft.Colors.WHITE,
-            surface_tint_color=ft.Colors.WHITE,
-            shape=ft.RoundedRectangleBorder(radius=16),
+            width=460,
+            padding=ft.padding.all(20),
+            bgcolor=ft.Colors.WHITE,
+            border_radius=ft.border_radius.all(16),
         )
         self.settings_overlay = ft.Container(
             content=ft.Container(
@@ -81,24 +63,10 @@ class ExploreView(ft.Container):
             alignment=ft.alignment.center,
             expand=True,
             visible=False,
-            bgcolor=ft.Colors.with_opacity(0.4, ft.Colors.BLACK),
-        )
-        action_buttons = ft.Column(
-            controls=[self.refresh_papers_button, self.settings_button],
-            spacing=12,
-            horizontal_alignment=ft.CrossAxisAlignment.END,
         )
         self.content = ft.Stack(
             controls=[
                 self.paper_scroll,
-                ft.Container(
-                    action_buttons,
-                    alignment=ft.alignment.bottom_right,
-                    padding=20,
-                    right=0,
-                    bottom=0,
-                    expand=True,
-                ),
                 self.settings_overlay,
             ],
             expand=True,
@@ -154,7 +122,7 @@ class ExploreView(ft.Container):
         else:
             print(message)
 
-    def toggle_settings(self, _):
+    def toggle_settings(self, _=None):
         self.settings_overlay.visible = not self.settings_overlay.visible
         if self.page:
             self.page.update()
@@ -175,10 +143,28 @@ def main(page: ft.Page):
     settings = Settings(api_client)
     explore_view = ExploreView(api_client, settings)
 
+    def refresh_action(_):
+        explore_view.refresh_papers()
+
+    def settings_action(_):
+        explore_view.toggle_settings()
+
     page.appbar = ft.AppBar(
         title=ft.Text("PAPERSCROLL", theme_style=ft.TextThemeStyle.TITLE_LARGE),
         center_title=True,
         bgcolor=ft.Colors.SURFACE_CONTAINER_HIGHEST,
+        actions=[
+            ft.IconButton(
+                icon=ft.Icons.REFRESH,
+                tooltip="Refresh papers",
+                on_click=refresh_action,
+            ),
+            ft.IconButton(
+                icon=ft.Icons.SETTINGS,
+                tooltip="Toggle settings",
+                on_click=settings_action,
+            ),
+        ],
     )
 
     api_client.set_status_callback(settings.set_bk_status)
