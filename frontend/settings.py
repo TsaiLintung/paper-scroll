@@ -1,10 +1,10 @@
-from .back import Backend
+from .api_client import ApiClient, BackendUnavailableError
 from .ui import MyDivider
 
 import flet as ft
 
 class AddJournal(ft.Row):
-    def __init__(self, backend: Backend, call_submit_journal):
+    def __init__(self, backend: ApiClient, call_submit_journal):
         super().__init__(wrap=True, spacing=12)
 
         self.backend = backend
@@ -59,7 +59,7 @@ class AddJournal(ft.Row):
 
 
 class ConfigField(ft.TextField):
-    def __init__(self, backend: Backend, field: str):
+    def __init__(self, backend: ApiClient, field: str):
         super().__init__(
             label=field.replace("_", " ").title(),
             value=backend.config.get(field),
@@ -71,11 +71,15 @@ class ConfigField(ft.TextField):
         self.backend = backend
 
     def submit_field(self, e: ft.ControlEvent):
-        self.backend.update_config(self.field, e.control.value)
+        try:
+            self.backend.update_config(self.field, e.control.value)
+        except BackendUnavailableError as exc:
+            self.error_text = str(exc)
+            self.update()
 
 
 class Settings(ft.Column):
-    def __init__(self, backend: Backend):
+    def __init__(self, backend: ApiClient):
         super().__init__(
             alignment=ft.MainAxisAlignment.START,
             horizontal_alignment=ft.CrossAxisAlignment.START,
@@ -157,7 +161,11 @@ class Settings(ft.Column):
         ]
 
     def submit_journal(self, journal_name: str, issn: str):
-        self.backend.add_journal(journal_name, issn)
+        try:
+            self.backend.add_journal(journal_name, issn)
+        except BackendUnavailableError as exc:
+            self._notify_backend_error(str(exc))
+            return
         self.journals_row.controls = self.get_journal_chip_row()
         self.update()
 
@@ -183,10 +191,18 @@ class Settings(ft.Column):
         e.control.error_text = None
         self.update()
         e.control.value = int(e.control.value)  # ensure integer format
-        self.backend.update_config(field, e.control.value)
+        try:
+            self.backend.update_config(field, e.control.value)
+        except BackendUnavailableError as exc:
+            e.control.error_text = str(exc)
+            self.update()
 
     def remove_journal(self, issn: str):
-        self.backend.remove_journal(issn)
+        try:
+            self.backend.remove_journal(issn)
+        except BackendUnavailableError as exc:
+            self._notify_backend_error(str(exc))
+            return
         self.journals_row.controls = self.get_journal_chip_row()
         self.update()
 
@@ -197,3 +213,15 @@ class Settings(ft.Column):
         self.backend_status.controls[0].value = status[0]
         self.backend_status.controls[1].value = status[1]
         self.update()
+        if self.page:
+            self.page.update()
+
+    def _notify_backend_error(self, message: str):
+        self.backend_status.controls[0].value = message
+        self.backend_status.controls[1].value = 0
+        self.update()
+        if self.page:
+            snackbar = ft.SnackBar(ft.Text(message))
+            self.page.snack_bar = snackbar
+            snackbar.open = True
+            self.page.update()

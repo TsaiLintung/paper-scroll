@@ -1,4 +1,5 @@
 from .paper import Paper
+from .api_client import BackendUnavailableError
 
 import flet as ft
 
@@ -60,7 +61,7 @@ class PaperDisplay(ft.Container):
             tooltip="Export to Zotero",
             url="",
             style=icon_style,
-            on_click=lambda e: self.on_zotero_submit(self.paper)
+            on_click=self._export_to_zotero
         )
 
         self.star = ft.IconButton(
@@ -146,13 +147,26 @@ class PaperDisplay(ft.Container):
 
     def _star(self, e=None):
         new_status = not self.star.selected  # Toggle
+        previous_status = self.star.selected
         self.star.selected = new_status
         self.title_star.selected = new_status
 
         if self.on_star_change:
-            self.on_star_change(self.paper, new_status)
+            try:
+                self.on_star_change(self.paper, new_status)
+            except BackendUnavailableError as exc:
+                self.star.selected = previous_status
+                self.title_star.selected = previous_status
+                self._notify_backend_error(str(exc))
 
         self.update()
+
+    def _export_to_zotero(self, _):
+        if self.on_zotero_submit:
+            try:
+                self.on_zotero_submit(self.paper)
+            except BackendUnavailableError as exc:
+                self._notify_backend_error(str(exc))
 
     def before_update(self):
         """
@@ -172,3 +186,12 @@ class PaperDisplay(ft.Container):
         else:
             self.pdf.icon = ft.Icons.CLOSE
             self.pdf.url = ""
+
+    def _notify_backend_error(self, message: str):
+        if self.page:
+            snackbar = ft.SnackBar(ft.Text(message))
+            self.page.snack_bar = snackbar
+            snackbar.open = True
+            self.page.update()
+        else:
+            print(message)

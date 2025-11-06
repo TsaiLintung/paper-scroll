@@ -1,17 +1,15 @@
-from src.paper_display import PaperDisplay
-from src.back import Backend
-from src.settings import Settings
+from frontend.paper_display import PaperDisplay
+from frontend.api_client import ApiClient, BackendUnavailableError
+from frontend.settings import Settings
 
-from src.ui import MyDivider, PAGE_PADDING, MyTheme, FONTS
+from frontend.ui import MyDivider, PAGE_PADDING, MyTheme, FONTS
 
-import os
 import time
 
 import flet as ft
 
 class StaredPapers(ft.Column):
-
-    def __init__(self, backend: Backend):
+    def __init__(self, backend: ApiClient):
         super().__init__()
         self.backend = backend
         self.controls = []
@@ -23,16 +21,21 @@ class StaredPapers(ft.Column):
     def before_update(self):
 
         self.controls = []
-        starred_papers = self.backend.get_starred_papers()
+        try:
+            starred_papers = self.backend.get_starred_papers()
+        except BackendUnavailableError as exc:
+            self.controls.append(ft.Text(str(exc)))
+            return
         for paper in starred_papers:
-            paper_display = PaperDisplay(paper, True, self.backend.on_star_change, self.backend.export_paper_to_zotero)
+            paper_display = PaperDisplay(
+                paper, True, self.backend.on_star_change, self.backend.export_paper_to_zotero
+            )
             paper_display.to_condensed()
             self.controls.append(paper_display)
             self.controls.append(MyDivider())
 
 class ExploreView(ft.Container):
-
-    def __init__(self, backend: Backend):
+    def __init__(self, backend: ApiClient):
         super().__init__()
         self.bgcolor = ft.Colors.TRANSPARENT
         self.backend = backend
@@ -65,11 +68,29 @@ class ExploreView(ft.Container):
         """
         Load more papers when the user scrolls to the bottom.
         """
+        error_displayed = False
         for _ in range(3):
-            paper = self.backend.get_random_paper()
-            self.paper_scroll.controls.append(PaperDisplay(paper, False, self.backend.on_star_change, self.backend.export_paper_to_zotero))
+            try:
+                paper = self.backend.get_random_paper()
+            except BackendUnavailableError as exc:
+                if not error_displayed:
+                    self._notify_backend_error(str(exc))
+                    error_displayed = True
+                break
+            self.paper_scroll.controls.append(
+                PaperDisplay(
+                    paper,
+                    False,
+                    self.backend.on_star_change,
+                    self.backend.export_paper_to_zotero,
+                )
+            )
             self.paper_scroll.controls.append(MyDivider())
             self.current_index += 1 
+        if error_displayed and not self.paper_scroll.controls:
+            self.paper_scroll.controls.append(
+                ft.Text("Backend unavailable. Start the API server and retry.")
+            )
 
     def refresh_papers(self):
         """
@@ -96,6 +117,15 @@ class ExploreView(ft.Container):
                 self.load_more_papers()
                 self.page.update()
                 self.is_loading = False
+
+    def _notify_backend_error(self, message: str):
+        if self.page:
+            snackbar = ft.SnackBar(ft.Text(message))
+            self.page.snack_bar = snackbar
+            snackbar.open = True
+            self.page.update()
+        else:
+            print(message)
 
  
 class MyNavBar(ft.NavigationBar):
@@ -136,31 +166,21 @@ class MyNavBar(ft.NavigationBar):
             self.page.go("/settings")
 
 def main(page: ft.Page):
-
-    data_dir = os.getenv("FLET_APP_STORAGE_DATA")
-
-    def set_bk_status(status):
-        """
-        Set the backend status message.
-        """
-        settings.set_bk_status(status)
-        page.update()
-
-    bk = Backend(data_dir, set_bk_status)
+    api_client = ApiClient()
 
     # Set up the page
     page.title = "paperscroll"
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     page.fonts = FONTS
-    page.theme = MyTheme(int(bk.config.get("text_size")))
+    page.theme = MyTheme(int(api_client.config.get("text_size", 16)))
     page.window.title_bar_hidden = True
     # Explore view ---------
 
-    explore_view = ExploreView(bk)
+    explore_view = ExploreView(api_client)
     # Starred view ---------
 
-    starred_papers_column = StaredPapers(bk)
+    starred_papers_column = StaredPapers(api_client)
     starred_view = ft.Container(
         content=starred_papers_column,
         alignment=ft.alignment.center, 
@@ -168,7 +188,7 @@ def main(page: ft.Page):
     )
 
     # settings view
-    settings = Settings(bk)
+    settings = Settings(api_client)
     settings_view = ft.Container(
         content=settings,
         alignment=ft.alignment.top_left,
@@ -203,6 +223,10 @@ def main(page: ft.Page):
         page.update()
 
     page.on_route_change = route_change
+
+    api_client.set_status_callback(settings.set_bk_status)
+    if not api_client.available:
+        settings.set_bk_status(("Backend unavailable. Start the API server.", 0.0))
 
     page.add(main_content)
     page.add(nav)
