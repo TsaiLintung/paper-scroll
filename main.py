@@ -14,6 +14,8 @@ class ExploreView(ft.Container):
         super().__init__()
         self.backend = backend
         self.settings = settings
+        self.settings.expand = True
+        self.settings.scroll = ft.ScrollMode.AUTO
         self.bgcolor = ft.Colors.TRANSPARENT
         self.current_index = 0
         self.is_loading = False
@@ -37,41 +39,56 @@ class ExploreView(ft.Container):
             ],
             alignment=ft.MainAxisAlignment.SPACE_BETWEEN,
         )
+        settings_body = ft.Container(
+            content=self.settings,
+            expand=True,
+            padding=0,
+            alignment=ft.alignment.top_left,
+        )
         self.settings_container = ft.Container(
             content=ft.Column(
                 controls=[
                     settings_header,
                     MyDivider(),
-                    ft.Container(
-                        content=self.settings,
-                        width=420,
-                        height=520,
-                    ),
+                    settings_body,
                 ],
-                spacing=10,
+                spacing=12,
+                expand=True,
             ),
             width=460,
             padding=ft.padding.all(20),
             bgcolor=ft.Colors.WHITE,
             border_radius=ft.border_radius.all(16),
         )
-        self.settings_overlay = ft.Container(
-            content=ft.Container(
-                content=self.settings_container,
-                alignment=ft.alignment.center,
-            ),
-            alignment=ft.alignment.center,
+        self.settings_overlay = ft.Stack(
+            controls=[
+                ft.Container(
+                    expand=True,
+                    bgcolor=ft.Colors.with_opacity(0.25, ft.Colors.BLACK),
+                ),
+                ft.Container(
+                    content=self.settings_container,
+                    alignment=ft.alignment.center,
+                    expand=True,
+                    padding=ft.padding.symmetric(horizontal=16, vertical=24),
+                ),
+            ],
             expand=True,
             visible=False,
         )
+        self.paper_layer = ft.Container(
+            content=self.paper_scroll,
+            padding=PAGE_PADDING,
+            expand=True,
+        )
         self.content = ft.Stack(
             controls=[
-                self.paper_scroll,
+                self.paper_layer,
                 self.settings_overlay,
             ],
             expand=True,
         )
-        self.padding = PAGE_PADDING
+        self.padding = ft.padding.all(0)
 
         self.load_more_papers()
 
@@ -136,6 +153,7 @@ def main(page: ft.Page):
     page.title = "paperscroll"
     page.vertical_alignment = ft.MainAxisAlignment.START
     page.horizontal_alignment = ft.CrossAxisAlignment.STRETCH
+    page.padding = 0
     page.fonts = FONTS
     page.theme = MyTheme(int(api_client.config.get("text_size", 16)))
     page.window.title_bar_hidden = True
@@ -154,16 +172,25 @@ def main(page: ft.Page):
         center_title=True,
         bgcolor=ft.Colors.SURFACE_CONTAINER_HIGHEST,
         actions=[
-            ft.IconButton(
-                icon=ft.Icons.REFRESH,
-                tooltip="Refresh papers",
-                on_click=refresh_action,
-            ),
-            ft.IconButton(
-                icon=ft.Icons.SETTINGS,
-                tooltip="Toggle settings",
-                on_click=settings_action,
-            ),
+            ft.Container(
+                content=ft.Row(
+                    controls=[
+                        ft.IconButton(
+                            icon=ft.Icons.REFRESH,
+                            tooltip="Refresh papers",
+                            on_click=refresh_action,
+                        ),
+                        ft.IconButton(
+                            icon=ft.Icons.SETTINGS,
+                            tooltip="Toggle settings",
+                            on_click=settings_action,
+                        ),
+                    ],
+                    alignment=ft.MainAxisAlignment.END,
+                    spacing=4,
+                ),
+                padding=ft.padding.only(right=12),
+            )
         ],
     )
 

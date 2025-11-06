@@ -5,7 +5,18 @@ import flet as ft
 
 class PaperDisplay(ft.Container):
     def __init__(self, paper: Paper):
-        super().__init__(bgcolor=ft.Colors.SURFACE)
+        super().__init__(
+            bgcolor=ft.Colors.with_opacity(0.98, ft.Colors.SURFACE),
+            padding=15,
+            margin=ft.margin.symmetric(vertical=6),
+            border_radius=ft.border_radius.all(12),
+            shadow=ft.BoxShadow(
+                spread_radius=0,
+                blur_radius=18,
+                color=ft.Colors.with_opacity(0.08, ft.Colors.BLACK),
+                offset=ft.Offset(0, 4),
+            ),
+        )
 
         self.paper = paper
 
@@ -57,7 +68,6 @@ class PaperDisplay(ft.Container):
             [self.title_column, self.abstract],
             spacing=10,
         )
-        self.padding = 15
 
     def before_update(self):
         paper = self.paper
