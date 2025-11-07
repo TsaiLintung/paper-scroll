@@ -39,8 +39,16 @@ export const ExploreView = ({
       <header className="explore-view__header">
         <h1>PAPERSCROLL</h1>
         <div className="explore-view__actions">
-          <button onClick={onRefresh}>Refresh</button>
-          <button onClick={onToggleSettings}>Settings</button>
+          <button type="button" onClick={onRefresh} aria-label="Refresh feed">
+            <span aria-hidden="true">⟳</span>
+          </button>
+          <button
+            type="button"
+            onClick={onToggleSettings}
+            aria-label="Open settings"
+          >
+            <span aria-hidden="true">⚙</span>
+          </button>
         </div>
       </header>
       <div className="explore-view__list" ref={listRef} onScroll={handleScroll}>

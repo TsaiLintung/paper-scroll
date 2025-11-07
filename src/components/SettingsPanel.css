@@ -1,57 +1,98 @@
 .settings-panel {
-  width: 420px;
+  width: 360px;
   background: #ffffff;
   height: 100%;
-  padding: 28px;
+  padding: 20px;
   border-left: 1px solid #e1e8ed;
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 16px;
   overflow-y: auto;
+  font-size: 0.95rem;
 }
 
 .settings-panel__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 12px;
+  padding-bottom: 10px;
   border-bottom: 1px solid #e1e8ed;
+}
+
+.settings-panel__header h2 {
+  margin: 0;
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+}
+
+.settings-panel__header button {
+  border: none;
+  background: transparent;
+  font-size: 1.6rem;
+  line-height: 1;
+  cursor: pointer;
+  color: #0f141a;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .settings-panel__section {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding-bottom: 16px;
+  gap: 8px;
+  padding-bottom: 12px;
   border-bottom: 1px solid #f0f3f4;
 }
 
 .settings-panel__section:last-of-type {
   border-bottom: none;
+  padding-bottom: 0;
+}
+
+.settings-panel__section h3 {
+  margin: 0;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #536471;
 }
 
 .settings-panel__grid {
   display: grid;
-  gap: 12px;
+  gap: 8px 12px;
+}
+
+.settings-panel__grid--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.settings-panel__grid--form {
+  grid-template-columns: minmax(0, 1fr) 140px auto;
+  align-items: end;
 }
 
 .settings-panel__grid label {
   display: flex;
   flex-direction: column;
-  gap: 6px;
-  font-size: 0.9rem;
+  gap: 4px;
+  font-size: 0.85rem;
 }
 
 .settings-panel__grid input {
-  padding: 8px 10px;
+  padding: 6px 8px;
   border-radius: 4px;
   border: 1px solid #cfd9de;
   background: #ffffff;
+  font-size: 0.9rem;
 }
 
 .settings-panel__grid button {
   align-self: flex-end;
-  padding: 8px 16px;
+  padding: 6px 14px;
   border-radius: 999px;
   border: 1px solid #cfd9de;
   background: #ffffff;
@@ -60,7 +101,7 @@
 }
 
 .settings-panel__section > button {
-  padding: 8px 16px;
+  padding: 6px 14px;
   border-radius: 999px;
   border: 1px solid #cfd9de;
   background: #ffffff;
@@ -78,17 +119,17 @@
 .settings-panel__chip-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
 }
 
 .settings-panel__chip {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   border: 1px solid #cfd9de;
   border-radius: 999px;
-  padding: 4px 12px;
-  font-size: 0.85rem;
+  padding: 3px 10px;
+  font-size: 0.8rem;
   background: #ffffff;
 }
 
@@ -96,21 +137,23 @@
   border: none;
   background: transparent;
   cursor: pointer;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .settings-panel__error {
   margin: 0;
   color: #c62828;
+  font-size: 0.85rem;
 }
 
 .settings-panel__status-text {
   margin: 0;
   color: #536471;
+  font-size: 0.85rem;
 }
 
 .settings-panel progress {
   width: 100%;
-  height: 4px;
+  height: 3px;
   accent-color: #1d9bf0;
 }

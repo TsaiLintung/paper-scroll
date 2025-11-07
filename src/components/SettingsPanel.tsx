@@ -48,12 +48,14 @@ export const SettingsPanel = ({
     <aside className="settings-panel">
       <header className="settings-panel__header">
         <h2>Settings</h2>
-        <button onClick={onClose}>Close</button>
+        <button onClick={onClose} aria-label="Close settings">
+          ×
+        </button>
       </header>
 
       <section className="settings-panel__section">
         <h3>Year range</h3>
-        <div className="settings-panel__grid">
+        <div className="settings-panel__grid settings-panel__grid--two">
           <label>
             Start
             <input
@@ -75,7 +77,10 @@ export const SettingsPanel = ({
 
       <section className="settings-panel__section">
         <h3>Journals</h3>
-        <form onSubmit={submitJournal} className="settings-panel__grid">
+        <form
+          onSubmit={submitJournal}
+          className="settings-panel__grid settings-panel__grid--form"
+        >
           <label>
             Name
             <input
@@ -107,24 +112,26 @@ export const SettingsPanel = ({
 
       <section className="settings-panel__section">
         <h3>Appearance</h3>
-        <label>
-          Text size
-          <input
-            type="number"
-            min={12}
-            max={30}
-            value={config.text_size}
-            onChange={(e) => onUpdateField('text_size', Number(e.target.value))}
-          />
-        </label>
-        <label>
-          Contact email
-          <input
-            type="email"
-            value={config.email}
-            onChange={(e) => onUpdateField('email', e.target.value)}
-          />
-        </label>
+        <div className="settings-panel__grid settings-panel__grid--two">
+          <label>
+            Text size
+            <input
+              type="number"
+              min={12}
+              max={30}
+              value={config.text_size}
+              onChange={(e) => onUpdateField('text_size', Number(e.target.value))}
+            />
+          </label>
+          <label>
+            Email
+            <input
+              type="email"
+              value={config.email}
+              onChange={(e) => onUpdateField('email', e.target.value)}
+            />
+          </label>
+        </div>
       </section>
 
       <section className="settings-panel__section">
