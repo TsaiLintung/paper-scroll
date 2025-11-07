@@ -1,13 +1,20 @@
 import { defineConfig } from 'vitest/config'
 import react from '@vitejs/plugin-react'
 
-const repoBase = '/paper-scroll/'
+const RELATIVE_BASE = './'
+const DEV_BASE = '/'
 
-export default defineConfig({
-  base: repoBase,
-  plugins: [react()],
-  test: {
-    globals: true,
-    environment: 'node',
-  },
+export default defineConfig(({ mode }) => {
+  const base =
+    process.env.VITE_PUBLIC_BASE ??
+    (mode === 'production' ? RELATIVE_BASE : DEV_BASE)
+
+  return {
+    base,
+    plugins: [react()],
+    test: {
+      globals: true,
+      environment: 'node',
+    },
+  }
 })
