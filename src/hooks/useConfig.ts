@@ -9,6 +9,7 @@ interface UseConfigResult {
   setField: <K extends keyof Config>(field: K, value: Config[K]) => Promise<Config>
   addJournal: (journal: Journal) => Promise<Config>
   removeJournal: (issn: string) => Promise<Config>
+  resetConfig: () => Promise<Config>
 }
 
 export const useConfig = (): UseConfigResult => {
@@ -57,11 +58,16 @@ export const useConfig = (): UseConfigResult => {
     [apply, store],
   )
 
+  const resetConfig = useCallback(async () => {
+    return apply(() => store.resetConfig())
+  }, [apply, store])
+
   return {
     config,
     loading,
     setField,
     addJournal,
     removeJournal,
+    resetConfig,
   }
 }

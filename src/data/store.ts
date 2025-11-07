@@ -1,4 +1,5 @@
 import type { Config, Journal } from '../types'
+import { DEFAULT_CONFIG } from '../types'
 import { readConfig, updateConfig, writeConfig } from './db'
 
 export class DataStore {
@@ -30,6 +31,14 @@ export class DataStore {
     const next: Config = {
       ...config,
       journals: config.journals.filter((journal) => journal.issn !== issn),
+    }
+    return writeConfig(next)
+  }
+
+  async resetConfig(): Promise<Config> {
+    const next: Config = {
+      ...DEFAULT_CONFIG,
+      journals: [...DEFAULT_CONFIG.journals],
     }
     return writeConfig(next)
   }

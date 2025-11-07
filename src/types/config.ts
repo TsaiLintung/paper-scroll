@@ -12,11 +12,15 @@ export interface Config {
 }
 
 export const DEFAULT_CONFIG: Config = {
-  start_year: 2021,
-  end_year: 2021,
+  start_year: 2020,
+  end_year: 2025,
   text_size: 16,
   email: '',
   journals: [
+    { name: 'QJE', issn: '0033-5533' },
+    { name: 'JPE', issn: '0022-3808' },
+    { name: 'ECMA', issn: '0012-9682' },
+    { name: 'ReStud', issn: '0034-6527' },
     { name: 'AER', issn: '0002-8282' },
   ],
 }

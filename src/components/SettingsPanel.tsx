@@ -14,6 +14,7 @@ interface SettingsPanelProps {
   ) => Promise<void> | void
   onAddJournal: (journal: Journal) => Promise<void> | void
   onRemoveJournal: (issn: string) => Promise<void> | void
+  onReset: () => Promise<void> | void
 }
 
 export const SettingsPanel = ({
@@ -22,6 +23,7 @@ export const SettingsPanel = ({
   onUpdateField,
   onAddJournal,
   onRemoveJournal,
+  onReset,
 }: SettingsPanelProps) => {
   const [journalName, setJournalName] = useState('')
   const [journalIssn, setJournalIssn] = useState('')
@@ -208,6 +210,15 @@ export const SettingsPanel = ({
         </div>
       </section>
 
+      <div className="settings-panel__footer">
+        <button
+          type="button"
+          className="settings-panel__reset-button"
+          onClick={() => onReset()}
+        >
+          Reset preferences
+        </button>
+      </div>
     </aside>
   )
 }

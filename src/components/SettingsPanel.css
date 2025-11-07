@@ -145,3 +145,18 @@
   color: #c62828;
   font-size: 0.85rem;
 }
+
+.settings-panel__footer {
+  margin-top: auto;
+  padding-top: 16px;
+}
+
+.settings-panel__reset-button {
+  width: 100%;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid #cfd9de;
+  background: #ffffff;
+  color: #0f141a;
+  cursor: pointer;
+}

@@ -8,7 +8,8 @@ import { useCallback, useEffect, useState } from 'react'
 import type { Config, Journal } from './types'
 
 function App() {
-  const { config, loading, setField, addJournal, removeJournal } = useConfig()
+  const { config, loading, setField, addJournal, removeJournal, resetConfig } =
+    useConfig()
   const [settingsOpen, setSettingsOpen] = useState(false)
   const [toast, setToast] = useState<null | { message: string; kind: ToastKind }>(
     null,
@@ -63,6 +64,11 @@ function App() {
     [removeJournal],
   )
 
+  const handleResetPreferences = useCallback(async () => {
+    await resetConfig()
+    showToast('Preferences reset to defaults.', 'info')
+  }, [resetConfig, showToast])
+
   if (loading || !config) {
     return (
       <div className="app-loading">
@@ -95,6 +101,7 @@ function App() {
               onUpdateField={handleFieldUpdate}
               onAddJournal={handleAddJournal}
               onRemoveJournal={handleRemoveJournal}
+              onReset={handleResetPreferences}
             />
           </div>
           <footer className="settings-overlay__footer">
