@@ -6,8 +6,9 @@ import { useConfig } from './hooks/useConfig'
 import { usePaperFeed } from './hooks/usePaperFeed'
 import { useStatus } from './hooks/useStatus'
 import { useSyncService } from './hooks/useSyncService'
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import type { Config, Journal } from './types'
+import { useDataStore } from './data/DataContext'
 
 const SYNC_SENSITIVE_FIELDS: Array<keyof Config> = [
   'start_year',
@@ -20,10 +21,12 @@ function App() {
   const { status } = useStatus()
   const { papers, isLoading, error, refresh, loadMore } = usePaperFeed(config)
   const { start: startSync, isRunning: isSyncing } = useSyncService()
+  const store = useDataStore()
   const [settingsOpen, setSettingsOpen] = useState(false)
   const [toast, setToast] = useState<null | { message: string; kind: ToastKind }>(
     null,
   )
+  const coldStartSyncTriggered = useRef(false)
 
   const showToast = useCallback(
     (message: string, kind: ToastKind = 'info') => {
@@ -94,6 +97,30 @@ function App() {
   const handleManualSync = useCallback(() => {
     void runSync()
   }, [runSync])
+
+  useEffect(() => {
+    if (!config || coldStartSyncTriggered.current) {
+      return
+    }
+    coldStartSyncTriggered.current = true
+
+    let active = true
+    void (async () => {
+      try {
+        const snapshots = await store.getSnapshots()
+        if (!active || snapshots.length > 0) {
+          return
+        }
+        await runSync({ silent: true })
+      } catch (err) {
+        console.error('Failed to evaluate cold-start sync', err)
+      }
+    })()
+
+    return () => {
+      active = false
+    }
+  }, [config, runSync, store])
 
   if (loading || !config) {
     return (
