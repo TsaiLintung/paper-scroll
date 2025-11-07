@@ -36,4 +36,10 @@ npm run preview    # serve the latest build locally
 - `src/services` — API clients for Crossref/OpenAlex and the sync orchestration logic.
 - `src/domain`, `src/types` — domain-specific models, adapters, and utilities. Align new behavior with these folders to keep presentation thin.
 
+### GitHub Pages Deployment
+- The Vite `base` is set to `/paper-scroll/`, so static assets resolve correctly when served from `https://<user>.github.io/paper-scroll/`.
+- A workflow (`.github/workflows/deploy.yml`) builds on every push to `main`, uploads `dist/`, and publishes it via `actions/deploy-pages`.
+- Enable GitHub Pages for the repo (Settings → Pages → Source: “GitHub Actions”) the first time you run the workflow.
+- For manual redeploys, trigger the workflow from the Actions tab or push a new commit to `main`.
+
 Need contribution details? Read `AGENTS.md` for coding conventions, testing expectations, and pull-request requirements.
