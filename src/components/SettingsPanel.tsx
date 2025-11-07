@@ -208,7 +208,15 @@ export const SettingsPanel = ({
             />
           </label>
           <p className="settings-panel__note">
-            Your email is stored locally and only used to sign OpenAlex API requests to increase the rate limit.
+            Your email is stored locally and only used to increase the rate limit.{' '}
+            <a
+              href="https://docs.openalex.org/how-to-use-the-api/rate-limits-and-authentication"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Learn more
+            </a>
+            .
           </p>
         </div>
       </section>

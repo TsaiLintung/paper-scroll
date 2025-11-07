@@ -116,6 +116,15 @@
   line-height: 1.3;
 }
 
+.settings-panel__note a {
+  color: #1d9bf0;
+  text-decoration: none;
+}
+
+.settings-panel__note a:hover {
+  text-decoration: underline;
+}
+
 .settings-panel__chip-row {
   display: flex;
   flex-wrap: wrap;
