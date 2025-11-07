@@ -68,7 +68,10 @@ export const usePaperFeed = (config: Config | null) => {
   const loadBatch = useCallback(
     async (count: number) => {
       const batch: PaperViewModel[] = []
-      for (let i = 0; i < count; i += 1) {
+      let attempts = 0
+      const maxAttempts = count * 5
+      while (batch.length < count && attempts < maxAttempts) {
+        attempts += 1
         const doi = await dequeueDoi()
         try {
           const work = await fetchWork(doi)
@@ -102,7 +105,9 @@ export const usePaperFeed = (config: Config | null) => {
     }
     isFetchingRef.current = true
     const batch = await loadBatch(LOAD_MORE_BATCH)
-    setPapers((prev) => [...prev, ...batch])
+    if (batch.length) {
+      setPapers((prev) => [...prev, ...batch])
+    }
     isFetchingRef.current = false
   }, [config, loadBatch])
 

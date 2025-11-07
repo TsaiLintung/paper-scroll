@@ -4,10 +4,11 @@ const OPENALEX_BASE =
   import.meta.env.VITE_OPENALEX_BASE ?? 'https://api.openalex.org'
 
 const sanitizeDoi = (doi: string) => {
-  if (doi.startsWith('http')) {
-    return doi
-  }
-  return `https://doi.org/${doi}`
+  const trimmed = doi.trim()
+  const normalized = trimmed.startsWith('http')
+    ? trimmed
+    : `https://doi.org/${trimmed}`
+  return normalized.toLowerCase()
 }
 
 export const fetchOpenAlexWork = async (
