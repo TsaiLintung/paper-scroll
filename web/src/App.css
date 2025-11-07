@@ -1,0 +1,47 @@
+:root {
+  --base-text-size: 16px;
+}
+
+body {
+  font-size: var(--base-text-size);
+}
+
+.app-shell {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100vh;
+  background: #f7f7fb;
+  color: #111017;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.settings-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease;
+}
+
+.settings-overlay.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.settings-overlay__panel {
+  height: 100%;
+  max-width: 480px;
+}
+
+.app-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 1.125rem;
+  color: #4d4c59;
+}

@@ -1,0 +1,38 @@
+.paper-card {
+  background: #ffffff;
+  box-shadow: 0 4px 18px rgba(15, 23, 42, 0.08), 0 1px 3px rgba(15, 23, 42, 0.08);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.paper-card__header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.paper-card__title {
+  font-size: 1.125rem;
+  line-height: 1.4;
+  text-decoration: none;
+  color: inherit;
+}
+
+.paper-card__title:hover {
+  text-decoration: underline;
+}
+
+.paper-card__meta {
+  margin: 0;
+  color: #4d4c59;
+  font-size: 0.9rem;
+}
+
+.paper-card__abstract {
+  margin: 0;
+  color: #1f1f29;
+  line-height: 1.5;
+  white-space: pre-line;
+}

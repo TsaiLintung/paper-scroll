@@ -1,0 +1,89 @@
+.settings-panel {
+  width: 420px;
+  background: #ffffff;
+  height: 100%;
+  padding: 32px;
+  border-left: 1px solid #e2e2ea;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.settings-panel__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.settings-panel__section {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.settings-panel__grid {
+  display: grid;
+  gap: 12px;
+}
+
+.settings-panel__grid label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+}
+
+.settings-panel__grid input {
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: 1px solid #d5d5e0;
+}
+
+.settings-panel__grid button {
+  align-self: flex-end;
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: none;
+  background: #111017;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.settings-panel__chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.settings-panel__chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #f2f2f6;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.85rem;
+}
+
+.settings-panel__chip button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.settings-panel__error {
+  margin: 0;
+  color: #c62828;
+}
+
+.settings-panel__status-text {
+  margin: 0;
+  color: #4d4c59;
+}
+
+.settings-panel progress {
+  width: 100%;
+  height: 6px;
+}

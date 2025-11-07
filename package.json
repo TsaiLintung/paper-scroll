@@ -1,0 +1,15 @@
+{
+  "name": "paper-scroll-monorepo",
+  "private": true,
+  "version": "0.0.0",
+  "workspaces": [
+    "web"
+  ],
+  "scripts": {
+    "dev": "npm run --workspace web dev",
+    "build": "npm run --workspace web build",
+    "lint": "npm run --workspace web lint",
+    "test": "npm run --workspace web test",
+    "preview": "npm run --workspace web preview"
+  }
+}
