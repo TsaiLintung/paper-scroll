@@ -1,36 +1,33 @@
 # Repository Guidelines
 
-This React + TypeScript + Vite workspace centers on a layered structure that keeps UI, domain logic, and browser integrations separate. Use the following reference when building, testing, or reviewing contributions.
-
-## Documentation for API
-
-Documentation for openalex is in `doc/openalex.md`
-
 ## Project Structure & Module Organization
-- `src/components` holds presentational React components; prefer small, focused trees under feature folders.
-- `src/domain`, `src/services`, and `src/workers` encapsulate business rules, data access, and long-running browser tasks—treat these as the single sources of truth.
-- `src/hooks`, `src/theme`, and `src/assets` supply reusable behavior, design tokens, and static media.
-- `src/data` hosts seed/config files, while `src/types` centralizes shared interfaces. Keep tests near the code they cover (e.g., `src/domain/paper.test.ts`).
+- `src/` hosts all TypeScript sources. UI lives under `src/components`, React hooks in `src/hooks`, business/data layers in `src/domain`, `src/services`, and `src/data`, while shared types sit in `src/types`.
+- Global styles live in `src/App.css` plus per-component CSS modules; assets such as icons are under `src/assets`.
+- Tests stay co-located with their targets (e.g., `src/domain/paper.test.ts`). Keep new specs beside the code they cover.
 
 ## Build, Test, and Development Commands
-- `npm run dev` — launch the Vite dev server with Fast Refresh.
-- `npm run build` — type-check with `tsc -b` before emitting an optimized production bundle.
-- `npm run preview` — serve the latest build locally to verify production artifacts.
-- `npm run lint` — run ESLint (`eslint.config.js`) across the repo; fix findings before submitting.
-- `npm test` — execute Vitest suites in watchable mode; use `npm test -- --run` for CI-like runs.
+- `npm run dev` — start Vite with Fast Refresh at `http://localhost:5173`.
+- `npm run build` — run TypeScript project references then emit the production bundle into `dist/`.
+- `npm run preview` — serve the latest `dist/` output (production sanity check).
+- `npm run lint` — execute ESLint using `eslint.config.js`; fix or suppress violations before opening a PR.
+- `npm test` / `npm test -- --run` — run Vitest suites (watch vs. single pass).
 
 ## Coding Style & Naming Conventions
-- TypeScript everywhere; favor explicit types in boundary layers (`services`, `domain`).
-- Two-space indentation, single quotes for strings, and React function components named `PascalCase`.
-- Co-locate styles in `*.css` modules or `App.css`; avoid inline styles for reusable components.
-- Run ESLint and let TypeScript surface unused symbols before pushing.
+- TypeScript everywhere with two-space indentation and single quotes for strings.
+- React components use PascalCase (`ExploreView`, `SettingsPanel`); hooks use `useX` naming.
+- Favor small, focused components; keep domain logic in `src/domain`/`src/services` and treat UI layers as thin presenters.
+- Run ESLint and rely on TypeScript to surface unused symbols before committing.
 
 ## Testing Guidelines
-- Vitest drives all automated tests; extend `src/domain/*.test.ts`-style colocated files for new modules.
-- Mock IndexedDB and fetch calls via lightweight fakes; avoid network access in tests.
-- Assert observable behavior (state transitions, DOM output) instead of implementation details; add regression specs when fixing bugs.
+- Vitest drives unit testing. Mirror the `*.test.ts` naming and colocate specs with the code under test.
+- Mock browser APIs (IndexedDB, fetch) with lightweight fakes—never perform real network calls.
+- Write behavior-focused assertions (state transitions, rendered DOM) and add regression tests alongside any bug fix.
 
 ## Commit & Pull Request Guidelines
-- Follow the existing log style: short, action-oriented sentences (e.g., `fully switch to web version`); keep to ≤72 chars and focus on the “what”.
-- Each PR should include: summary, screenshots or recordings for UI changes, linked issue/shortcut, test plan (`npm test`, `npm run lint`, build) in checklist form.
-- Squash noisy fixup commits locally; reviewers expect one logical change per PR.
+- Follow the repo’s history: short, action-oriented commit messages ≤72 chars (e.g., `add settings reset button`).
+- Each PR should provide: summary of changes, screenshots for UI updates, linked issue/story, and a checklist covering `npm test`, `npm run lint`, and `npm run build` results.
+- Squash noisy fixups locally and keep each PR focused on one logical change.
+
+## Configuration Tips
+- OpenAlex base URL is configurable through `VITE_OPENALEX_BASE`; defaults to `https://api.openalex.org`.
+- User preferences persist in `localStorage`. Use the built-in “Reset preferences” button (Settings footer) to return to `DEFAULT_CONFIG` when testing.*** End Patch` to=functions.apply_patch  Nsjson

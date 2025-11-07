@@ -105,7 +105,18 @@ function App() {
             />
           </div>
           <footer className="settings-overlay__footer">
-            Powered by OpenAlex · © Lin-Tung Tsai
+            Powered by{' '}
+            <a href="https://openalex.org/" target="_blank" rel="noreferrer">
+              OpenAlex
+            </a>{' '}
+            · ©{' '}
+            <a
+              href="https://github.com/TsaiLintung/paper-scroll"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Lin-Tung Tsai
+            </a>
           </footer>
         </div>
       </div>
