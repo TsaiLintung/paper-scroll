@@ -68,35 +68,38 @@ function App() {
     [config, isSyncing, showToast, startSync],
   )
 
+  const mutateAndSync = useCallback(
+    async (mutate: () => Promise<Config>) => {
+      const next = await mutate()
+      await runSync({ configOverride: next, silent: true })
+    },
+    [runSync],
+  )
+
   const handleFieldUpdate = useCallback(
     async <K extends keyof Config>(field: K, value: Config[K]) => {
-      const next = await setField(field, value)
       if (SYNC_SENSITIVE_FIELDS.includes(field)) {
-        await runSync({ configOverride: next, silent: true })
+        await mutateAndSync(() => setField(field, value))
+        return
       }
+      await setField(field, value)
     },
-    [runSync, setField],
+    [mutateAndSync, setField],
   )
 
   const handleAddJournal = useCallback(
     async (journal: Journal) => {
-      const next = await addJournal(journal)
-      await runSync({ configOverride: next, silent: true })
+      await mutateAndSync(() => addJournal(journal))
     },
-    [addJournal, runSync],
+    [addJournal, mutateAndSync],
   )
 
   const handleRemoveJournal = useCallback(
     async (issn: string) => {
-      const next = await removeJournal(issn)
-      await runSync({ configOverride: next, silent: true })
+      await mutateAndSync(() => removeJournal(issn))
     },
-    [removeJournal, runSync],
+    [mutateAndSync, removeJournal],
   )
-
-  const handleManualSync = useCallback(() => {
-    void runSync()
-  }, [runSync])
 
   useEffect(() => {
     if (!config || coldStartSyncTriggered.current) {
@@ -155,7 +158,9 @@ function App() {
             onUpdateField={handleFieldUpdate}
             onAddJournal={handleAddJournal}
             onRemoveJournal={handleRemoveJournal}
-            onSync={handleManualSync}
+            onSync={() => {
+              void runSync()
+            }}
             isSyncing={isSyncing}
           />
         </div>

@@ -34,19 +34,18 @@ export const usePaperFeed = (config: Config | null) => {
     if (pool.length === 0) {
       doiPoolRef.current = [DEFAULT_DOI]
       setError('No journal data yet. Run “Update journals” to fetch metadata.')
-      return false
+      return
     }
     doiPoolRef.current = shuffle(pool)
     setError(null)
-    return true
   }, [store])
 
-  const dequeueDoi = async () => {
+  const dequeueDoi = useCallback(async () => {
     if (doiPoolRef.current.length === 0) {
       await loadSnapshotsIntoPool()
     }
     return doiPoolRef.current.shift() ?? DEFAULT_DOI
-  }
+  }, [loadSnapshotsIntoPool])
 
   const fetchWork = useCallback(
     async (doi: string) => {
@@ -84,7 +83,7 @@ export const usePaperFeed = (config: Config | null) => {
       }
       return batch
     },
-    [fetchWork],
+    [dequeueDoi, fetchWork],
   )
 
   const loadInitial = useCallback(async () => {
@@ -92,7 +91,6 @@ export const usePaperFeed = (config: Config | null) => {
       return
     }
     setIsLoading(true)
-    setError(null)
     await loadSnapshotsIntoPool()
     const batch = await loadBatch(INITIAL_BATCH)
     setPapers(batch)
@@ -115,15 +113,11 @@ export const usePaperFeed = (config: Config | null) => {
     loadInitial()
   }, [loadInitial])
 
-  const refresh = useCallback(() => {
-    loadInitial()
-  }, [loadInitial])
-
   return {
     papers,
     isLoading,
     error,
-    refresh,
+    refresh: loadInitial,
     loadMore,
   }
 }

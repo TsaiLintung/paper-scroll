@@ -9,7 +9,6 @@ interface UseConfigResult {
   setField: <K extends keyof Config>(field: K, value: Config[K]) => Promise<Config>
   addJournal: (journal: Journal) => Promise<Config>
   removeJournal: (issn: string) => Promise<Config>
-  refresh: () => Promise<void>
 }
 
 export const useConfig = (): UseConfigResult => {
@@ -28,31 +27,34 @@ export const useConfig = (): UseConfigResult => {
     load()
   }, [load])
 
-  const setField = useCallback(
-    async <K extends keyof Config>(field: K, value: Config[K]) => {
-      const next = await store.setConfigField(field, value)
+  const apply = useCallback(
+    async (mutate: () => Promise<Config>) => {
+      const next = await mutate()
       setConfig(next)
       return next
     },
-    [store],
+    [setConfig],
+  )
+
+  const setField = useCallback(
+    async <K extends keyof Config>(field: K, value: Config[K]) => {
+      return apply(() => store.setConfigField(field, value))
+    },
+    [apply, store],
   )
 
   const addJournal = useCallback(
     async (journal: Journal) => {
-      const next = await store.addJournal(journal)
-      setConfig(next)
-      return next
+      return apply(() => store.addJournal(journal))
     },
-    [store],
+    [apply, store],
   )
 
   const removeJournal = useCallback(
     async (issn: string) => {
-      const next = await store.removeJournal(issn)
-      setConfig(next)
-      return next
+      return apply(() => store.removeJournal(issn))
     },
-    [store],
+    [apply, store],
   )
 
   return {
@@ -61,6 +63,5 @@ export const useConfig = (): UseConfigResult => {
     setField,
     addJournal,
     removeJournal,
-    refresh: load,
   }
 }

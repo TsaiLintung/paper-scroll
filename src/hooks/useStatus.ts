@@ -16,27 +16,22 @@ export const useStatus = () => {
 
   useEffect(() => {
     let mounted = true
-    refresh()
-    const interval = setInterval(() => {
-      store.getStatus().then((payload) => {
-        if (payload && mounted) {
-          setStatus(payload)
-        }
+    const tick = () => {
+      refresh().catch(() => {
+        /* ignore polling errors */
       })
+    }
+    tick()
+    const interval = setInterval(() => {
+      if (mounted) {
+        tick()
+      }
     }, 1000)
     return () => {
       mounted = false
       clearInterval(interval)
     }
-  }, [refresh, store])
+  }, [refresh])
 
-  const update = useCallback(
-    async (payload: StatusPayload) => {
-      await store.saveStatus(payload)
-      setStatus(payload)
-    },
-    [store],
-  )
-
-  return { status, refresh, update }
+  return { status }
 }
