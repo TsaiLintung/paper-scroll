@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 import './Toast.css'
 import closeIcon from '../assets/close-thin.svg'
 
-export type ToastKind = 'info' | 'error' | 'success'
+export type ToastKind = 'info' | 'error'
 
 interface ToastProps {
   message: string

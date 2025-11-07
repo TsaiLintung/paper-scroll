@@ -5,7 +5,6 @@ import { toPaperViewModel } from '../domain/paper'
 import { fetchOpenAlexWork } from '../services/openalex'
 import type { Config, PaperViewModel } from '../types'
 
-const DEFAULT_DOI = '10.1038/s41586-020-2649-2'
 const INITIAL_BATCH = 5
 const LOAD_MORE_BATCH = 3
 
@@ -32,19 +31,19 @@ export const usePaperFeed = (config: Config | null) => {
       snapshot.items.map((item) => item.DOI).filter(Boolean),
     )
     if (pool.length === 0) {
-      doiPoolRef.current = [DEFAULT_DOI]
       setError('No journal data yet. Run “Update journals” to fetch metadata.')
-      return
+      return false
     }
     doiPoolRef.current = shuffle(pool)
     setError(null)
+    return true
   }, [store])
 
-  const dequeueDoi = useCallback(async () => {
-    if (doiPoolRef.current.length === 0) {
-      await loadSnapshotsIntoPool()
+  const ensurePoolHasEntries = useCallback(async () => {
+    if (doiPoolRef.current.length > 0) {
+      return true
     }
-    return doiPoolRef.current.shift() ?? DEFAULT_DOI
+    return loadSnapshotsIntoPool()
   }, [loadSnapshotsIntoPool])
 
   const fetchWork = useCallback(
@@ -57,7 +56,6 @@ export const usePaperFeed = (config: Config | null) => {
       await store.rememberPaper({
         doi,
         payload: work,
-        cached_at: Date.now(),
       })
       return work
     },
@@ -66,12 +64,19 @@ export const usePaperFeed = (config: Config | null) => {
 
   const loadBatch = useCallback(
     async (count: number) => {
+      const hasPool = await ensurePoolHasEntries()
+      if (!hasPool) {
+        return []
+      }
       const batch: PaperViewModel[] = []
       let attempts = 0
       const maxAttempts = count * 5
       while (batch.length < count && attempts < maxAttempts) {
         attempts += 1
-        const doi = await dequeueDoi()
+        const doi = doiPoolRef.current.shift()
+        if (!doi) {
+          break
+        }
         try {
           const work = await fetchWork(doi)
           batch.push(toPaperViewModel(work))
@@ -83,7 +88,7 @@ export const usePaperFeed = (config: Config | null) => {
       }
       return batch
     },
-    [dequeueDoi, fetchWork],
+    [ensurePoolHasEntries, fetchWork],
   )
 
   const loadInitial = useCallback(async () => {
@@ -91,9 +96,13 @@ export const usePaperFeed = (config: Config | null) => {
       return
     }
     setIsLoading(true)
-    await loadSnapshotsIntoPool()
-    const batch = await loadBatch(INITIAL_BATCH)
-    setPapers(batch)
+    const populatedPool = await loadSnapshotsIntoPool()
+    if (populatedPool) {
+      const batch = await loadBatch(INITIAL_BATCH)
+      setPapers(batch)
+    } else {
+      setPapers([])
+    }
     setIsLoading(false)
   }, [config, loadBatch, loadSnapshotsIntoPool])
 

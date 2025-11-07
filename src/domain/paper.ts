@@ -1,7 +1,5 @@
 import type { OpenAlexWork, PaperViewModel } from '../types'
 
-const DEFAULT_DOI = '10.1038/s41586-020-2649-2'
-
 const toDoiUrl = (doi?: string) => {
   if (!doi) {
     return ''
@@ -39,7 +37,7 @@ const joinAuthors = (work: OpenAlexWork) => {
 }
 
 export const toPaperViewModel = (work: OpenAlexWork): PaperViewModel => {
-  const doiUrl = toDoiUrl(work.doi ?? DEFAULT_DOI)
+  const doiUrl = toDoiUrl(work.doi)
   const title = work.display_name ?? work.title ?? 'Untitled'
   const abstract = reconstructAbstract(work.abstract_inverted_index)
   const yearJournal = formatYearJournal(work)

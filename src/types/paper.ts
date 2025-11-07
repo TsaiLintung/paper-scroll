@@ -38,5 +38,4 @@ export interface PaperViewModel {
 export interface PaperRecord {
   doi: string
   payload: OpenAlexWork
-  cached_at: number
 }
