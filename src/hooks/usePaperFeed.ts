@@ -36,6 +36,11 @@ export const usePaperFeed = (
   const [error, setError] = useState<string | null>(null)
   const isFetchingRef = useRef(false)
   const seenIdsRef = useRef<Set<string>>(new Set())
+  const paperErrorRef = useRef(onPaperError)
+
+  useEffect(() => {
+    paperErrorRef.current = onPaperError
+  }, [onPaperError])
 
   const pickTarget = useCallback(() => {
     if (!config) {
@@ -69,10 +74,10 @@ export const usePaperFeed = (
       const message =
         err instanceof Error ? err.message : 'Failed to fetch paper data.'
       setError(message)
-      onPaperError?.(message)
+      paperErrorRef.current?.(message)
       return null
     }
-  }, [config?.email, onPaperError, pickTarget])
+  }, [config?.email, pickTarget])
 
   const loadBatch = useCallback(
     async (count: number) => {
