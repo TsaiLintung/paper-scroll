@@ -15,6 +15,7 @@ interface SettingsPanelProps {
   onAddJournal: (journal: Journal) => Promise<void> | void
   onRemoveJournal: (issn: string) => Promise<void> | void
   onSync: () => Promise<void> | void
+  isSyncing?: boolean
 }
 
 export const SettingsPanel = ({
@@ -25,6 +26,7 @@ export const SettingsPanel = ({
   onAddJournal,
   onRemoveJournal,
   onSync,
+  isSyncing = false,
 }: SettingsPanelProps) => {
   const [journalName, setJournalName] = useState('')
   const [journalIssn, setJournalIssn] = useState('')
@@ -127,7 +129,9 @@ export const SettingsPanel = ({
 
       <section className="settings-panel__section">
         <h3>Journal sync</h3>
-        <button onClick={onSync}>Update journals</button>
+        <button onClick={onSync} disabled={isSyncing}>
+          {isSyncing ? 'Updating…' : 'Update journals'}
+        </button>
         <p className="settings-panel__status-text">
           {status?.message ?? 'Idle'}
         </p>

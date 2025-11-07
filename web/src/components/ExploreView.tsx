@@ -7,6 +7,7 @@ import './ExploreView.css'
 interface ExploreViewProps {
   papers: PaperViewModel[]
   isLoading: boolean
+  error?: string | null
   onRefresh: () => void
   onLoadMore: () => void
   onToggleSettings: () => void
@@ -15,6 +16,7 @@ interface ExploreViewProps {
 export const ExploreView = ({
   papers,
   isLoading,
+  error,
   onRefresh,
   onLoadMore,
   onToggleSettings,
@@ -42,6 +44,7 @@ export const ExploreView = ({
         </div>
       </header>
       <div className="explore-view__list" ref={listRef} onScroll={handleScroll}>
+        {error && <div className="explore-view__error">{error}</div>}
         {papers.map((paper, idx) => (
           <div key={paper.id}>
             {idx > 0 && <div className="explore-view__divider" />}

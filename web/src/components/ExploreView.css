@@ -54,3 +54,10 @@
   color: #4d4c59;
   padding: 12px;
 }
+
+.explore-view__error {
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: #fff3f3;
+  color: #b42318;
+}

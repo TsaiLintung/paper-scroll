@@ -1,51 +1,94 @@
+import type {
+  Config,
+  SyncWorkerOutboundMessage,
+  SyncWorkerInboundMessage,
+} from '../types'
 import { DataStore } from '../data/store'
-import type { JournalSnapshot, StatusPayload } from '../types'
 
-const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms))
+type Resolve = () => void
+type Reject = (error: Error) => void
 
 export class SyncService {
-  private isRunning = false
+  private worker: Worker
+
+  private pending: Promise<void> | null = null
+
   private store: DataStore
 
   constructor(store: DataStore) {
     this.store = store
+    this.worker = new Worker(
+      new URL('../workers/syncWorker.ts', import.meta.url),
+      { type: 'module' },
+    )
   }
 
-  async startSync(): Promise<void> {
-    if (this.isRunning) {
-      return
+  start(config: Config): Promise<void> {
+    if (this.pending) {
+      return this.pending
     }
-    this.isRunning = true
-    await this.updateStatus({ message: 'Sync started…', progress: 0 })
-    try {
-      await this.simulateFetch()
-      await this.updateStatus({ message: 'All journals updated.', progress: 1 })
-    } finally {
-      this.isRunning = false
-    }
+
+    this.pending = new Promise<void>((resolve, reject) => {
+      const handleMessage = (event: MessageEvent<SyncWorkerOutboundMessage>) =>
+        this.handleWorkerMessage(event, resolve, reject, cleanup)
+      const handleError = (event: ErrorEvent) => {
+        cleanup()
+        reject(event.error ?? new Error(event.message))
+      }
+
+      const cleanup = () => {
+        this.worker.removeEventListener('message', handleMessage)
+        this.worker.removeEventListener('error', handleError)
+        this.pending = null
+      }
+
+      this.worker.addEventListener('message', handleMessage)
+      this.worker.addEventListener('error', handleError)
+
+      const payload: SyncWorkerInboundMessage = {
+        type: 'start',
+        payload: {
+          journals: config.journals,
+          start_year: config.start_year,
+          end_year: config.end_year,
+          email: config.email,
+        },
+      }
+      this.worker.postMessage(payload)
+    })
+
+    return this.pending
   }
 
-  private async simulateFetch(): Promise<void> {
-    const steps = [
-      { message: 'Fetching journals…', progress: 0.35 },
-      { message: 'Indexing papers…', progress: 0.7 },
-    ]
-
-    for (const step of steps) {
-      await sleep(600)
-      await this.updateStatus(step)
-    }
-
-    const snapshot: JournalSnapshot = {
-      issn: '0002-8282',
-      name: 'aer',
-      year: 2021,
-      items: [{ DOI: '10.1038/s41586-020-2649-2' }],
-    }
-    await this.store.saveSnapshot(snapshot)
+  dispose() {
+    this.worker.terminate()
   }
 
-  private async updateStatus(payload: StatusPayload) {
-    await this.store.saveStatus(payload)
+  private async handleWorkerMessage(
+    event: MessageEvent<SyncWorkerOutboundMessage>,
+    resolve: Resolve,
+    reject: Reject,
+    cleanup: () => void,
+  ) {
+    const { data } = event
+    switch (data.type) {
+      case 'status':
+        await this.store.saveStatus(data.payload)
+        break
+      case 'snapshot':
+        await this.store.saveSnapshot(data.payload)
+        break
+      case 'error':
+        await this.store.saveStatus({ message: data.message, progress: 0 })
+        cleanup()
+        reject(new Error(data.message))
+        return
+      case 'done':
+        cleanup()
+        resolve()
+        return
+      default:
+        break
+    }
   }
 }

@@ -35,6 +35,7 @@ body {
 .settings-overlay__panel {
   height: 100%;
   max-width: 480px;
+  overflow: auto;
 }
 
 .app-loading {

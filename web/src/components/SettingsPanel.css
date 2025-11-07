@@ -7,6 +7,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
+  overflow-y: auto;
 }
 
 .settings-panel__header {
@@ -48,6 +49,12 @@
   background: #111017;
   color: #ffffff;
   cursor: pointer;
+}
+
+.settings-panel__grid button:disabled,
+.settings-panel__section > button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .settings-panel__chip-row {

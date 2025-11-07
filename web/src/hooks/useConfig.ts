@@ -6,9 +6,9 @@ import { useDataStore } from '../data/DataContext'
 interface UseConfigResult {
   config: Config | null
   loading: boolean
-  setField: <K extends keyof Config>(field: K, value: Config[K]) => Promise<void>
-  addJournal: (journal: Journal) => Promise<void>
-  removeJournal: (issn: string) => Promise<void>
+  setField: <K extends keyof Config>(field: K, value: Config[K]) => Promise<Config>
+  addJournal: (journal: Journal) => Promise<Config>
+  removeJournal: (issn: string) => Promise<Config>
   refresh: () => Promise<void>
 }
 
@@ -32,6 +32,7 @@ export const useConfig = (): UseConfigResult => {
     async <K extends keyof Config>(field: K, value: Config[K]) => {
       const next = await store.setConfigField(field, value)
       setConfig(next)
+      return next
     },
     [store],
   )
@@ -40,6 +41,7 @@ export const useConfig = (): UseConfigResult => {
     async (journal: Journal) => {
       const next = await store.addJournal(journal)
       setConfig(next)
+      return next
     },
     [store],
   )
@@ -48,6 +50,7 @@ export const useConfig = (): UseConfigResult => {
     async (issn: string) => {
       const next = await store.removeJournal(issn)
       setConfig(next)
+      return next
     },
     [store],
   )
