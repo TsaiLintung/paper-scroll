@@ -38,7 +38,21 @@ body {
 .settings-overlay__panel {
   height: 100%;
   max-width: 480px;
+  background: #ffffff;
+  border-left: 1px solid #e1e8ed;
+  display: flex;
+  flex-direction: column;
+}
+
+.settings-overlay__body {
+  flex: 1;
   overflow: auto;
+}
+
+.settings-overlay__footer {
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  color: #5b7083;
   background: #ffffff;
   border-left: 1px solid #e1e8ed;
 }
@@ -50,17 +64,4 @@ body {
   height: 100vh;
   font-size: 1.125rem;
   color: #536471;
-}
-
-.app-footer {
-  position: fixed;
-  bottom: 1rem;
-  right: 2rem;
-  font-size: 0.8rem;
-  color: #5b7083;
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid #e1e8ed;
-  border-radius: 0;
-  padding: 0.25rem 0.75rem;
-  user-select: none;
 }

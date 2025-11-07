@@ -81,13 +81,18 @@ function App() {
           className="settings-overlay__panel"
           onClick={(e) => e.stopPropagation()}
         >
-          <SettingsPanel
-            config={config}
-            onClose={() => setSettingsOpen(false)}
-            onUpdateField={handleFieldUpdate}
-            onAddJournal={handleAddJournal}
-            onRemoveJournal={handleRemoveJournal}
-          />
+          <div className="settings-overlay__body">
+            <SettingsPanel
+              config={config}
+              onClose={() => setSettingsOpen(false)}
+              onUpdateField={handleFieldUpdate}
+              onAddJournal={handleAddJournal}
+              onRemoveJournal={handleRemoveJournal}
+            />
+          </div>
+          <footer className="settings-overlay__footer">
+            Powered by OpenAlex · © Lin-Tung Tsai
+          </footer>
         </div>
       </div>
       {toast && (
@@ -97,9 +102,6 @@ function App() {
           onClose={() => setToast(null)}
         />
       )}
-      <footer className="app-footer">
-        Powered by OpenAlex · © Lin-Tung Tsai
-      </footer>
     </div>
   )
 }
