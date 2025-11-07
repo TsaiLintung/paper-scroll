@@ -3,10 +3,11 @@
 PaperScroll is a lightweight reading companion for researchers who track long lists of academic journals. It samples works directly from OpenAlex (using the `sample` query) based on the reader’s journal list and year range, then renders the queue in a clean, scrollable layout. Preferences live entirely in the browser (IndexedDB), so returning to the app restores the exact reading setup without additional sync steps.
 
 ### Features
-- **Infinite paper feed** — scroll through randomly sampled works, pull-to-refresh, and load more without reloading.
+- **Infinite paper feed** — scroll through randomly sampled works while the app prefetches more as you near the bottom; no manual refresh button needed.
 - **On-demand OpenAlex sampling** — each card picks a random journal-year combo within the configured range, then calls `sample=1` to fetch a work.
-- **Configurable reading experience** — adjust text size, year ranges, contact email, and journal lists inside the settings overlay.
+- **Configurable reading experience** — adjust text size, year ranges (commit with Enter, validated between 1900–2100), contact email, and journal lists inside the settings overlay.
 - **Local-first storage** — configs live in IndexedDB via `idb`, so reopening the app keeps your preferences intact even offline.
+- **Gentle nudges** — if no email is set, the app shows a toast reminding readers that providing one speeds up polite OpenAlex access.
 
 ### Tech Stack
 - React 19 + TypeScript, styled with modular CSS files (`src/App.css`, `src/components/*.css`).
@@ -26,6 +27,7 @@ npm run preview    # serve the latest build locally
 
 ### Configuration
 - Journal, year, and email settings persist via `src/data/db.ts` (default includes AER, ISSN 0002-8282).
+- Year inputs accept whole numbers between 1900 and 2100, require `End ≥ Start`, and only save when you press Enter—useful for experimenting before committing changes.
 - API hosts fall back to public OpenAlex; create `.env.local` with `VITE_OPENALEX_BASE` to point at mirrors or proxies.
 
 ### Project Layout

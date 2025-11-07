@@ -13,6 +13,7 @@ function App() {
   const [toast, setToast] = useState<null | { message: string; kind: ToastKind }>(
     null,
   )
+  const [emailPromptShown, setEmailPromptShown] = useState(false)
 
   const showToast = useCallback(
     (message: string, kind: ToastKind = 'info') => {
@@ -21,7 +22,7 @@ function App() {
     [],
   )
 
-  const { papers, isLoading, error, refresh, loadMore } = usePaperFeed(config, {
+  const { papers, isLoading, error, loadMore } = usePaperFeed(config, {
     onPaperError: (message) => showToast(message, 'error'),
   })
 
@@ -33,6 +34,13 @@ function App() {
       )
     }
   }, [config?.text_size])
+
+  useEffect(() => {
+    if (config && !config.email?.trim() && !emailPromptShown) {
+      showToast('Enter email in settings to increase load speed.', 'info')
+      setEmailPromptShown(true)
+    }
+  }, [config, emailPromptShown, showToast])
 
   const handleFieldUpdate = useCallback(
     async <K extends keyof Config>(field: K, value: Config[K]) => {
@@ -69,7 +77,6 @@ function App() {
         papers={papers}
         isLoading={isLoading}
         error={error}
-        onRefresh={refresh}
         onLoadMore={loadMore}
         onToggleSettings={() => setSettingsOpen((prev) => !prev)}
       />

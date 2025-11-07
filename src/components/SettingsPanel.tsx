@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import type { FormEvent } from 'react'
 
 import type { Config, Journal } from '../types'
@@ -26,6 +26,19 @@ export const SettingsPanel = ({
   const [journalName, setJournalName] = useState('')
   const [journalIssn, setJournalIssn] = useState('')
   const [error, setError] = useState<string | null>(null)
+  const [yearError, setYearError] = useState<string | null>(null)
+  const [startYearInput, setStartYearInput] = useState(
+    String(config.start_year),
+  )
+  const [endYearInput, setEndYearInput] = useState(String(config.end_year))
+
+  useEffect(() => {
+    setStartYearInput(String(config.start_year))
+  }, [config.start_year])
+
+  useEffect(() => {
+    setEndYearInput(String(config.end_year))
+  }, [config.end_year])
 
   const submitJournal = (event: FormEvent) => {
     event.preventDefault()
@@ -37,6 +50,44 @@ export const SettingsPanel = ({
     setJournalName('')
     setJournalIssn('')
     setError(null)
+  }
+
+  const handleYearCommit = (
+    field: 'start_year' | 'end_year',
+    value: string,
+  ) => {
+    const trimmed = value.trim()
+    if (!trimmed) {
+      setYearError('Year is required.')
+      return
+    }
+    const next = Number(trimmed)
+    if (!Number.isInteger(next)) {
+      setYearError('Year must be a whole number.')
+      return
+    }
+
+    if (next < 1900 || next > 2100) {
+      setYearError('Year must be between 1900 and 2100.')
+      return
+    }
+    const otherValue =
+      field === 'start_year' ? config.end_year : config.start_year
+    if (field === 'start_year' && next > otherValue) {
+      setYearError('Start year cannot be after end year.')
+      return
+    }
+    if (field === 'end_year' && next < otherValue) {
+      setYearError('End year cannot be before start year.')
+      return
+    }
+    setYearError(null)
+    onUpdateField(field, next)
+    if (field === 'start_year') {
+      setStartYearInput(String(next))
+    } else {
+      setEndYearInput(String(next))
+    }
   }
 
   return (
@@ -55,19 +106,42 @@ export const SettingsPanel = ({
             Start
             <input
               type="number"
-              value={config.start_year}
-              onChange={(e) => onUpdateField('start_year', Number(e.target.value))}
+              min={1900}
+              max={2100}
+              value={startYearInput}
+              onChange={(e) => {
+                setStartYearInput(e.target.value)
+                setYearError(null)
+              }}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  e.preventDefault()
+                  handleYearCommit('start_year', startYearInput)
+                }
+              }}
             />
           </label>
           <label>
             End
             <input
               type="number"
-              value={config.end_year}
-              onChange={(e) => onUpdateField('end_year', Number(e.target.value))}
+              min={1900}
+              max={2100}
+              value={endYearInput}
+              onChange={(e) => {
+                setEndYearInput(e.target.value)
+                setYearError(null)
+              }}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter') {
+                  e.preventDefault()
+                  handleYearCommit('end_year', endYearInput)
+                }
+              }}
             />
           </label>
         </div>
+        {yearError && <p className="settings-panel__error">{yearError}</p>}
       </section>
 
       <section className="settings-panel__section">
@@ -111,7 +185,7 @@ export const SettingsPanel = ({
       </section>
 
       <section className="settings-panel__section">
-        <h3>Appearance</h3>
+        <h3>Other</h3>
         <div className="settings-panel__grid settings-panel__grid--two">
           <label>
             Text size

@@ -3,14 +3,12 @@ import { useCallback, useRef } from 'react'
 import type { PaperViewModel } from '../types'
 import { PaperCard } from './PaperCard'
 import './ExploreView.css'
-import restartIcon from '../assets/restart-thin.svg'
 import settingsIcon from '../assets/settings-thin.svg'
 
 interface ExploreViewProps {
   papers: PaperViewModel[]
   isLoading: boolean
   error?: string | null
-  onRefresh: () => void
   onLoadMore: () => void
   onToggleSettings: () => void
 }
@@ -19,7 +17,6 @@ export const ExploreView = ({
   papers,
   isLoading,
   error,
-  onRefresh,
   onLoadMore,
   onToggleSettings,
 }: ExploreViewProps) => {
@@ -41,9 +38,6 @@ export const ExploreView = ({
       <header className="explore-view__header">
         <h1>PAPERSCROLL</h1>
         <div className="explore-view__actions">
-          <button type="button" onClick={onRefresh} aria-label="Refresh feed">
-            <img src={restartIcon} alt="" aria-hidden="true" />
-          </button>
           <button
             type="button"
             onClick={onToggleSettings}

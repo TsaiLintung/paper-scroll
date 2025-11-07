@@ -14,16 +14,9 @@ interface UsePaperFeedOptions {
   onPaperError?: (message: string) => void
 }
 
-const getYearBounds = (start: number, end: number) => {
-  const min = Math.min(start, end)
-  const max = Math.max(start, end)
-  return { min, max }
-}
-
 const pickYear = (start: number, end: number) => {
-  const { min, max } = getYearBounds(start, end)
-  const span = max - min + 1
-  return min + Math.floor(Math.random() * span)
+  const span = end - start + 1
+  return start + Math.floor(Math.random() * Math.max(span, 1))
 }
 
 export const usePaperFeed = (
@@ -59,7 +52,7 @@ export const usePaperFeed = (
   const samplePaper = useCallback(async () => {
     const target = pickTarget()
     if (!target) {
-      return null
+      return { paper: null, canRetry: false }
     }
     const { journal, year } = target
     try {
@@ -69,13 +62,13 @@ export const usePaperFeed = (
         email: config?.email,
       })
       setError(null)
-      return toPaperViewModel(work)
+      return { paper: toPaperViewModel(work), canRetry: true }
     } catch (err) {
       const message =
         err instanceof Error ? err.message : 'Failed to fetch paper data.'
       setError(message)
       paperErrorRef.current?.(message)
-      return null
+      return { paper: null, canRetry: true }
     }
   }, [config?.email, pickTarget])
 
@@ -86,20 +79,20 @@ export const usePaperFeed = (
       const maxAttempts = count * 5
       while (batch.length < count && attempts < maxAttempts) {
         attempts += 1
-        const paper = await samplePaper()
+        const { paper, canRetry } = await samplePaper()
         if (paper) {
           if (seenIdsRef.current.has(paper.id)) {
             continue
           }
           seenIdsRef.current.add(paper.id)
           batch.push(paper)
-        } else if (!pickTarget()) {
+        } else if (!canRetry) {
           break
         }
       }
       return batch
     },
-    [pickTarget, samplePaper],
+    [samplePaper],
   )
 
   const loadInitial = useCallback(async () => {
@@ -133,7 +126,6 @@ export const usePaperFeed = (
     papers,
     isLoading,
     error,
-    refresh: loadInitial,
     loadMore,
   }
 }
