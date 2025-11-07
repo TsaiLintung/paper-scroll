@@ -4,21 +4,24 @@
 
 body {
   font-size: var(--base-text-size);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #ffffff;
+  color: #0f141a;
+  margin: 0;
 }
 
 .app-shell {
   display: grid;
   grid-template-columns: 1fr;
   height: 100vh;
-  background: #f7f7fb;
-  color: #111017;
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #ffffff;
+  color: inherit;
 }
 
 .settings-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(15, 23, 42, 0.25);
+  background: rgba(255, 255, 255, 0.92);
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -36,6 +39,8 @@ body {
   height: 100%;
   max-width: 480px;
   overflow: auto;
+  background: #ffffff;
+  border-left: 1px solid #e1e8ed;
 }
 
 .app-loading {
@@ -44,5 +49,5 @@ body {
   justify-content: center;
   height: 100vh;
   font-size: 1.125rem;
-  color: #4d4c59;
+  color: #536471;
 }

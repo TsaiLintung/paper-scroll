@@ -44,16 +44,18 @@ export const ExploreView = ({
         </div>
       </header>
       <div className="explore-view__list" ref={listRef} onScroll={handleScroll}>
-        {error && <div className="explore-view__error">{error}</div>}
-        {papers.map((paper, idx) => (
-          <div key={paper.id}>
-            {idx > 0 && <div className="explore-view__divider" />}
-            <PaperCard paper={paper} />
-          </div>
-        ))}
-        {isLoading && (
-          <div className="explore-view__loading">Loading more papers…</div>
-        )}
+        <div className="explore-view__list-inner">
+          {error && <div className="explore-view__error">{error}</div>}
+          {papers.map((paper, idx) => (
+            <div key={paper.id}>
+              {idx > 0 && <div className="explore-view__divider" />}
+              <PaperCard paper={paper} />
+            </div>
+          ))}
+          {isLoading && (
+            <div className="explore-view__loading">Loading more papers…</div>
+          )}
+        </div>
       </div>
     </section>
   )

@@ -1,5 +1,4 @@
 import type { PaperViewModel } from '../types'
-import { RADII } from '../theme'
 import './PaperCard.css'
 
 interface PaperCardProps {
@@ -8,7 +7,7 @@ interface PaperCardProps {
 
 export const PaperCard = ({ paper }: PaperCardProps) => {
   return (
-    <article className="paper-card" style={{ borderRadius: RADII.lg }}>
+    <article className="paper-card">
       <header className="paper-card__header">
         <a
           className="paper-card__title"
