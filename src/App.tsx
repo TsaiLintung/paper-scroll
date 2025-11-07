@@ -97,6 +97,9 @@ function App() {
           onClose={() => setToast(null)}
         />
       )}
+      <footer className="app-footer">
+        Powered by OpenAlex · © Lin-Tung Tsai
+      </footer>
     </div>
   )
 }
