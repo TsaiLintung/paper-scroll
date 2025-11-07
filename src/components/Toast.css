@@ -18,8 +18,16 @@
   border: none;
   background: transparent;
   color: inherit;
-  font-size: 1.2rem;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+}
+
+.toast button img {
+  width: 16px;
+  height: 16px;
 }
 
 .toast--error {

@@ -3,6 +3,7 @@ import type { FormEvent } from 'react'
 
 import type { Config, Journal, StatusPayload } from '../types'
 import './SettingsPanel.css'
+import closeIcon from '../assets/close-thin.svg'
 
 interface SettingsPanelProps {
   config: Config
@@ -49,7 +50,7 @@ export const SettingsPanel = ({
       <header className="settings-panel__header">
         <h2>Settings</h2>
         <button onClick={onClose} aria-label="Close settings">
-          ×
+          <img src={closeIcon} alt="" aria-hidden="true" />
         </button>
       </header>
 
@@ -104,7 +105,12 @@ export const SettingsPanel = ({
           {config.journals.map((journal) => (
             <span key={journal.issn} className="settings-panel__chip">
               {journal.name} · {journal.issn}
-              <button onClick={() => onRemoveJournal(journal.issn)}>×</button>
+              <button
+                onClick={() => onRemoveJournal(journal.issn)}
+                aria-label={`Remove ${journal.name}`}
+              >
+                <img src={closeIcon} alt="" aria-hidden="true" />
+              </button>
             </span>
           ))}
         </div>

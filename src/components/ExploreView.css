@@ -40,6 +40,11 @@
   transition: background 150ms ease;
 }
 
+.explore-view__actions button img {
+  width: 24px;
+  height: 24px;
+}
+
 
 .explore-view__list {
   flex: 1;

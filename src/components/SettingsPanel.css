@@ -28,8 +28,6 @@
 .settings-panel__header button {
   border: none;
   background: transparent;
-  font-size: 1.6rem;
-  line-height: 1;
   cursor: pointer;
   color: #0f141a;
   width: 52px;
@@ -38,6 +36,11 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+}
+
+.settings-panel__header button img {
+  width: 18px;
+  height: 18px;
 }
 
 .settings-panel__section {
@@ -137,7 +140,15 @@
   border: none;
   background: transparent;
   cursor: pointer;
-  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+}
+
+.settings-panel__chip button img {
+  width: 14px;
+  height: 14px;
 }
 
 .settings-panel__error {

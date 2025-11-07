@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import './Toast.css'
+import closeIcon from '../assets/close-thin.svg'
 
 export type ToastKind = 'info' | 'error' | 'success'
 
@@ -25,7 +26,7 @@ export const Toast = ({
     <div className={`toast toast--${kind}`}>
       <span>{message}</span>
       <button type="button" onClick={onClose} aria-label="Dismiss">
-        ×
+        <img src={closeIcon} alt="" aria-hidden="true" />
       </button>
     </div>
   )

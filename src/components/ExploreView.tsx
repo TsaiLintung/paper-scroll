@@ -3,6 +3,8 @@ import { useCallback, useRef } from 'react'
 import type { PaperViewModel } from '../types'
 import { PaperCard } from './PaperCard'
 import './ExploreView.css'
+import restartIcon from '../assets/restart-thin.svg'
+import settingsIcon from '../assets/settings-thin.svg'
 
 interface ExploreViewProps {
   papers: PaperViewModel[]
@@ -40,14 +42,14 @@ export const ExploreView = ({
         <h1>PAPERSCROLL</h1>
         <div className="explore-view__actions">
           <button type="button" onClick={onRefresh} aria-label="Refresh feed">
-            <span aria-hidden="true">⟳</span>
+            <img src={restartIcon} alt="" aria-hidden="true" />
           </button>
           <button
             type="button"
             onClick={onToggleSettings}
             aria-label="Open settings"
           >
-            <span aria-hidden="true">⚙</span>
+            <img src={settingsIcon} alt="" aria-hidden="true" />
           </button>
         </div>
       </header>
