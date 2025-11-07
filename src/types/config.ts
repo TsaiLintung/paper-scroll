@@ -17,6 +17,6 @@ export const DEFAULT_CONFIG: Config = {
   text_size: 16,
   email: '',
   journals: [
-    { name: 'aer', issn: '0002-8282' },
+    { name: 'AER', issn: '0002-8282' },
   ],
 }
