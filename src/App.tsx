@@ -4,29 +4,15 @@ import { SettingsPanel } from './components/SettingsPanel'
 import { Toast, type ToastKind } from './components/Toast'
 import { useConfig } from './hooks/useConfig'
 import { usePaperFeed } from './hooks/usePaperFeed'
-import { useStatus } from './hooks/useStatus'
-import { useSyncService } from './hooks/useSyncService'
-import { useCallback, useEffect, useRef, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import type { Config, Journal } from './types'
-import { useDataStore } from './data/DataContext'
-
-const SYNC_SENSITIVE_FIELDS: Array<keyof Config> = [
-  'start_year',
-  'end_year',
-  'email',
-]
 
 function App() {
   const { config, loading, setField, addJournal, removeJournal } = useConfig()
-  const { status } = useStatus()
-  const { papers, isLoading, error, refresh, loadMore } = usePaperFeed(config)
-  const { start: startSync, isRunning: isSyncing } = useSyncService()
-  const store = useDataStore()
   const [settingsOpen, setSettingsOpen] = useState(false)
   const [toast, setToast] = useState<null | { message: string; kind: ToastKind }>(
     null,
   )
-  const coldStartSyncTriggered = useRef(false)
 
   const showToast = useCallback(
     (message: string, kind: ToastKind = 'info') => {
@@ -34,6 +20,10 @@ function App() {
     },
     [],
   )
+
+  const { papers, isLoading, error, refresh, loadMore } = usePaperFeed(config, {
+    onPaperError: (message) => showToast(message, 'error'),
+  })
 
   useEffect(() => {
     if (config?.text_size) {
@@ -44,86 +34,26 @@ function App() {
     }
   }, [config?.text_size])
 
-  const runSync = useCallback(
-    async ({
-      configOverride,
-      silent = false,
-    }: { configOverride?: Config; silent?: boolean } = {}) => {
-      const target = configOverride ?? config
-      if (!target || isSyncing) {
-        return
-      }
-      try {
-        await startSync(target)
-        if (!silent) {
-          showToast('Journals updated.')
-        }
-      } catch (err) {
-        showToast(
-          err instanceof Error ? err.message : 'Failed to update journals.',
-          'error',
-        )
-      }
-    },
-    [config, isSyncing, showToast, startSync],
-  )
-
-  const mutateAndSync = useCallback(
-    async (mutate: () => Promise<Config>) => {
-      const next = await mutate()
-      await runSync({ configOverride: next, silent: true })
-    },
-    [runSync],
-  )
-
   const handleFieldUpdate = useCallback(
     async <K extends keyof Config>(field: K, value: Config[K]) => {
-      if (SYNC_SENSITIVE_FIELDS.includes(field)) {
-        await mutateAndSync(() => setField(field, value))
-        return
-      }
       await setField(field, value)
     },
-    [mutateAndSync, setField],
+    [setField],
   )
 
   const handleAddJournal = useCallback(
     async (journal: Journal) => {
-      await mutateAndSync(() => addJournal(journal))
+      await addJournal(journal)
     },
-    [addJournal, mutateAndSync],
+    [addJournal],
   )
 
   const handleRemoveJournal = useCallback(
     async (issn: string) => {
-      await mutateAndSync(() => removeJournal(issn))
+      await removeJournal(issn)
     },
-    [mutateAndSync, removeJournal],
+    [removeJournal],
   )
-
-  useEffect(() => {
-    if (!config || coldStartSyncTriggered.current) {
-      return
-    }
-    coldStartSyncTriggered.current = true
-
-    let active = true
-    void (async () => {
-      try {
-        const snapshots = await store.getSnapshots()
-        if (!active || snapshots.length > 0) {
-          return
-        }
-        await runSync({ silent: true })
-      } catch (err) {
-        console.error('Failed to evaluate cold-start sync', err)
-      }
-    })()
-
-    return () => {
-      active = false
-    }
-  }, [config, runSync, store])
 
   if (loading || !config) {
     return (
@@ -153,15 +83,10 @@ function App() {
         >
           <SettingsPanel
             config={config}
-            status={status}
             onClose={() => setSettingsOpen(false)}
             onUpdateField={handleFieldUpdate}
             onAddJournal={handleAddJournal}
             onRemoveJournal={handleRemoveJournal}
-            onSync={() => {
-              void runSync()
-            }}
-            isSyncing={isSyncing}
           />
         </div>
       </div>

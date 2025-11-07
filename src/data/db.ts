@@ -1,78 +1,52 @@
-import { openDB, type DBSchema, type IDBPDatabase } from 'idb'
-
-import type {
-  Config,
-  JournalSnapshot,
-  PaperRecord,
-  StatusPayload,
-} from '../types'
+import type { Config } from '../types'
 import { DEFAULT_CONFIG } from '../types'
 
-interface PaperScrollDB extends DBSchema {
-  config: {
-    key: string
-    value: Config
+const STORAGE_KEY = 'paper-scroll:config'
+
+const getStorage = (): Storage | null => {
+  if (typeof window === 'undefined' || !window.localStorage) {
+    return null
   }
-  journalSnapshots: {
-    key: string
-    value: JournalSnapshot
+  return window.localStorage
+}
+
+const readFromStorage = (): Config | null => {
+  const storage = getStorage()
+  if (!storage) {
+    return null
   }
-  status: {
-    key: string
-    value: StatusPayload
+  const raw = storage.getItem(STORAGE_KEY)
+  if (!raw) {
+    return null
   }
-  papers: {
-    key: string
-    value: PaperRecord
+  try {
+    return JSON.parse(raw) as Config
+  } catch (err) {
+    console.warn('Failed to parse stored config, resetting.', err)
+    storage.removeItem(STORAGE_KEY)
+    return null
   }
 }
 
-const DB_NAME = 'paper-scroll'
-const DB_VERSION = 1
-const CONFIG_KEY = 'singleton'
-
-let dbPromise: Promise<IDBPDatabase<PaperScrollDB>> | null = null
-
-const makeSnapshotKey = (name: string, year: number) => `${name}-${year}`
-
-const initDb = () =>
-  openDB<PaperScrollDB>(DB_NAME, DB_VERSION, {
-    upgrade(db) {
-      if (!db.objectStoreNames.contains('config')) {
-        db.createObjectStore('config')
-      }
-      if (!db.objectStoreNames.contains('journalSnapshots')) {
-        db.createObjectStore('journalSnapshots')
-      }
-      if (!db.objectStoreNames.contains('status')) {
-        db.createObjectStore('status')
-      }
-      if (!db.objectStoreNames.contains('papers')) {
-        db.createObjectStore('papers')
-      }
-    },
-  })
-
-const getDb = () => {
-  if (!dbPromise) {
-    dbPromise = initDb()
+const writeToStorage = (config: Config) => {
+  const storage = getStorage()
+  if (!storage) {
+    return
   }
-  return dbPromise
+  storage.setItem(STORAGE_KEY, JSON.stringify(config))
 }
 
 export const readConfig = async (): Promise<Config> => {
-  const db = await getDb()
-  const config = await db.get('config', CONFIG_KEY)
-  if (config) {
-    return config
+  const stored = readFromStorage()
+  if (stored) {
+    return stored
   }
-  await db.put('config', DEFAULT_CONFIG, CONFIG_KEY)
+  writeToStorage(DEFAULT_CONFIG)
   return DEFAULT_CONFIG
 }
 
 export const writeConfig = async (config: Config): Promise<Config> => {
-  const db = await getDb()
-  await db.put('config', config, CONFIG_KEY)
+  writeToStorage(config)
   return config
 }
 
@@ -82,42 +56,4 @@ export const updateConfig = async (
   const current = await readConfig()
   const next = { ...current, ...updates }
   return writeConfig(next)
-}
-
-export const saveJournalSnapshot = async (
-  snapshot: JournalSnapshot,
-): Promise<void> => {
-  const db = await getDb()
-  await db.put(
-    'journalSnapshots',
-    snapshot,
-    makeSnapshotKey(snapshot.name, snapshot.year),
-  )
-}
-
-export const listJournalSnapshots = async (): Promise<JournalSnapshot[]> => {
-  const db = await getDb()
-  return db.getAll('journalSnapshots')
-}
-
-export const writeStatus = async (payload: StatusPayload): Promise<void> => {
-  const db = await getDb()
-  await db.put('status', payload, CONFIG_KEY)
-}
-
-export const readStatus = async (): Promise<StatusPayload | undefined> => {
-  const db = await getDb()
-  return db.get('status', CONFIG_KEY)
-}
-
-export const cachePaper = async (record: PaperRecord): Promise<void> => {
-  const db = await getDb()
-  await db.put('papers', record, record.doi)
-}
-
-export const getCachedPaper = async (
-  doi: string,
-): Promise<PaperRecord | undefined> => {
-  const db = await getDb()
-  return db.get('papers', doi)
 }

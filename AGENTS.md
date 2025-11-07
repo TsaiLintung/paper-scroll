@@ -2,6 +2,10 @@
 
 This React + TypeScript + Vite workspace centers on a layered structure that keeps UI, domain logic, and browser integrations separate. Use the following reference when building, testing, or reviewing contributions.
 
+## Documentation for API
+
+Documentation for openalex is in `doc/openalex.md`
+
 ## Project Structure & Module Organization
 - `src/components` holds presentational React components; prefer small, focused trees under feature folders.
 - `src/domain`, `src/services`, and `src/workers` encapsulate business rules, data access, and long-running browser tasks—treat these as the single sources of truth.

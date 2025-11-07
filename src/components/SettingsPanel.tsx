@@ -1,13 +1,12 @@
 import { useState } from 'react'
 import type { FormEvent } from 'react'
 
-import type { Config, Journal, StatusPayload } from '../types'
+import type { Config, Journal } from '../types'
 import './SettingsPanel.css'
 import closeIcon from '../assets/close-thin.svg'
 
 interface SettingsPanelProps {
   config: Config
-  status: StatusPayload | null
   onClose: () => void
   onUpdateField: <K extends keyof Config>(
     field: K,
@@ -15,19 +14,14 @@ interface SettingsPanelProps {
   ) => Promise<void> | void
   onAddJournal: (journal: Journal) => Promise<void> | void
   onRemoveJournal: (issn: string) => Promise<void> | void
-  onSync: () => Promise<void> | void
-  isSyncing?: boolean
 }
 
 export const SettingsPanel = ({
   config,
-  status,
   onClose,
   onUpdateField,
   onAddJournal,
   onRemoveJournal,
-  onSync,
-  isSyncing = false,
 }: SettingsPanelProps) => {
   const [journalName, setJournalName] = useState('')
   const [journalIssn, setJournalIssn] = useState('')
@@ -140,16 +134,6 @@ export const SettingsPanel = ({
         </div>
       </section>
 
-      <section className="settings-panel__section">
-        <h3>Journal sync</h3>
-        <button onClick={onSync} disabled={isSyncing}>
-          {isSyncing ? 'Updating…' : 'Update journals'}
-        </button>
-        <p className="settings-panel__status-text">
-          {status?.message ?? 'Idle'}
-        </p>
-        <progress value={status?.progress ?? 0} max={1} />
-      </section>
     </aside>
   )
 }
