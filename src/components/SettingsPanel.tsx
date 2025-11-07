@@ -207,6 +207,9 @@ export const SettingsPanel = ({
               onChange={(e) => onUpdateField('email', e.target.value)}
             />
           </label>
+          <p className="settings-panel__note">
+            Your email is stored locally and only used to sign OpenAlex API requests to increase the rate limit.
+          </p>
         </div>
       </section>
 
