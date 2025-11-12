@@ -1,0 +1,1 @@
+https://freesvgicons.com/search?q=plus&collectionId=iconamoon
