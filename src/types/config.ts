@@ -10,6 +10,7 @@ export interface Config {
   email: string
   journals: Journal[]
   block_phrases: string[]
+  dark_mode: boolean
 }
 
 export const DEFAULT_CONFIG: Config = {
@@ -24,6 +25,7 @@ export const DEFAULT_CONFIG: Config = {
     { name: 'ReStud', issn: '0034-6527' },
     { name: 'AER', issn: '0002-8282' },
   ],
+  dark_mode: false,
   block_phrases: [
     'front matter',
     'recent referees',

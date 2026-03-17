@@ -1,8 +1,8 @@
 .settings-panel {
   width: 380px;
-  background: #ffffff;
+  background: var(--color-surface);
   height: 100%;
-  border-left: 1px solid #c8e6d5;
+  border-left: 1px solid var(--color-border);
   display: flex;
   flex-direction: column;
   overflow-y: auto;
@@ -20,18 +20,18 @@
 
 .settings-panel__header h2 {
   margin: 0;
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Source Sans 3', 'Myriad Pro', sans-serif;
   font-size: 1.15rem;
   font-weight: 500;
   letter-spacing: 0.04em;
-  color: #0f1a15;
+  color: var(--color-text);
 }
 
 .settings-panel__header button {
   border: none;
   background: transparent;
   cursor: pointer;
-  color: #4e7a66;
+  color: var(--color-text-muted);
   width: 36px;
   height: 36px;
   border-radius: 50%;
@@ -42,7 +42,7 @@
 }
 
 .settings-panel__header button:hover {
-  color: #0f1a15;
+  color: var(--color-text);
 }
 
 .settings-panel__header button img {
@@ -54,7 +54,7 @@
 
 .settings-panel__section {
   padding: 20px 28px;
-  border-top: 1px solid #e9f5ef;
+  border-top: 1px solid var(--color-border-subtle);
   display: flex;
   flex-direction: column;
   gap: 14px;
@@ -66,12 +66,12 @@
 
 .settings-panel__section h3 {
   margin: 0;
-  font-family: 'Lora', Georgia, serif;
+  font-family: 'Source Sans 3', 'Myriad Pro', sans-serif;
   font-size: 0.68rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.14em;
-  color: #4e7a66;
+  color: var(--color-text-muted);
 }
 
 /* ── Field (label + input) ── */
@@ -84,17 +84,17 @@
 
 .settings-panel__field span {
   font-size: 0.75rem;
-  color: #4e7a66;
+  color: var(--color-text-muted);
   letter-spacing: 0.03em;
 }
 
 .settings-panel__field input {
   border: none;
-  border-bottom: 1px solid #c2ddd2;
+  border-bottom: 1px solid var(--color-border-input);
   padding: 6px 0;
   font-size: 0.95rem;
-  font-family: 'Lora', Georgia, serif;
-  color: #0f1a15;
+  font-family: 'Source Sans 3', 'Myriad Pro', sans-serif;
+  color: var(--color-text);
   background: transparent;
   width: 100%;
   transition: border-color 150ms ease;
@@ -102,7 +102,7 @@
 
 .settings-panel__field input:focus {
   outline: none;
-  border-bottom-color: #3eb489;
+  border-bottom-color: var(--color-accent);
 }
 
 /* ── Two-column grid for fields ── */
@@ -129,10 +129,10 @@
 .settings-panel__add-button {
   padding: 6px 16px;
   border-radius: 999px;
-  border: 1px solid #3eb489;
-  background: #ffffff;
-  color: #2d8a6c;
-  font-family: 'Lora', Georgia, serif;
+  border: 1px solid var(--color-accent);
+  background: transparent;
+  color: var(--color-accent);
+  font-family: 'Source Sans 3', 'Myriad Pro', sans-serif;
   font-size: 0.85rem;
   cursor: pointer;
   white-space: nowrap;
@@ -140,8 +140,8 @@
 }
 
 .settings-panel__add-button:hover {
-  background: #3eb489;
-  color: #ffffff;
+  background: var(--color-accent);
+  color: var(--color-surface);
 }
 
 .settings-panel__add-button:disabled {
@@ -149,11 +149,67 @@
   cursor: not-allowed;
 }
 
+/* ── Toggle ── */
+
+.settings-panel__toggle-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.settings-panel__toggle-row span {
+  font-size: 0.9rem;
+  color: var(--color-text);
+}
+
+.settings-panel__toggle {
+  position: relative;
+  width: 36px;
+  height: 20px;
+  flex-shrink: 0;
+}
+
+.settings-panel__toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+
+.settings-panel__toggle-track {
+  position: absolute;
+  inset: 0;
+  border-radius: 999px;
+  background: var(--color-border-input);
+  cursor: pointer;
+  transition: background 200ms ease;
+}
+
+.settings-panel__toggle input:checked + .settings-panel__toggle-track {
+  background: var(--color-accent);
+}
+
+.settings-panel__toggle-track::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #ffffff;
+  transition: transform 200ms ease;
+}
+
+.settings-panel__toggle input:checked + .settings-panel__toggle-track::after {
+  transform: translateX(16px);
+}
+
 /* ── Error ── */
 
 .settings-panel__error {
   margin: 0;
-  color: #c62828;
+  color: var(--color-error);
   font-size: 0.82rem;
 }
 
@@ -169,19 +225,19 @@
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  border: 1px solid #c2ddd2;
+  border: 1px solid var(--color-border-input);
   border-radius: 999px;
   padding: 4px 10px 4px 12px;
   font-size: 0.8rem;
-  color: #0f1a15;
-  background: #ffffff;
+  color: var(--color-text);
+  background: transparent;
 }
 
 .settings-panel__chip button {
   border: none;
   background: transparent;
   cursor: pointer;
-  color: #4e7a66;
+  color: var(--color-text-muted);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -190,7 +246,7 @@
 }
 
 .settings-panel__chip button:hover {
-  color: #c62828;
+  color: var(--color-error);
 }
 
 .settings-panel__chip button img {
@@ -203,12 +259,12 @@
 .settings-panel__note {
   margin: 0;
   font-size: 0.78rem;
-  color: #4e7a66;
+  color: var(--color-text-muted);
   line-height: 1.5;
 }
 
 .settings-panel__note a {
-  color: #3eb489;
+  color: var(--color-accent);
   text-decoration: none;
 }
 
@@ -221,23 +277,23 @@
 .settings-panel__footer {
   margin-top: auto;
   padding: 20px 28px;
-  border-top: 1px solid #e9f5ef;
+  border-top: 1px solid var(--color-border-subtle);
 }
 
 .settings-panel__reset-button {
   width: 100%;
   padding: 8px 14px;
   border-radius: 999px;
-  border: 1px solid #c2ddd2;
-  background: #ffffff;
-  color: #4e7a66;
-  font-family: 'Lora', Georgia, serif;
+  border: 1px solid var(--color-border-input);
+  background: transparent;
+  color: var(--color-text-muted);
+  font-family: 'Source Sans 3', 'Myriad Pro', sans-serif;
   font-size: 0.85rem;
   cursor: pointer;
   transition: border-color 150ms ease, color 150ms ease;
 }
 
 .settings-panel__reset-button:hover {
-  border-color: #c62828;
-  color: #c62828;
+  border-color: var(--color-error);
+  color: var(--color-error);
 }

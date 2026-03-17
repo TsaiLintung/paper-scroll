@@ -6,10 +6,10 @@
   display: inline-flex;
   align-items: center;
   gap: 12px;
-  background: #ffffff;
-  color: #0f1a15;
-  border: 1px solid #c8e6d5;
-  font-family: 'Lora', Georgia, serif;
+  background: var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid var(--color-border);
+  font-family: 'Source Sans 3', 'Myriad Pro', sans-serif;
   font-size: 0.9rem;
   max-width: 320px;
   box-shadow: 0 2px 12px rgba(62, 180, 137, 0.08);
@@ -19,7 +19,7 @@
 .toast button {
   border: none;
   background: transparent;
-  color: #4e7a66;
+  color: var(--color-text-muted);
   cursor: pointer;
   display: inline-flex;
   align-items: center;
@@ -34,7 +34,6 @@
 }
 
 .toast--error {
-  border-color: #f5c2c0;
-  color: #b42318;
-  box-shadow: 0 2px 12px rgba(180, 35, 24, 0.06);
+  border-color: var(--color-error-border);
+  color: var(--color-error);
 }

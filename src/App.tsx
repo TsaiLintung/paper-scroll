@@ -37,6 +37,13 @@ function App() {
   }, [config?.text_size])
 
   useEffect(() => {
+    document.documentElement.setAttribute(
+      'data-theme',
+      config?.dark_mode ? 'dark' : 'light',
+    )
+  }, [config?.dark_mode])
+
+  useEffect(() => {
     if (config && !config.email?.trim() && !emailPromptShown) {
       showToast('Enter email in settings to increase load speed.', 'info')
       setEmailPromptShown(true)

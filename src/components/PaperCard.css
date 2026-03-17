@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: 10px;
   padding: 20px 24px;
-  background: #ffffff;
+  background: var(--color-bg);
 }
 
 .paper-card__header {
@@ -13,7 +13,7 @@
 }
 
 .paper-card__title {
-  font-family: 'Playfair Display', Georgia, serif;
+  font-family: 'Source Serif 4', 'Minion Pro', Georgia, serif;
   font-size: 1.1rem;
   font-weight: 500;
   line-height: 1.4;
@@ -23,18 +23,18 @@
 
 .paper-card__title:hover {
   text-decoration: underline;
-  color: #2d8a6c;
+  color: var(--color-accent-hover);
 }
 
 .paper-card__meta {
   margin: 0;
-  color: #4e7a66;
+  color: var(--color-text-muted);
   font-size: 0.9rem;
 }
 
 .paper-card__abstract {
   margin: 0;
-  color: #0f1a15;
+  color: var(--color-text);
   line-height: 1.65;
   white-space: pre-line;
 }

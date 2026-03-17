@@ -243,6 +243,17 @@ export const SettingsPanel = ({
             onChange={(e) => onUpdateField('text_size', Number(e.target.value))}
           />
         </div>
+        <div className="settings-panel__toggle-row">
+          <span>Dark mode</span>
+          <label className="settings-panel__toggle">
+            <input
+              type="checkbox"
+              checked={config.dark_mode}
+              onChange={(e) => onUpdateField('dark_mode', e.target.checked)}
+            />
+            <span className="settings-panel__toggle-track" />
+          </label>
+        </div>
       </section>
 
       <section className="settings-panel__section">
