@@ -7,13 +7,15 @@
 }
 
 .explore-view__header {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: 10px 24px;
   max-height: 80px;
   overflow: hidden;
   opacity: 1;
+  border-bottom: 1px solid #e9f5ef;
   transition: max-height 350ms ease, opacity 250ms ease, padding 350ms ease;
 }
 
@@ -25,12 +27,16 @@
 }
 
 .explore-view__header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   margin: 0;
   font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.1rem;
   font-weight: 500;
   letter-spacing: 0.35em;
   color: #0f1a15;
+  pointer-events: none;
 }
 
 .explore-view__actions {
