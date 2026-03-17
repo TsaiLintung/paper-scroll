@@ -11,13 +11,15 @@
   align-items: center;
   justify-content: space-between;
   padding: 10px 24px;
-  border-bottom: 1px solid #e1e8ed;
 }
 
 .explore-view__header h1 {
   margin: 0;
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.1rem;
+  font-weight: 500;
   letter-spacing: 0.35em;
+  color: #0f1a15;
 }
 
 .explore-view__actions {
@@ -28,7 +30,7 @@
 .explore-view__actions button {
   border: none;
   background: transparent;
-  color: #0f141a;
+  color: #0f1a15;
   width: 52px;
   height: 52px;
   border-radius: 50%;
@@ -51,30 +53,25 @@
   min-height: 0;
   overflow-y: auto;
   background: #ffffff;
-  border-top: 1px solid #e1e8ed;
 }
 
 .explore-view__list-inner {
   margin: 0 auto;
   max-width: 720px;
-  border-left: 1px solid #e1e8ed;
-  border-right: 1px solid #e1e8ed;
-  border-bottom: 1px solid #e1e8ed;
   background: #ffffff;
   padding-bottom: 48px;
 }
 
 .explore-view__divider {
   height: 1px;
-  background: #e1e8ed;
+  background: #e9f5ef;
   margin: 0;
 }
 
 .explore-view__loading {
   text-align: center;
-  color: #536471;
+  color: #4e7a66;
   padding: 16px 0;
-  border-bottom: 1px solid #e1e8ed;
 }
 
 .explore-view__error {

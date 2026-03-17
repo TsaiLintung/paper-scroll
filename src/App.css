@@ -4,9 +4,9 @@
 
 body {
   font-size: var(--base-text-size);
-  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: 'Lora', Georgia, 'Times New Roman', serif;
   background: #ffffff;
-  color: #0f141a;
+  color: #0f1a15;
   margin: 0;
 }
 
@@ -21,7 +21,7 @@ body {
 .settings-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.94);
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -39,7 +39,7 @@ body {
   height: 100%;
   max-width: 480px;
   background: #ffffff;
-  border-left: 1px solid #e1e8ed;
+  border-left: 1px solid #c8e6d5;
   display: flex;
   flex-direction: column;
 }
@@ -52,10 +52,10 @@ body {
 .settings-overlay__footer {
   padding: 0.5rem 1rem;
   font-size: 0.8rem;
-  color: #5b7083;
+  color: #4e7a66;
   background: #ffffff;
-  border-top: 1px solid #e1e8ed;
-    border-left: 1px solid #e1e8ed;
+  border-top: 1px solid #c8e6d5;
+  border-left: 1px solid #c8e6d5;
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem;
@@ -78,5 +78,5 @@ body {
   justify-content: center;
   height: 100vh;
   font-size: 1.125rem;
-  color: #536471;
+  color: #4e7a66;
 }

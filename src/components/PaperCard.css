@@ -13,7 +13,9 @@
 }
 
 .paper-card__title {
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 1.1rem;
+  font-weight: 500;
   line-height: 1.4;
   text-decoration: none;
   color: inherit;
@@ -21,17 +23,18 @@
 
 .paper-card__title:hover {
   text-decoration: underline;
+  color: #2d8a6c;
 }
 
 .paper-card__meta {
   margin: 0;
-  color: #536471;
+  color: #4e7a66;
   font-size: 0.9rem;
 }
 
 .paper-card__abstract {
   margin: 0;
-  color: #0f141a;
-  line-height: 1.45;
+  color: #0f1a15;
+  line-height: 1.65;
   white-space: pre-line;
 }
