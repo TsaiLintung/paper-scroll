@@ -8,7 +8,7 @@ import { useCallback, useEffect, useState } from 'react'
 import type { Config, Journal } from './types'
 
 function App() {
-  const { config, loading, setField, addJournal, removeJournal, resetConfig } =
+  const { config, loading, setField, addJournal, removeJournal, addBlockPhrase, removeBlockPhrase, resetConfig } =
     useConfig()
   const [settingsOpen, setSettingsOpen] = useState(false)
   const [toast, setToast] = useState<null | { message: string; kind: ToastKind }>(
@@ -64,6 +64,16 @@ function App() {
     [removeJournal],
   )
 
+  const handleAddBlockPhrase = useCallback(
+    async (phrase: string) => { await addBlockPhrase(phrase) },
+    [addBlockPhrase],
+  )
+
+  const handleRemoveBlockPhrase = useCallback(
+    async (phrase: string) => { await removeBlockPhrase(phrase) },
+    [removeBlockPhrase],
+  )
+
   const handleResetPreferences = useCallback(async () => {
     await resetConfig()
     showToast('Preferences reset to defaults.', 'info')
@@ -101,6 +111,8 @@ function App() {
               onUpdateField={handleFieldUpdate}
               onAddJournal={handleAddJournal}
               onRemoveJournal={handleRemoveJournal}
+              onAddBlockPhrase={handleAddBlockPhrase}
+              onRemoveBlockPhrase={handleRemoveBlockPhrase}
               onReset={handleResetPreferences}
             />
           </div>

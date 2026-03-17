@@ -9,6 +9,8 @@ interface UseConfigResult {
   setField: <K extends keyof Config>(field: K, value: Config[K]) => Promise<Config>
   addJournal: (journal: Journal) => Promise<Config>
   removeJournal: (issn: string) => Promise<Config>
+  addBlockPhrase: (phrase: string) => Promise<Config>
+  removeBlockPhrase: (phrase: string) => Promise<Config>
   resetConfig: () => Promise<Config>
 }
 
@@ -58,6 +60,20 @@ export const useConfig = (): UseConfigResult => {
     [apply, store],
   )
 
+  const addBlockPhrase = useCallback(
+    async (phrase: string) => {
+      return apply(() => store.addBlockPhrase(phrase))
+    },
+    [apply, store],
+  )
+
+  const removeBlockPhrase = useCallback(
+    async (phrase: string) => {
+      return apply(() => store.removeBlockPhrase(phrase))
+    },
+    [apply, store],
+  )
+
   const resetConfig = useCallback(async () => {
     return apply(() => store.resetConfig())
   }, [apply, store])
@@ -68,6 +84,8 @@ export const useConfig = (): UseConfigResult => {
     setField,
     addJournal,
     removeJournal,
+    addBlockPhrase,
+    removeBlockPhrase,
     resetConfig,
   }
 }

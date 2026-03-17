@@ -35,6 +35,18 @@ export class DataStore {
     return writeConfig(next)
   }
 
+  async addBlockPhrase(phrase: string): Promise<Config> {
+    const config = await this.getConfig()
+    const normalized = phrase.trim().toLowerCase()
+    if (config.block_phrases.includes(normalized)) return config
+    return writeConfig({ ...config, block_phrases: [...config.block_phrases, normalized] })
+  }
+
+  async removeBlockPhrase(phrase: string): Promise<Config> {
+    const config = await this.getConfig()
+    return writeConfig({ ...config, block_phrases: config.block_phrases.filter((p) => p !== phrase) })
+  }
+
   async resetConfig(): Promise<Config> {
     const next: Config = {
       ...DEFAULT_CONFIG,

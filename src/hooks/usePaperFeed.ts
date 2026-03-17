@@ -72,6 +72,16 @@ export const usePaperFeed = (
     }
   }, [config?.email, pickTarget])
 
+  const isBlocked = useCallback(
+    (paper: PaperViewModel) => {
+      const phrases = config?.block_phrases ?? []
+      if (!phrases.length) return false
+      const haystack = `${paper.title} ${paper.abstract}`.toLowerCase()
+      return phrases.some((p) => haystack.includes(p))
+    },
+    [config?.block_phrases],
+  )
+
   const loadBatch = useCallback(
     async (count: number) => {
       const batch: PaperViewModel[] = []
@@ -81,7 +91,7 @@ export const usePaperFeed = (
         attempts += 1
         const { paper, canRetry } = await samplePaper()
         if (paper) {
-          if (seenIdsRef.current.has(paper.id)) {
+          if (seenIdsRef.current.has(paper.id) || isBlocked(paper)) {
             continue
           }
           seenIdsRef.current.add(paper.id)
@@ -92,7 +102,7 @@ export const usePaperFeed = (
       }
       return batch
     },
-    [samplePaper],
+    [samplePaper, isBlocked],
   )
 
   const loadInitial = useCallback(async () => {

@@ -14,6 +14,8 @@ interface SettingsPanelProps {
   ) => Promise<void> | void
   onAddJournal: (journal: Journal) => Promise<void> | void
   onRemoveJournal: (issn: string) => Promise<void> | void
+  onAddBlockPhrase: (phrase: string) => Promise<void> | void
+  onRemoveBlockPhrase: (phrase: string) => Promise<void> | void
   onReset: () => Promise<void> | void
 }
 
@@ -23,10 +25,13 @@ export const SettingsPanel = ({
   onUpdateField,
   onAddJournal,
   onRemoveJournal,
+  onAddBlockPhrase,
+  onRemoveBlockPhrase,
   onReset,
 }: SettingsPanelProps) => {
   const [journalName, setJournalName] = useState('')
   const [journalIssn, setJournalIssn] = useState('')
+  const [phraseInput, setPhraseInput] = useState('')
   const [error, setError] = useState<string | null>(null)
   const [yearError, setYearError] = useState<string | null>(null)
   const [startYearInput, setStartYearInput] = useState(
@@ -103,9 +108,9 @@ export const SettingsPanel = ({
 
       <section className="settings-panel__section">
         <h3>Year range</h3>
-        <div className="settings-panel__grid settings-panel__grid--two">
-          <label>
-            Start
+        <div className="settings-panel__row">
+          <div className="settings-panel__field">
+            <span>From</span>
             <input
               type="number"
               min={1900}
@@ -121,10 +126,11 @@ export const SettingsPanel = ({
                   handleYearCommit('start_year', startYearInput)
                 }
               }}
+              onBlur={() => handleYearCommit('start_year', startYearInput)}
             />
-          </label>
-          <label>
-            End
+          </div>
+          <div className="settings-panel__field">
+            <span>To</span>
             <input
               type="number"
               min={1900}
@@ -140,35 +146,35 @@ export const SettingsPanel = ({
                   handleYearCommit('end_year', endYearInput)
                 }
               }}
+              onBlur={() => handleYearCommit('end_year', endYearInput)}
             />
-          </label>
+          </div>
         </div>
         {yearError && <p className="settings-panel__error">{yearError}</p>}
       </section>
 
       <section className="settings-panel__section">
         <h3>Journals</h3>
-        <form
-          onSubmit={submitJournal}
-          className="settings-panel__grid settings-panel__grid--form"
-        >
-          <label>
-            Name
+        <form onSubmit={submitJournal} className="settings-panel__journal-form">
+          <div className="settings-panel__field">
+            <span>Name</span>
             <input
               value={journalName}
               maxLength={32}
               onChange={(e) => setJournalName(e.target.value)}
             />
-          </label>
-          <label>
-            ISSN
+          </div>
+          <div className="settings-panel__field settings-panel__field--issn">
+            <span>ISSN</span>
             <input
               value={journalIssn}
               maxLength={12}
               onChange={(e) => setJournalIssn(e.target.value)}
             />
-          </label>
-          <button type="submit">Add</button>
+          </div>
+          <button type="submit" className="settings-panel__add-button">
+            Add
+          </button>
         </form>
         {error && <p className="settings-panel__error">{error}</p>}
         <div className="settings-panel__chip-row">
@@ -187,38 +193,79 @@ export const SettingsPanel = ({
       </section>
 
       <section className="settings-panel__section">
-        <h3>Other</h3>
-        <div className="settings-panel__grid settings-panel__grid--two">
-          <label>
-            Text size
+        <h3>Block phrases</h3>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault()
+            if (phraseInput.trim()) {
+              onAddBlockPhrase(phraseInput.trim())
+              setPhraseInput('')
+            }
+          }}
+          className="settings-panel__journal-form"
+        >
+          <div className="settings-panel__field">
+            <span>Phrase</span>
             <input
-              type="number"
-              min={12}
-              max={30}
-              value={config.text_size}
-              onChange={(e) => onUpdateField('text_size', Number(e.target.value))}
+              value={phraseInput}
+              onChange={(e) => setPhraseInput(e.target.value)}
+              placeholder="e.g. machine learning"
             />
-          </label>
-          <label>
-            Email
-            <input
-              type="email"
-              value={config.email}
-              onChange={(e) => onUpdateField('email', e.target.value)}
-            />
-          </label>
-          <p className="settings-panel__note">
-            Your email is stored locally and only used to increase the rate limit.{' '}
-            <a
-              href="https://docs.openalex.org/how-to-use-the-api/rate-limits-and-authentication"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Learn more
-            </a>
-            .
-          </p>
+          </div>
+          <button type="submit" className="settings-panel__add-button">
+            Add
+          </button>
+        </form>
+        <div className="settings-panel__chip-row">
+          {config.block_phrases.map((phrase) => (
+            <span key={phrase} className="settings-panel__chip">
+              {phrase}
+              <button
+                onClick={() => onRemoveBlockPhrase(phrase)}
+                aria-label={`Remove ${phrase}`}
+              >
+                <img src={closeIcon} alt="" aria-hidden="true" />
+              </button>
+            </span>
+          ))}
         </div>
+      </section>
+
+      <section className="settings-panel__section">
+        <h3>Display</h3>
+        <div className="settings-panel__field">
+          <span>Text size</span>
+          <input
+            type="number"
+            min={12}
+            max={30}
+            value={config.text_size}
+            onChange={(e) => onUpdateField('text_size', Number(e.target.value))}
+          />
+        </div>
+      </section>
+
+      <section className="settings-panel__section">
+        <h3>Account</h3>
+        <div className="settings-panel__field">
+          <span>Email</span>
+          <input
+            type="email"
+            value={config.email}
+            onChange={(e) => onUpdateField('email', e.target.value)}
+          />
+        </div>
+        <p className="settings-panel__note">
+          Your email is stored locally and only used to increase the API rate limit.{' '}
+          <a
+            href="https://docs.openalex.org/how-to-use-the-api/rate-limits-and-authentication"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Learn more
+          </a>
+          .
+        </p>
       </section>
 
       <div className="settings-panel__footer">
@@ -227,7 +274,7 @@ export const SettingsPanel = ({
           className="settings-panel__reset-button"
           onClick={() => onReset()}
         >
-          Reset preferences
+          Reset to defaults
         </button>
       </div>
     </aside>

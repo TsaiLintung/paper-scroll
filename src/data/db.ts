@@ -39,6 +39,11 @@ const writeToStorage = (config: Config) => {
 export const readConfig = async (): Promise<Config> => {
   const stored = readFromStorage()
   if (stored) {
+    if (!stored.block_phrases) {
+      const migrated = { ...stored, block_phrases: [] }
+      writeToStorage(migrated)
+      return migrated
+    }
     return stored
   }
   writeToStorage(DEFAULT_CONFIG)
