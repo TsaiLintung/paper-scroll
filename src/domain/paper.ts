@@ -39,7 +39,7 @@ const joinAuthors = (work: OpenAlexWork) => {
 export const toPaperViewModel = (work: OpenAlexWork): PaperViewModel => {
   const doiUrl = toDoiUrl(work.doi)
   const rawTitle = work.display_name ?? work.title ?? 'Untitled'
-  const title = rawTitle.replace(/<[^>]*>/g, '').trim()
+  const title = rawTitle.replace(/<[^>]*>/g, '').trim().replace(/\*+$/, '')
   const abstract = reconstructAbstract(work.abstract_inverted_index)
   const yearJournal = formatYearJournal(work)
   const authorsJoined = joinAuthors(work)
